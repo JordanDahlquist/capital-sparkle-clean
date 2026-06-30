@@ -1,4 +1,5 @@
 import { MapPin, ShieldCheck, Layers, Droplets, Shield } from "lucide-react";
+import { Reveal } from "./reveal";
 
 const items = [
   {
@@ -40,9 +41,10 @@ export function HomeWhy() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {items.map(({ icon: Icon, title, body }) => (
-            <div
+          {items.map(({ icon: Icon, title, body }, i) => (
+            <Reveal
               key={title}
+              delayMs={i * 80}
               className="flex h-full flex-col bg-white border border-gray-200 rounded-lg p-6 text-center sm:text-left shadow-sm"
             >
               <div className="flex justify-center sm:justify-start mb-4">
@@ -55,17 +57,17 @@ export function HomeWhy() {
                 {title}
               </h3>
               <p className="text-[#1A1A1A] text-sm leading-relaxed">{body}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className="mt-12 bg-[#0B3D7A] rounded-lg px-6 py-6 md:py-7 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
+        <Reveal className="mt-12 bg-[#0B3D7A] rounded-lg px-6 py-6 md:py-7 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
           <Shield className="text-[#C8102E] shrink-0" size={32} strokeWidth={2} fill="#C8102E" stroke="#ffffff" />
           <p className="text-white text-base md:text-lg" style={{ fontFamily: "Inter, sans-serif" }}>
             <span className="font-bold">Proud to offer Military &amp; First Responder discounts.</span>{" "}
             <span className="opacity-90">Thank you for your service.</span>
           </p>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
