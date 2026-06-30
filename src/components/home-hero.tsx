@@ -57,7 +57,7 @@ export function HomeHero() {
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 py-16 sm:py-24 lg:py-32">
         <div className="max-w-2xl">
           <p
-            className="relative z-10 text-[var(--brand-red)] font-bold uppercase tracking-[0.18em] text-xs sm:text-sm"
+            className="hero-in hero-in-eyebrow relative z-10 text-[var(--brand-red)] font-bold uppercase tracking-[0.18em] text-xs sm:text-sm"
             style={{
               fontFamily: "var(--font-display)",
               textShadow:
@@ -68,19 +68,19 @@ export function HomeHero() {
           </p>
 
           <h1
-            className="mt-4 text-white font-bold uppercase leading-[1.05] text-4xl sm:text-5xl lg:text-6xl"
+            className="hero-in hero-in-h1 mt-4 text-white font-bold uppercase leading-[1.05] text-4xl sm:text-5xl lg:text-6xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Make Your Home Look New Again
           </h1>
 
-          <p className="mt-5 text-white/90 text-base sm:text-lg max-w-xl leading-relaxed">
+          <p className="hero-in hero-in-sub mt-5 text-white/90 text-base sm:text-lg max-w-xl leading-relaxed">
             Professional house washing, roof cleaning, concrete sealing and more across
             Albany, Saratoga, Schenectady and the entire Capital Region. 10 years in
             business. Free quotes.
           </p>
 
-          <div className="mt-7 flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="hero-in hero-in-ctas mt-7 flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a
               href="#quote"
               className="btn-pop btn-shimmer inline-flex items-center justify-center min-h-[52px] px-6 rounded-md bg-[var(--brand-red)] text-white font-bold uppercase tracking-wide text-base hover:bg-[var(--brand-red-hover)] transition-colors"
@@ -97,10 +97,11 @@ export function HomeHero() {
           </div>
 
           <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-3">
-            {trustItems.map(({ icon: Icon, label, key }) => (
+            {trustItems.map(({ icon: Icon, label, key }, i) => (
               <li
                 key={key}
-                className="flex items-center gap-2 text-white/90 text-sm font-medium"
+                className="hero-in hero-in-trust flex items-center gap-2 text-white/90 text-sm font-medium"
+                style={{ ["--hero-trust-i" as string]: i } as React.CSSProperties}
               >
                 <Icon className="h-4 w-4 text-[var(--brand-red)]" aria-hidden="true" />
                 <span>{label}</span>
