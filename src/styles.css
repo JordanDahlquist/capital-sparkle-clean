@@ -204,7 +204,7 @@ html.js-reveal-ready .reveal.reveal-flap {
 }
 html.js-reveal-ready .reveal.reveal-flap:not(.reveal-in) {
   opacity: 0;
-  transform: rotateX(-75deg) translate3d(0, 12px, 0);
+  transform: rotateX(-60deg) translate3d(0, 12px, 0);
 }
 html.js-reveal-ready .reveal.reveal-flap.reveal-in {
   opacity: 1;
