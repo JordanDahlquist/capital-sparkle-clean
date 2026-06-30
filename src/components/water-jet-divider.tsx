@@ -51,25 +51,26 @@ export function WaterJetDivider() {
     <div
       ref={ref}
       aria-hidden="true"
-      className="water-jet-divider relative w-full h-[100px] bg-[#F4F6F8] overflow-hidden"
+      className="water-jet-divider relative w-full h-[120px] bg-[#F4F6F8] overflow-hidden"
     >
       {/* Jet streak */}
       <div className={`wj-jet ${playClass}`}>
         <svg
-          width="320"
-          height="20"
-          viewBox="0 0 320 20"
+          width="480"
+          height="28"
+          viewBox="0 0 480 28"
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
             <linearGradient id="wjGrad" x1="0" y1="0" x2="1" y2="0">
               <stop offset="0%" stopColor="#1E6FD9" stopOpacity="0" />
-              <stop offset="45%" stopColor="#1E6FD9" stopOpacity="0.95" />
+              <stop offset="55%" stopColor="#1E6FD9" stopOpacity="1" />
+              <stop offset="85%" stopColor="#1E6FD9" stopOpacity="1" />
               <stop offset="100%" stopColor="#1E6FD9" stopOpacity="0" />
             </linearGradient>
           </defs>
-          <rect x="0" y="8" width="320" height="4" rx="2" fill="url(#wjGrad)" />
-          <polygon points="296,4 320,10 296,16" fill="#1E6FD9" opacity="0.9" />
+          <rect x="0" y="11" width="480" height="6" rx="3" fill="url(#wjGrad)" />
+          <polygon points="450,4 480,14 450,24" fill="#1E6FD9" />
         </svg>
       </div>
 
@@ -86,8 +87,8 @@ export function WaterJetDivider() {
             } as React.CSSProperties
           }
         >
-          <svg width={d.r * 2} height={d.r * 2} xmlns="http://www.w3.org/2000/svg">
-            <circle cx={d.r} cy={d.r} r={d.r} fill="#1E6FD9" />
+          <svg width={d.r * 3} height={d.r * 3} xmlns="http://www.w3.org/2000/svg">
+            <circle cx={d.r * 1.5} cy={d.r * 1.5} r={d.r * 1.5} fill="#1E6FD9" />
           </svg>
         </div>
       ))}
