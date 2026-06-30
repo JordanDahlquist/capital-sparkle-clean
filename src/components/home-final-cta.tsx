@@ -20,13 +20,13 @@ export function HomeFinalCta() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center">
           <a
             href="#quote"
-            className="inline-flex items-center justify-center bg-[#C8102E] hover:bg-[#a50d25] text-white font-bold uppercase tracking-wide px-8 py-4 rounded-md transition-colors min-h-[44px]"
+            className="btn-pop btn-shimmer inline-flex items-center justify-center bg-[#C8102E] hover:bg-[#a50d25] text-white font-bold uppercase tracking-wide px-8 py-4 rounded-md transition-colors min-h-[44px]"
           >
             Get Free Quote
           </a>
           <a
             href="tel:+15189001913"
-            className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-[#0B3D7A] font-bold uppercase tracking-wide px-8 py-4 rounded-md transition-colors min-h-[44px]"
+            className="btn-pop inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-[#0B3D7A] font-bold uppercase tracking-wide px-8 py-4 rounded-md transition-colors min-h-[44px]"
           >
             <Phone size={20} strokeWidth={2.5} />
             Call (518) 900-1913
