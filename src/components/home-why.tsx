@@ -1,5 +1,6 @@
 import { MapPin, ShieldCheck, Layers, Droplets, Shield } from "lucide-react";
 import { Reveal } from "./reveal";
+import { CountUp } from "./count-up";
 
 const items = [
   {
@@ -36,7 +37,7 @@ export function HomeWhy() {
             className="text-[#0B3D7A] text-3xl md:text-5xl uppercase leading-tight"
             style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700 }}
           >
-            10 Years Making Capital Region Homes Look New
+            <CountUp to={10} /> Years Making Capital Region Homes Look New
           </h2>
         </div>
 
@@ -45,10 +46,10 @@ export function HomeWhy() {
             <Reveal
               key={title}
               delayMs={i * 80}
-              className="flex h-full flex-col bg-white border border-gray-200 rounded-lg p-6 text-center sm:text-left shadow-sm"
+              className="card-pop flex h-full flex-col bg-white border border-gray-200 rounded-lg p-6 text-center sm:text-left shadow-sm"
             >
               <div className="flex justify-center sm:justify-start mb-4">
-                <Icon className="text-[#C8102E]" size={40} strokeWidth={1.75} />
+                <Icon className="icon-wiggle text-[#C8102E]" size={40} strokeWidth={1.75} />
               </div>
               <h3
                 className="text-[#0B3D7A] text-lg mb-2 uppercase"
