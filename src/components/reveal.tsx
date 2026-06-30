@@ -47,14 +47,23 @@ export function useReveal(delayMs = 0) {
           }
         }
       },
-      { rootMargin: "0px 0px -10% 0px", threshold: 0.1 },
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.15 },
     );
     obs.observe(el);
-    // Failsafe: if the observer never fires within 1.5s, force visible.
+    // Per-element safety net: if the element is already at/near the viewport
+    // shortly after mount but the observer hasn't fired (e.g. IO bug, async
+    // layout), force-reveal just THAT element. Off-screen elements stay
+    // hidden until they actually scroll into view.
     const failsafe = window.setTimeout(() => {
-      setVisible(true);
-      obs.disconnect();
-    }, 1500);
+      const node = ref.current;
+      if (!node) return;
+      const rect = node.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      if (rect.top < vh * 0.95 && rect.bottom > 0) {
+        setVisible(true);
+        obs.disconnect();
+      }
+    }, 400);
     return () => {
       obs.disconnect();
       window.clearTimeout(failsafe);

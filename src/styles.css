@@ -171,12 +171,12 @@
   opacity: 1;
   transform: none;
   transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
 }
 html.js-reveal-ready .reveal:not(.reveal-in) {
   opacity: 0;
-  transform: translate3d(0, 24px, 0);
+  transform: translate3d(0, 28px, 0);
   will-change: opacity, transform;
 }
 html.js-reveal-ready .reveal.reveal-in {
