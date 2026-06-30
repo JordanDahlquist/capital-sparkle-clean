@@ -40,11 +40,15 @@ export function HomeWhy() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          style={{ perspective: "1000px" }}
+        >
           {items.map(({ icon: Icon, title, body }, i) => (
             <Reveal
               key={title}
-              delayMs={i * 80}
+              delayMs={i * 90}
+              variant="flap"
               className="card-pop flex h-full flex-col bg-white border border-gray-200 rounded-lg p-6 text-center sm:text-left shadow-sm"
             >
               <div className="flex justify-center sm:justify-start mb-4">

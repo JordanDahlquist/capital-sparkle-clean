@@ -78,12 +78,16 @@ export function HomeServices() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          style={{ perspective: "1000px" }}
+        >
           {services.map(({ icon: Icon, name, desc, href }, i) => (
             <Reveal
               as="a"
               key={name}
-              delayMs={i * 80}
+              delayMs={i * 90}
+              variant="flap"
               href={href}
               className="card-pop group flex h-full flex-col bg-white border border-gray-200 rounded-lg p-6 text-center sm:text-left shadow-sm"
             >

@@ -186,12 +186,16 @@ export function HomeGallery() {
         </Reveal>
 
         {/* PART 2 — Grid of 6 before/after pairs */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          style={{ perspective: "1000px" }}
+        >
           {tiles.map((t, i) => (
             <Reveal
               as="figure"
               key={t.caption}
-              delayMs={i * 80}
+              delayMs={i * 90}
+              variant="flap"
               className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200"
             >
               <div className="grid grid-cols-2 gap-0.5 bg-gray-200">
