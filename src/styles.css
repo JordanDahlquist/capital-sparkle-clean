@@ -195,12 +195,12 @@ html.js-reveal-ready .reveal.reveal-in {
 
 /* Hero "spray clean" reveal — runs once on mount, CSS-only. */
 .hero-img-dirty {
-  filter: grayscale(70%) brightness(0.8) blur(2px);
+  filter: grayscale(85%) brightness(0.7) blur(3px);
   will-change: filter;
 }
 .hero-img-clean {
   clip-path: polygon(0 0, -20% 0, -60% 100%, 0 100%);
-  animation: hero-sweep 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s forwards;
+  animation: hero-sweep 2.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s forwards;
   will-change: clip-path;
 }
 .hero-spray-streak {
@@ -209,17 +209,17 @@ html.js-reveal-ready .reveal.reveal-in {
   pointer-events: none;
   background-image: linear-gradient(
     115deg,
-    transparent 38%,
-    rgba(255, 255, 255, 0) 44%,
-    rgba(255, 255, 255, 0.55) 50%,
-    rgba(255, 255, 255, 0.18) 55%,
-    transparent 62%
+    transparent 36%,
+    rgba(180, 220, 255, 0.35) 44%,
+    rgba(255, 255, 255, 0.95) 50%,
+    rgba(200, 230, 255, 0.5) 56%,
+    transparent 64%
   );
   background-size: 250% 100%;
   background-position: 130% 0;
   mix-blend-mode: screen;
   opacity: 0;
-  animation: hero-spray 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s forwards;
+  animation: hero-spray 2.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s forwards;
   will-change: background-position, opacity;
 }
 @keyframes hero-sweep {
@@ -320,7 +320,7 @@ html.js-reveal-ready .reveal.reveal-in {
   pointer-events: none;
   z-index: 0;
 }
-.btn-shimmer:hover::before { animation: btn-shimmer-sweep 0.7s ease-out forwards; }
+.btn-shimmer:hover::before { animation: btn-shimmer-sweep 0.9s ease-out forwards; }
 @keyframes btn-shimmer-sweep { to { transform: translateX(120%); } }
 .btn-shimmer > * { position: relative; z-index: 1; }
 
