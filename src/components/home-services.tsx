@@ -85,10 +85,10 @@ export function HomeServices() {
               key={name}
               delayMs={i * 80}
               href={href}
-              className="group flex h-full flex-col bg-white border border-gray-200 rounded-lg p-6 text-center sm:text-left shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+              className="card-pop group flex h-full flex-col bg-white border border-gray-200 rounded-lg p-6 text-center sm:text-left shadow-sm"
             >
               <div className="flex justify-center sm:justify-start mb-4">
-                <Icon className="text-[#C8102E]" size={40} strokeWidth={1.75} />
+                <Icon className="icon-wiggle text-[#C8102E]" size={40} strokeWidth={1.75} />
               </div>
               <h3
                 className="text-[#0B3D7A] text-lg mb-2 uppercase"
@@ -112,7 +112,7 @@ export function HomeServices() {
           </p>
           <a
             href="#quote"
-            className="inline-block bg-[#C8102E] hover:bg-[#a50d25] text-white font-bold uppercase tracking-wide px-8 py-4 rounded-md transition-colors min-h-[44px]"
+            className="btn-pop btn-shimmer inline-block bg-[#C8102E] hover:bg-[#a50d25] text-white font-bold uppercase tracking-wide px-8 py-4 rounded-md transition-colors min-h-[44px]"
           >
             Get Free Quote
           </a>
