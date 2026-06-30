@@ -250,3 +250,46 @@
     display: none;
   }
 }
+
+/* === Water-jet divider === */
+.water-jet-divider .wj-jet {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-120%, -50%);
+  opacity: 0;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 0 6px rgba(30, 111, 217, 0.35));
+}
+.water-jet-divider .wj-jet.is-playing {
+  animation: wj-shoot 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+.water-jet-divider .wj-drop {
+  position: absolute;
+  left: 0;
+  transform: translate(-120%, -50%);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.water-jet-divider .wj-drop.is-playing {
+  animation: wj-drop 0.95s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  animation-delay: var(--wj-delay, 0ms);
+}
+@keyframes wj-shoot {
+  0% { transform: translate(-120%, -50%); opacity: 0; }
+  12% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translate(100vw, -50%); opacity: 0; }
+}
+@keyframes wj-drop {
+  0% { transform: translate(-30%, calc(-50% + 0px)); opacity: 0.85; }
+  60% { opacity: 0.7; }
+  100% { transform: translate(100vw, calc(-50% + var(--wj-dy, 0px))); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .water-jet-divider .wj-jet,
+  .water-jet-divider .wj-drop {
+    animation: none !important;
+    opacity: 0;
+  }
+}
