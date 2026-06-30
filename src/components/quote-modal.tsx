@@ -600,7 +600,7 @@ function Step4({
   );
 }
 
-function SuccessView({ onClose, titleId }: { onClose: () => void; titleId: string }) {
+function SuccessView({ onClose, titleId }: { onClose?: () => void; titleId: string }) {
   return (
     <div className="qm-success">
       <div className="qm-check" aria-hidden="true">
@@ -617,9 +617,11 @@ function SuccessView({ onClose, titleId }: { onClose: () => void; titleId: strin
         <Phone className="h-4 w-4" aria-hidden="true" />
         Call us now (518) 900-1913
       </a>
-      <button type="button" className="qm-btn-text" onClick={onClose}>
-        Close
-      </button>
+      {onClose && (
+        <button type="button" className="qm-btn-text" onClick={onClose}>
+          Close
+        </button>
+      )}
     </div>
   );
 }
