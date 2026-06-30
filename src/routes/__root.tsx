@@ -112,6 +112,18 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        {/* Set the reveal hidden start-state BEFORE first paint so cards
+            don't flash visible→hidden when JS hydrates. */}
+        <script
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{if(!window.matchMedia||!window.matchMedia('(prefers-reduced-motion: reduce)').matches){if('IntersectionObserver' in window){document.documentElement.classList.add('js-reveal-ready');}}}catch(e){}})();",
+          }}
+        />
+        <noscript>
+          <style>{`.reveal{opacity:1 !important;transform:none !important;}`}</style>
+        </noscript>
       </head>
       <body>
         {children}
