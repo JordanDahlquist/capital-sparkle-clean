@@ -75,7 +75,7 @@ function QuoteButton({ className = "", onClick, children = "Get Free Quote" }: {
       href="#quote"
       onClick={onClick}
       className={
-        "inline-flex items-center justify-center min-h-[44px] px-4 sm:px-5 rounded-md bg-[var(--brand-red)] text-white font-bold uppercase tracking-wide text-sm hover:bg-[var(--brand-red-hover)] transition-colors " +
+        "btn-pop btn-shimmer inline-flex items-center justify-center min-h-[44px] px-4 sm:px-5 rounded-md bg-[var(--brand-red)] text-white font-bold uppercase tracking-wide text-sm hover:bg-[var(--brand-red-hover)] transition-colors " +
         className
       }
     >
