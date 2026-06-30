@@ -17,86 +17,42 @@ import {
  */
 export function useReveal(delayMs = 0, variant: "fade" | "flap" = "fade") {
   const ref = useRef<HTMLElement | null>(null);
-  const [visible, setVisible] = useState(false);
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     if (
-      typeof window !== "undefined" &&
-      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches
+      typeof window === "undefined" ||
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ||
+      typeof IntersectionObserver === "undefined"
     ) {
-      setVisible(true);
+      // Already visible at rest; just skip the entrance animation.
       return;
     }
-    if (typeof IntersectionObserver === "undefined") {
-      setVisible(true);
-      return;
-    }
-    // Flap cards start rotated -75deg which squishes their bounding box.
-    // Use a near-zero threshold so IO fires as soon as ANY part enters view.
-    const isFlap = variant === "flap";
     const obs = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
           if (e.isIntersecting) {
-            setVisible(true);
+            setAnimate(true);
             obs.disconnect();
             break;
           }
         }
       },
-      isFlap
-        ? { rootMargin: "0px 0px -5% 0px", threshold: 0.01 }
-        : { rootMargin: "0px 0px -18% 0px", threshold: 0.2 },
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.01 },
     );
     obs.observe(el);
-    // Per-element safety net: poll a few times. For flap cards, the rotated
-    // bounding box may confuse IO — also check the parent's rect so a card
-    // is never stuck hidden once its grid is in view.
-    const checkVisible = () => {
-      const node = ref.current;
-      if (!node) return false;
-      const vh = window.innerHeight || document.documentElement.clientHeight;
-      const targets: Element[] = [node];
-      if (isFlap && node.parentElement) targets.push(node.parentElement);
-      for (const t of targets) {
-        const r = t.getBoundingClientRect();
-        if (r.top < vh * 0.95 && r.bottom > 0) return true;
-      }
-      return false;
-    };
-    const failsafes = [200, 600, 1200, 2000].map((ms) =>
-      window.setTimeout(() => {
-        if (checkVisible()) {
-          setVisible(true);
-          obs.disconnect();
-        }
-      }, ms),
-    );
-    // Also re-check on scroll: if IO somehow misses, scroll position reveals it.
-    const onScroll = () => {
-      if (checkVisible()) {
-        setVisible(true);
-        obs.disconnect();
-        window.removeEventListener("scroll", onScroll);
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      obs.disconnect();
-      failsafes.forEach((id) => window.clearTimeout(id));
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, [variant]);
+    return () => obs.disconnect();
+  }, []);
 
   const style: CSSProperties = {
-    transitionDelay: visible && delayMs ? `${delayMs}ms` : undefined,
+    animationDelay: animate && delayMs ? `${delayMs}ms` : undefined,
   };
   const variantClass = variant === "flap" ? " reveal-flap" : "";
   return {
     ref,
-    className: `reveal${variantClass}${visible ? " reveal-in" : ""}`,
+    className: `reveal${variantClass}${animate ? " animate-in" : ""}`,
     style,
   };
 }
