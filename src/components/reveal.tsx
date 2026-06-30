@@ -47,7 +47,7 @@ export function useReveal(delayMs = 0) {
           }
         }
       },
-      { rootMargin: "0px 0px -10% 0px", threshold: 0.15 },
+      { rootMargin: "0px 0px -18% 0px", threshold: 0.2 },
     );
     obs.observe(el);
     // Per-element safety net: if the element is already at/near the viewport
