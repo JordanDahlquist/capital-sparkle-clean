@@ -1,6 +1,7 @@
 import { Phone, ShieldCheck, BadgeCheck, Clock, Star, HeartHandshake } from "lucide-react";
 import heroImage from "../assets/hero-pressure-sprayer.png.asset.json";
 import type { CSSProperties, ReactNode } from "react";
+import { openQuoteModal } from "./quote-modal";
 
 // Toggle ON only after the client confirms licensing & insurance.
 const SHOW_LICENSED_INSURED = false;
