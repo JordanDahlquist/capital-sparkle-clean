@@ -33,6 +33,10 @@ export function useReveal(delayMs = 0) {
       setVisible(true);
       return;
     }
+    // Enable the hidden pre-animation state only now that we know JS + IO work.
+    if (typeof document !== "undefined") {
+      document.documentElement.classList.add("js-reveal-ready");
+    }
     const obs = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
@@ -46,7 +50,15 @@ export function useReveal(delayMs = 0) {
       { rootMargin: "0px 0px -10% 0px", threshold: 0.1 },
     );
     obs.observe(el);
-    return () => obs.disconnect();
+    // Failsafe: if the observer never fires within 1.5s, force visible.
+    const failsafe = window.setTimeout(() => {
+      setVisible(true);
+      obs.disconnect();
+    }, 1500);
+    return () => {
+      obs.disconnect();
+      window.clearTimeout(failsafe);
+    };
   }, []);
 
   const style: CSSProperties = {
