@@ -26,12 +26,16 @@ export function HomeReviews() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div
+          className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+          style={{ perspective: "1000px" }}
+        >
           {cards.map((marker, i) => (
             <Reveal
               as="article"
               key={marker}
-              delayMs={i * 80}
+              delayMs={i * 90}
+              variant="flap"
               data-placeholder={marker}
               className="flex h-full flex-col bg-white border border-gray-200 rounded-lg p-6 shadow-sm"
             >
