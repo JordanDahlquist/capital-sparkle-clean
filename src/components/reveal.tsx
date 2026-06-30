@@ -37,6 +37,9 @@ export function useReveal(delayMs = 0, variant: "fade" | "flap" = "fade") {
     if (typeof document !== "undefined") {
       document.documentElement.classList.add("js-reveal-ready");
     }
+    // Flap cards start rotated -75deg which squishes their bounding box.
+    // Use a near-zero threshold so IO fires as soon as ANY part enters view.
+    const isFlap = variant === "flap";
     const obs = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
@@ -47,28 +50,49 @@ export function useReveal(delayMs = 0, variant: "fade" | "flap" = "fade") {
           }
         }
       },
-      { rootMargin: "0px 0px -18% 0px", threshold: 0.2 },
+      isFlap
+        ? { rootMargin: "0px 0px -5% 0px", threshold: 0.01 }
+        : { rootMargin: "0px 0px -18% 0px", threshold: 0.2 },
     );
     obs.observe(el);
-    // Per-element safety net: if the element is already at/near the viewport
-    // shortly after mount but the observer hasn't fired (e.g. IO bug, async
-    // layout), force-reveal just THAT element. Off-screen elements stay
-    // hidden until they actually scroll into view.
-    const failsafe = window.setTimeout(() => {
+    // Per-element safety net: poll a few times. For flap cards, the rotated
+    // bounding box may confuse IO — also check the parent's rect so a card
+    // is never stuck hidden once its grid is in view.
+    const checkVisible = () => {
       const node = ref.current;
-      if (!node) return;
-      const rect = node.getBoundingClientRect();
+      if (!node) return false;
       const vh = window.innerHeight || document.documentElement.clientHeight;
-      if (rect.top < vh * 0.95 && rect.bottom > 0) {
+      const targets: Element[] = [node];
+      if (isFlap && node.parentElement) targets.push(node.parentElement);
+      for (const t of targets) {
+        const r = t.getBoundingClientRect();
+        if (r.top < vh * 0.95 && r.bottom > 0) return true;
+      }
+      return false;
+    };
+    const failsafes = [200, 600, 1200, 2000].map((ms) =>
+      window.setTimeout(() => {
+        if (checkVisible()) {
+          setVisible(true);
+          obs.disconnect();
+        }
+      }, ms),
+    );
+    // Also re-check on scroll: if IO somehow misses, scroll position reveals it.
+    const onScroll = () => {
+      if (checkVisible()) {
         setVisible(true);
         obs.disconnect();
+        window.removeEventListener("scroll", onScroll);
       }
-    }, 400);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
       obs.disconnect();
-      window.clearTimeout(failsafe);
+      failsafes.forEach((id) => window.clearTimeout(id));
+      window.removeEventListener("scroll", onScroll);
     };
-  }, []);
+  }, [variant]);
 
   const style: CSSProperties = {
     transitionDelay: visible && delayMs ? `${delayMs}ms` : undefined,
