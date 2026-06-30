@@ -15,6 +15,11 @@ import {
  *   keyframe. If anything fails, content stays visible — never hidden.
  */
 function attach(el: HTMLElement, delayMs: number) {
+  // DEBUG
+  if (typeof window !== "undefined") {
+    (window as unknown as { __revealAttach?: number }).__revealAttach =
+      ((window as unknown as { __revealAttach?: number }).__revealAttach || 0) + 1;
+  }
   if (
     typeof window === "undefined" ||
     typeof IntersectionObserver === "undefined" ||
