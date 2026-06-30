@@ -14,7 +14,7 @@ const cities = [
 
 export function HomeServiceArea() {
   return (
-    <section className="bg-white py-16 md:py-20">
+    <section id="service-area" className="bg-white py-16 md:py-20 scroll-mt-24">
       <div className="mx-auto max-w-[1200px] px-4">
         <div className="text-center mb-10 md:mb-12">
           <p className="text-[#C8102E] font-semibold uppercase tracking-[0.2em] text-sm mb-3">
