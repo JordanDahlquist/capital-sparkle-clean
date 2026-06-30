@@ -33,10 +33,6 @@ export function useReveal(delayMs = 0, variant: "fade" | "flap" = "fade") {
       setVisible(true);
       return;
     }
-    // Enable the hidden pre-animation state only now that we know JS + IO work.
-    if (typeof document !== "undefined") {
-      document.documentElement.classList.add("js-reveal-ready");
-    }
     // Flap cards start rotated -75deg which squishes their bounding box.
     // Use a near-zero threshold so IO fires as soon as ANY part enters view.
     const isFlap = variant === "flap";
