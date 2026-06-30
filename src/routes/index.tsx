@@ -4,6 +4,7 @@ import { HomeServices } from "../components/home-services";
 import { HomeGallery } from "../components/home-gallery";
 import { HomeWhy } from "../components/home-why";
 import { HomeReviews } from "../components/home-reviews";
+import { HomeServiceArea } from "../components/home-service-area";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,6 +26,7 @@ function Index() {
       <HomeGallery />
       <HomeWhy />
       <HomeReviews />
+      <HomeServiceArea />
     </main>
   );
 }
