@@ -33,15 +33,19 @@ export function HomeHero() {
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(100deg, color-mix(in oklab, var(--brand-deep-blue) 88%, transparent) 0%, color-mix(in oklab, var(--brand-deep-blue) 72%, transparent) 60%, color-mix(in oklab, var(--brand-deep-blue) 55%, transparent) 100%)",
+            "linear-gradient(to right, color-mix(in oklab, var(--brand-deep-blue) 92%, transparent) 0%, color-mix(in oklab, var(--brand-deep-blue) 80%, transparent) 45%, color-mix(in oklab, var(--brand-deep-blue) 55%, transparent) 75%, color-mix(in oklab, var(--brand-deep-blue) 35%, transparent) 100%)",
         }}
       />
 
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 py-16 sm:py-24 lg:py-32">
         <div className="max-w-2xl">
           <p
-            className="text-[var(--brand-red)] font-bold uppercase tracking-[0.18em] text-xs sm:text-sm"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="relative z-10 text-[var(--brand-red)] font-bold uppercase tracking-[0.18em] text-xs sm:text-sm"
+            style={{
+              fontFamily: "var(--font-display)",
+              textShadow:
+                "0 1px 2px rgba(0,0,0,0.55), 0 0 12px rgba(11,61,122,0.7)",
+            }}
           >
             Capital Region's Pressure Washing Pros
           </p>
