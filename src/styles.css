@@ -64,7 +64,18 @@
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.205 0 0); /* #1A1A1A charcoal */
+
+  /* Brand tokens (Capital Pro) */
+  --brand-deep-blue: oklch(0.358 0.115 257);     /* #0B3D7A */
+  --brand-red: oklch(0.554 0.218 27.5);          /* #C8102E */
+  --brand-red-hover: oklch(0.485 0.205 27.5);    /* darker red */
+  --brand-bright-blue: oklch(0.555 0.176 257);   /* #1E6FD9 */
+  --brand-charcoal: oklch(0.205 0 0);            /* #1A1A1A */
+  --brand-light-gray: oklch(0.969 0.003 247);    /* #F4F6F8 */
+
+  --font-display: "Oswald", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
