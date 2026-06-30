@@ -5,6 +5,7 @@ import { HomeGallery } from "../components/home-gallery";
 import { HomeWhy } from "../components/home-why";
 import { HomeReviews } from "../components/home-reviews";
 import { HomeServiceArea } from "../components/home-service-area";
+import { HomeFinalCta } from "../components/home-final-cta";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,6 +28,7 @@ function Index() {
       <HomeWhy />
       <HomeReviews />
       <HomeServiceArea />
+      <HomeFinalCta />
     </main>
   );
 }
