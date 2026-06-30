@@ -15,7 +15,7 @@ import {
  * - Elements occupy their final layout space from the start; we only paint
  *   opacity/transform, so nothing on the page shifts.
  */
-export function useReveal(delayMs = 0) {
+export function useReveal(delayMs = 0, variant: "fade" | "flap" = "fade") {
   const ref = useRef<HTMLElement | null>(null);
   const [visible, setVisible] = useState(false);
 
@@ -73,9 +73,10 @@ export function useReveal(delayMs = 0) {
   const style: CSSProperties = {
     transitionDelay: visible && delayMs ? `${delayMs}ms` : undefined,
   };
+  const variantClass = variant === "flap" ? " reveal-flap" : "";
   return {
     ref,
-    className: `reveal${visible ? " reveal-in" : ""}`,
+    className: `reveal${variantClass}${visible ? " reveal-in" : ""}`,
     style,
   };
 }
@@ -83,6 +84,7 @@ export function useReveal(delayMs = 0) {
 type RevealProps<T extends ElementType = "div"> = {
   as?: T;
   delayMs?: number;
+  variant?: "fade" | "flap";
   className?: string;
   style?: CSSProperties;
   children?: ReactNode;
@@ -91,13 +93,14 @@ type RevealProps<T extends ElementType = "div"> = {
 export function Reveal<T extends ElementType = "div">({
   as,
   delayMs = 0,
+  variant = "fade",
   className = "",
   style,
   children,
   ...rest
 }: RevealProps<T>) {
   const Tag = (as || "div") as ElementType;
-  const r = useReveal(delayMs);
+  const r = useReveal(delayMs, variant);
   return (
     <Tag
       ref={r.ref as React.Ref<HTMLElement>}
