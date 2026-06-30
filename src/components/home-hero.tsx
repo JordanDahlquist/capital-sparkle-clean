@@ -1,6 +1,6 @@
 import { Phone, ShieldCheck, BadgeCheck, Clock, Star, HeartHandshake } from "lucide-react";
 import heroImage from "../assets/hero-placeholder.jpg.asset.json";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 // Toggle ON only after the client confirms licensing & insurance.
 const SHOW_LICENSED_INSURED = false;
@@ -101,7 +101,7 @@ export function HomeHero() {
               <li
                 key={key}
                 className="hero-in hero-in-trust flex items-center gap-2 text-white/90 text-sm font-medium"
-                style={{ ["--hero-trust-i" as string]: i } as React.CSSProperties}
+                style={{ ["--hero-trust-i" as string]: i } as CSSProperties}
               >
                 <Icon className="h-4 w-4 text-[var(--brand-red)]" aria-hidden="true" />
                 <span>{label}</span>
