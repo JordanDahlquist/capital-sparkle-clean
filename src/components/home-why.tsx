@@ -1,6 +1,5 @@
 import { MapPin, ShieldCheck, Layers, Droplets, Shield } from "lucide-react";
 import { Reveal } from "./reveal";
-import { CountUp } from "./count-up";
 
 const items = [
   {
@@ -37,7 +36,7 @@ export function HomeWhy() {
             className="text-[#0B3D7A] text-3xl md:text-5xl uppercase leading-tight"
             style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700 }}
           >
-            <CountUp to={10} /> Years Making Capital Region Homes Look New
+            10 Years Making Capital Region Homes Look New
           </h2>
         </div>
 
