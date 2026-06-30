@@ -28,6 +28,7 @@ function BeforeAfterSlider() {
   const [pos, setPos] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
+  const [nudge, setNudge] = useState(false);
 
   const updateFromClientX = useCallback((clientX: number) => {
     const el = containerRef.current;
@@ -55,6 +56,32 @@ function BeforeAfterSlider() {
       window.removeEventListener("touchend", up);
     };
   }, [updateFromClientX]);
+
+  // One-time handle wiggle when slider scrolls into view, to hint it's draggable.
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches
+    ) return;
+    if (typeof IntersectionObserver === "undefined") return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            obs.disconnect();
+            setNudge(true);
+            window.setTimeout(() => setNudge(false), 650);
+            break;
+          }
+        }
+      },
+      { threshold: 0.35 },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
 
   return (
     <div
@@ -103,7 +130,10 @@ function BeforeAfterSlider() {
       <button
         type="button"
         aria-label="Drag to compare before and after"
-        className="absolute top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white shadow-lg border-2 border-[#0B3D7A] flex items-center justify-center cursor-ew-resize touch-none"
+        className={
+          "absolute top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white shadow-lg border-2 border-[#0B3D7A] flex items-center justify-center cursor-ew-resize touch-none " +
+          (nudge ? "handle-nudge" : "")
+        }
         style={{ left: `calc(${pos}% - 24px)` }}
         onMouseDown={(e) => { e.stopPropagation(); dragging.current = true; }}
         onTouchStart={(e) => { e.stopPropagation(); dragging.current = true; }}
@@ -195,7 +225,7 @@ export function HomeGallery() {
         <div className="text-center mt-12">
           <a
             href="#quote"
-            className="inline-block bg-[#C8102E] hover:bg-[#a50d25] text-white font-bold uppercase tracking-wide px-8 py-4 rounded-md transition-colors min-h-[44px]"
+            className="btn-pop btn-shimmer inline-block bg-[#C8102E] hover:bg-[#a50d25] text-white font-bold uppercase tracking-wide px-8 py-4 rounded-md transition-colors min-h-[44px]"
           >
             Get Your Free Quote
           </a>
