@@ -119,11 +119,6 @@ export function QuoteModalProvider({ children }: { children: ReactNode }) {
 function QuoteModal({ onClose }: { onClose: () => void }) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const titleId = "quote-modal-title";
-  const [step, setStep] = useState(1);
-  const [stepDir, setStepDir] = useState<1 | -1>(1);
-  const [data, setData] = useState<Payload>(EMPTY);
-  const [submitted, setSubmitted] = useState(false);
-  const [touched, setTouched] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     const prev = document.body.style.overflow;
@@ -160,13 +155,55 @@ function QuoteModal({ onClose }: { onClose: () => void }) {
     return () => document.removeEventListener("keydown", onKey);
   }, [onClose]);
 
+  function onBackdrop(e: React.MouseEvent<HTMLDivElement>) {
+    if (e.target === e.currentTarget) onClose();
+  }
+
+  return (
+    <div className="qm-backdrop" onMouseDown={onBackdrop}>
+      <div
+        ref={dialogRef}
+        className="qm-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={titleId}
+      >
+        <QuoteWizard titleId={titleId} onClose={onClose} containerRef={dialogRef} />
+      </div>
+    </div>
+  );
+}
+
+/**
+ * QuoteWizard — the step machine + form UI. Used inside the modal AND
+ * rendered inline above the footer for users who scroll past CTAs.
+ */
+export function QuoteWizard({
+  titleId = "quote-inline-title",
+  onClose,
+  containerRef,
+}: {
+  titleId?: string;
+  onClose?: () => void;
+  containerRef?: React.RefObject<HTMLElement | HTMLDivElement | null>;
+}) {
+  const [step, setStep] = useState(1);
+  const [stepDir, setStepDir] = useState<1 | -1>(1);
+  const [data, setData] = useState<Payload>(EMPTY);
+  const [submitted, setSubmitted] = useState(false);
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
+
+  // Autofocus the first focusable in the active step — but only when this
+  // wizard is inside a modal (containerRef provided). Inline usage avoids
+  // scroll-jacking the user.
   useEffect(() => {
+    if (!containerRef?.current) return;
     const t = window.setTimeout(() => {
-      const el = dialogRef.current?.querySelector<HTMLElement>("[data-autofocus]");
+      const el = containerRef.current?.querySelector<HTMLElement>("[data-autofocus]");
       el?.focus();
     }, 60);
     return () => window.clearTimeout(t);
-  }, [step, submitted]);
+  }, [step, submitted, containerRef]);
 
   const update = <K extends keyof Payload>(k: K, v: Payload[K]) =>
     setData((d) => ({ ...d, [k]: v }));
@@ -209,26 +246,15 @@ function QuoteModal({ onClose }: { onClose: () => void }) {
     };
     // TODO: POST payload to Supabase `leads` and redirect to /thank-you (wired in backend chunk).
     // eslint-disable-next-line no-console
-    console.log("[quote-modal] submit payload", payload);
+    console.log("[quote-form] submit payload", payload);
     setSubmitted(true);
-  }
-
-  function onBackdrop(e: React.MouseEvent<HTMLDivElement>) {
-    if (e.target === e.currentTarget) onClose();
   }
 
   const progressPct = submitted ? 100 : (step / 4) * 100;
 
   return (
-    <div className="qm-backdrop" onMouseDown={onBackdrop}>
-      <div
-        ref={dialogRef}
-        className="qm-dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby={titleId}
-      >
-        <div className="qm-header">
+    <>
+      <div className="qm-header">
           {!submitted && (
             <div className="qm-progress-wrap" aria-hidden="true">
               <div className="qm-progress-meta">
@@ -239,9 +265,11 @@ function QuoteModal({ onClose }: { onClose: () => void }) {
               </div>
             </div>
           )}
-          <button type="button" onClick={onClose} aria-label="Close quote form" className="qm-close">
-            <X className="h-5 w-5" />
-          </button>
+          {onClose && (
+            <button type="button" onClick={onClose} aria-label="Close quote form" className="qm-close">
+              <X className="h-5 w-5" />
+            </button>
+          )}
         </div>
 
         <div className="qm-body">
@@ -324,8 +352,7 @@ function QuoteModal({ onClose }: { onClose: () => void }) {
             <p className="qm-trust">No obligation. Free quote. Local crew, 10+ years.</p>
           </div>
         )}
-      </div>
-    </div>
+    </>
   );
 }
 
