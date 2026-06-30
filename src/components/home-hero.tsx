@@ -1,5 +1,5 @@
 import { Phone, ShieldCheck, BadgeCheck, Clock, Star, HeartHandshake } from "lucide-react";
-import heroImage from "../assets/hero-placeholder.jpg.asset.json";
+import heroImage from "../assets/hero-pressure-sprayer.png.asset.json";
 import type { CSSProperties, ReactNode } from "react";
 
 // Toggle ON only after the client confirms licensing & insurance.
