@@ -1,25 +1,64 @@
-import { Home, Cloud, Layers, Trees, ArrowRight } from "lucide-react";
+import {
+  Home,
+  CloudRain,
+  Grid3x3,
+  Layers,
+  Rows3,
+  Droplets,
+  AppWindow,
+  Fence,
+  ArrowRight,
+} from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 const services = [
   {
     icon: Home,
     name: "House Washing",
     desc: "Soft-wash siding, brick, and stucco. Lifts mold, mildew, and grime without damage.",
+    href: "/house-washing",
   },
   {
-    icon: Cloud,
-    name: "Roof Cleaning",
-    desc: "Low-pressure soft wash that clears black streaks and moss. Safe for shingles.",
+    icon: CloudRain,
+    name: "Roof Washing",
+    desc: "Low-pressure soft wash that clears black streaks and moss. Safe for your shingles.",
+    href: "/roof-washing",
+  },
+  {
+    icon: Grid3x3,
+    name: "Paver Cleaning & Sealing",
+    desc: "Deep-clean pavers, re-sand the joints, and seal to lock out weeds and stains.",
+    href: "/paver-cleaning-sealing",
   },
   {
     icon: Layers,
-    name: "Concrete & Driveway",
-    desc: "Clean and seal driveways, walkways, and patios. Brings back the original surface.",
+    name: "Concrete Cleaning & Sealing",
+    desc: "Blast dirt and oil off driveways and walkways, then seal to protect the surface.",
+    href: "/concrete-cleaning-sealing",
   },
   {
-    icon: Trees,
-    name: "Decks & Fences",
-    desc: "Strip dirt and graying, restore wood and composite to a clean finish.",
+    icon: Rows3,
+    name: "Deck & Patio Cleaning",
+    desc: "Strip dirt and graying from wood and composite. Restore a clean, even finish.",
+    href: "/deck-patio-cleaning",
+  },
+  {
+    icon: Droplets,
+    name: "Gutter Cleaning & Whitening",
+    desc: "Clear clogged gutters and scrub off the black tiger stripes. Like-new exterior.",
+    href: "/gutter-cleaning",
+  },
+  {
+    icon: AppWindow,
+    name: "Window Cleaning",
+    desc: "Streak-free windows inside and out. Let the light back in.",
+    href: "/window-cleaning",
+  },
+  {
+    icon: Fence,
+    name: "Fence Cleaning",
+    desc: "Wash away dirt, algae, and stains from wood, vinyl, and chain-link.",
+    href: "/fence-cleaning",
   },
 ];
 
@@ -39,31 +78,29 @@ export function HomeServices() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {services.map(({ icon: Icon, name, desc }) => (
-            <div
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map(({ icon: Icon, name, desc, href }) => (
+            <Link
               key={name}
-              className="group bg-white border border-gray-200 rounded-lg p-6 text-center md:text-left shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+              to={href}
+              className="group flex h-full flex-col bg-white border border-gray-200 rounded-lg p-6 text-center sm:text-left shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="flex justify-center md:justify-start mb-4">
+              <div className="flex justify-center sm:justify-start mb-4">
                 <Icon className="text-[#C8102E]" size={40} strokeWidth={1.75} />
               </div>
               <h3
-                className="text-[#0B3D7A] text-xl mb-2 uppercase"
+                className="text-[#0B3D7A] text-lg mb-2 uppercase"
                 style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700 }}
               >
                 {name}
               </h3>
-              <p className="text-[#1A1A1A] text-base leading-relaxed mb-4">
+              <p className="text-[#1A1A1A] text-sm leading-relaxed mb-4 flex-1">
                 {desc}
               </p>
-              <a
-                href="#quote"
-                className="inline-flex items-center gap-1 text-[#C8102E] font-bold text-sm uppercase tracking-wide hover:underline"
-              >
-                Free Quote <ArrowRight size={14} />
-              </a>
-            </div>
+              <span className="inline-flex items-center gap-1 text-[#C8102E] font-bold text-sm uppercase tracking-wide group-hover:underline mt-auto">
+                Learn More <ArrowRight size={14} />
+              </span>
+            </Link>
           ))}
         </div>
 
