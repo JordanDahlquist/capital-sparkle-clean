@@ -1,21 +1,12 @@
 import { Phone, ShieldCheck, BadgeCheck, Clock, Star, HeartHandshake } from "lucide-react";
 import heroImage from "../assets/hero-placeholder.jpg.asset.json";
-import { CountUp } from "./count-up";
 import type { ReactNode } from "react";
 
 // Toggle ON only after the client confirms licensing & insurance.
 const SHOW_LICENSED_INSURED = false;
 
 const trustItems: Array<{ icon: typeof Clock; label: ReactNode; key: string }> = [
-  {
-    icon: Clock,
-    key: "exp",
-    label: (
-      <>
-        <CountUp to={10} />+ Years Experience
-      </>
-    ),
-  },
+  { icon: Clock, key: "exp", label: "10+ Years Experience" },
   { icon: BadgeCheck, key: "free", label: "Free Quotes" },
   { icon: Star, key: "sat", label: "Satisfaction Guaranteed" },
   { icon: HeartHandshake, key: "vet", label: "Veteran & First Responder Discounts" },
