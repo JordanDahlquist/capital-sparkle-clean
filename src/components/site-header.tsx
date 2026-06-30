@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, Phone, X, Droplet } from "lucide-react";
+import { openQuoteModal } from "./quote-modal";
 
 const NAV_LINKS = [
   { label: "Services", href: "#services" },
@@ -71,16 +72,20 @@ function CallBlock({ compact = false }: { compact?: boolean }) {
 
 function QuoteButton({ className = "", onClick, children = "Get Free Quote" }: { className?: string; onClick?: () => void; children?: React.ReactNode }) {
   return (
-    <a
-      href="#quote"
-      onClick={onClick}
+    <button
+      type="button"
+      onClick={(e) => {
+        onClick?.();
+        openQuoteModal();
+        e.currentTarget.blur();
+      }}
       className={
         "btn-pop btn-shimmer inline-flex items-center justify-center min-h-[44px] px-4 sm:px-5 rounded-md bg-[var(--brand-red)] text-white font-bold uppercase tracking-wide text-sm hover:bg-[var(--brand-red-hover)] transition-colors " +
         className
       }
     >
       {children}
-    </a>
+    </button>
   );
 }
 
