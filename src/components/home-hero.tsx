@@ -15,18 +15,32 @@ const trustItems = [
 export function HomeHero() {
   return (
     <section className="relative isolate overflow-hidden bg-[var(--brand-deep-blue)]">
-      {/* PLACEHOLDER background image — swap with a real Capital Pro job photo */}
-      <img
-        src={heroImage.url}
-        alt=""
-        aria-hidden="true"
-        loading="lazy"
-        decoding="async"
-        width={1920}
-        height={1280}
-        data-placeholder="REPLACE_WITH_REAL_CAPITAL_PRO_JOB_PHOTO"
-        className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
-      />
+      {/* PLACEHOLDER background image — swap with a real Capital Pro job photo.
+          Two layers share one cached image: a "dirty" (filtered) base and a
+          "clean" overlay revealed by a diagonal CSS sweep. Animation is CSS-only,
+          GPU-friendly (clip-path/opacity), and skipped under prefers-reduced-motion. */}
+      <div aria-hidden="true" className="absolute inset-0 -z-20 overflow-hidden">
+        <img
+          src={heroImage.url}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          width={1920}
+          height={1280}
+          data-placeholder="REPLACE_WITH_REAL_CAPITAL_PRO_JOB_PHOTO"
+          className="absolute inset-0 h-full w-full object-cover object-center hero-img-dirty"
+        />
+        <img
+          src={heroImage.url}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          width={1920}
+          height={1280}
+          className="absolute inset-0 h-full w-full object-cover object-center hero-img-clean"
+        />
+        <div className="hero-spray-streak" />
+      </div>
       {/* Dark blue overlay for text legibility */}
       <div
         aria-hidden="true"
