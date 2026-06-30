@@ -7,6 +7,7 @@ import { HomeWhy } from "../components/home-why";
 import { HomeReviews } from "../components/home-reviews";
 import { HomeServiceArea } from "../components/home-service-area";
 import { HomeFinalCta } from "../components/home-final-cta";
+import { InlineQuoteSection } from "../components/inline-quote-section";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,6 +32,7 @@ function Index() {
       <HomeReviews />
       <HomeServiceArea />
       <HomeFinalCta />
+      <InlineQuoteSection />
     </main>
   );
 }
