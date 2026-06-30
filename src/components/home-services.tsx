@@ -1,4 +1,5 @@
 import {
+import { openQuoteModal } from "./quote-modal";
   Home,
   CloudRain,
   Grid3x3,

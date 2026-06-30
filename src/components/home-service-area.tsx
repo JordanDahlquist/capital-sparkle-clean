@@ -1,4 +1,5 @@
 import { MapPin } from "lucide-react";
+import { openQuoteModal } from "./quote-modal";
 import { Reveal } from "./reveal";
 
 const cities = [

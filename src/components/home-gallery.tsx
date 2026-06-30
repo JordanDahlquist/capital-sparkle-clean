@@ -1,4 +1,5 @@
 import { useRef, useState, useCallback, useEffect } from "react";
+import { openQuoteModal } from "./quote-modal";
 import { Reveal } from "./reveal";
 
 /**
