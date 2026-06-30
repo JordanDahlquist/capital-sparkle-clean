@@ -1,5 +1,4 @@
 import {
-import { openQuoteModal } from "./quote-modal";
   Home,
   CloudRain,
   Grid3x3,
@@ -11,6 +10,7 @@ import { openQuoteModal } from "./quote-modal";
   ArrowRight,
 } from "lucide-react";
 import { Reveal } from "./reveal";
+import { openQuoteModal } from "./quote-modal";
 
 const services = [
   {
