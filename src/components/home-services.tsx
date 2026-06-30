@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Reveal } from "./reveal";
+import { openQuoteModal } from "./quote-modal";
 
 const services = [
   {
@@ -114,12 +115,13 @@ export function HomeServices() {
           <p className="text-[#1A1A1A] text-lg mb-5">
             Not sure what you need? We'll tell you straight, free.
           </p>
-          <a
-            href="#quote"
+          <button
+            type="button"
+            onClick={() => openQuoteModal()}
             className="btn-pop btn-shimmer inline-block bg-[#C8102E] hover:bg-[#a50d25] text-white font-bold uppercase tracking-wide px-8 py-4 rounded-md transition-colors min-h-[44px]"
           >
             Get Free Quote
-          </a>
+          </button>
         </div>
       </div>
     </section>

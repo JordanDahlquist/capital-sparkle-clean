@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
 import { QuoteModalProvider } from "../components/quote-modal";
+import { StickyMobileBar } from "../components/sticky-mobile-bar";
 
 function NotFoundComponent() {
   return (
@@ -132,6 +133,7 @@ function RootComponent() {
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
         <Outlet />
         <SiteFooter />
+        <StickyMobileBar />
       </QuoteModalProvider>
     </QueryClientProvider>
   );

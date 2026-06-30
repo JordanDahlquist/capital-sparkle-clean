@@ -1,4 +1,5 @@
 import { useRef, useState, useCallback, useEffect } from "react";
+import { openQuoteModal } from "./quote-modal";
 import { Reveal } from "./reveal";
 
 /**
@@ -235,12 +236,13 @@ export function HomeGallery() {
         </div>
 
         <div className="text-center mt-12">
-          <a
-            href="#quote"
+          <button
+            type="button"
+            onClick={() => openQuoteModal()}
             className="btn-pop btn-shimmer inline-block bg-[#C8102E] hover:bg-[#a50d25] text-white font-bold uppercase tracking-wide px-8 py-4 rounded-md transition-colors min-h-[44px]"
           >
             Get Your Free Quote
-          </a>
+          </button>
         </div>
       </div>
     </section>

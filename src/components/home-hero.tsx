@@ -1,6 +1,7 @@
 import { Phone, ShieldCheck, BadgeCheck, Clock, Star, HeartHandshake } from "lucide-react";
 import heroImage from "../assets/hero-pressure-sprayer.png.asset.json";
 import type { CSSProperties, ReactNode } from "react";
+import { openQuoteModal } from "./quote-modal";
 
 // Toggle ON only after the client confirms licensing & insurance.
 const SHOW_LICENSED_INSURED = false;
@@ -81,12 +82,13 @@ export function HomeHero() {
           </p>
 
           <div className="hero-in hero-in-ctas mt-7 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <a
-              href="#quote"
+            <button
+              type="button"
+              onClick={() => openQuoteModal()}
               className="btn-pop btn-shimmer inline-flex items-center justify-center min-h-[52px] px-6 rounded-md bg-[var(--brand-red)] text-white font-bold uppercase tracking-wide text-base hover:bg-[var(--brand-red-hover)] transition-colors"
             >
               Get Free Quote
-            </a>
+            </button>
             <a
               href="tel:+15189001913"
               className="btn-pop inline-flex items-center justify-center gap-2 min-h-[52px] px-6 rounded-md bg-white text-[var(--brand-deep-blue)] font-bold text-base hover:bg-[var(--brand-light-gray)] transition-colors"
