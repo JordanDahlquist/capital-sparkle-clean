@@ -1,4 +1,5 @@
 import { useRef, useState, useCallback, useEffect } from "react";
+import { Reveal } from "./reveal";
 
 /**
  * Home Before/After Gallery
@@ -142,15 +143,17 @@ export function HomeGallery() {
         </div>
 
         {/* PART 1 — Featured interactive slider */}
-        <div className="mb-12 md:mb-16">
+        <Reveal className="mb-12 md:mb-16">
           <BeforeAfterSlider />
-        </div>
+        </Reveal>
 
         {/* PART 2 — Grid of 6 before/after pairs */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {tiles.map((t) => (
-            <figure
+          {tiles.map((t, i) => (
+            <Reveal
+              as="figure"
               key={t.caption}
+              delayMs={i * 80}
               className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200"
             >
               <div className="grid grid-cols-2 gap-0.5 bg-gray-200">
@@ -185,7 +188,7 @@ export function HomeGallery() {
               >
                 {t.caption}
               </figcaption>
-            </figure>
+            </Reveal>
           ))}
         </div>
 

@@ -1,4 +1,5 @@
 import { MapPin } from "lucide-react";
+import { Reveal } from "./reveal";
 
 const cities = [
   "Albany",
@@ -28,7 +29,7 @@ export function HomeServiceArea() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
           {/* Left: copy + city list */}
-          <div>
+          <Reveal>
             <p className="text-[#1A1A1A] text-base md:text-lg leading-relaxed mb-6">
               Capital Pro Pressure Washing serves homeowners across the Capital
               Region of New York. If you don't see your town listed, call us.
@@ -52,10 +53,11 @@ export function HomeServiceArea() {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
 
           {/* Right: map embed (placeholder — swap with confirmed embed URL) */}
-          <div
+          <Reveal
+            delayMs={120}
             data-placeholder="REPLACE_WITH_GOOGLE_MAP_EMBED"
             className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-md border border-gray-200 bg-[#F4F6F8]"
           >
@@ -66,7 +68,7 @@ export function HomeServiceArea() {
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute inset-0 h-full w-full border-0"
             />
-          </div>
+          </Reveal>
         </div>
 
         <div className="text-center mt-12">

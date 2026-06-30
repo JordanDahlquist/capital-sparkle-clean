@@ -1,9 +1,10 @@
 import { Phone } from "lucide-react";
+import { Reveal } from "./reveal";
 
 export function HomeFinalCta() {
   return (
     <section className="bg-[#0B3D7A] py-16 md:py-20">
-      <div className="mx-auto max-w-[1200px] px-4 text-center">
+      <Reveal className="mx-auto max-w-[1200px] px-4 text-center">
         <h2
           className="text-white text-3xl md:text-5xl uppercase leading-tight mb-4"
           style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700 }}
@@ -31,7 +32,7 @@ export function HomeFinalCta() {
             Call (518) 900-1913
           </a>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

@@ -9,6 +9,7 @@ import {
   Fence,
   ArrowRight,
 } from "lucide-react";
+import { Reveal } from "./reveal";
 
 const services = [
   {
@@ -78,9 +79,11 @@ export function HomeServices() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map(({ icon: Icon, name, desc, href }) => (
-            <a
+          {services.map(({ icon: Icon, name, desc, href }, i) => (
+            <Reveal
+              as="a"
               key={name}
+              delayMs={i * 80}
               href={href}
               className="group flex h-full flex-col bg-white border border-gray-200 rounded-lg p-6 text-center sm:text-left shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
             >
@@ -99,7 +102,7 @@ export function HomeServices() {
               <span className="inline-flex items-center gap-1 text-[#C8102E] font-bold text-sm uppercase tracking-wide group-hover:underline mt-auto">
                 Learn More <ArrowRight size={14} />
               </span>
-            </a>
+            </Reveal>
           ))}
         </div>
 
