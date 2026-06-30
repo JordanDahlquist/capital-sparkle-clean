@@ -390,6 +390,8 @@ html.js-reveal-ready .reveal.reveal-flap.reveal-in {
 
 .card-pop { transition: transform 0.2s ease, box-shadow 0.2s ease; }
 .card-pop:hover { transform: translateY(-4px); box-shadow: 0 12px 28px -10px rgba(11,61,122,0.28); }
+/* Override the flap resting transform so hover-lift still wins. */
+html.js-reveal-ready .reveal-flap.reveal-in.card-pop:hover { transform: translateY(-4px); }
 
 .card-pop .icon-wiggle { transform-origin: center; }
 .card-pop:hover .icon-wiggle { animation: icon-wiggle 0.55s ease; }
