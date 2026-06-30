@@ -105,8 +105,10 @@ export function SiteHeader() {
   return (
     <header
       className={
-        "sticky top-0 z-50 w-full bg-white transition-shadow " +
-        (scrolled ? "shadow-md" : "shadow-none border-b border-[var(--brand-light-gray)]")
+        "sticky top-0 z-50 w-full bg-white border-b transition-shadow " +
+        (scrolled
+          ? "shadow-md border-transparent"
+          : "shadow-none border-[var(--brand-light-gray)]")
       }
     >
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 h-16 lg:h-20 flex items-center justify-between gap-4">
