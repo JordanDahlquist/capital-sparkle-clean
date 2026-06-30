@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { Menu, Phone, X, Droplet } from "lucide-react";
 import { openQuoteModal } from "./quote-modal";
 
-const NAV_LINKS = [
+type NavLink = { label: string; href?: string; action?: "quote" };
+const NAV_LINKS: NavLink[] = [
   { label: "Services", href: "#services" },
   { label: "Gallery", href: "#gallery" },
   { label: "Service Area", href: "#service-area" },
   { label: "Reviews", href: "#reviews" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", action: "quote" },
 ];
 
 const PHONE_DISPLAY = "(518) 900-1913";
@@ -122,15 +123,26 @@ export function SiteHeader() {
 
         {/* Center: nav (desktop) */}
         <nav className="hidden lg:flex items-center gap-7" aria-label="Primary">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-[var(--brand-charcoal)] font-medium text-sm hover:text-[var(--brand-bright-blue)] transition-colors min-h-[44px] flex items-center"
-            >
-              {link.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((link) =>
+            link.action === "quote" ? (
+              <button
+                key={link.label}
+                type="button"
+                onClick={() => openQuoteModal()}
+                className="text-[var(--brand-charcoal)] font-medium text-sm hover:text-[var(--brand-bright-blue)] transition-colors min-h-[44px] flex items-center bg-transparent"
+              >
+                {link.label}
+              </button>
+            ) : (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-[var(--brand-charcoal)] font-medium text-sm hover:text-[var(--brand-bright-blue)] transition-colors min-h-[44px] flex items-center"
+              >
+                {link.label}
+              </a>
+            )
+          )}
         </nav>
 
         {/* Right: call + CTA (desktop) */}
@@ -159,16 +171,30 @@ export function SiteHeader() {
       {open && (
         <div className="lg:hidden border-t border-[var(--brand-light-gray)] bg-white">
           <nav className="mx-auto max-w-[1200px] px-4 py-3 flex flex-col" aria-label="Mobile">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="py-3 text-[var(--brand-charcoal)] font-medium text-base border-b border-[var(--brand-light-gray)] last:border-b-0 hover:text-[var(--brand-bright-blue)] transition-colors min-h-[44px] flex items-center"
-              >
-                {link.label}
-              </a>
-            ))}
+            {NAV_LINKS.map((link) =>
+              link.action === "quote" ? (
+                <button
+                  key={link.label}
+                  type="button"
+                  onClick={() => {
+                    setOpen(false);
+                    openQuoteModal();
+                  }}
+                  className="py-3 text-left text-[var(--brand-charcoal)] font-medium text-base border-b border-[var(--brand-light-gray)] last:border-b-0 hover:text-[var(--brand-bright-blue)] transition-colors min-h-[44px] flex items-center bg-transparent"
+                >
+                  {link.label}
+                </button>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="py-3 text-[var(--brand-charcoal)] font-medium text-base border-b border-[var(--brand-light-gray)] last:border-b-0 hover:text-[var(--brand-bright-blue)] transition-colors min-h-[44px] flex items-center"
+                >
+                  {link.label}
+                </a>
+              )
+            )}
             <a
               href={PHONE_TEL}
               onClick={() => setOpen(false)}
