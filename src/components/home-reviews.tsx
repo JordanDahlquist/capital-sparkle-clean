@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { Reveal } from "./reveal";
 
 // Toggle ON only after the Google Business Profile link is confirmed.
 const SHOW_VERIFIED_LINE = false;
@@ -26,9 +27,11 @@ export function HomeReviews() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {cards.map((marker) => (
-            <article
+          {cards.map((marker, i) => (
+            <Reveal
+              as="article"
               key={marker}
+              delayMs={i * 80}
               data-placeholder={marker}
               className="flex h-full flex-col bg-white border border-gray-200 rounded-lg p-6 shadow-sm"
             >
@@ -52,7 +55,7 @@ export function HomeReviews() {
               >
                 [Name], [Town]
               </p>
-            </article>
+            </Reveal>
           ))}
         </div>
 
