@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin, Droplet, Clock, Globe, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Globe, Facebook, Instagram } from "lucide-react";
+import logo from "../assets/capital-pro-logo.png.asset.json";
 
 // Wired to the SAME toggle concept as the hero. Flip to true once Jordan
 // confirms licensing/insurance docs and a public license number.
@@ -33,21 +34,14 @@ const areas = [
 function FooterLogo() {
   return (
     <a href="/" className="inline-flex items-center gap-2" aria-label="Capital Pro Pressure Washing — Home">
-      <Droplet size={28} className="text-[#C8102E]" fill="#C8102E" strokeWidth={0} />
-      <span className="flex flex-col leading-none">
-        <span
-          className="text-white text-2xl uppercase"
-          style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700, letterSpacing: "0.02em" }}
-        >
-          Capital Pro
-        </span>
-        <span
-          className="text-[#C8102E] text-[11px] mt-0.5"
-          style={{ fontFamily: "Oswald, sans-serif", fontWeight: 600, letterSpacing: "0.28em" }}
-        >
-          PRESSURE WASHING
-        </span>
-      </span>
+      <img
+        src={logo.url}
+        alt="Capital Pro Pressure Washing"
+        className="h-20 w-auto bg-white rounded-md p-2"
+        width={800}
+        height={800}
+        decoding="async"
+      />
     </a>
   );
 }
