@@ -90,18 +90,15 @@ export function ServicePage({ service }: { service: ServiceContent }) {
             </ul>
           </div>
 
-          {/* Visual placeholder */}
+          {/* Service hero image */}
           <div className="relative">
-            <div
-              className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl ring-1 ring-white/10"
-              style={{
-                background:
-                  "linear-gradient(135deg, #0B3D7A 0%, #1E6FD9 60%, #C8102E 130%)",
-              }}
-            >
-              <div className="w-full h-full flex items-center justify-center">
-                <Icon className="text-white/30" size={220} strokeWidth={1.2} />
-              </div>
+            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl ring-1 ring-white/10 bg-white/5">
+              <img
+                src={service.heroImage}
+                alt={`${service.name} by Capital Pro Pressure Washing`}
+                className="h-full w-full object-cover"
+                loading="eager"
+              />
             </div>
             <div className="absolute -bottom-4 -left-4 bg-white text-[var(--brand-deep-blue)] px-4 py-3 rounded-md shadow-lg">
               <p className="text-xs uppercase font-bold tracking-widest text-[var(--brand-red)]">
