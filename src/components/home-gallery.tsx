@@ -3,6 +3,8 @@ import { openQuoteModal } from "./quote-modal";
 import { Reveal } from "./reveal";
 import houseWashBefore from "../assets/before-after/house-wash-before.png.asset.json";
 import houseWashAfter from "../assets/before-after/house-wash-after.png.asset.json";
+import roofWashBefore from "../assets/before-after/roof-wash-before.png.asset.json";
+import roofWashAfter from "../assets/before-after/roof-wash-after.png.asset.json";
 
 /**
  * Home Before/After Gallery
@@ -166,6 +168,15 @@ const tiles: Array<{ caption: string; beforeMarker: string; afterMarker: string 
   { caption: "Gutter Cleaning", beforeMarker: "REPLACE_GUTTER_BEFORE", afterMarker: "REPLACE_GUTTER_AFTER" },
 ];
 
+const tileImages: Record<string, { before: string; after: string; beforeAlt: string; afterAlt: string }> = {
+  "Roof Washing": {
+    before: roofWashBefore.url,
+    after: roofWashAfter.url,
+    beforeAlt: "Roof washing — before",
+    afterAlt: "Roof washing — after",
+  },
+};
+
 export function HomeGallery() {
   return (
     <section id="gallery" className="bg-[#F4F6F8] py-16 md:py-20 scroll-mt-24">
@@ -203,9 +214,9 @@ export function HomeGallery() {
               <div className="grid grid-cols-2 gap-0.5 bg-gray-200">
                 <div className="relative aspect-[4/3]">
                   <img
-                    src={placeholder(t.caption, "before")}
-                    alt={`${t.caption} before — placeholder`}
-                    data-placeholder={t.beforeMarker}
+                    src={tileImages[t.caption]?.before ?? placeholder(t.caption, "before")}
+                    alt={tileImages[t.caption]?.beforeAlt ?? `${t.caption} before — placeholder`}
+                    data-placeholder={tileImages[t.caption] ? undefined : t.beforeMarker}
                     loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover"
                   />
@@ -215,9 +226,9 @@ export function HomeGallery() {
                 </div>
                 <div className="relative aspect-[4/3]">
                   <img
-                    src={placeholder(t.caption, "after")}
-                    alt={`${t.caption} after — placeholder`}
-                    data-placeholder={t.afterMarker}
+                    src={tileImages[t.caption]?.after ?? placeholder(t.caption, "after")}
+                    alt={tileImages[t.caption]?.afterAlt ?? `${t.caption} after — placeholder`}
+                    data-placeholder={tileImages[t.caption] ? undefined : t.afterMarker}
                     loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover"
                   />
