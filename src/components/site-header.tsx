@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Menu, Phone, X, Droplet } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import { openQuoteModal } from "./quote-modal";
+import logo from "../assets/capital-pro-logo.png.asset.json";
 
 type NavLink = { label: string; href?: string; action?: "quote" };
 const NAV_LINKS: NavLink[] = [
@@ -21,24 +22,14 @@ function Wordmark() {
       className="flex items-center gap-2 min-h-[44px]"
       aria-label="Capital Pro Pressure Washing — Home"
     >
-      <Droplet
-        className="h-7 w-7 shrink-0 fill-[var(--brand-red)] text-[var(--brand-red)]"
-        aria-hidden="true"
+      <img
+        src={logo.url}
+        alt="Capital Pro Pressure Washing"
+        className="h-12 sm:h-14 lg:h-16 w-auto"
+        width={800}
+        height={800}
+        decoding="async"
       />
-      <span className="flex flex-col leading-none">
-        <span
-          className="font-display font-bold tracking-tight text-[var(--brand-deep-blue)] text-xl sm:text-2xl"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          CAPITAL PRO
-        </span>
-        <span
-          className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--brand-red)] mt-0.5"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          Pressure Washing
-        </span>
-      </span>
     </a>
   );
 }
