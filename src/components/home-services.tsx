@@ -8,6 +8,10 @@ import {
   AppWindow,
   Fence,
   ArrowRight,
+  Shield,
+  Snowflake,
+  Lightbulb,
+  Building2,
 } from "lucide-react";
 import { Reveal } from "./reveal";
 import { openQuoteModal } from "./quote-modal";
@@ -33,8 +37,8 @@ const services = [
   },
   {
     icon: Layers,
-    name: "Concrete Cleaning & Sealing",
-    desc: "Blast dirt and oil off driveways and walkways, then seal to protect the surface.",
+    name: "Concrete & Driveway",
+    desc: "Blast dirt and oil off driveways, sidewalks, and walkways. Optional sealing.",
     href: "/concrete-cleaning-sealing",
   },
   {
@@ -50,6 +54,12 @@ const services = [
     href: "/gutter-cleaning",
   },
   {
+    icon: Shield,
+    name: "Gutter Guards",
+    desc: "Professional-grade gutter guard installation. Stop clogs before they start.",
+    href: "/gutter-guards",
+  },
+  {
     icon: AppWindow,
     name: "Window Cleaning",
     desc: "Streak-free windows inside and out. Let the light back in.",
@@ -60,6 +70,24 @@ const services = [
     name: "Fence Cleaning",
     desc: "Wash away dirt, algae, and stains from wood, vinyl, and chain-link.",
     href: "/fence-cleaning",
+  },
+  {
+    icon: Snowflake,
+    name: "Holiday Lighting",
+    desc: "Design, install, take-down, and storage of professional Christmas lighting.",
+    href: "/holiday-lighting",
+  },
+  {
+    icon: Lightbulb,
+    name: "Permanent Outdoor Lighting",
+    desc: "Year-round programmable rooflines and accent lighting — holidays to game day.",
+    href: "/permanent-lighting",
+  },
+  {
+    icon: Building2,
+    name: "Commercial Washing",
+    desc: "Storefronts, buildings, brick, and dumpster pads. Kept clean on a schedule.",
+    href: "/commercial-pressure-washing",
   },
 ];
 
