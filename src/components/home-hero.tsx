@@ -2,9 +2,7 @@ import { Phone, ShieldCheck, BadgeCheck, Clock, Star, HeartHandshake } from "luc
 import heroImage from "../assets/hero-pressure-sprayer.png.asset.json";
 import type { CSSProperties, ReactNode } from "react";
 import { openQuoteModal } from "./quote-modal";
-
-// Toggle ON only after the client confirms licensing & insurance.
-const SHOW_LICENSED_INSURED = false;
+import { SHOW_LICENSED_INSURED } from "../data/flags";
 
 const trustItems: Array<{ icon: typeof Clock; label: ReactNode; key: string }> = [
   { icon: Clock, key: "exp", label: "10+ Years Experience" },

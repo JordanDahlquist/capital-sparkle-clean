@@ -1,9 +1,6 @@
 import { Phone, Mail, MapPin, Clock, Globe, Facebook, Instagram } from "lucide-react";
 import logo from "../assets/capital-pro-logo.png.asset.json";
-
-// Wired to the SAME toggle concept as the hero. Flip to true once Jordan
-// confirms licensing/insurance docs and a public license number.
-const SHOW_LICENSED_INSURED = false;
+import { SHOW_LICENSED_INSURED } from "../data/flags";
 
 // Flip to true once Jordan confirms the Google Business Profile URL.
 const SHOW_GOOGLE_PROFILE = false;

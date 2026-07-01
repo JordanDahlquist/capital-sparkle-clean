@@ -924,3 +924,19 @@ html, body {
 @media (prefers-reduced-motion: reduce) {
   .btn-jiggle { animation: none; }
 }
+
+/* FAQ accordion — content always in DOM for crawlers; visually collapsed via CSS. */
+.faq-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 320ms ease, opacity 240ms ease;
+}
+.faq-panel > * { overflow: hidden; min-height: 0; }
+.faq-panel--open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq-panel { transition: none; }
+}
