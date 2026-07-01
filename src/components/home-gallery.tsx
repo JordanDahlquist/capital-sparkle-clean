@@ -5,6 +5,8 @@ import houseWashBefore from "../assets/before-after/house-wash-before.png.asset.
 import houseWashAfter from "../assets/before-after/house-wash-after.png.asset.json";
 import roofWashBefore from "../assets/before-after/roof-wash-before.png.asset.json";
 import roofWashAfter from "../assets/before-after/roof-wash-after.png.asset.json";
+import paverBefore from "../assets/before-after/paver-before.png.asset.json";
+import paverAfter from "../assets/before-after/paver-after.png.asset.json";
 
 /**
  * Home Before/After Gallery
@@ -174,6 +176,12 @@ const tileImages: Record<string, { before: string; after: string; beforeAlt: str
     after: roofWashAfter.url,
     beforeAlt: "Roof washing — before",
     afterAlt: "Roof washing — after",
+  },
+  "Paver Cleaning & Sealing": {
+    before: paverBefore.url,
+    after: paverAfter.url,
+    beforeAlt: "Paver cleaning & sealing — before",
+    afterAlt: "Paver cleaning & sealing — after",
   },
 };
 
