@@ -903,3 +903,24 @@ html, body {
 @media (prefers-reduced-motion: reduce) {
   .reviews-marquee-track { animation: none; }
 }
+
+/* Attention jiggle — periodic wiggle to draw eye to primary CTAs */
+@keyframes btn-jiggle {
+  0%, 88%, 100% { transform: translate3d(0,0,0) rotate(0deg); }
+  89% { transform: translate3d(-2px,0,0) rotate(-2deg); }
+  90.5% { transform: translate3d(3px,0,0) rotate(2deg); }
+  92% { transform: translate3d(-3px,0,0) rotate(-2deg); }
+  93.5% { transform: translate3d(2px,0,0) rotate(1.5deg); }
+  95% { transform: translate3d(-1px,0,0) rotate(-1deg); }
+  96.5% { transform: translate3d(1px,0,0) rotate(0.5deg); }
+}
+.btn-jiggle {
+  animation: btn-jiggle 6s ease-in-out infinite;
+  transform-origin: center;
+}
+.btn-jiggle:hover, .btn-jiggle:focus-visible, .btn-jiggle:active {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-jiggle { animation: none; }
+}
