@@ -22,7 +22,7 @@ export function HomeFinalCta() {
           <button
             type="button"
             onClick={() => openQuoteModal()}
-            className="btn-pop btn-shimmer inline-flex items-center justify-center bg-[#C8102E] hover:bg-[#a50d25] text-white font-bold uppercase tracking-wide px-8 py-4 rounded-md transition-colors min-h-[44px]"
+            className="btn-pop btn-shimmer btn-jiggle inline-flex items-center justify-center bg-[#C8102E] hover:bg-[#a50d25] text-white font-bold uppercase tracking-wide px-8 py-4 rounded-md transition-colors min-h-[44px]"
           >
             Get Free Quote
           </button>
