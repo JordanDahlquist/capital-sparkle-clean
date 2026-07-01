@@ -25,10 +25,11 @@ const placeholder = (label: string, tone: "before" | "after") => {
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#39;");
   const safeLabel = esc(label);
+  const anchorX = tone === "before" ? "25%" : "75%";
   const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'>
     <rect width='800' height='600' fill='${bg}'/>
-    <text x='50%' y='48%' font-family='Inter,sans-serif' font-size='34' font-weight='700' fill='${fg}' text-anchor='middle'>${tone.toUpperCase()}</text>
-    <text x='50%' y='58%' font-family='Inter,sans-serif' font-size='20' fill='${fg}' text-anchor='middle' opacity='0.85'>${safeLabel}</text>
+    <text x='${anchorX}' y='48%' font-family='Inter,sans-serif' font-size='34' font-weight='700' fill='${fg}' text-anchor='middle'>${tone.toUpperCase()}</text>
+    <text x='${anchorX}' y='58%' font-family='Inter,sans-serif' font-size='20' fill='${fg}' text-anchor='middle' opacity='0.85'>${safeLabel}</text>
   </svg>`;
   return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
 };
