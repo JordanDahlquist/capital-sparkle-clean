@@ -11,6 +11,8 @@ import concreteBefore from "../assets/before-after/concrete-before.png.asset.jso
 import concreteAfter from "../assets/before-after/concrete-after.png.asset.json";
 import deckBefore from "../assets/before-after/deck-before.png.asset.json";
 import deckAfter from "../assets/before-after/deck-after.png.asset.json";
+import houseTileBefore from "../assets/before-after/house-wash-tile-before.png.asset.json";
+import houseTileAfter from "../assets/before-after/house-wash-tile-after.png.asset.json";
 
 /**
  * Home Before/After Gallery
@@ -175,6 +177,12 @@ const tiles: Array<{ caption: string; beforeMarker: string; afterMarker: string 
 ];
 
 const tileImages: Record<string, { before: string; after: string; beforeAlt: string; afterAlt: string }> = {
+  "House Washing": {
+    before: houseTileBefore.url,
+    after: houseTileAfter.url,
+    beforeAlt: "House washing — before",
+    afterAlt: "House washing — after",
+  },
   "Roof Washing": {
     before: roofWashBefore.url,
     after: roofWashAfter.url,
