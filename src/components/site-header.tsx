@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, Phone, X, Facebook, Instagram } from "lucide-react";
 import { openQuoteModal } from "./quote-modal";
 import logo from "../assets/capital-pro-logo.png.asset.json";
 
@@ -14,6 +14,8 @@ const NAV_LINKS: NavLink[] = [
 
 const PHONE_DISPLAY = "(518) 900-1913";
 const PHONE_TEL = "tel:+15189001913";
+const FACEBOOK_URL = "https://www.facebook.com/CapitalProPressureWashing";
+const INSTAGRAM_URL = "https://www.instagram.com/capitalpropressurewashing/";
 
 function Wordmark() {
   return (
@@ -194,6 +196,26 @@ export function SiteHeader() {
               <Phone className="h-4 w-4" />
               {PHONE_DISPLAY}
             </a>
+            <div className="mt-4 flex items-center justify-center gap-5 pt-3 border-t border-[var(--brand-light-gray)]">
+              <a
+                href={FACEBOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Capital Pro on Facebook"
+                className="text-[var(--brand-deep-blue)] hover:text-[var(--brand-bright-blue)] transition-colors"
+              >
+                <Facebook className="h-6 w-6" />
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Capital Pro on Instagram"
+                className="text-[var(--brand-deep-blue)] hover:text-[var(--brand-bright-blue)] transition-colors"
+              >
+                <Instagram className="h-6 w-6" />
+              </a>
+            </div>
           </nav>
         </div>
       )}
