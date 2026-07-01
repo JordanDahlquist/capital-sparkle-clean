@@ -1,6 +1,8 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import { openQuoteModal } from "./quote-modal";
 import { Reveal } from "./reveal";
+import houseWashBefore from "../assets/before-after/house-wash-before.png.asset.json";
+import houseWashAfter from "../assets/before-after/house-wash-after.png.asset.json";
 
 /**
  * Home Before/After Gallery
@@ -102,9 +104,8 @@ function BeforeAfterSlider() {
     >
       {/* AFTER (base layer) */}
       <img
-        src={placeholder("House Wash — Featured", "after")}
-        alt="After — placeholder"
-        data-placeholder="REPLACE_AFTER_HOUSEWASH"
+        src={houseWashAfter.url}
+        alt="House wash — after"
         loading="lazy"
         className="absolute inset-0 h-full w-full object-cover"
         draggable={false}
@@ -115,9 +116,8 @@ function BeforeAfterSlider() {
         style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
       >
         <img
-          src={placeholder("House Wash — Featured", "before")}
-          alt="Before — placeholder"
-          data-placeholder="REPLACE_BEFORE_HOUSEWASH"
+          src={houseWashBefore.url}
+          alt="House wash — before"
           loading="lazy"
           className="absolute inset-0 h-full w-full object-cover"
           draggable={false}
