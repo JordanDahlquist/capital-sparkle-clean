@@ -85,7 +85,7 @@ export function HomeHero() {
             <button
               type="button"
               onClick={() => openQuoteModal()}
-              className="btn-pop btn-shimmer inline-flex items-center justify-center min-h-[52px] px-6 rounded-md bg-[var(--brand-red)] text-white font-bold uppercase tracking-wide text-base hover:bg-[var(--brand-red-hover)] transition-colors"
+              className="btn-pop btn-shimmer btn-jiggle inline-flex items-center justify-center min-h-[52px] px-6 rounded-md bg-[var(--brand-red)] text-white font-bold uppercase tracking-wide text-base hover:bg-[var(--brand-red-hover)] transition-colors"
             >
               Get Free Quote
             </button>
