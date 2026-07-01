@@ -878,3 +878,19 @@ html {
   .smb-root { transition: opacity 0.15s linear; transform: none !important; }
   .smb-hidden { transform: none !important; }
 }
+
+/* Reviews marquee — auto-scroll carousel */
+.reviews-marquee { overflow: hidden; }
+.reviews-marquee-track {
+  width: max-content;
+  animation: reviews-scroll 60s linear infinite;
+  will-change: transform;
+}
+.reviews-marquee:hover .reviews-marquee-track { animation-play-state: paused; }
+@keyframes reviews-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reviews-marquee-track { animation: none; }
+}
