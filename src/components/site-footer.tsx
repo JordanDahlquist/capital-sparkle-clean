@@ -118,21 +118,18 @@ export function SiteFooter() {
                 </a>
               </li>
               <li>
-                <span
-                  data-placeholder="CONFIRM_PUBLIC_EMAIL"
-                  className="inline-flex items-center gap-2 text-white/75 text-sm"
+                <a
+                  href="mailto:luist@capitalpropw.com"
+                  className="inline-flex items-center gap-2 text-white hover:text-[#C8102E] text-sm transition-colors"
                 >
                   <Mail size={16} strokeWidth={2} />
-                  capitalpropw@[CONFIRM EMAIL]
-                </span>
+                  luist@capitalpropw.com
+                </a>
               </li>
               <li>
-                <span
-                  data-placeholder="CONFIRM_HOURS"
-                  className="inline-flex items-center gap-2 text-white/75 text-sm"
-                >
+                <span className="inline-flex items-start gap-2 text-white/75 text-sm">
                   <Clock size={16} strokeWidth={2} />
-                  Hours: [CONFIRM HOURS]
+                  Mon–Fri, 9am–5pm ET
                 </span>
               </li>
               {SHOW_GOOGLE_PROFILE && (
