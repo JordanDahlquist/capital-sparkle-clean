@@ -13,11 +13,24 @@ import {
   Building2,
   type LucideIcon,
 } from "lucide-react";
+import houseWashingHero from "../assets/service-heroes/service-house-washing.png.asset.json";
+import roofWashingHero from "../assets/service-heroes/service-roof-washing.png.asset.json";
+import paverCleaningHero from "../assets/service-heroes/service-paver-cleaning-sealing.png.asset.json";
+import concreteCleaningHero from "../assets/service-heroes/service-concrete-cleaning-sealing.png.asset.json";
+import deckPatioHero from "../assets/service-heroes/service-deck-patio-cleaning.png.asset.json";
+import gutterCleaningHero from "../assets/service-heroes/service-gutter-cleaning.png.asset.json";
+import gutterGuardsHero from "../assets/service-heroes/service-gutter-guards.png.asset.json";
+import windowCleaningHero from "../assets/service-heroes/service-window-cleaning.png.asset.json";
+import fenceCleaningHero from "../assets/service-heroes/service-fence-cleaning.png.asset.json";
+import holidayLightingHero from "../assets/service-heroes/service-holiday-lighting.png.asset.json";
+import permanentLightingHero from "../assets/service-heroes/service-permanent-lighting.png.asset.json";
+import commercialWashingHero from "../assets/service-heroes/service-commercial-pressure-washing.png.asset.json";
 
 export type ServiceContent = {
   slug: string;
   name: string;
   icon: LucideIcon;
+  heroImage: string;
   hero: {
     eyebrow: string;
     headline: string;
@@ -35,6 +48,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "house-washing",
     name: "House Washing",
     icon: Home,
+    heroImage: houseWashingHero.url,
     hero: {
       eyebrow: "Soft Wash Specialists",
       headline: "House Washing That Actually Lifts the Grime",
@@ -68,6 +82,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "roof-washing",
     name: "Roof Washing",
     icon: CloudRain,
+    heroImage: roofWashingHero.url,
     hero: {
       eyebrow: "Soft Wash — Shingle Safe",
       headline: "Roof Washing That Kills Black Streaks for Good",
@@ -101,6 +116,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "paver-cleaning-sealing",
     name: "Paver Cleaning & Sealing",
     icon: Grid3x3,
+    heroImage: paverCleaningHero.url,
     hero: {
       eyebrow: "Deep Clean · Re-Sand · Seal",
       headline: "Paver Restoration That Locks Out Weeds and Stains",
@@ -134,6 +150,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "concrete-cleaning-sealing",
     name: "Concrete & Driveway Cleaning",
     icon: Layers,
+    heroImage: concreteCleaningHero.url,
     hero: {
       eyebrow: "Driveways · Sidewalks · Patios",
       headline: "Concrete That Looks Poured Yesterday",
@@ -167,6 +184,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "deck-patio-cleaning",
     name: "Deck & Patio Cleaning",
     icon: Rows3,
+    heroImage: deckPatioHero.url,
     hero: {
       eyebrow: "Wood · Composite · Trex",
       headline: "Bring Your Deck Back to Life",
@@ -200,6 +218,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "gutter-cleaning",
     name: "Gutter Cleaning & Whitening",
     icon: Droplets,
+    heroImage: gutterCleaningHero.url,
     hero: {
       eyebrow: "Interior + Exterior",
       headline: "Gutters That Flow — and Look Brand New",
@@ -233,6 +252,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "gutter-guards",
     name: "Gutter Guards",
     icon: Shield,
+    heroImage: gutterGuardsHero.url,
     hero: {
       eyebrow: "Installed by Professionals",
       headline: "Gutter Guards That Actually Work",
@@ -266,6 +286,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "window-cleaning",
     name: "Window Cleaning",
     icon: AppWindow,
+    heroImage: windowCleaningHero.url,
     hero: {
       eyebrow: "Interior & Exterior",
       headline: "Streak-Free Windows, Inside and Out",
@@ -299,6 +320,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "fence-cleaning",
     name: "Fence Cleaning",
     icon: Fence,
+    heroImage: fenceCleaningHero.url,
     hero: {
       eyebrow: "Wood · Vinyl · Chain-Link",
       headline: "Fences Restored, Not Just Sprayed",
@@ -332,6 +354,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "holiday-lighting",
     name: "Holiday Lighting",
     icon: Snowflake,
+    heroImage: holidayLightingHero.url,
     hero: {
       eyebrow: "Design · Install · Take-Down · Storage",
       headline: "Turn-Key Christmas Lighting for Your Home",
@@ -365,6 +388,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "permanent-lighting",
     name: "Permanent Outdoor Lighting",
     icon: Lightbulb,
+    heroImage: permanentLightingHero.url,
     hero: {
       eyebrow: "Programmable · Year-Round",
       headline: "Permanent Outdoor Lighting for Every Occasion",
@@ -398,6 +422,7 @@ export const SERVICES: ServiceContent[] = [
     slug: "commercial-pressure-washing",
     name: "Commercial Pressure Washing",
     icon: Building2,
+    heroImage: commercialWashingHero.url,
     hero: {
       eyebrow: "Storefronts · HOAs · Facilities",
       headline: "Commercial Pressure Washing on Your Schedule",
