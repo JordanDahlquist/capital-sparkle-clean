@@ -63,7 +63,7 @@ export function ServicePage({ service }: { service: ServiceContent }) {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <button
-                onClick={() => openQuoteModal(service.name)}
+                onClick={() => openQuoteModal()}
                 className="btn-pop btn-shimmer inline-flex items-center justify-center gap-2 bg-[var(--brand-red)] hover:bg-[#a00d25] text-white font-bold uppercase tracking-wide px-6 py-4 rounded-md text-base"
                 style={{ fontFamily: "var(--font-display)" }}
               >
@@ -241,7 +241,7 @@ export function ServicePage({ service }: { service: ServiceContent }) {
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
             <button
-              onClick={() => openQuoteModal(service.name)}
+              onClick={() => openQuoteModal()}
               className="btn-pop btn-shimmer inline-flex items-center justify-center gap-2 bg-[var(--brand-red)] hover:bg-[#a00d25] text-white font-bold uppercase tracking-wide px-6 py-3 rounded-md"
               style={{ fontFamily: "var(--font-display)" }}
             >
@@ -323,7 +323,7 @@ export function ServicePage({ service }: { service: ServiceContent }) {
             </p>
           </div>
           <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 md:p-8">
-            <QuoteWizard defaultService={service.name} />
+            <QuoteWizard />
           </div>
         </div>
       </section>
