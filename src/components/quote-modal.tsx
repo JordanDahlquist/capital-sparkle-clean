@@ -23,6 +23,9 @@ import {
   AppWindow,
   Fence,
   HelpCircle,
+  Shield,
+  Snowflake,
+  Lightbulb,
 } from "lucide-react";
 
 /* Context — any button on the site can call useQuoteModal().open() */
@@ -72,8 +75,12 @@ const SERVICES = [
   { id: "pavers", label: "Paver Cleaning", Icon: Grid3x3 },
   { id: "deck", label: "Deck & Patio", Icon: Trees },
   { id: "gutter", label: "Gutter Cleaning", Icon: Sparkles },
+  { id: "guards", label: "Gutter Guards", Icon: Shield },
   { id: "window", label: "Window Cleaning", Icon: AppWindow },
   { id: "fence", label: "Fence Cleaning", Icon: Fence },
+  { id: "holiday", label: "Holiday Lighting", Icon: Snowflake },
+  { id: "permanent", label: "Permanent Lighting", Icon: Lightbulb },
+  { id: "commercial", label: "Commercial Washing", Icon: Building2 },
   { id: "unsure", label: "Not sure / Multiple", Icon: HelpCircle },
 ];
 
