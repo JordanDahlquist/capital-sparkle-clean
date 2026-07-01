@@ -10,6 +10,15 @@ html {
   html { scroll-behavior: auto; }
 }
 
+/* Disable browser scroll-anchoring globally.
+   The reveal-flap / hero-in / marquee animations transform elements as they
+   enter the viewport. Scroll-anchoring reacts to those transform-driven
+   bounding-box changes and can yank the page back toward the top mid-scroll.
+   We control our own animations; opt out of anchoring to prevent the jump. */
+html, body {
+  overflow-anchor: none;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /*
