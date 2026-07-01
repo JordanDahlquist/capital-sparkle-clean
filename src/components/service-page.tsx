@@ -345,8 +345,8 @@ export function ServicePage({ service }: { service: ServiceContent }) {
               return (
                 <Link
                   key={s.slug}
-                  to={"/$service" as never}
-                  params={{ service: s.slug } as never}
+                  to="/$service"
+                  params={{ service: s.slug }}
                   className="group flex flex-col items-center text-center gap-2 p-4 rounded-lg border border-gray-200 hover:border-[var(--brand-red)] hover:shadow-md transition"
                 >
                   <OI className="text-[var(--brand-red)] group-hover:scale-110 transition" size={28} />
