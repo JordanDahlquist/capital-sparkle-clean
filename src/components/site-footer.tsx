@@ -17,9 +17,13 @@ const services = [
   { name: "Paver Cleaning & Sealing", href: "/paver-cleaning-sealing" },
   { name: "Concrete Cleaning & Sealing", href: "/concrete-cleaning-sealing" },
   { name: "Deck & Patio Cleaning", href: "/deck-patio-cleaning" },
-  { name: "Gutter Cleaning", href: "/gutter-cleaning" },
+  { name: "Gutter Cleaning & Whitening", href: "/gutter-cleaning" },
+  { name: "Gutter Guards", href: "/gutter-guards" },
   { name: "Window Cleaning", href: "/window-cleaning" },
   { name: "Fence Cleaning", href: "/fence-cleaning" },
+  { name: "Holiday Lighting", href: "/holiday-lighting" },
+  { name: "Permanent Outdoor Lighting", href: "/permanent-lighting" },
+  { name: "Commercial Washing", href: "/commercial-pressure-washing" },
 ];
 
 const areas = [
