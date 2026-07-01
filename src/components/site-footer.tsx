@@ -9,7 +9,9 @@ const SHOW_LICENSED_INSURED = false;
 const SHOW_GOOGLE_PROFILE = false;
 
 // Flip to true once Jordan confirms public social handles.
-const SHOW_SOCIAL = false;
+const SHOW_SOCIAL = true;
+const FACEBOOK_URL = "https://www.facebook.com/CapitalProPressureWashing";
+const INSTAGRAM_URL = "https://www.instagram.com/capitalpropressurewashing/";
 
 const services = [
   { name: "House Washing", href: "/house-washing" },
@@ -147,16 +149,18 @@ export function SiteFooter() {
               {SHOW_SOCIAL && (
                 <li className="flex items-center gap-3 pt-1">
                   <a
-                    href="#"
-                    data-placeholder="CONFIRM_FACEBOOK_URL"
+                    href={FACEBOOK_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Facebook"
                     className="text-white/75 hover:text-white transition-colors"
                   >
                     <Facebook size={20} strokeWidth={2} />
                   </a>
                   <a
-                    href="#"
-                    data-placeholder="CONFIRM_INSTAGRAM_URL"
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Instagram"
                     className="text-white/75 hover:text-white transition-colors"
                   >
