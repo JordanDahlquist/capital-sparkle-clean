@@ -183,7 +183,17 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-[1200px] px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/60">
           <p>© 2026 Capital Pro Pressure Washing. All rights reserved.</p>
-          <p>Site by Aeon Marketing</p>
+          <p>
+            Site by{" "}
+            <a
+              href="https://washerauthority.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/80 hover:text-white underline underline-offset-2 transition-colors"
+            >
+              Washer Authority
+            </a>
+          </p>
         </div>
       </div>
     </footer>
