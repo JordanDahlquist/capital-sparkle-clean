@@ -6,16 +6,16 @@ export const Route = createFileRoute("/$service")({
   loader: ({ params }) => {
     const service = getService(params.service);
     if (!service) throw notFound();
-    return { service };
+    return { slug: service.slug, meta: service.meta };
   },
   head: ({ loaderData }) =>
     loaderData
       ? {
           meta: [
-            { title: loaderData.service.meta.title },
-            { name: "description", content: loaderData.service.meta.description },
-            { property: "og:title", content: loaderData.service.meta.title },
-            { property: "og:description", content: loaderData.service.meta.description },
+            { title: loaderData.meta.title },
+            { name: "description", content: loaderData.meta.description },
+            { property: "og:title", content: loaderData.meta.title },
+            { property: "og:description", content: loaderData.meta.description },
           ],
         }
       : { meta: [{ title: "Service | Capital Pro Pressure Washing" }] },
@@ -31,7 +31,8 @@ export const Route = createFileRoute("/$service")({
 });
 
 function ServiceRoute() {
-  const { service } = Route.useLoaderData();
+  const { slug } = Route.useLoaderData();
+  const service = getService(slug)!;
   return <ServicePage service={service} />;
 }
 
