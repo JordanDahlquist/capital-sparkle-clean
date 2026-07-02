@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "asset_id": "debab8c9-2e1b-4209-8f3c-c1eaf8381b3b",
+  "asset_id": "e68f0af8-fbbd-4edc-89cc-fe5f46212fe2",
   "project_id": "e1a64cc6-0fc8-4a5b-9036-8fa01cc3f811",
-  "url": "/__l5e/assets-v1/debab8c9-2e1b-4209-8f3c-c1eaf8381b3b/paver-after.png",
-  "r2_key": "a/v1/e1a64cc6-0fc8-4a5b-9036-8fa01cc3f811/debab8c9-2e1b-4209-8f3c-c1eaf8381b3b/paver-after.png",
-  "original_filename": "paver-after.png",
-  "size": 2835000,
-  "content_type": "image/png",
-  "created_at": "2026-07-01T06:30:02Z"
+  "url": "/__l5e/assets-v1/e68f0af8-fbbd-4edc-89cc-fe5f46212fe2/paver-after.webp",
+  "r2_key": "a/v1/e1a64cc6-0fc8-4a5b-9036-8fa01cc3f811/e68f0af8-fbbd-4edc-89cc-fe5f46212fe2/paver-after.webp",
+  "original_filename": "paver-after.webp",
+  "size": 296508,
+  "content_type": "image/webp",
+  "created_at": "2026-07-02T12:38:14Z"
 }
