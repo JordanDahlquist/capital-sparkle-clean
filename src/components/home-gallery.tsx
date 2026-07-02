@@ -53,6 +53,7 @@ function BeforeAfterSlider() {
   const containerRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
   const [nudge, setNudge] = useState(false);
+  const demoRan = useRef(false);
 
   const updateFromClientX = useCallback((clientX: number) => {
     const el = containerRef.current;
@@ -81,22 +82,43 @@ function BeforeAfterSlider() {
     };
   }, [updateFromClientX]);
 
-  // One-time handle wiggle when slider scrolls into view, to hint it's draggable.
+  // One-time sweep animation when the slider scrolls into view, so users see it's draggable.
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    if (
+    const reduced =
       typeof window !== "undefined" &&
-      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches
-    ) return;
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
     if (typeof IntersectionObserver === "undefined") return;
     const obs = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
-          if (e.isIntersecting) {
+          if (e.isIntersecting && !demoRan.current) {
+            demoRan.current = true;
             obs.disconnect();
-            setNudge(true);
-            window.setTimeout(() => setNudge(false), 650);
+            if (reduced) break;
+            // Animated sweep: 50 → 20 → 80 → 50, easing back and forth.
+            const start = performance.now();
+            const duration = 2200;
+            const ease = (t: number) =>
+              t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+            const tick = (now: number) => {
+              if (dragging.current) return; // user took over; stop demo
+              const t = Math.min(1, (now - start) / duration);
+              const e2 = ease(t);
+              // Two full oscillations around center, decaying amplitude.
+              const amp = 30 * (1 - e2);
+              const sweep = 50 + Math.sin(e2 * Math.PI * 2) * amp;
+              setPos(sweep);
+              if (t < 1) {
+                requestAnimationFrame(tick);
+              } else {
+                setPos(50);
+                setNudge(true);
+                window.setTimeout(() => setNudge(false), 650);
+              }
+            };
+            requestAnimationFrame(tick);
             break;
           }
         }
