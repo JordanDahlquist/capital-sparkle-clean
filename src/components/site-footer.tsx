@@ -1,6 +1,5 @@
 import { Phone, Mail, MapPin, Clock, Globe, Facebook, Instagram, ShieldCheck } from "lucide-react";
 import logo from "../assets/capital-pro-logo.png.asset.json";
-import { SHOW_LICENSED_INSURED } from "../data/flags";
 
 // Flip to true once Jordan confirms the Google Business Profile URL.
 const SHOW_GOOGLE_PROFILE = false;
