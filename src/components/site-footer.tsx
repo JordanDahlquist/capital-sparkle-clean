@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Globe, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Globe, Facebook, Instagram, ShieldCheck } from "lucide-react";
 import logo from "../assets/capital-pro-logo.png.asset.json";
 import { SHOW_LICENSED_INSURED } from "../data/flags";
 
@@ -72,9 +72,15 @@ export function SiteFooter() {
               10 years in business.
             </p>
             {SHOW_LICENSED_INSURED && (
-              <p className="text-white/75 text-sm mt-4 font-semibold">
-                Licensed &amp; Insured
-              </p>
+              <div className="mt-5">
+                <span
+                  className="inline-flex items-center gap-2 rounded-md border border-[#C8102E]/70 bg-[#C8102E]/10 px-3 py-2 text-white text-xs uppercase tracking-widest"
+                  style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700, letterSpacing: "0.12em" }}
+                >
+                  <ShieldCheck size={16} strokeWidth={2.5} className="text-[#C8102E]" />
+                  Licensed &amp; Insured
+                </span>
+              </div>
             )}
           </div>
 
