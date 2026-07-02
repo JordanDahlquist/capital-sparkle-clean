@@ -71,17 +71,15 @@ export function SiteFooter() {
               Professional exterior cleaning across New York's Capital Region.
               10 years in business.
             </p>
-            {SHOW_LICENSED_INSURED && (
-              <div className="mt-5">
-                <span
-                  className="inline-flex items-center gap-2 rounded-md border border-[#C8102E]/70 bg-[#C8102E]/10 px-3 py-2 text-white text-xs uppercase tracking-widest"
-                  style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700, letterSpacing: "0.12em" }}
-                >
-                  <ShieldCheck size={16} strokeWidth={2.5} className="text-[#C8102E]" />
-                  Licensed &amp; Insured
-                </span>
-              </div>
-            )}
+            <div className="mt-5">
+              <span
+                className="inline-flex items-center gap-2 rounded-md border border-[#C8102E]/70 bg-[#C8102E]/10 px-3 py-2 text-white text-xs uppercase tracking-widest"
+                style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700, letterSpacing: "0.12em" }}
+              >
+                <ShieldCheck size={16} strokeWidth={2.5} className="text-[#C8102E]" />
+                Workers Comp &amp; Liability Insured
+              </span>
+            </div>
           </div>
 
           {/* Column 2: services */}
@@ -169,16 +167,6 @@ export function SiteFooter() {
                   >
                     <Instagram size={20} strokeWidth={2} />
                   </a>
-                </li>
-              )}
-              {SHOW_LICENSED_INSURED && (
-                <li>
-                  <span
-                    data-placeholder="CONFIRM_LICENSE_NUMBER"
-                    className="text-white/75 text-sm"
-                  >
-                    License #: [CONFIRM]
-                  </span>
                 </li>
               )}
             </ul>
