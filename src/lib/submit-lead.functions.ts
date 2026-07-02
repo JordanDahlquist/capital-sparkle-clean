@@ -21,8 +21,7 @@ export const submitLead = createServerFn({ method: "POST" })
 
     // 1. Save to leads table FIRST as backup — never lose a lead.
     const { data: inserted, error: insertErr } = await supabaseAdmin
-      .from("leads")
-      // @ts-expect-error - `leads` table exists; generated types may lag behind.
+      .from("leads" as never)
       .insert({
         first_name: data.firstName,
         phone: data.phone,
@@ -32,7 +31,7 @@ export const submitLead = createServerFn({ method: "POST" })
         services: data.services,
         timeline: data.timeline,
         message: data.message,
-      })
+      } as never)
       .select("id")
       .single();
 
@@ -83,9 +82,8 @@ export const submitLead = createServerFn({ method: "POST" })
     // 3. Update the lead row with forwarding status (best-effort).
     if (leadId) {
       await supabaseAdmin
-        .from("leads")
-        // @ts-expect-error - see above.
-        .update({ ghl_forwarded: ghlOk, ghl_error: ghlError })
+        .from("leads" as never)
+        .update({ ghl_forwarded: ghlOk, ghl_error: ghlError } as never)
         .eq("id", leadId);
     }
 
