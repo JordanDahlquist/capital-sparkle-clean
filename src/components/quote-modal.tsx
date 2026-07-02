@@ -8,6 +8,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { submitLead } from "@/lib/submit-lead.functions";
 import {
   X,
   Check,
@@ -251,10 +252,42 @@ export function QuoteWizard({
       location: data.location.trim(),
       message: data.message.trim(),
     };
-    // TODO: POST payload to Supabase `leads` and redirect to /thank-you (wired in backend chunk).
-    // eslint-disable-next-line no-console
-    console.log("[quote-form] submit payload", payload);
-    setSubmitted(true);
+    void (async () => {
+      try {
+        await submitLead({ data: payload });
+      } catch (err) {
+        // Server always returns ok; surface only unexpected transport errors in logs.
+        console.error("[quote-form] submit error", err);
+      }
+      // Fire analytics if present (GA4 + Meta Pixel). Defensive — no-op if not loaded.
+      try {
+        const w = window as unknown as {
+          gtag?: (...args: unknown[]) => void;
+          fbq?: (...args: unknown[]) => void;
+          dataLayer?: unknown[];
+        };
+        w.gtag?.("event", "generate_lead", {
+          form: "quote",
+          services: payload.services.join(","),
+          property_type: payload.propertyType,
+          timeline: payload.timeline,
+        });
+        w.fbq?.("track", "Lead", {
+          content_category: payload.services.join(","),
+          content_name: "Quote Form",
+        });
+      } catch {
+        /* ignore analytics failures */
+      }
+      setSubmitted(true);
+      // Give the success state a beat to render for users who watch for it,
+      // then redirect to /thank-you (canonical conversion page).
+      if (typeof window !== "undefined") {
+        window.setTimeout(() => {
+          window.location.assign("/thank-you");
+        }, 250);
+      }
+    })();
   }
 
   const progressPct = submitted ? 100 : (step / 4) * 100;
