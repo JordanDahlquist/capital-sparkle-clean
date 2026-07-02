@@ -288,13 +288,13 @@ export const SERVICES: ServiceContent[] = [
     icon: AppWindow,
     heroImage: windowCleaningHero.url,
     hero: {
-      eyebrow: "Interior & Exterior",
-      headline: "Streak-Free Windows, Inside and Out",
+      eyebrow: "Exterior Only",
+      headline: "Streak-Free Exterior Windows",
       subhead:
-        "Purified-water pole cleaning for exteriors and traditional squeegee work inside. Let the light back in.",
+        "Purified-water pole cleaning for every exterior window, screen, and sill. Let the light back in.",
     },
     intro:
-      "The difference between clean windows and streaky ones is technique and water. We use pure-water systems outside and old-school squeegee work inside — every window, every screen, every sill.",
+      "The difference between clean windows and streaky ones is technique and water. We use pure-water pole systems on every exterior window — no soap residue, no ladders on your landscaping, no streaks. Screens and sills included. We do not offer interior window cleaning.",
     benefits: [
       { title: "Streak-Free Guaranteed", desc: "If a window streaks, we come back — no charge." },
       { title: "Screens + Sills Included", desc: "We remove, wash, and reinstall screens. Wipe sills." },
@@ -302,18 +302,19 @@ export const SERVICES: ServiceContent[] = [
       { title: "Pairs with Any Wash", desc: "Bundle with a house wash and save." },
     ],
     process: [
-      { title: "Interior Prep", desc: "Cover sills and floors, remove screens." },
-      { title: "Clean In & Out", desc: "Squeegee interior, pure-water pole exterior." },
+      { title: "Screen Removal", desc: "Take down every screen, rinse, and set aside to dry." },
+      { title: "Pure-Water Pole Clean", desc: "Scrub and rinse every exterior pane, frame, and sill with purified water — no soap, no streaks." },
       { title: "Reinstall & Walk-Through", desc: "Screens back in, final walkthrough with you." },
     ],
     faqs: [
-      { q: "Do you clean tracks and screens?", a: "Basic wipe of tracks and full screen wash included." },
-      { q: "Post-construction windows?", a: "Yes — we handle stucco splatter and paint overspray as an add-on." },
+      { q: "Do you clean interior windows?", a: "No — we're exterior-only. Every window, screen, and sill on the outside of the house gets cleaned." },
+      { q: "Do you clean screens?", a: "Yes — screens are removed, washed, and reinstalled as part of every job." },
+      { q: "Post-construction windows?", a: "Yes — we handle stucco splatter and paint overspray on exterior glass as an add-on." },
       { q: "How often?", a: "Twice a year for most homes. Once a year minimum." },
     ],
     meta: {
-      title: "Window Cleaning in Albany, NY | Capital Pro Pressure Washing",
-      description: "Streak-free interior and exterior window cleaning across the Capital Region. Screens and sills included.",
+      title: "Exterior Window Cleaning in Albany, NY | Capital Pro Pressure Washing",
+      description: "Streak-free exterior window cleaning across the Capital Region. Pure-water pole system, screens and sills included.",
     },
   },
   {
