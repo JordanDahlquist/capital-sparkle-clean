@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "asset_id": "5d41984f-0936-4f58-acd0-ea15feeacb0a",
+  "asset_id": "fc3847d6-4d58-41ab-b2d9-9a43b21f876a",
   "project_id": "e1a64cc6-0fc8-4a5b-9036-8fa01cc3f811",
-  "url": "/__l5e/assets-v1/5d41984f-0936-4f58-acd0-ea15feeacb0a/gutter-before.png",
-  "r2_key": "a/v1/e1a64cc6-0fc8-4a5b-9036-8fa01cc3f811/5d41984f-0936-4f58-acd0-ea15feeacb0a/gutter-before.png",
-  "original_filename": "gutter-before.png",
-  "size": 2088775,
-  "content_type": "image/png",
-  "created_at": "2026-07-01T06:48:22Z"
+  "url": "/__l5e/assets-v1/fc3847d6-4d58-41ab-b2d9-9a43b21f876a/gutter-before.webp",
+  "r2_key": "a/v1/e1a64cc6-0fc8-4a5b-9036-8fa01cc3f811/fc3847d6-4d58-41ab-b2d9-9a43b21f876a/gutter-before.webp",
+  "original_filename": "gutter-before.webp",
+  "size": 69778,
+  "content_type": "image/webp",
+  "created_at": "2026-07-02T12:37:47Z"
 }
