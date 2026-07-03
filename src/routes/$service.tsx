@@ -2,23 +2,76 @@ import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { getService } from "../data/services";
 import { ServicePage } from "../components/service-page";
 
+const SITE = "https://capitalpropressurewashing.com";
+
 export const Route = createFileRoute("/$service")({
   loader: ({ params }) => {
     const service = getService(params.service);
     if (!service) throw notFound();
-    return { slug: service.slug, meta: service.meta };
+    return { slug: service.slug, name: service.name, heroImage: service.heroImage, meta: service.meta };
   },
-  head: ({ loaderData }) =>
-    loaderData
-      ? {
-          meta: [
-            { title: loaderData.meta.title },
-            { name: "description", content: loaderData.meta.description },
-            { property: "og:title", content: loaderData.meta.title },
-            { property: "og:description", content: loaderData.meta.description },
-          ],
-        }
-      : { meta: [{ title: "Service | Capital Pro Pressure Washing" }] },
+  head: ({ loaderData, params }) => {
+    if (!loaderData) {
+      return {
+        meta: [
+          { title: "Service Not Found | Capital Pro Pressure Washing" },
+          { name: "robots", content: "noindex" },
+        ],
+      };
+    }
+    const url = `${SITE}/${params.service}`;
+    const image = loaderData.heroImage.startsWith("http")
+      ? loaderData.heroImage
+      : `${SITE}${loaderData.heroImage}`;
+    return {
+      meta: [
+        { title: loaderData.meta.title },
+        { name: "description", content: loaderData.meta.description },
+        { property: "og:title", content: loaderData.meta.title },
+        { property: "og:description", content: loaderData.meta.description },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "website" },
+        { property: "og:image", content: image },
+        { name: "twitter:title", content: loaderData.meta.title },
+        { name: "twitter:description", content: loaderData.meta.description },
+        { name: "twitter:image", content: image },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: loaderData.name,
+            serviceType: loaderData.name,
+            provider: { "@id": `${SITE}/#business` },
+            areaServed: [
+              "Albany, NY",
+              "Schenectady, NY",
+              "Clifton Park, NY",
+              "Saratoga Springs, NY",
+              "Troy, NY",
+              "Rensselaer, NY",
+            ],
+            url,
+            description: loaderData.meta.description,
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+              { "@type": "ListItem", position: 2, name: loaderData.name, item: url },
+            ],
+          }),
+        },
+      ],
+    };
+  },
   notFoundComponent: NotFound,
   errorComponent: ({ error, reset }) => (
     <div className="mx-auto max-w-xl px-4 py-24 text-center">
