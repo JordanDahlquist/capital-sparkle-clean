@@ -22,6 +22,7 @@ export type Database = {
           ghl_error: string | null
           ghl_forwarded: boolean
           id: string
+          last_name: string | null
           location: string | null
           message: string | null
           phone: string
@@ -36,6 +37,7 @@ export type Database = {
           ghl_error?: string | null
           ghl_forwarded?: boolean
           id?: string
+          last_name?: string | null
           location?: string | null
           message?: string | null
           phone: string
@@ -50,6 +52,7 @@ export type Database = {
           ghl_error?: string | null
           ghl_forwarded?: boolean
           id?: string
+          last_name?: string | null
           location?: string | null
           message?: string | null
           phone?: string
