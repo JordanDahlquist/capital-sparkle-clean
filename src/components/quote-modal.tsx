@@ -54,6 +54,7 @@ type Payload = {
   timeline: string;
   message: string;
   firstName: string;
+  lastName: string;
   phone: string;
   email: string;
 };
@@ -65,6 +66,7 @@ const EMPTY: Payload = {
   timeline: "",
   message: "",
   firstName: "",
+  lastName: "",
   phone: "",
   email: "",
 };
@@ -223,6 +225,7 @@ export function QuoteWizard({
     if (s === 4)
       return (
         data.firstName.trim().length > 0 &&
+        data.lastName.trim().length > 0 &&
         isValidUsPhone(data.phone) &&
         emailRx.test(data.email.trim())
       );
@@ -236,7 +239,7 @@ export function QuoteWizard({
 
   function handleContinue() {
     if (!stepValid(step)) {
-      if (step === 4) setTouched({ firstName: true, phone: true, email: true });
+      if (step === 4) setTouched({ firstName: true, lastName: true, phone: true, email: true });
       return;
     }
     if (step < 4) go(step + 1);
@@ -249,6 +252,7 @@ export function QuoteWizard({
       phone: normalizePhone(data.phone),
       email: data.email.trim(),
       firstName: data.firstName.trim(),
+      lastName: data.lastName.trim(),
       location: data.location.trim(),
       message: data.message.trim(),
     };
@@ -581,6 +585,10 @@ function Step4({
     touched.firstName && data.firstName.trim().length === 0
       ? "Please enter your first name."
       : "";
+  const lastNameErr =
+    touched.lastName && data.lastName.trim().length === 0
+      ? "Please enter your last name."
+      : "";
   const phoneErr =
     touched.phone && !isValidUsPhone(data.phone)
       ? "Enter a valid 10-digit US phone number."
@@ -609,6 +617,22 @@ function Step4({
           required
         />
         {nameErr && <p id="qm-name-err" className="qm-err">{nameErr}</p>}
+      </div>
+      <div className="qm-field">
+        <label htmlFor="qm-lastname" className="qm-label">Last name</label>
+        <input
+          id="qm-lastname"
+          type="text"
+          autoComplete="family-name"
+          className={`qm-input ${lastNameErr ? "qm-input-err" : ""}`}
+          value={data.lastName}
+          onChange={(e) => onChange("lastName", e.target.value)}
+          onBlur={() => onBlur("lastName")}
+          aria-invalid={!!lastNameErr}
+          aria-describedby={lastNameErr ? "qm-lastname-err" : undefined}
+          required
+        />
+        {lastNameErr && <p id="qm-lastname-err" className="qm-err">{lastNameErr}</p>}
       </div>
       <div className="qm-field">
         <label htmlFor="qm-phone" className="qm-label">Phone</label>
