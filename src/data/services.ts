@@ -74,8 +74,8 @@ export const SERVICES: ServiceContent[] = [
       { q: "How often should I have it done?", a: "Once a year is ideal in the Capital Region — every 18 months minimum for shaded sides." },
     ],
     meta: {
-      title: "House Washing in Albany, NY | Capital Pro Pressure Washing",
-      description: "Professional soft-wash house washing in Albany, Schenectady, Saratoga & the Capital Region. Kills mold and mildew safely. Free quote.",
+      title: "House Washing in Albany & the Capital Region | Capital Pro",
+      description: "Soft-wash house washing in Albany, Schenectady, Saratoga & the Capital Region. Kills mold, mildew, and algae safely. Free quotes.",
     },
   },
   {
@@ -108,8 +108,8 @@ export const SERVICES: ServiceContent[] = [
       { q: "Is it safe for metal roofs?", a: "Yes. We adjust the mix for metal, tile, cedar, and asphalt separately." },
     ],
     meta: {
-      title: "Roof Cleaning & Soft Wash in Albany, NY | Capital Pro",
-      description: "Shingle-safe soft wash roof cleaning across the Capital Region. Removes black streaks, moss, and algae. Free quote today.",
+      title: "Roof Washing in Albany & the Capital Region | Capital Pro",
+      description: "Shingle-safe soft-wash roof washing across Albany & the Capital Region. Removes black streaks, moss, and algae. Free quotes.",
     },
   },
   {
@@ -142,8 +142,8 @@ export const SERVICES: ServiceContent[] = [
       { q: "How long does the seal last?", a: "3–5 years depending on traffic and sun exposure." },
     ],
     meta: {
-      title: "Paver Cleaning & Sealing in Albany, NY | Capital Pro",
-      description: "Restore and seal paver patios, driveways, and walkways across the Capital Region. Polymeric sand + premium sealer.",
+      title: "Paver Cleaning & Sealing in Albany & the Capital Region",
+      description: "Paver cleaning and sealing across Albany & the Capital Region. Deep clean, polymeric re-sand, and premium sealer. Free quotes.",
     },
   },
   {
@@ -176,8 +176,8 @@ export const SERVICES: ServiceContent[] = [
       { q: "How often?", a: "Annual cleaning, sealer every 2–3 years." },
     ],
     meta: {
-      title: "Concrete & Driveway Cleaning in Albany, NY | Capital Pro",
-      description: "Professional concrete and driveway pressure washing across the Capital Region. Even, streak-free results. Optional sealing.",
+      title: "Concrete & Driveway Cleaning in Albany & the Capital Region",
+      description: "Concrete and driveway pressure washing across Albany & the Capital Region. Even, streak-free surface cleaning. Free quotes.",
     },
   },
   {
@@ -210,8 +210,8 @@ export const SERVICES: ServiceContent[] = [
       { q: "Composite decks too?", a: "Yes — different mix, gentler pressure, same clean result." },
     ],
     meta: {
-      title: "Deck & Patio Cleaning in Albany, NY | Capital Pro",
-      description: "Professional deck and patio cleaning across the Capital Region. Wood-safe, composite-safe, stain-ready.",
+      title: "Deck & Patio Cleaning in Albany & the Capital Region",
+      description: "Soft-wash deck and patio cleaning across Albany & the Capital Region. Wood, composite, and Trex safe. Stain-ready. Free quotes.",
     },
   },
   {
@@ -244,8 +244,8 @@ export const SERVICES: ServiceContent[] = [
       { q: "Whitening on any gutter?", a: "Aluminum, yes. Vinyl and copper — we'll advise on-site." },
     ],
     meta: {
-      title: "Gutter Cleaning & Whitening in Albany, NY | Capital Pro",
-      description: "Interior gutter cleaning plus exterior brightening across the Capital Region. Removes black tiger stripes.",
+      title: "Gutter Cleaning in Albany & the Capital Region | Capital Pro",
+      description: "Gutter cleaning and exterior whitening across Albany & the Capital Region. Removes clogs and black tiger stripes. Free quotes.",
     },
   },
   {
@@ -278,8 +278,8 @@ export const SERVICES: ServiceContent[] = [
       { q: "How long do they last?", a: "20+ years with the systems we install." },
     ],
     meta: {
-      title: "Gutter Guard Installation in Albany, NY | Capital Pro",
-      description: "Professional micro-mesh gutter guards installed across the Capital Region. Stop clogs for good.",
+      title: "Gutter Guards in Albany & the Capital Region | Capital Pro",
+      description: "Professional micro-mesh gutter guard installation across Albany & the Capital Region. Stop clogs for good. Free quotes.",
     },
   },
   {
@@ -313,8 +313,8 @@ export const SERVICES: ServiceContent[] = [
       { q: "How often?", a: "Twice a year for most homes. Once a year minimum." },
     ],
     meta: {
-      title: "Exterior Window Cleaning in Albany, NY | Capital Pro Pressure Washing",
-      description: "Streak-free exterior window cleaning across the Capital Region. Pure-water pole system, screens and sills included.",
+      title: "Exterior Window Cleaning in Albany & the Capital Region",
+      description: "Streak-free exterior window cleaning across Albany & the Capital Region. Pure-water pole system, screens and sills included.",
     },
   },
   {
@@ -347,8 +347,8 @@ export const SERVICES: ServiceContent[] = [
       { q: "Chain link?", a: "Absolutely — cleaner spray followed by a rinse." },
     ],
     meta: {
-      title: "Fence Cleaning in Albany, NY | Capital Pro Pressure Washing",
-      description: "Wood, vinyl, and chain-link fence cleaning across the Capital Region. Both sides. Free quote.",
+      title: "Fence Cleaning in Albany & the Capital Region | Capital Pro",
+      description: "Wood, vinyl, and chain-link fence cleaning across Albany & the Capital Region. Both sides cleaned. Free quotes.",
     },
   },
   {
@@ -381,8 +381,8 @@ export const SERVICES: ServiceContent[] = [
       { q: "When should I book?", a: "By September or October. Slots fill fast." },
     ],
     meta: {
-      title: "Christmas & Holiday Lighting in Albany, NY | Capital Pro",
-      description: "Turn-key holiday lighting design, install, take-down, and storage across the Capital Region.",
+      title: "Holiday Lighting in Albany & the Capital Region | Capital Pro",
+      description: "Turn-key Christmas and holiday lighting design, install, take-down, and storage across Albany & the Capital Region.",
     },
   },
   {
@@ -415,8 +415,8 @@ export const SERVICES: ServiceContent[] = [
       { q: "Financing?", a: "We can point you to financing options at quote time." },
     ],
     meta: {
-      title: "Permanent Outdoor Lighting in Albany, NY | Capital Pro",
-      description: "Programmable permanent outdoor lighting for holidays and everyday use across the Capital Region.",
+      title: "Permanent Outdoor Lighting in Albany & the Capital Region",
+      description: "Programmable permanent outdoor lighting for holidays and everyday use across Albany & the Capital Region. Free quotes.",
     },
   },
   {
@@ -449,8 +449,8 @@ export const SERVICES: ServiceContent[] = [
       { q: "Net-30 billing?", a: "Yes, on approved commercial accounts." },
     ],
     meta: {
-      title: "Commercial Pressure Washing in Albany, NY | Capital Pro",
-      description: "Commercial pressure washing, storefront cleaning, and facility services across the Capital Region. COI on file.",
+      title: "Commercial Pressure Washing in Albany & the Capital Region",
+      description: "Commercial pressure washing for storefronts, HOAs, and facilities across Albany & the Capital Region. COI on file. Free quotes.",
     },
   },
 ];
