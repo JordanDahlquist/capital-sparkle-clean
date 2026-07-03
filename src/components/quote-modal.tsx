@@ -585,6 +585,10 @@ function Step4({
     touched.firstName && data.firstName.trim().length === 0
       ? "Please enter your first name."
       : "";
+  const lastNameErr =
+    touched.lastName && data.lastName.trim().length === 0
+      ? "Please enter your last name."
+      : "";
   const phoneErr =
     touched.phone && !isValidUsPhone(data.phone)
       ? "Enter a valid 10-digit US phone number."
@@ -613,6 +617,22 @@ function Step4({
           required
         />
         {nameErr && <p id="qm-name-err" className="qm-err">{nameErr}</p>}
+      </div>
+      <div className="qm-field">
+        <label htmlFor="qm-lastname" className="qm-label">Last name</label>
+        <input
+          id="qm-lastname"
+          type="text"
+          autoComplete="family-name"
+          className={`qm-input ${lastNameErr ? "qm-input-err" : ""}`}
+          value={data.lastName}
+          onChange={(e) => onChange("lastName", e.target.value)}
+          onBlur={() => onBlur("lastName")}
+          aria-invalid={!!lastNameErr}
+          aria-describedby={lastNameErr ? "qm-lastname-err" : undefined}
+          required
+        />
+        {lastNameErr && <p id="qm-lastname-err" className="qm-err">{lastNameErr}</p>}
       </div>
       <div className="qm-field">
         <label htmlFor="qm-phone" className="qm-label">Phone</label>
