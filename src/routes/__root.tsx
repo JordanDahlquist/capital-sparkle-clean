@@ -82,18 +82,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Capital Pro Shine is a multi-page website for exterior cleaning services." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Capital Pro Shine is a multi-page website for exterior cleaning services." },
+      { name: "author", content: "Capital Pro Pressure Washing" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Capital Pro Shine is a multi-page website for exterior cleaning services." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/334dbcee-de8c-49c9-b261-ba68db3f3b42/id-preview-9699ab78--e1a64cc6-0fc8-4a5b-9036-8fa01cc3f811.lovable.app-1782887445363.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/334dbcee-de8c-49c9-b261-ba68db3f3b42/id-preview-9699ab78--e1a64cc6-0fc8-4a5b-9036-8fa01cc3f811.lovable.app-1782887445363.png" },
+      { property: "og:site_name", content: "Capital Pro Pressure Washing" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -110,6 +102,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     scripts: [
       {
         children: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5D8X5LJJ');`,
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HomeAndConstructionBusiness",
+          "@id": "https://capitalpropressurewashing.com/#business",
+          name: "Capital Pro Pressure Washing",
+          url: "https://capitalpropressurewashing.com",
+          telephone: "+15189001913",
+          description:
+            "Professional exterior cleaning across the Capital Region of New York — house washing, roof washing, gutter cleaning, concrete, decks, and more. 10+ years serving Albany, Schenectady, Saratoga Springs, Troy, Clifton Park, and Rensselaer.",
+          areaServed: [
+            { "@type": "City", name: "Albany", addressRegion: "NY" },
+            { "@type": "City", name: "Schenectady", addressRegion: "NY" },
+            { "@type": "City", name: "Clifton Park", addressRegion: "NY" },
+            { "@type": "City", name: "Saratoga Springs", addressRegion: "NY" },
+            { "@type": "City", name: "Troy", addressRegion: "NY" },
+            { "@type": "City", name: "Rensselaer", addressRegion: "NY" },
+          ],
+          sameAs: [
+            "https://www.facebook.com/CapitalProPressureWashing",
+            "https://www.instagram.com/capitalpropressurewashing/",
+          ],
+        }),
       },
     ],
   }),
