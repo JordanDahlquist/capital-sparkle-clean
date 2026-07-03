@@ -3,6 +3,7 @@ import { z } from "zod";
 
 const payloadSchema = z.object({
   firstName: z.string().trim().min(1).max(100),
+  lastName: z.string().trim().max(100).optional().default(""),
   phone: z.string().trim().min(7).max(20),
   email: z.string().trim().email().max(255),
   location: z.string().trim().max(200).optional().default(""),
@@ -24,6 +25,7 @@ export const submitLead = createServerFn({ method: "POST" })
       .from("leads" as never)
       .insert({
         first_name: data.firstName,
+        last_name: data.lastName,
         phone: data.phone,
         email: data.email,
         location: data.location,
@@ -57,6 +59,7 @@ export const submitLead = createServerFn({ method: "POST" })
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             firstName: data.firstName,
+            lastName: data.lastName,
             phone: data.phone,
             email: data.email,
             location: data.location,
