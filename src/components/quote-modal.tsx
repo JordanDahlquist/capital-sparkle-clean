@@ -276,6 +276,16 @@ export function QuoteWizard({
           content_category: payload.services.join(","),
           content_name: "Quote Form",
         });
+        w.dataLayer = w.dataLayer || [];
+        (w.dataLayer as unknown[]).push({
+          event: "lead_submitted",
+          form: "quote",
+          services: payload.services,
+          property_type: payload.propertyType,
+          timeline: payload.timeline,
+          location: payload.location,
+          page_path: window.location.pathname,
+        });
       } catch {
         /* ignore analytics failures */
       }
