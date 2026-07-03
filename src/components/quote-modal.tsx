@@ -202,6 +202,7 @@ export function QuoteWizard({
   const [data, setData] = useState<Payload>(EMPTY);
   const [submitted, setSubmitted] = useState(false);
   const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const submittingRef = useRef(false);
 
   // Autofocus the first focusable in the active step — but only when this
   // wizard is inside a modal (containerRef provided). Inline usage avoids
@@ -247,6 +248,10 @@ export function QuoteWizard({
   }
 
   function handleSubmit() {
+    // Guard: prevent double-submits (rapid double-click, re-render, etc.)
+    // from firing the Lead pixel/analytics event more than once.
+    if (submittingRef.current) return;
+    submittingRef.current = true;
     const payload: Payload = {
       ...data,
       phone: normalizePhone(data.phone),
@@ -256,6 +261,12 @@ export function QuoteWizard({
       location: data.location.trim(),
       message: data.message.trim(),
     };
+    // Single event_id for this submission. Shared between client Pixel (eventID)
+    // and any future server-side Conversions API call so Meta can dedupe.
+    const eventId =
+      typeof crypto !== "undefined" && "randomUUID" in crypto
+        ? crypto.randomUUID()
+        : `lead_${Date.now()}_${Math.random().toString(36).slice(2)}`;
     void (async () => {
       try {
         await submitLead({ data: payload });
@@ -276,13 +287,19 @@ export function QuoteWizard({
           property_type: payload.propertyType,
           timeline: payload.timeline,
         });
-        w.fbq?.("track", "Lead", {
-          content_category: payload.services.join(","),
-          content_name: "Quote Form",
-        });
+        w.fbq?.(
+          "track",
+          "Lead",
+          {
+            content_category: payload.services.join(","),
+            content_name: "Quote Form",
+          },
+          { eventID: eventId },
+        );
         w.dataLayer = w.dataLayer || [];
         (w.dataLayer as unknown[]).push({
           event: "lead_submitted",
+          event_id: eventId,
           form: "quote",
           services: payload.services,
           property_type: payload.propertyType,
