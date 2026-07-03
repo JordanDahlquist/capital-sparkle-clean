@@ -15,6 +15,7 @@ import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
 import { QuoteModalProvider } from "../components/quote-modal";
 import { StickyMobileBar } from "../components/sticky-mobile-bar";
+import { AnalyticsTracker } from "../components/analytics-tracker";
 
 function NotFoundComponent() {
   return (
@@ -151,6 +152,7 @@ function RootComponent() {
         <Outlet />
         <SiteFooter />
         <StickyMobileBar />
+        <AnalyticsTracker />
       </QuoteModalProvider>
     </QueryClientProvider>
   );
