@@ -54,6 +54,7 @@ type Payload = {
   timeline: string;
   message: string;
   firstName: string;
+  lastName: string;
   phone: string;
   email: string;
 };
@@ -65,6 +66,7 @@ const EMPTY: Payload = {
   timeline: "",
   message: "",
   firstName: "",
+  lastName: "",
   phone: "",
   email: "",
 };
@@ -223,6 +225,7 @@ export function QuoteWizard({
     if (s === 4)
       return (
         data.firstName.trim().length > 0 &&
+        data.lastName.trim().length > 0 &&
         isValidUsPhone(data.phone) &&
         emailRx.test(data.email.trim())
       );
@@ -236,7 +239,7 @@ export function QuoteWizard({
 
   function handleContinue() {
     if (!stepValid(step)) {
-      if (step === 4) setTouched({ firstName: true, phone: true, email: true });
+      if (step === 4) setTouched({ firstName: true, lastName: true, phone: true, email: true });
       return;
     }
     if (step < 4) go(step + 1);
@@ -249,6 +252,7 @@ export function QuoteWizard({
       phone: normalizePhone(data.phone),
       email: data.email.trim(),
       firstName: data.firstName.trim(),
+      lastName: data.lastName.trim(),
       location: data.location.trim(),
       message: data.message.trim(),
     };
