@@ -87,7 +87,7 @@ export const SERVICES: ServiceContent[] = [
       eyebrow: "Soft Wash — Shingle Safe",
       headline: "Roof Washing That Kills Black Streaks for Good",
       subhead:
-        "Those black stains are gloeocapsa magma — a living algae eating your shingles. We kill it at the root without high pressure.",
+        "Those black stains are gloeocapsa magma — a living algae eating your shingles. We kill it at the root.",
     },
     intro:
       "High-pressure roof cleaning voids most shingle warranties. Our ARMA-approved soft wash follows manufacturer guidelines, kills algae and moss on contact, and leaves your roof safely renewed for years.",
