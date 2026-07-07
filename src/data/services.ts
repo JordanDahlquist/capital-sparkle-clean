@@ -14,7 +14,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import houseWashingHero from "../assets/service-heroes/service-house-washing.png.asset.json";
-import roofWashingHero from "../assets/service-heroes/service-roof-washing.png.asset.json";
+import roofWashingHero from "../assets/service-heroes/service-roof-washing-custom.jpg.asset.json";
 import paverCleaningHero from "../assets/service-heroes/service-paver-cleaning-sealing.png.asset.json";
 import concreteCleaningHero from "../assets/service-heroes/service-concrete-cleaning-sealing.png.asset.json";
 import deckPatioHero from "../assets/service-heroes/service-deck-patio-cleaning.png.asset.json";
