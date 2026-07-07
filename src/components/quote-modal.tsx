@@ -221,7 +221,7 @@ export function QuoteWizard({
 
   function stepValid(s: number): boolean {
     if (s === 1) return data.services.length > 0;
-    if (s === 2) return data.location.trim().length > 0;
+    if (s === 2) return true;
     if (s === 3) return data.timeline.length > 0;
     if (s === 4)
       return (
@@ -492,17 +492,16 @@ function Step2({
     <div>
       <StepTitle id={titleId}>Where's the property?</StepTitle>
       <div className="qm-field">
-        <label htmlFor="qm-location" className="qm-label">Town or ZIP</label>
+        <label htmlFor="qm-location" className="qm-label">Full address (optional)</label>
         <input
           id="qm-location"
           type="text"
-          autoComplete="postal-code"
+          autoComplete="street-address"
           data-autofocus=""
           className="qm-input"
-          placeholder="e.g. Clifton Park or 12065"
+          placeholder="e.g. 123 Main St, Clifton Park, NY 12065"
           value={location}
           onChange={(e) => onLocation(e.target.value)}
-          required
         />
       </div>
       <div className="qm-field">
