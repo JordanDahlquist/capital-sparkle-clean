@@ -98,6 +98,7 @@ export function ServicePage({ service }: { service: ServiceContent }) {
                 alt={`${service.name} by Capital Pro Pressure Washing`}
                 className="h-full w-full object-cover"
                 loading="eager"
+                {...(service.heroPlaceholder ? { "data-placeholder": service.heroPlaceholder } : {})}
               />
             </div>
             <div className="absolute -bottom-4 -left-4 bg-white text-[var(--brand-deep-blue)] px-4 py-3 rounded-md shadow-lg">
