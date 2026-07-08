@@ -55,12 +55,6 @@ const services = [
     href: "/gutter-cleaning",
   },
   {
-    icon: Shield,
-    name: "Gutter Guards",
-    desc: "Professional-grade gutter guard installation. Stop clogs before they start.",
-    href: "/gutter-guards",
-  },
-  {
     icon: AppWindow,
     name: "Window Cleaning",
     desc: "Streak-free windows inside and out. Let the light back in.",
