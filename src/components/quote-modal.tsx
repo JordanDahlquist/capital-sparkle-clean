@@ -200,7 +200,12 @@ export function QuoteWizard({
 }) {
   const [step, setStep] = useState(1);
   const [stepDir, setStepDir] = useState<1 | -1>(1);
-  const [data, setData] = useState<Payload>(EMPTY);
+  const [data, setData] = useState<Payload>(() => {
+    if (typeof window !== "undefined" && window.location.pathname === "/roof-rejuvenation") {
+      return { ...EMPTY, services: ["rejuvenation"] };
+    }
+    return EMPTY;
+  });
   const [submitted, setSubmitted] = useState(false);
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const submittingRef = useRef(false);
