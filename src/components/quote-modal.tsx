@@ -72,12 +72,13 @@ const EMPTY: Payload = {
 };
 
 const SERVICES = [
+  { id: "rejuvenation", label: "Roof Rejuvenation", Icon: Sparkles },
   { id: "house", label: "House Washing", Icon: Droplets },
   { id: "roof", label: "Roof Washing", Icon: CloudRain },
   { id: "concrete", label: "Concrete & Driveway", Icon: Square },
   { id: "pavers", label: "Paver Cleaning", Icon: Grid3x3 },
   { id: "deck", label: "Deck & Patio", Icon: Trees },
-  { id: "gutter", label: "Gutter Cleaning", Icon: Sparkles },
+  { id: "gutter", label: "Gutter Cleaning", Icon: Droplets },
   { id: "guards", label: "Gutter Guards", Icon: Shield },
   { id: "window", label: "Window Cleaning", Icon: AppWindow },
   { id: "fence", label: "Fence Cleaning", Icon: Fence },
