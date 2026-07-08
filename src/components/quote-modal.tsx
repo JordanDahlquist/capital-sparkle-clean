@@ -502,38 +502,101 @@ function Step1({
 
 function Step2({
   titleId,
-  location,
-  propertyType,
-  onLocation,
-  onPropertyType,
+  data,
+  touched,
+  onChange,
+  onBlur,
 }: {
   titleId: string;
-  location: string;
-  propertyType: "Home" | "Business";
-  onLocation: (v: string) => void;
-  onPropertyType: (v: "Home" | "Business") => void;
+  data: Payload;
+  touched: Record<string, boolean>;
+  onChange: <K extends keyof Payload>(k: K, v: Payload[K]) => void;
+  onBlur: (k: string) => void;
 }) {
+  const cityErr =
+    touched.city && data.city.trim().length === 0 ? "Please enter a city." : "";
+  const stateErr =
+    touched.state && data.state.trim().length === 0 ? "Please enter a state." : "";
+  const zipErr =
+    touched.zip && !zipRx.test(data.zip.trim())
+      ? "Enter a 5-digit ZIP code."
+      : "";
   return (
     <div>
       <StepTitle id={titleId}>Where's the property?</StepTitle>
       <div className="qm-field">
-        <label htmlFor="qm-location" className="qm-label">Full address (optional)</label>
+        <label htmlFor="qm-address" className="qm-label">
+          Street address <span className="qm-optional">(optional)</span>
+        </label>
         <input
-          id="qm-location"
+          id="qm-address"
           type="text"
           autoComplete="street-address"
           data-autofocus=""
           className="qm-input"
-          placeholder="e.g. 123 Main St, Clifton Park, NY 12065"
-          value={location}
-          onChange={(e) => onLocation(e.target.value)}
+          placeholder="e.g. 123 Main St"
+          value={data.address}
+          onChange={(e) => onChange("address", e.target.value)}
         />
+      </div>
+      <div className="qm-field">
+        <label htmlFor="qm-city" className="qm-label">City</label>
+        <input
+          id="qm-city"
+          type="text"
+          autoComplete="address-level2"
+          className={`qm-input ${cityErr ? "qm-input-err" : ""}`}
+          placeholder="Clifton Park"
+          value={data.city}
+          onChange={(e) => onChange("city", e.target.value)}
+          onBlur={() => onBlur("city")}
+          aria-invalid={!!cityErr}
+          aria-describedby={cityErr ? "qm-city-err" : undefined}
+          required
+        />
+        {cityErr && <p id="qm-city-err" className="qm-err">{cityErr}</p>}
+      </div>
+      <div className="qm-field">
+        <label htmlFor="qm-state" className="qm-label">State</label>
+        <input
+          id="qm-state"
+          type="text"
+          autoComplete="address-level1"
+          maxLength={2}
+          className={`qm-input ${stateErr ? "qm-input-err" : ""}`}
+          value={data.state}
+          onChange={(e) => onChange("state", e.target.value.toUpperCase())}
+          onBlur={() => onBlur("state")}
+          aria-invalid={!!stateErr}
+          aria-describedby={stateErr ? "qm-state-err" : undefined}
+          required
+        />
+        {stateErr && <p id="qm-state-err" className="qm-err">{stateErr}</p>}
+      </div>
+      <div className="qm-field">
+        <label htmlFor="qm-zip" className="qm-label">ZIP code</label>
+        <input
+          id="qm-zip"
+          type="text"
+          autoComplete="postal-code"
+          inputMode="numeric"
+          maxLength={5}
+          className={`qm-input ${zipErr ? "qm-input-err" : ""}`}
+          placeholder="12065"
+          value={data.zip}
+          onChange={(e) => onChange("zip", e.target.value.replace(/\D/g, "").slice(0, 5))}
+          onBlur={() => onBlur("zip")}
+          aria-invalid={!!zipErr}
+          aria-describedby={zipErr ? "qm-zip-err" : undefined}
+          required
+        />
+        {zipErr && <p id="qm-zip-err" className="qm-err">{zipErr}</p>}
       </div>
       <div className="qm-field">
         <span className="qm-label">Property type</span>
         <div className="qm-toggle" role="radiogroup" aria-label="Property type">
           {(["Home", "Business"] as const).map((t) => {
-            const active = propertyType === t;
+            const active = data.propertyType === t;
             const Icon = t === "Home" ? HomeIcon : Building2;
             return (
               <button
@@ -541,7 +604,7 @@ function Step2({
                 type="button"
                 role="radio"
                 aria-checked={active}
-                onClick={() => onPropertyType(t)}
+                onClick={() => onChange("propertyType", t)}
                 className={`qm-toggle-btn ${active ? "qm-toggle-active" : ""}`}
               >
                 <Icon className="h-4 w-4" aria-hidden="true" />
