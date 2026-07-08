@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { HomeHero } from "../components/home-hero";
 import { HomeServices } from "../components/home-services";
 import { HomeGallery } from "../components/home-gallery";
+import { HomeInAction } from "../components/home-in-action";
 import { WaterJetDivider } from "../components/water-jet-divider";
 import { HomeWhy } from "../components/home-why";
 import { HomeReviews } from "../components/home-reviews";
@@ -47,6 +48,7 @@ function Index() {
       <HomeHero />
       <HomeServices />
       <HomeGallery />
+      <HomeInAction />
       <WaterJetDivider />
       <HomeWhy />
       <HomeReviews />
