@@ -11,6 +11,7 @@ import {
   Snowflake,
   Lightbulb,
   Building2,
+  Sparkles,
   type LucideIcon,
 } from "lucide-react";
 import houseWashingHero from "../assets/service-heroes/service-house-washing.png.asset.json";
@@ -31,6 +32,7 @@ export type ServiceContent = {
   name: string;
   icon: LucideIcon;
   heroImage: string;
+  heroPlaceholder?: string;
   hero: {
     eyebrow: string;
     headline: string;
