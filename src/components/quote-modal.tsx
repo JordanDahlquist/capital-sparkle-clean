@@ -49,7 +49,10 @@ export function openQuoteModal() {
 
 type Payload = {
   services: string[];
-  location: string;
+  address: string;
+  city: string;
+  state: string;
+  zip: string;
   propertyType: "Home" | "Business";
   timeline: string;
   message: string;
@@ -61,7 +64,10 @@ type Payload = {
 
 const EMPTY: Payload = {
   services: [],
-  location: "",
+  address: "",
+  city: "",
+  state: "NY",
+  zip: "",
   propertyType: "Home",
   timeline: "",
   message: "",
@@ -91,6 +97,7 @@ const SERVICES = [
 const TIMELINES = ["As soon as possible", "Next few weeks", "Just getting quotes"];
 
 const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const zipRx = /^\d{5}$/;
 function normalizePhone(v: string) {
   return v.replace(/\D/g, "");
 }
@@ -227,7 +234,12 @@ export function QuoteWizard({
 
   function stepValid(s: number): boolean {
     if (s === 1) return data.services.length > 0;
-    if (s === 2) return true;
+    if (s === 2)
+      return (
+        data.city.trim().length > 0 &&
+        data.state.trim().length > 0 &&
+        zipRx.test(data.zip.trim())
+      );
     if (s === 3) return data.timeline.length > 0;
     if (s === 4)
       return (
@@ -246,7 +258,8 @@ export function QuoteWizard({
 
   function handleContinue() {
     if (!stepValid(step)) {
-      if (step === 4) setTouched({ firstName: true, lastName: true, phone: true, email: true });
+      if (step === 2) setTouched((t) => ({ ...t, city: true, state: true, zip: true }));
+      if (step === 4) setTouched((t) => ({ ...t, firstName: true, lastName: true, phone: true, email: true }));
       return;
     }
     if (step < 4) go(step + 1);
@@ -264,7 +277,10 @@ export function QuoteWizard({
       email: data.email.trim(),
       firstName: data.firstName.trim(),
       lastName: data.lastName.trim(),
-      location: data.location.trim(),
+      address: data.address.trim(),
+      city: data.city.trim(),
+      state: data.state.trim(),
+      zip: data.zip.trim(),
       message: data.message.trim(),
     };
     // Single event_id for this submission. Shared between client Pixel (eventID)
@@ -374,10 +390,10 @@ export function QuoteWizard({
               {step === 2 && (
                 <Step2
                   titleId={titleId}
-                  location={data.location}
-                  propertyType={data.propertyType}
-                  onLocation={(v) => update("location", v)}
-                  onPropertyType={(v) => update("propertyType", v)}
+                  data={data}
+                  touched={touched}
+                  onChange={update}
+                  onBlur={(k) => setTouched((t) => ({ ...t, [k]: true }))}
                 />
               )}
               {step === 3 && (
