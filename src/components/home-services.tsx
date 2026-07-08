@@ -12,6 +12,7 @@ import {
   Snowflake,
   Lightbulb,
   Building2,
+  Sparkles,
 } from "lucide-react";
 import { Reveal } from "./reveal";
 import { openQuoteModal } from "./quote-modal";
@@ -88,6 +89,12 @@ const services = [
     name: "Commercial Washing",
     desc: "Storefronts, buildings, brick, and dumpster pads. Kept clean on a schedule.",
     href: "/commercial-pressure-washing",
+  },
+  {
+    icon: Sparkles,
+    name: "Roof Rejuvenation",
+    desc: "Soy-based asphalt shingle treatment designed to extend roof life. 6-year warranty.",
+    href: "/roof-rejuvenation",
   },
 ];
 

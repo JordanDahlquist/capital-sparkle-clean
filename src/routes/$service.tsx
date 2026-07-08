@@ -8,7 +8,13 @@ export const Route = createFileRoute("/$service")({
   loader: ({ params }) => {
     const service = getService(params.service);
     if (!service) throw notFound();
-    return { slug: service.slug, name: service.name, heroImage: service.heroImage, meta: service.meta };
+    return {
+      slug: service.slug,
+      name: service.name,
+      heroImage: service.heroImage,
+      meta: service.meta,
+      faqs: service.faqs,
+    };
   },
   head: ({ loaderData, params }) => {
     if (!loaderData) {
@@ -67,6 +73,18 @@ export const Route = createFileRoute("/$service")({
               { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
               { "@type": "ListItem", position: 2, name: loaderData.name, item: url },
             ],
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: loaderData.faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
           }),
         },
       ],
