@@ -455,6 +455,42 @@ export const SERVICES: ServiceContent[] = [
       description: "Commercial pressure washing for storefronts, HOAs, and facilities across Albany & the Capital Region. COI on file. Free quotes.",
     },
   },
+  {
+    slug: "roof-rejuvenation",
+    name: "Roof Rejuvenation",
+    icon: Sparkles,
+    heroImage: roofWashingHero.url,
+    heroPlaceholder: "REPLACE_ROOF_REJUVENATION_HERO",
+    hero: {
+      eyebrow: "Asphalt Shingle Rejuvenation",
+      headline: "Roof Rejuvenation That Extends Your Roof's Life",
+      subhead:
+        "A soy-based treatment that restores aging asphalt shingles and protects them from the elements — a fraction of the cost of a replacement. Backed by a 6-year warranty. Free quotes across the Capital Region.",
+    },
+    intro:
+      "Roof rejuvenation is a treatment applied to aging asphalt shingles that helps restore flexibility and protect against UV, rain, and wind. It's a maintenance step designed to extend the life of a roof that isn't ready for full replacement, and it's reapplied periodically (about every few years) to keep shingles performing.",
+    benefits: [
+      { title: "Extend Roof Life", desc: "Designed to add years to an asphalt roof and delay the cost of a full replacement." },
+      { title: "Protects Against the Elements", desc: "Helps shield shingles from UV, rain, and wind damage." },
+      { title: "Fraction of Replacement Cost", desc: "Far cheaper than tearing off and replacing a roof." },
+      { title: "6-Year Warranty", desc: "The rejuvenation treatment is backed by a 6-year warranty." },
+    ],
+    process: [
+      { title: "Free Roof Assessment", desc: "We look at your roof and give you a straight quote over the phone." },
+      { title: "Treatment & Repairs", desc: "We apply the rejuvenation treatment and handle minor repairs as needed." },
+      { title: "Final Walkthrough", desc: "We do a final inspection so you're satisfied with the results." },
+    ],
+    faqs: [
+      { q: "How long does roof rejuvenation last?", a: "The treatment is designed to protect shingles for several years and is typically reapplied periodically (about every few years) as part of ongoing roof maintenance." },
+      { q: "Is it cheaper than replacing my roof?", a: "Yes — rejuvenation is a fraction of the cost of a full tear-off and replacement, and it can help delay that expense when your roof isn't ready to be replaced." },
+      { q: "What kind of roofs can be treated?", a: "Rejuvenation is designed for asphalt shingle roofs. We'll assess your roof during the free quote and let you know if it's a good candidate." },
+      { q: "Is there a warranty?", a: "Yes. The rejuvenation treatment is backed by a 6-year warranty." },
+    ],
+    meta: {
+      title: "Roof Rejuvenation in Albany & the Capital Region | Capital Pro",
+      description: "Asphalt shingle roof rejuvenation across Albany & the Capital Region. Soy-based treatment that helps extend roof life. 6-year warranty. Free quotes.",
+    },
+  },
 ];
 
 export function getService(slug: string): ServiceContent | undefined {
