@@ -47,11 +47,11 @@ function Index() {
     <main>
       <HomeHero />
       <HomeServices />
-      <HomeGallery />
       <HomeInAction />
+      <HomeReviews />
+      <HomeGallery />
       <WaterJetDivider />
       <HomeWhy />
-      <HomeReviews />
       <HomeServiceArea />
       <HomeFaq />
       <HomeFinalCta />

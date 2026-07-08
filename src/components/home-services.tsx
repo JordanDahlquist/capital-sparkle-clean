@@ -8,7 +8,6 @@ import {
   AppWindow,
   Fence,
   ArrowRight,
-  Shield,
   Snowflake,
   Lightbulb,
   Building2,
@@ -53,12 +52,6 @@ const services = [
     name: "Gutter Cleaning & Whitening",
     desc: "Clear clogged gutters and scrub off the black tiger stripes. Like-new exterior.",
     href: "/gutter-cleaning",
-  },
-  {
-    icon: Shield,
-    name: "Gutter Guards",
-    desc: "Professional-grade gutter guard installation. Stop clogs before they start.",
-    href: "/gutter-guards",
   },
   {
     icon: AppWindow,
