@@ -326,7 +326,10 @@ export function QuoteWizard({
           services: payload.services,
           property_type: payload.propertyType,
           timeline: payload.timeline,
-          location: payload.location,
+          address: payload.address,
+          city: payload.city,
+          state: payload.state,
+          zip: payload.zip,
           page_path: window.location.pathname,
         });
       } catch {
