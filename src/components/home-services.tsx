@@ -8,7 +8,6 @@ import {
   AppWindow,
   Fence,
   ArrowRight,
-  Shield,
   Snowflake,
   Lightbulb,
   Building2,
