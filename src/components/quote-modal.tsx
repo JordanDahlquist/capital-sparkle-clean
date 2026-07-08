@@ -78,7 +78,7 @@ const SERVICES = [
   { id: "concrete", label: "Concrete & Driveway", Icon: Square },
   { id: "pavers", label: "Paver Cleaning", Icon: Grid3x3 },
   { id: "deck", label: "Deck & Patio", Icon: Trees },
-  { id: "gutter", label: "Gutter Cleaning", Icon: Droplets },
+  { id: "gutter", label: "Gutter Cleaning", Icon: Sparkles },
   { id: "guards", label: "Gutter Guards", Icon: Shield },
   { id: "window", label: "Window Cleaning", Icon: AppWindow },
   { id: "fence", label: "Fence Cleaning", Icon: Fence },
