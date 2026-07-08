@@ -16,6 +16,8 @@ export type Database = {
     Tables: {
       leads: {
         Row: {
+          address: string | null
+          city: string | null
           created_at: string
           email: string
           first_name: string
@@ -28,9 +30,13 @@ export type Database = {
           phone: string
           property_type: string | null
           services: string[]
+          state: string | null
           timeline: string | null
+          zip: string | null
         }
         Insert: {
+          address?: string | null
+          city?: string | null
           created_at?: string
           email: string
           first_name: string
@@ -43,9 +49,13 @@ export type Database = {
           phone: string
           property_type?: string | null
           services?: string[]
+          state?: string | null
           timeline?: string | null
+          zip?: string | null
         }
         Update: {
+          address?: string | null
+          city?: string | null
           created_at?: string
           email?: string
           first_name?: string
@@ -58,7 +68,9 @@ export type Database = {
           phone?: string
           property_type?: string | null
           services?: string[]
+          state?: string | null
           timeline?: string | null
+          zip?: string | null
         }
         Relationships: []
       }
