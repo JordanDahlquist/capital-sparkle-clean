@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ThankYouRouteImport } from './routes/thank-you'
 import { Route as RoofWashingAlbanyNyRouteImport } from './routes/roof-washing-albany-ny'
 import { Route as HouseWashingAlbanyNyRouteImport } from './routes/house-washing-albany-ny'
+import { Route as ConcreteCleaningAlbanyNyRouteImport } from './routes/concrete-cleaning-albany-ny'
 import { Route as ServiceRouteImport } from './routes/$service'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -30,6 +31,12 @@ const HouseWashingAlbanyNyRoute = HouseWashingAlbanyNyRouteImport.update({
   path: '/house-washing-albany-ny',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ConcreteCleaningAlbanyNyRoute =
+  ConcreteCleaningAlbanyNyRouteImport.update({
+    id: '/concrete-cleaning-albany-ny',
+    path: '/concrete-cleaning-albany-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServiceRoute = ServiceRouteImport.update({
   id: '/$service',
   path: '/$service',
@@ -44,6 +51,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$service': typeof ServiceRoute
+  '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
   '/house-washing-albany-ny': typeof HouseWashingAlbanyNyRoute
   '/roof-washing-albany-ny': typeof RoofWashingAlbanyNyRoute
   '/thank-you': typeof ThankYouRoute
@@ -51,6 +59,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$service': typeof ServiceRoute
+  '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
   '/house-washing-albany-ny': typeof HouseWashingAlbanyNyRoute
   '/roof-washing-albany-ny': typeof RoofWashingAlbanyNyRoute
   '/thank-you': typeof ThankYouRoute
@@ -59,6 +68,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$service': typeof ServiceRoute
+  '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
   '/house-washing-albany-ny': typeof HouseWashingAlbanyNyRoute
   '/roof-washing-albany-ny': typeof RoofWashingAlbanyNyRoute
   '/thank-you': typeof ThankYouRoute
@@ -68,6 +78,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/$service'
+    | '/concrete-cleaning-albany-ny'
     | '/house-washing-albany-ny'
     | '/roof-washing-albany-ny'
     | '/thank-you'
@@ -75,6 +86,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/$service'
+    | '/concrete-cleaning-albany-ny'
     | '/house-washing-albany-ny'
     | '/roof-washing-albany-ny'
     | '/thank-you'
@@ -82,6 +94,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/$service'
+    | '/concrete-cleaning-albany-ny'
     | '/house-washing-albany-ny'
     | '/roof-washing-albany-ny'
     | '/thank-you'
@@ -90,6 +103,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ServiceRoute: typeof ServiceRoute
+  ConcreteCleaningAlbanyNyRoute: typeof ConcreteCleaningAlbanyNyRoute
   HouseWashingAlbanyNyRoute: typeof HouseWashingAlbanyNyRoute
   RoofWashingAlbanyNyRoute: typeof RoofWashingAlbanyNyRoute
   ThankYouRoute: typeof ThankYouRoute
@@ -118,6 +132,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HouseWashingAlbanyNyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/concrete-cleaning-albany-ny': {
+      id: '/concrete-cleaning-albany-ny'
+      path: '/concrete-cleaning-albany-ny'
+      fullPath: '/concrete-cleaning-albany-ny'
+      preLoaderRoute: typeof ConcreteCleaningAlbanyNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/$service': {
       id: '/$service'
       path: '/$service'
@@ -138,6 +159,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ServiceRoute: ServiceRoute,
+  ConcreteCleaningAlbanyNyRoute: ConcreteCleaningAlbanyNyRoute,
   HouseWashingAlbanyNyRoute: HouseWashingAlbanyNyRoute,
   RoofWashingAlbanyNyRoute: RoofWashingAlbanyNyRoute,
   ThankYouRoute: ThankYouRoute,
