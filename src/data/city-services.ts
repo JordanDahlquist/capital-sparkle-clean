@@ -894,7 +894,7 @@ export const CITY_SERVICES: CityServiceContent[] = [
       },
     ],
     meta: {
-      title: "Concrete Cleaning in Schenectady, NY | Capital Pro Pressure Washing",
+      title: "Concrete Cleaning in Schenectady, NY | Capital Pro",
       description:
         "Driveway & concrete cleaning in Schenectady, NY — rotary surface-cleaner finish, salt-haze removal, and optional sealing. Free on-site quotes.",
     },
@@ -1040,7 +1040,7 @@ export const CITY_SERVICES: CityServiceContent[] = [
       },
     ],
     meta: {
-      title: "Roof Washing in Saratoga Springs, NY | Capital Pro Pressure Washing",
+      title: "Roof Washing in Saratoga Springs, NY | Capital Pro",
       description:
         "Soft-wash roof cleaning in Saratoga Springs, NY. Kills moss and black algae under Saratoga's tree canopy — book before track season. ARMA-approved. Free quotes.",
     },
@@ -1186,7 +1186,7 @@ export const CITY_SERVICES: CityServiceContent[] = [
       },
     ],
     meta: {
-      title: "House Washing in Saratoga Springs, NY | Capital Pro Pressure Washing",
+      title: "House Washing in Saratoga Springs, NY | Capital Pro",
       description:
         "Soft-wash house washing in Saratoga Springs, NY — Victorian-safe, track-season ready. Downtown, North Broadway, East Side & Wilton. Free on-site quotes.",
     },
@@ -1332,7 +1332,7 @@ export const CITY_SERVICES: CityServiceContent[] = [
       },
     ],
     meta: {
-      title: "Concrete Cleaning in Saratoga Springs, NY | Capital Pro Pressure Washing",
+      title: "Concrete Cleaning in Saratoga Springs, NY | Capital Pro",
       description:
         "Driveway & concrete cleaning in Saratoga Springs, NY — surface-cleaner finish, salt-haze removal, optional sealing. Guest-ready before track season.",
     },
@@ -1770,7 +1770,7 @@ export const CITY_SERVICES: CityServiceContent[] = [
       },
     ],
     meta: {
-      title: "Concrete & Brick Cleaning in Troy, NY | Capital Pro Pressure Washing",
+      title: "Concrete & Brick Cleaning in Troy, NY | Capital Pro",
       description:
         "Driveway, brick walkway, and stoop cleaning in Troy, NY — masonry-safe, salt-haze removal, optional sealing. Historic-brick specialists. Free quotes.",
     },
