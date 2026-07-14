@@ -245,16 +245,16 @@ export const CITY_SERVICES: CityServiceContent[] = [
     ],
     benefits: [
       {
-        title: "Extends Your Albany Roof 5–15 Years",
-        desc: "Killing the algae stops granule loss — the leading cause of shingle failure in the Hudson Valley climate.",
+        title: "Protects Your Roof's Lifespan",
+        desc: "Killing the algae stops granule loss — the leading cause of premature shingle failure in the Hudson Valley climate.",
       },
       {
         title: "Shingle-Warranty Safe",
         desc: "ARMA-approved soft wash. No high pressure, no walking on wet shingles, no voided warranty.",
       },
       {
-        title: "No Return in 2 Months",
-        desc: "Bleach-only 'pressure wash' cleans just fade the streaks. Our treatment kills the algae — clean rooflines last years.",
+        title: "Kills Algae At The Root",
+        desc: "Bleach-only 'pressure wash' cleans just fade the streaks. Our treatment targets the algae itself, so results hold up far longer than a surface rinse.",
       },
       {
         title: "Instant Curb Appeal in Albany's Market",
@@ -290,7 +290,7 @@ export const CITY_SERVICES: CityServiceContent[] = [
       },
       {
         q: "How long before the black streaks come back?",
-        a: "Years. We kill the algae at the root — not just bleach the color out. Most Albany homes see clean rooflines for 5+ years, longer with an annual house wash.",
+        a: "Because we kill the algae at the root instead of just bleaching the color out, Albany rooflines typically stay clean far longer than a standard pressure rinse. Regrowth timing depends on shade, tree cover, and humidity — an annual house wash helps keep it at bay.",
       },
       {
         q: "Do you service my Albany neighborhood?",
