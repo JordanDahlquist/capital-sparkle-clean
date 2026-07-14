@@ -490,6 +490,447 @@ export const CITY_SERVICES: CityServiceContent[] = [
       },
     ],
   },
+  {
+    slug: "house-washing-schenectady-ny",
+    service: "House Washing",
+    city: "Schenectady",
+    region: "Capital Region, NY",
+    icon: Home,
+    heroImage: houseWashingHero.url,
+    hero: {
+      eyebrow: "Schenectady, NY · Soft Wash for Historic Homes",
+      headline: "House Washing in Schenectady, NY",
+      subhead:
+        "The Stockade District has stood for 350 years — long enough that a pressure washer can undo generations of preservation in an afternoon. We soft-wash Schenectady's historic brick and clapboard the way it should be cleaned: gently, at hose pressure, without touching a single mortar joint.",
+    },
+    intro: [
+      "Schenectady isn't like the newer Capital Region suburbs. Walk the Stockade District and you're looking at some of the oldest continuously occupied wood-frame and brick homes in America — some pre-Revolution. Turn a corner into GE Realty Plot and you're surrounded by grand early-1900s architecture built when Charles Steinmetz and his neighbors ran the electrical world from Union Street.",
+      "That housing stock is exactly why so many pressure washing calls in Schenectady go wrong. High-pressure wands split old wood clapboard, drive water behind original siding, and blast crumbling lime mortar right out of Stockade brick joints. What looked like 'just dirt' becomes a five-figure repair.",
+      "Our Schenectady soft-wash approach was built for this. Professional-grade cleaning solutions handle the Mohawk River humidity and mildew — the wash does the work, not the pressure. It's the same reason preservation-minded homeowners in the Stockade and GE Plot call us instead of anyone with a trailer and a pressure hose.",
+    ],
+    localContext: {
+      heading: "Built For Schenectady's Housing Stock",
+      body:
+        "From 18th-century Stockade clapboard to Realty Plot Tudors and postwar Niskayuna ranches, no two Schenectady homes ask for the same wash. We calibrate detergent strength and rinse pressure to the actual surface — not a generic template.",
+      bullets: [
+        {
+          title: "Stockade District — Historic Wood & Brick",
+          desc: "Pre-Revolution clapboard and soft, sand-lime mortar don't tolerate pressure. We soft-wash at lower-than-garden-hose PSI and keep water off failing joints entirely.",
+        },
+        {
+          title: "GE Realty Plot & Union Street",
+          desc: "Grand early-1900s homes with painted brick, stone accents, and ornate wood trim. Delicate detergents, careful masking around leaded windows, no ladder scars on original wood.",
+        },
+        {
+          title: "Niskayuna & Rotterdam Suburbs",
+          desc: "Larger postwar Colonials and split-levels — vinyl, aluminum, and Hardie siding. Our soft-wash reaches gable peaks safely from the ground.",
+        },
+        {
+          title: "Scotia, Glenville & Mont Pleasant",
+          desc: "Mohawk River humidity keeps north-facing walls damp for days. Extended dwell times and re-rinsing wipe out mildew that returns quickly on shorter washes.",
+        },
+      ],
+    },
+    neighborhoods: [
+      "Stockade District",
+      "GE Realty Plot",
+      "Union Street",
+      "Niskayuna",
+      "Rotterdam",
+      "Glenville",
+      "Scotia",
+      "Mont Pleasant",
+    ],
+    benefits: [
+      {
+        title: "Preservation-Grade Soft Wash",
+        desc: "The right approach for Stockade wood and old mortar — cleaning solution does the work at hose pressure, so nothing gets blown out or split.",
+      },
+      {
+        title: "Handles Mohawk River Mildew",
+        desc: "Valley humidity feeds green algae and black mildew on shaded siding. Our biocides target it at the root rather than just bleaching the surface.",
+      },
+      {
+        title: "Surface-Specific Detergents",
+        desc: "Painted brick, sand-lime mortar, cedar clapboard, vinyl, aluminum — each surface gets its own mix rather than one generic soap.",
+      },
+      {
+        title: "10+ Years On Schenectady Homes",
+        desc: "Same local crew that has cleaned homes from Front Street through GE Plot and out into Niskayuna. Not a franchise, not a rotating subcontractor.",
+      },
+    ],
+    process: [
+      {
+        title: "Free Walkthrough Quote",
+        desc: "We walk the property, note any failing mortar, cracked clapboard, or paint issues before we quote, and give you a firm price — never a moving range.",
+      },
+      {
+        title: "Mask, Pre-Treat & Soft-Wash",
+        desc: "Pre-rinse plants and shrubs, mask off failing joints and old wood repairs, apply detergent, let it dwell, then rinse top-to-bottom at low pressure.",
+      },
+      {
+        title: "Detail Pass & Walk-Through",
+        desc: "Hand-detail around historic doors, porches, and window casings. Walk the home with you before we leave — you approve the finish.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is pressure washing safe on Stockade District homes?",
+        a: "No — that's exactly the mistake we help homeowners avoid. High pressure splits historic clapboard and pulls sand-lime mortar out of old brick joints. On Stockade homes we soft-wash exclusively, at less pressure than a garden hose.",
+      },
+      {
+        q: "Will your detergents strip old paint or lime mortar?",
+        a: "No. We match detergent strength to the surface and pre-test in an inconspicuous area on older or hand-painted homes. On failing mortar joints we mask entirely and hand-detail the surrounding brick.",
+      },
+      {
+        q: "Do you clean GE Realty Plot homes with slate roofs and leaded windows?",
+        a: "Yes — regularly. Leaded and stained glass gets masked; slate roofs are only ever soft-washed (never walked or pressure-cleaned). We treat GE Plot exteriors as preservation work.",
+      },
+      {
+        q: "How much does house washing cost in Schenectady?",
+        a: "Most single-family Schenectady homes fall in the $349–$699 range. Historic Stockade and larger GE Plot homes with detail work run higher because the labor and masking are more involved.",
+      },
+      {
+        q: "How fast will mildew come back on the shaded side of my house?",
+        a: "Along the Mohawk it depends heavily on tree cover and how much sun the north wall sees. Because we treat the biology and not just the color, results generally last considerably longer than a straight pressure rinse — an annual wash typically stays ahead of regrowth.",
+      },
+      {
+        q: "Do you service Niskayuna, Rotterdam, Scotia, and Glenville?",
+        a: "Yes — plus Mont Pleasant, Union Street, and out toward Alplaus. If you're inside the Schenectady/Niskayuna/Rotterdam service radius, we cover you.",
+      },
+    ],
+    meta: {
+      title: "House Washing in Schenectady, NY | Capital Pro Pressure Washing",
+      description:
+        "Soft-wash house washing in Schenectady, NY — Stockade District, GE Realty Plot, Niskayuna & Rotterdam. Preservation-safe. 10+ years local. Free quotes.",
+    },
+    relatedServices: [
+      {
+        name: "Roof Washing",
+        to: "/$service",
+        slug: "roof-washing",
+        blurb: "Shingle-safe soft wash for Schenectady's older rooflines.",
+      },
+      {
+        name: "Gutter Cleaning & Whitening",
+        to: "/$service",
+        slug: "gutter-cleaning",
+        blurb: "Clear leaves and remove black tiger-stripe staining from the gutter face.",
+      },
+      {
+        name: "Concrete Cleaning",
+        to: "/$service",
+        slug: "concrete-cleaning-sealing",
+        blurb: "Undo winter salt damage on Schenectady driveways and walkways.",
+      },
+    ],
+    relatedCityLinks: [
+      {
+        name: "Roof Washing in Schenectady, NY",
+        to: "/roof-washing-schenectady-ny",
+        blurb: "Kill Mohawk-Valley algae streaks on older Schenectady roofs.",
+      },
+      {
+        name: "Concrete Cleaning in Schenectady, NY",
+        to: "/concrete-cleaning-schenectady-ny",
+        blurb: "Salt-haze and stain removal for Schenectady driveways.",
+      },
+    ],
+  },
+  {
+    slug: "roof-washing-schenectady-ny",
+    service: "Roof Washing",
+    city: "Schenectady",
+    region: "Capital Region, NY",
+    icon: CloudRain,
+    heroImage: roofWashingHero.url,
+    hero: {
+      eyebrow: "Schenectady, NY · ARMA-Approved Soft Wash",
+      headline: "Roof Washing in Schenectady, NY",
+      subhead:
+        "The Mohawk River valley traps humidity, and Schenectady's older, shaded roofs pay the price — long black streaks of gloeocapsa magma feeding on the limestone in your shingles. We kill it at the root, from the ground, without pressure.",
+    },
+    intro: [
+      "If you've driven down Union Street or through GE Realty Plot in late summer, you've seen it: dark, ribbon-like stains marching down the north slope of otherwise fine roofs. That's not weathering. It's gloeocapsa magma — a living cyanobacteria — and it's eating the limestone filler in your shingles.",
+      "Schenectady is a near-perfect breeding ground. The Mohawk River valley holds humidity longer than the surrounding hills. Century-old tree canopies over the Stockade District and Realty Plot keep rooflines shaded and slow to dry. And a lot of Schenectady homes still carry shingles that were installed 15–25 years ago and have never been cleaned.",
+      "Pressure washing an older Schenectady roof is one of the worst things you can do to it — it blasts granules into the gutters and voids most shingle warranties. Our ARMA-approved soft wash uses professional cleaning solutions applied from ladders and the ground. The algae dies on contact, no one walks your brittle shingles, and the streaks are gone.",
+    ],
+    localContext: {
+      heading: "Why Schenectady Roofs Streak First",
+      body:
+        "Schenectady sits at the meeting point of the Mohawk River, dense urban tree cover, and older housing stock — three factors that compound faster here than in most of the Capital Region.",
+      bullets: [
+        {
+          title: "Mohawk River Valley Humidity",
+          desc: "Damp valley air keeps shingles wet for hours after everyone else has dried. That's the environment gloeocapsa magma needs.",
+        },
+        {
+          title: "Century-Old Tree Canopy",
+          desc: "Stockade, Union Street, and GE Realty Plot all sit under heavy shade. Shade + damp = north-slope streaking in as little as 3–5 years.",
+        },
+        {
+          title: "Older Asphalt Shingles",
+          desc: "Plenty of Schenectady roofs still carry architectural shingles from the late 90s or 2000s. Prime real estate for algae if never treated.",
+        },
+        {
+          title: "Slate & Metal Roofs Too",
+          desc: "Many historic and Realty Plot homes have slate or standing-seam metal. Both need soft-wash — nothing else touches them.",
+        },
+      ],
+    },
+    neighborhoods: [
+      "Stockade District",
+      "GE Realty Plot",
+      "Union Street",
+      "Niskayuna",
+      "Rotterdam",
+      "Glenville",
+      "Scotia",
+      "Mont Pleasant",
+    ],
+    benefits: [
+      {
+        title: "Protects Aging Schenectady Roofs",
+        desc: "Killing the algae stops granule loss — the biggest single driver of premature shingle failure on Schenectady's older architectural roofs.",
+      },
+      {
+        title: "Slate & Metal Safe",
+        desc: "Historic slate on Stockade homes and standing-seam metal on GE Plot roofs both get their own soft-wash formulation — never pressure.",
+      },
+      {
+        title: "Warranty-Safe Application",
+        desc: "ARMA-approved. No high pressure. No walking wet, brittle shingles. Warranty language stays intact.",
+      },
+      {
+        title: "Curb Appeal In A Preservation City",
+        desc: "A clean, streak-free roof reads as 'well kept' — a real factor for Schenectady homes going to market or up for historic recognition.",
+      },
+    ],
+    process: [
+      {
+        title: "Free Ground-Level Roof Assessment",
+        desc: "We photograph the roof from the ground and ladders, note flashing, drip edge, and shingle condition, and give a firm quote.",
+      },
+      {
+        title: "Soft-Wash From Ladders & Ground",
+        desc: "ARMA-approved solution is applied at low pressure. On most Schenectady homes we never walk the roof at all.",
+      },
+      {
+        title: "Gentle Rinse & Gutter Flush",
+        desc: "Low-pressure rinse, then flush gutters and downspouts before we leave — critical on older Stockade and Realty Plot fascia.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Can you soft-wash a slate roof on a Stockade District home?",
+        a: "Yes — carefully. Slate is safe with the correct soft-wash mix at very low pressure and never walking on the tile. It's how historic Schenectady roofs should be cleaned.",
+      },
+      {
+        q: "My shingles are almost 20 years old. Should I still wash them?",
+        a: "Usually yes — if the shingles are intact but stained, washing removes the algae eating the granules and helps the remaining shingle life. If they're already curling or bald in spots we'll tell you honestly on the free assessment.",
+      },
+      {
+        q: "How is soft-wash different from what a pressure washing company does?",
+        a: "High pressure blasts the color off the surface temporarily and often voids the shingle warranty. Soft-wash uses cleaning chemistry — not pressure — to kill the algae itself. The streaks don't come back the same way, and no granules end up in the gutters.",
+      },
+      {
+        q: "Do you work on standing-seam metal or copper roofs on Realty Plot?",
+        a: "Yes. Metal and copper get a different mix and technique than asphalt or slate. We're used to the ornate Realty Plot rooflines and dormer detailing.",
+      },
+      {
+        q: "Will you damage my landscaping in the Stockade District?",
+        a: "No. We pre-rinse plantings, tarp sensitive beds, and re-rinse after. On tight Stockade lots this matters — we treat neighbors' plantings the same way we treat yours.",
+      },
+      {
+        q: "How much does roof washing cost in Schenectady?",
+        a: "Most Schenectady roofs quote in the $499–$1,299 range depending on pitch, height, square footage, and shingle vs slate vs metal. Firm on-site quote, never a bait-and-switch range.",
+      },
+    ],
+    meta: {
+      title: "Roof Washing in Schenectady, NY | Capital Pro Pressure Washing",
+      description:
+        "Shingle, slate & metal-safe soft-wash roof cleaning in Schenectady, NY. Kills Mohawk Valley algae streaks. ARMA-approved. Free on-site quotes.",
+    },
+    relatedServices: [
+      {
+        name: "House Washing",
+        to: "/$service",
+        slug: "house-washing",
+        blurb: "Bundle a soft-wash siding cleaning with your roof — one visit, one crew.",
+      },
+      {
+        name: "Gutter Cleaning & Whitening",
+        to: "/$service",
+        slug: "gutter-cleaning",
+        blurb: "Flush the granules and debris out after a roof wash — protect Schenectady fascia.",
+      },
+      {
+        name: "Roof Rejuvenation",
+        to: "/$service",
+        slug: "roof-rejuvenation",
+        blurb: "For aging Schenectady shingles — restore flexibility and help extend usable life.",
+      },
+    ],
+    relatedCityLinks: [
+      {
+        name: "House Washing in Schenectady, NY",
+        to: "/house-washing-schenectady-ny",
+        blurb: "Preservation-grade soft wash for Schenectady exteriors.",
+      },
+      {
+        name: "Concrete Cleaning in Schenectady, NY",
+        to: "/concrete-cleaning-schenectady-ny",
+        blurb: "Undo winter salt damage on Schenectady drives and walks.",
+      },
+    ],
+  },
+  {
+    slug: "concrete-cleaning-schenectady-ny",
+    service: "Concrete Cleaning",
+    city: "Schenectady",
+    region: "Capital Region, NY",
+    icon: Layers,
+    heroImage: concreteCleaningHero.url,
+    hero: {
+      eyebrow: "Schenectady, NY · Surface-Cleaner Finish",
+      headline: "Concrete & Driveway Cleaning in Schenectady, NY",
+      subhead:
+        "Schenectady winters are hard on concrete — road salt, plow slush, and dozens of freeze/thaw cycles pit and stain everything they touch. Our rotary surface cleaner puts an even, streak-free finish back on the drive, and sealing keeps it there.",
+    },
+    intro: [
+      "Older Schenectady neighborhoods — the Stockade, Union Street, Mont Pleasant, and stretches of Rotterdam and Scotia — are full of concrete that has been in the ground for decades. Every winter that concrete takes another beating: brine trucks up front, driveway salt at the door, plow slush piled on top, and a freeze/thaw cycle that runs from November into April.",
+      "By the time the snow clears in Schenectady, most driveways look like a topographic map — salt haze in a milky ring near the garage, tire lines, rust from planters, oil drops, and a gray-black film the spring rain doesn't touch. And then someone shows up with a pressure wand and leaves behind 'tiger stripes' that make the driveway look worse than before.",
+      "We clean Schenectady concrete with a commercial-grade rotary surface cleaner — the same equipment that keeps gas station aprons and shopping-plaza sidewalks looking presentable. Uniform pressure across the full surface. No wand marks. No zebra stripes. Older, salt-worn concrete that hasn't been touched in years often looks like a new pour when we're done.",
+    ],
+    localContext: {
+      heading: "Why Schenectady Concrete Ages Fast",
+      body:
+        "The Capital Region is one of the toughest concrete climates in the Northeast, and Schenectady's mix of heavy road salting, older driveways, and long wet springs accelerates every failure mode concrete has.",
+      bullets: [
+        {
+          title: "Aggressive Road Salt",
+          desc: "Schenectady County salts hard and salts often. That brine gets tracked and plowed into unsealed concrete every single winter.",
+        },
+        {
+          title: "Dozens Of Freeze/Thaw Cycles",
+          desc: "Water works into hairline cracks, freezes, expands, and pops the surface. Sealing is the single biggest defense against spalling.",
+        },
+        {
+          title: "Older Concrete In Established Neighborhoods",
+          desc: "Stockade, Mont Pleasant, and Union Street driveways are often 30–60 years old. A proper surface-clean usually brings them back further than owners expect.",
+        },
+        {
+          title: "Organic Staining Under Trees",
+          desc: "Heavy tree cover over Realty Plot and Niskayuna drops tannin, sap, and leaves — leaving orange and black shadow stains no rinse handles alone.",
+        },
+      ],
+    },
+    neighborhoods: [
+      "Stockade District",
+      "GE Realty Plot",
+      "Union Street",
+      "Niskayuna",
+      "Rotterdam",
+      "Glenville",
+      "Scotia",
+      "Mont Pleasant",
+    ],
+    benefits: [
+      {
+        title: "Even Rotary Surface-Cleaner Finish",
+        desc: "Uniform pressure edge to edge — no wand marks, no zebra stripes, no missed strips down the middle of the drive.",
+      },
+      {
+        title: "Cuts Salt Haze & Winter Film",
+        desc: "Specialty pre-treatments break the milky white brine film that rain and a garden hose won't touch.",
+      },
+      {
+        title: "Sealing For Schenectady Winters",
+        desc: "The single smartest post-clean upgrade in this climate — a good sealer blocks salt penetration, resists freeze/thaw, and helps the clean hold much longer.",
+      },
+      {
+        title: "Older Concrete Comes Back Further Than Owners Expect",
+        desc: "On Stockade, Mont Pleasant and Union Street driveways we routinely surprise homeowners with how much of the 'permanent' gray was just decades of grime.",
+      },
+    ],
+    process: [
+      {
+        title: "Stain-By-Stain Pre-Treat",
+        desc: "Spot-treat oil drips, rust rings, tannin shadows, and salt haze before the main pass — each stain type gets its own chemistry.",
+      },
+      {
+        title: "Commercial Rotary Surface-Clean",
+        desc: "Full-width rotary head at even pressure. The finish is uniform corner to corner, garage apron to sidewalk.",
+      },
+      {
+        title: "Rinse & Optional Sealing Visit",
+        desc: "Final rinse today. If you're sealing, we return once the concrete has fully dried and apply a densifier or penetrating sealer built for Northeast winters.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Can you actually remove winter salt haze?",
+        a: "Yes. Salt haze is one of the most common Schenectady calls we take in April. Pre-treatment plus a rotary surface-clean pass takes off the milky ring that rain, a broom, and a garden hose won't move.",
+      },
+      {
+        q: "Is sealing worth it on a 40-year-old driveway?",
+        a: "Usually yes. Even on older concrete, a penetrating sealer slows further salt damage and freeze/thaw spalling and helps the clean hold much longer. On a driveway that's already crumbling we'll tell you honestly if sealing is the wrong call.",
+      },
+      {
+        q: "Will pressure washing crack my Schenectady driveway?",
+        a: "A properly used rotary surface cleaner won't, because pressure is spread evenly across the head. It's DIY wands — one narrow high-pressure line held in one spot — that gouge concrete and leave the 'tiger stripe' pattern.",
+      },
+      {
+        q: "Can you clean around raised joints and older expansion strips?",
+        a: "Yes. Older Schenectady driveways often have failing tar joints or wood expansion strips. We adjust angle and pressure around them so we don't blow them out of the seam.",
+      },
+      {
+        q: "Do you clean paver driveways too?",
+        a: "Yes — pavers get a different process (cleaning, joint re-sanding, and sealing). We can quote a paver driveway and a concrete apron on the same visit.",
+      },
+      {
+        q: "How much does driveway cleaning cost in Schenectady?",
+        a: "Most Schenectady driveways run $249–$549 for cleaning alone. Sealing is quoted separately based on square footage and product.",
+      },
+    ],
+    meta: {
+      title: "Concrete Cleaning in Schenectady, NY | Capital Pro Pressure Washing",
+      description:
+        "Driveway & concrete cleaning in Schenectady, NY — rotary surface-cleaner finish, salt-haze removal, and optional sealing. Free on-site quotes.",
+    },
+    relatedServices: [
+      {
+        name: "Paver Cleaning & Sealing",
+        to: "/$service",
+        slug: "paver-cleaning-sealing",
+        blurb: "Restore Schenectady paver drives and patios — cleaning plus polymeric sanding and sealing.",
+      },
+      {
+        name: "House Washing",
+        to: "/$service",
+        slug: "house-washing",
+        blurb: "Bundle a soft-wash siding cleaning with your driveway visit.",
+      },
+      {
+        name: "Deck & Patio Cleaning",
+        to: "/$service",
+        slug: "deck-patio-cleaning",
+        blurb: "Strip graying and mildew off Schenectady decks — prep for stain.",
+      },
+    ],
+    relatedCityLinks: [
+      {
+        name: "House Washing in Schenectady, NY",
+        to: "/house-washing-schenectady-ny",
+        blurb: "Preservation-grade soft wash for Schenectady exteriors.",
+      },
+      {
+        name: "Roof Washing in Schenectady, NY",
+        to: "/roof-washing-schenectady-ny",
+        blurb: "Kill Mohawk-Valley algae streaks on Schenectady rooflines.",
+      },
+    ],
+  },
 ];
 
 export function getCityService(slug: string) {
