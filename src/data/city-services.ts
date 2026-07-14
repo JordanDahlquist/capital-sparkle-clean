@@ -931,6 +931,444 @@ export const CITY_SERVICES: CityServiceContent[] = [
       },
     ],
   },
+  {
+    slug: "roof-washing-saratoga-springs-ny",
+    service: "Roof Washing",
+    city: "Saratoga Springs",
+    region: "Capital Region, NY",
+    icon: CloudRain,
+    heroImage: roofWashingHero.url,
+    hero: {
+      eyebrow: "Saratoga Springs, NY · ARMA-Approved Soft Wash",
+      headline: "Roof Washing in Saratoga Springs, NY",
+      subhead:
+        "Saratoga's famous tree canopy is beautiful — and it's exactly why so many roofs here streak black and grow moss faster than anywhere else in the Capital Region. We soft-wash from the ground so the shingles survive.",
+    },
+    intro: [
+      "Walk down North Broadway, through the East Side, or under the elms off Union Ave, and look up. That mature tree canopy is one of the things people love about Saratoga Springs — and it's also the single biggest reason roofs here suffer. Constant shade keeps shingles damp for days after rain. Leaves, sap, and pollen fall onto rooflines and stay there. Add Saratoga County's humid summers and you've built a perfect greenhouse for the two problems we see on nearly every Saratoga roof: gloeocapsa magma black streaking and — much more than in Albany or Schenectady — actual moss.",
+      "Moss is the giveaway that Saratoga is a heavier-shade market. Moss doesn't just stain a roof; it holds moisture against the shingle surface and works between the tabs, prying them up over time. By the time you can see it clearly from the sidewalk, it's already been at work on the deck of the roof for years.",
+      "There is a hard deadline built into this town: track season. Late July through Labor Day, Saratoga homeowners host out-of-town guests, list homes as short-term rentals for the meet, and throw backyard parties two or three nights a week. A moss-covered, streaked roof is the first thing an incoming guest photographs from the driveway. Our ARMA-approved soft wash kills both algae and moss at the root without pressure — no walking on wet, brittle shingles, no voided warranty, no granules in the gutters. Book by early June to be in the queue before the meet.",
+    ],
+    localContext: {
+      heading: "Why Saratoga Roofs Streak & Grow Moss First",
+      body:
+        "Saratoga Springs sits under one of the densest residential tree canopies in the Capital Region, and that canopy interacts with humid summers, older housing stock, and steep Victorian rooflines to produce more moss and algae than the surrounding towns.",
+      bullets: [
+        {
+          title: "Dense Mature Tree Canopy",
+          desc: "North Broadway, the East Side, and downtown streets stay shaded for most of the day. Roofs never fully dry between storms — ideal for algae and, unusually for the region, moss.",
+        },
+        {
+          title: "Debris Load From Overhanging Limbs",
+          desc: "Constant leaf, needle, and sap fall traps moisture on the shingle surface and in valleys, feeding moss and speeding stain buildup.",
+        },
+        {
+          title: "Victorian & Steep-Pitch Rooflines",
+          desc: "Downtown, North Broadway, and Broadway-adjacent homes have complex, high-pitch roofs with dormers, valleys, and turrets. Perfect microclimates for moss to hide.",
+        },
+        {
+          title: "The Track-Season Deadline",
+          desc: "July–August you're hosting or renting. Curb appeal has a firm date. Soft-wash should be done by mid-June to hit the meet clean.",
+        },
+      ],
+    },
+    neighborhoods: [
+      "Downtown / Broadway",
+      "North Broadway",
+      "East Side",
+      "Geyser Crest",
+      "Wilton",
+      "Greenfield",
+      "Ballston Spa area",
+    ],
+    benefits: [
+      {
+        title: "Kills Moss & Algae At The Root",
+        desc: "In heavy-canopy Saratoga, treating the biology — not just bleaching the surface — is what keeps the roof from looking the same again in two months.",
+      },
+      {
+        title: "Protects Steep Victorian Rooflines",
+        desc: "Applied from ladders and the ground so no one walks your ornate downtown or North Broadway rooflines. Complex valleys and dormer flashings stay intact.",
+      },
+      {
+        title: "Warranty-Safe Application",
+        desc: "ARMA-approved soft wash. No high-pressure cleaning, no granule loss into the gutters, no warranty language undone.",
+      },
+      {
+        title: "Ready For Track Season & Rental Guests",
+        desc: "Book by early June for a clean roofline before the meet — the first thing arriving guests, buyers, and short-term renters see from the drive.",
+      },
+    ],
+    process: [
+      {
+        title: "Free Ground & Ladder Assessment",
+        desc: "We photograph the roof from every side, note moss coverage, flashing, and shingle condition, and give a firm quote — no vague ranges.",
+      },
+      {
+        title: "Soft-Wash Application",
+        desc: "ARMA-approved solution applied at low pressure from ladders and the ground. Moss and algae die on contact.",
+      },
+      {
+        title: "Gentle Rinse & Gutter Flush",
+        desc: "Low-pressure rinse, then flush the gutters and downspouts so nothing left over drains onto your driveway or landscaping.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Do you clean actual moss off Saratoga roofs, or only black algae?",
+        a: "Both. Saratoga's canopy makes it one of the few Capital Region markets where full moss growth is common. Our soft-wash mix kills moss at the root; over the following weeks it dries out and weathers off the shingle rather than being scraped or pressure-blasted.",
+      },
+      {
+        q: "How soon before track season should I schedule?",
+        a: "Book by late May or early June. July and August fill up fast because every rental host and party host in town wants a clean exterior before the meet. Anything after mid-July risks not fitting into the schedule.",
+      },
+      {
+        q: "Can you soft-wash the complex roof on a Victorian downtown home?",
+        a: "Yes — that's most of what we do in Saratoga. Turrets, dormers, valleys, and steep pitches are handled from ladders using extension application, never by walking the roof surface.",
+      },
+      {
+        q: "Will the treatment harm the mature trees and gardens I care about?",
+        a: "No. We pre-rinse plantings before the wash, apply the treatment with drift control, and re-rinse afterward. The mature landscaping in Saratoga is part of what makes the homes valuable — we treat it accordingly.",
+      },
+      {
+        q: "My roof is old but not ready to replace. Is washing still worth it?",
+        a: "Usually yes. If the shingles are intact but moss- and algae-stained, killing the biology helps slow further granule loss on the shingles you have. On badly failing roofs we'll say so plainly during the free assessment.",
+      },
+      {
+        q: "How much does roof washing cost in Saratoga Springs?",
+        a: "Most Saratoga roofs quote in the $549–$1,499 range depending on pitch, height, square footage, and moss load. Downtown and North Broadway Victorians with complex rooflines run higher. Firm on-site quote every time.",
+      },
+    ],
+    meta: {
+      title: "Roof Washing in Saratoga Springs, NY | Capital Pro Pressure Washing",
+      description:
+        "Soft-wash roof cleaning in Saratoga Springs, NY. Kills moss and black algae under Saratoga's tree canopy — book before track season. ARMA-approved. Free quotes.",
+    },
+    relatedServices: [
+      {
+        name: "House Washing",
+        to: "/$service",
+        slug: "house-washing",
+        blurb: "Bundle a soft-wash siding cleaning with your roof visit — before the meet.",
+      },
+      {
+        name: "Gutter Cleaning & Whitening",
+        to: "/$service",
+        slug: "gutter-cleaning",
+        blurb: "Flush the moss, granules, and leaf litter Saratoga's canopy dumps into your gutters.",
+      },
+      {
+        name: "Roof Rejuvenation",
+        to: "/$service",
+        slug: "roof-rejuvenation",
+        blurb: "For aging Saratoga shingles — restore flexibility and help extend usable roof life.",
+      },
+    ],
+    relatedCityLinks: [
+      {
+        name: "House Washing in Saratoga Springs, NY",
+        to: "/house-washing-saratoga-springs-ny",
+        blurb: "Victorian-safe soft wash for Saratoga exteriors, ready by track season.",
+      },
+      {
+        name: "Concrete Cleaning in Saratoga Springs, NY",
+        to: "/concrete-cleaning-saratoga-springs-ny",
+        blurb: "Drives, walks, and entertaining spaces cleaned before you host.",
+      },
+    ],
+  },
+  {
+    slug: "house-washing-saratoga-springs-ny",
+    service: "House Washing",
+    city: "Saratoga Springs",
+    region: "Capital Region, NY",
+    icon: Home,
+    heroImage: houseWashingHero.url,
+    hero: {
+      eyebrow: "Saratoga Springs, NY · Soft Wash Before The Meet",
+      headline: "House Washing in Saratoga Springs, NY",
+      subhead:
+        "Victorian downtown, grand North Broadway, and shaded East Side homes — we soft-wash Saratoga at hose pressure, so painted trim and original woodwork stay intact and the exterior is guest-ready by track season.",
+    },
+    intro: [
+      "There's a specific look Saratoga Springs homes are supposed to have: painted Victorian trim in three colors, mature landscaping, a wraparound porch, and siding that reads as freshly maintained. That look does not survive high pressure. Painted spindles crack, old putty gets driven out of window sashes, and ornate wood detailing splinters — the exact features that make North Broadway and downtown houses worth what they're worth.",
+      "Meanwhile the tree canopy that makes these streets beautiful keeps the north side of every home shaded and slow to dry. Green algae and mildew build fast in those conditions. By June, houses that looked fine over the winter are showing streaks along shaded siding, gutters, and porch ceilings.",
+      "There's a hard deadline on this in Saratoga: track season. From late July through Labor Day, homeowners are hosting friends, family, buyers, or short-term rental guests. The house needs to be photograph-ready. Our soft-wash approach uses professional cleaning solutions at less pressure than a garden hose — safe for Victorian trim, historic paint, and delicate landscaping — and kills mildew at the root so it doesn't rebound in six weeks. Book by early June and you're on the schedule before the meet.",
+    ],
+    localContext: {
+      heading: "Built For Saratoga's Housing Stock",
+      body:
+        "Downtown Victorians, North Broadway estates, East Side Colonials, and the newer builds in Geyser Crest and Wilton all ask for a different wash. We match detergent strength and rinse pressure to the actual surface — not a generic template.",
+      bullets: [
+        {
+          title: "Downtown & Broadway Victorians",
+          desc: "Painted wood spindles, brackets, and clapboard. Low-pressure soft-wash and gentle detergents that clean without stripping historic paint or driving water into old sashes.",
+        },
+        {
+          title: "North Broadway Estates",
+          desc: "Large homes with painted brick, stone accents, and mature plantings right against the foundation. Careful masking around leaded windows, drift control near heirloom gardens.",
+        },
+        {
+          title: "East Side & Shaded Streets",
+          desc: "Heavy canopy = mildew heaven on north-facing walls. Extended dwell time and a re-rinse — the algae doesn't come back a month later.",
+        },
+        {
+          title: "Geyser Crest, Wilton & Greenfield",
+          desc: "Larger newer homes on bigger lots — vinyl, Hardie, and painted cedar. Our soft-wash reaches high gables safely from the ground.",
+        },
+      ],
+    },
+    neighborhoods: [
+      "Downtown / Broadway",
+      "North Broadway",
+      "East Side",
+      "Geyser Crest",
+      "Wilton",
+      "Greenfield",
+      "Ballston Spa area",
+    ],
+    benefits: [
+      {
+        title: "Victorian- & Trim-Safe Soft Wash",
+        desc: "Painted spindles, ornate brackets, and old wood sashes stay intact. Cleaning does the work at hose pressure — no splitting, no water intrusion.",
+      },
+      {
+        title: "Kills Canopy-Shade Mildew",
+        desc: "Saratoga's tree cover feeds mildew on shaded siding. Our biocides target the biology at the root rather than just bleaching the color out.",
+      },
+      {
+        title: "Track-Season & Rental-Ready",
+        desc: "Book by early June and the exterior is photograph-ready before guests arrive for the meet — a real deadline for hosts and short-term rentals.",
+      },
+      {
+        title: "Careful Around Mature Landscaping",
+        desc: "North Broadway and East Side plantings aren't replaceable. We pre-rinse beds, apply with drift control, and re-rinse — no scorched hostas or hydrangeas.",
+      },
+    ],
+    process: [
+      {
+        title: "Free Walkthrough Quote",
+        desc: "We walk the property, note any historic trim, failing paint, or delicate landscaping, and give a firm price — never a moving range.",
+      },
+      {
+        title: "Mask, Pre-Treat & Soft-Wash",
+        desc: "Pre-rinse plantings, mask historic elements, apply detergent, let it dwell on shaded walls, then rinse top-to-bottom at low pressure.",
+      },
+      {
+        title: "Detail Pass & Walk-Through",
+        desc: "Hand-detail around porch spindles, front doors, and window casings. Walk the home with you — you approve the finish before we leave.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Can you clean the painted Victorian trim on my downtown home?",
+        a: "Yes — that's the housing stock we clean most often in Saratoga. Soft-wash at less-than-garden-hose pressure removes mildew and grime without stripping historic paint or splintering ornate spindles and brackets.",
+      },
+      {
+        q: "How far in advance of track season should I book?",
+        a: "By late May or early June. July and August fill fast because so many owners host or rent during the meet. Booking early puts you in the clean-before-guests window rather than the after-they-leave window.",
+      },
+      {
+        q: "Will your cleaning damage the mature plantings on North Broadway lots?",
+        a: "No. We pre-rinse beds and shrubs before the wash, apply detergent with drift control, and re-rinse after. Mature landscaping is a big part of Saratoga curb appeal — we treat it accordingly.",
+      },
+      {
+        q: "The north side of my house grows green every year. Can you actually stop that?",
+        a: "We can't remove the tree cover feeding it, but we can treat the biology instead of just bleaching the surface. That's why homes we wash tend to stay cleaner meaningfully longer than a straight pressure rinse — an annual visit typically stays ahead of regrowth.",
+      },
+      {
+        q: "Do you work on short-term rental homes on tight turnarounds?",
+        a: "Yes — we schedule Saratoga rental hosts around meet-week check-ins whenever we can. Tell us the arrival date on the quote.",
+      },
+      {
+        q: "How much does house washing cost in Saratoga Springs?",
+        a: "Most single-family Saratoga homes fall in the $399–$799 range. Downtown Victorians and larger North Broadway estates with detailed trim run higher — the labor and masking are more involved.",
+      },
+    ],
+    meta: {
+      title: "House Washing in Saratoga Springs, NY | Capital Pro Pressure Washing",
+      description:
+        "Soft-wash house washing in Saratoga Springs, NY — Victorian-safe, track-season ready. Downtown, North Broadway, East Side & Wilton. Free on-site quotes.",
+    },
+    relatedServices: [
+      {
+        name: "Roof Washing",
+        to: "/$service",
+        slug: "roof-washing",
+        blurb: "Kill moss and black streaks on Saratoga's canopy-shaded roofs.",
+      },
+      {
+        name: "Window Cleaning",
+        to: "/$service",
+        slug: "window-cleaning",
+        blurb: "Exterior windows crystal-clear for meet-season photos and open houses.",
+      },
+      {
+        name: "Concrete Cleaning",
+        to: "/$service",
+        slug: "concrete-cleaning-sealing",
+        blurb: "Drives, walks, and entertaining spaces cleaned before hosting.",
+      },
+    ],
+    relatedCityLinks: [
+      {
+        name: "Roof Washing in Saratoga Springs, NY",
+        to: "/roof-washing-saratoga-springs-ny",
+        blurb: "Moss and algae, gone — the shade problem in Saratoga.",
+      },
+      {
+        name: "Concrete Cleaning in Saratoga Springs, NY",
+        to: "/concrete-cleaning-saratoga-springs-ny",
+        blurb: "Guest-ready drives, walks, and patios before track season.",
+      },
+    ],
+  },
+  {
+    slug: "concrete-cleaning-saratoga-springs-ny",
+    service: "Concrete Cleaning",
+    city: "Saratoga Springs",
+    region: "Capital Region, NY",
+    icon: Layers,
+    heroImage: concreteCleaningHero.url,
+    hero: {
+      eyebrow: "Saratoga Springs, NY · Surface-Cleaner Finish",
+      headline: "Concrete & Driveway Cleaning in Saratoga Springs, NY",
+      subhead:
+        "The driveway and walkway are the first surfaces meet-season guests touch. We surface-clean Saratoga concrete edge-to-edge — no wand marks — and undo a winter's worth of salt and shade staining before your first party.",
+    },
+    intro: [
+      "In Saratoga Springs, driveways and walkways do double duty. They're daily driveways for eight months of the year, and they're entertaining space from Memorial Day through Labor Day. Cars park at the curb because the driveway is full of guests. The walk from the sidewalk to the front porch is the first physical surface every arriving guest — or short-term rental check-in — actually steps on.",
+      "Between winter salt, freeze/thaw cycles, and the tannin drop from Saratoga's mature tree canopy, that concrete takes a beating. Salt haze leaves a milky ring near the garage. Leaves and needles stain the walk in orange and black shadows the rain never touches. And someone with a rented pressure wand almost always makes it worse — 'tiger stripes' down the driveway that scream DIY.",
+      "We clean Saratoga concrete with a commercial rotary surface cleaner — the same equipment kept on gas station aprons and high-traffic plazas. Even pressure across the whole surface. No zebra stripes. Then, because this is a heavy salt-and-shade market, we strongly recommend sealing: it blocks salt penetration, resists freeze/thaw spalling, and keeps the concrete guest-ready deeper into the season. Book by early June and the drive, walk, and any patio pavers are done before the meet.",
+    ],
+    localContext: {
+      heading: "Why Saratoga Concrete Stains Fast",
+      body:
+        "Saratoga sits at the meeting point of heavy winter salting, mature tree canopy, and a summer entertaining calendar that puts every square foot of concrete on display. That combination stains concrete faster than most Capital Region markets — and gives owners a hard deadline to fix it.",
+      bullets: [
+        {
+          title: "Winter Salt & Freeze/Thaw",
+          desc: "Aggressive deicing plus dozens of freeze/thaw cycles push salt into unsealed concrete and pop the surface loose. Sealing is the single biggest fix.",
+        },
+        {
+          title: "Tannin & Organic Staining",
+          desc: "Mature canopy drops leaves, needles, sap, and berries onto walks and drives — leaving orange and black shadow stains a garden hose can't move.",
+        },
+        {
+          title: "Shaded, Slow-Drying Walkways",
+          desc: "East Side and North Broadway walks stay damp under the canopy. Algae builds a green film that gets slippery in wet weather.",
+        },
+        {
+          title: "The Hosting & Track-Season Deadline",
+          desc: "Guests, buyers, and rental check-ins arrive from late June through Labor Day. Drives, walks, and patios need to be finished before the first arrival, not the last.",
+        },
+      ],
+    },
+    neighborhoods: [
+      "Downtown / Broadway",
+      "North Broadway",
+      "East Side",
+      "Geyser Crest",
+      "Wilton",
+      "Greenfield",
+      "Ballston Spa area",
+    ],
+    benefits: [
+      {
+        title: "Even Rotary Surface-Cleaner Finish",
+        desc: "Uniform pressure edge-to-edge — no wand marks, no zebra stripes down the middle of the drive.",
+      },
+      {
+        title: "Cuts Salt Haze & Tannin Shadows",
+        desc: "Targeted pre-treatments handle Saratoga's specific mix: winter salt film plus canopy-tannin staining that plain water won't touch.",
+      },
+      {
+        title: "Sealing For Saratoga Winters",
+        desc: "The smartest post-clean upgrade in this climate — a penetrating sealer blocks salt, resists freeze/thaw, and helps the clean hold much longer.",
+      },
+      {
+        title: "Guest-Ready Before Track Season",
+        desc: "Book by early June and the drive, walk, and pavers are photograph-ready before the first meet-week arrival.",
+      },
+    ],
+    process: [
+      {
+        title: "Stain-By-Stain Pre-Treat",
+        desc: "Spot-treat oil drops, rust rings, tannin shadows, and salt haze before the main pass — each stain type gets its own chemistry.",
+      },
+      {
+        title: "Commercial Rotary Surface-Clean",
+        desc: "Full-width rotary head at even pressure. Finish is uniform corner to corner, garage apron to sidewalk to porch step.",
+      },
+      {
+        title: "Rinse & Optional Sealing Visit",
+        desc: "Final rinse today. If you're sealing, we return once the concrete has dried and apply a densifier or penetrating sealer built for Northeast winters.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Can you have my drive and walk ready for a meet-week arrival?",
+        a: "Yes if you book early — late May or June is ideal. We schedule Saratoga hosts and rental owners around specific arrival dates whenever we can. Tell us the date on the quote.",
+      },
+      {
+        q: "Do you clean paver walkways and patios too?",
+        a: "Yes. Pavers are cleaned, re-sanded, and sealed as a separate service — we can quote a paver patio, a concrete apron, and the front walk on the same visit.",
+      },
+      {
+        q: "Will you remove the orange and black shadow stains under my trees?",
+        a: "Most of them. Tannin and organic staining respond well to the pre-treat plus rotary pass. Deep, years-old staining often lightens dramatically but may not vanish entirely — we set honest expectations before starting.",
+      },
+      {
+        q: "Is sealing worth it in Saratoga?",
+        a: "Usually yes. Between winter salt, freeze/thaw, and canopy tannin, a good penetrating sealer helps the clean hold much longer and slows further damage to the concrete beneath. On badly failing concrete we'll tell you plainly if sealing is the wrong call.",
+      },
+      {
+        q: "Will pressure washing crack older Saratoga concrete?",
+        a: "A properly used rotary surface cleaner won't — pressure is spread evenly across the head. It's DIY narrow wands held in one spot that gouge concrete and leave the 'tiger stripe' pattern that screams unprofessional.",
+      },
+      {
+        q: "How much does driveway cleaning cost in Saratoga Springs?",
+        a: "Most Saratoga driveways run $279–$599 for cleaning alone. Sealing is quoted separately by square footage. Long North Broadway drives and detailed downtown walkways run higher.",
+      },
+    ],
+    meta: {
+      title: "Concrete Cleaning in Saratoga Springs, NY | Capital Pro Pressure Washing",
+      description:
+        "Driveway & concrete cleaning in Saratoga Springs, NY — surface-cleaner finish, salt-haze removal, optional sealing. Guest-ready before track season.",
+    },
+    relatedServices: [
+      {
+        name: "Paver Cleaning & Sealing",
+        to: "/$service",
+        slug: "paver-cleaning-sealing",
+        blurb: "Restore Saratoga paver patios and walkways — cleaning plus polymeric sanding and sealing.",
+      },
+      {
+        name: "House Washing",
+        to: "/$service",
+        slug: "house-washing",
+        blurb: "Bundle a soft-wash siding cleaning with your driveway visit.",
+      },
+      {
+        name: "Deck & Patio Cleaning",
+        to: "/$service",
+        slug: "deck-patio-cleaning",
+        blurb: "Strip graying and mildew off Saratoga decks — prep for stain before hosting.",
+      },
+    ],
+    relatedCityLinks: [
+      {
+        name: "House Washing in Saratoga Springs, NY",
+        to: "/house-washing-saratoga-springs-ny",
+        blurb: "Victorian- and trim-safe soft wash before track season.",
+      },
+      {
+        name: "Roof Washing in Saratoga Springs, NY",
+        to: "/roof-washing-saratoga-springs-ny",
+        blurb: "Kill moss and algae on canopy-shaded Saratoga roofs.",
+      },
+    ],
+  },
 ];
 
 export function getCityService(slug: string) {
