@@ -127,7 +127,6 @@ export const CITY_SERVICES: CityServiceContent[] = [
     faqs: [
       {
         q: "How much does house washing cost in Albany?",
-        desc: undefined as unknown as string,
         a: "Most Albany single-family homes fall in the $349–$649 range. Historic Center Square brownstones and larger Delmar Colonials run higher. We give firm quotes — never a range that changes on the day of service.",
       },
       {
@@ -150,7 +149,7 @@ export const CITY_SERVICES: CityServiceContent[] = [
         q: "Do you clean brick and stucco?",
         a: "Yes. Common on Center Square and Mansion District homes. We adjust detergent and pressure for masonry and never drive water into old mortar joints.",
       },
-    ] as unknown as { q: string; a: string }[],
+    ],
     meta: {
       title: "House Washing in Albany, NY | Capital Pro Pressure Washing",
       description:
