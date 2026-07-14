@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ThankYouRouteImport } from './routes/thank-you'
+import { Route as HouseWashingAlbanyNyRouteImport } from './routes/house-washing-albany-ny'
 import { Route as ServiceRouteImport } from './routes/$service'
 import { Route as IndexRouteImport } from './routes/index'
 
 const ThankYouRoute = ThankYouRouteImport.update({
   id: '/thank-you',
   path: '/thank-you',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HouseWashingAlbanyNyRoute = HouseWashingAlbanyNyRouteImport.update({
+  id: '/house-washing-albany-ny',
+  path: '/house-washing-albany-ny',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServiceRoute = ServiceRouteImport.update({
@@ -32,30 +38,34 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$service': typeof ServiceRoute
+  '/house-washing-albany-ny': typeof HouseWashingAlbanyNyRoute
   '/thank-you': typeof ThankYouRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$service': typeof ServiceRoute
+  '/house-washing-albany-ny': typeof HouseWashingAlbanyNyRoute
   '/thank-you': typeof ThankYouRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$service': typeof ServiceRoute
+  '/house-washing-albany-ny': typeof HouseWashingAlbanyNyRoute
   '/thank-you': typeof ThankYouRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$service' | '/thank-you'
+  fullPaths: '/' | '/$service' | '/house-washing-albany-ny' | '/thank-you'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$service' | '/thank-you'
-  id: '__root__' | '/' | '/$service' | '/thank-you'
+  to: '/' | '/$service' | '/house-washing-albany-ny' | '/thank-you'
+  id: '__root__' | '/' | '/$service' | '/house-washing-albany-ny' | '/thank-you'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ServiceRoute: typeof ServiceRoute
+  HouseWashingAlbanyNyRoute: typeof HouseWashingAlbanyNyRoute
   ThankYouRoute: typeof ThankYouRoute
 }
 
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/thank-you'
       fullPath: '/thank-you'
       preLoaderRoute: typeof ThankYouRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/house-washing-albany-ny': {
+      id: '/house-washing-albany-ny'
+      path: '/house-washing-albany-ny'
+      fullPath: '/house-washing-albany-ny'
+      preLoaderRoute: typeof HouseWashingAlbanyNyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$service': {
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ServiceRoute: ServiceRoute,
+  HouseWashingAlbanyNyRoute: HouseWashingAlbanyNyRoute,
   ThankYouRoute: ThankYouRoute,
 }
 export const routeTree = rootRouteImport
