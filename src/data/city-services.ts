@@ -323,7 +323,7 @@ export const CITY_SERVICES: CityServiceContent[] = [
         name: "Roof Rejuvenation",
         to: "/$service",
         slug: "roof-rejuvenation",
-        blurb: "For older Albany roofs — restore flexibility and add 5+ years of life.",
+        blurb: "For older Albany roofs — restore shingle flexibility and help extend usable roof life.",
       },
     ],
     relatedCityLinks: [
