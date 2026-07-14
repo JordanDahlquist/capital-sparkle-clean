@@ -455,9 +455,9 @@ export function CityServicePage({ content }: { content: CityServiceContent }) {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {content.relatedCityLinks.map((r) => (
-              <Link
+              <a
                 key={r.to}
-                to={r.to}
+                href={r.to}
                 className="group block bg-white rounded-lg p-5 border border-gray-200 hover:border-[var(--brand-red)] hover:shadow-md transition"
               >
                 <div className="flex items-center justify-between mb-2">
@@ -475,7 +475,7 @@ export function CityServicePage({ content }: { content: CityServiceContent }) {
                 <p className="text-[var(--brand-charcoal)]/80 text-sm leading-relaxed">
                   {r.blurb}
                 </p>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
