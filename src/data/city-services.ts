@@ -1369,6 +1369,444 @@ export const CITY_SERVICES: CityServiceContent[] = [
       },
     ],
   },
+  {
+    slug: "house-washing-troy-ny",
+    service: "House Washing",
+    city: "Troy",
+    region: "Capital Region, NY",
+    icon: Home,
+    heroImage: houseWashingHero.url,
+    hero: {
+      eyebrow: "Troy, NY · Soft Wash For Historic Brick",
+      headline: "House Washing in Troy, NY",
+      subhead:
+        "Troy is a brick-and-brownstone city — 19th-century rowhouses, Washington Park townhouses, Pottery District walk-ups. High pressure destroys old lime mortar. We soft-wash brick and masonry at less-than-garden-hose pressure so the walls stay intact.",
+    },
+    intro: [
+      "Troy is the most masonry-heavy city in the Capital Region. Walk Washington Park, the blocks around Russell Sage, or the streets of the Pottery District and you're surrounded by Victorian rowhouses, brownstones, and 19th-century brick buildings — much of it built when lime mortar, not modern Portland cement, was the standard. That's the thing most washing companies get wrong here: old lime mortar is soft, and a high-pressure wand pointed at a joint will blow it out in seconds.",
+      "The damage is usually invisible from the sidewalk until the next hard rain, when water drives through the opened joint into the masonry wall behind. On a preserved rowhouse that repair runs into thousands of dollars — plus the historic-district paperwork if you're near Washington Park or downtown.",
+      "Our Troy soft-wash approach is built for exactly this housing stock. Professional cleaning solutions do the work — not pressure. We soft-wash brick, brownstone, and painted masonry at lower-than-garden-hose PSI, mask around failing joints, and keep water off the wall rather than driving it in. Hudson River humidity feeds green algae and mildew on shaded sides; the treatment kills it at the root rather than just bleaching the color out.",
+    ],
+    localContext: {
+      heading: "Built For Troy's Brick & Brownstone",
+      body:
+        "No two Troy homes ask for the exact same wash — Washington Park brownstone, Pottery District brick, Sycaway vinyl, and Lansingburgh clapboard all get their own detergent and rinse pressure. We calibrate to the actual surface rather than blasting everything the same way.",
+      bullets: [
+        {
+          title: "Washington Park & Downtown Rowhouses",
+          desc: "Preserved 19th-century brick with original lime mortar. We soft-wash at very low pressure and mask any failing joints — no water driven into masonry walls.",
+        },
+        {
+          title: "Pottery District & Little Italy",
+          desc: "Painted brick storefronts and walk-ups. Detergents matched to painted masonry so cleaning doesn't strip historic paint or expose brick underneath.",
+        },
+        {
+          title: "South Troy & Lansingburgh",
+          desc: "Older wood clapboard, aluminum, and vinyl mixed on tight lots. Careful drift control between adjacent homes and shared walls.",
+        },
+        {
+          title: "Sycaway & Sycaway-Adjacent Homes",
+          desc: "Larger postwar homes with vinyl and Hardie siding. Soft-wash reaches high peaks safely from the ground — no ladders scraping siding.",
+        },
+      ],
+    },
+    neighborhoods: [
+      "Washington Park",
+      "Pottery District",
+      "Little Italy",
+      "Sycaway",
+      "Lansingburgh",
+      "South Troy",
+      "Downtown Troy",
+    ],
+    benefits: [
+      {
+        title: "Masonry-Safe Soft Wash",
+        desc: "The right approach for Troy's lime mortar and historic brick — chemistry does the cleaning at hose pressure, so joints stay intact.",
+      },
+      {
+        title: "Kills Hudson River Mildew",
+        desc: "Riverfront humidity and shaded sides feed green algae on Troy walls. Our treatment targets the biology at the root rather than just fading the color.",
+      },
+      {
+        title: "Surface-Specific Detergents",
+        desc: "Brownstone, painted brick, vinyl, aluminum, and cedar each get their own mix rather than one generic soap that damages one to clean another.",
+      },
+      {
+        title: "Careful On Tight Troy Lots",
+        desc: "Rowhouses share walls and gardens. We use drift control and pre-rinse neighboring plantings so we don't create a problem next door.",
+      },
+    ],
+    process: [
+      {
+        title: "Free Walkthrough Quote",
+        desc: "We walk the property, note any failing mortar, cracked brick, or paint issues, and give a firm price — no vague ranges that change on the day.",
+      },
+      {
+        title: "Mask, Pre-Treat & Soft-Wash",
+        desc: "Pre-rinse plantings, mask failing joints and historic elements, apply detergent, let it dwell on shaded walls, then rinse top-to-bottom at low pressure.",
+      },
+      {
+        title: "Detail Pass & Walk-Through",
+        desc: "Hand-detail around historic doors, stoops, and window casings. Walk the property with you before we leave — you approve the finish.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is pressure washing safe on a Washington Park brownstone?",
+        a: "No — that's exactly the mistake we help homeowners avoid. High pressure blows soft lime mortar out of the joint and drives water into the masonry wall behind. On Washington Park, downtown, and any 19th-century Troy home, we soft-wash exclusively at less pressure than a garden hose.",
+      },
+      {
+        q: "Will your detergents strip painted brick or historic paint?",
+        a: "No. We match detergent strength to the surface and pre-test in an inconspicuous spot on older or hand-painted homes. On painted brick we use gentler chemistry than we'd use on raw masonry.",
+      },
+      {
+        q: "My rowhouse shares walls with the neighbors. Will your wash bother them?",
+        a: "We plan every Troy rowhouse job around the shared walls, shared gutters, and tight lots. Drift control, pre-rinsing neighboring plantings, and keeping runoff on your property — not theirs — is part of the standard job.",
+      },
+      {
+        q: "There's failing mortar on my house already. Can you still wash it?",
+        a: "Yes, but carefully. We identify failing joints during the walkthrough, mask them entirely, and hand-detail the surrounding brick. We won't clean anywhere the wash would drive water into a wall — you'll be told plainly what should be repointed first.",
+      },
+      {
+        q: "How fast will the green come back on the shaded side facing the Hudson?",
+        a: "Because we treat the biology and not just the color, results generally last considerably longer than a straight pressure rinse. Exact timing depends on shade and tree cover — an annual wash typically stays ahead of regrowth on shaded riverfront-adjacent walls.",
+      },
+      {
+        q: "How much does house washing cost in Troy?",
+        a: "Most single-family Troy homes fall in the $349–$749 range. Washington Park brownstones and downtown rowhouses with detailed masonry run higher because the masking and hand-detail work is more involved.",
+      },
+    ],
+    meta: {
+      title: "House Washing in Troy, NY | Capital Pro Pressure Washing",
+      description:
+        "Soft-wash house washing in Troy, NY — safe for brick, brownstone, and lime mortar. Washington Park, Pottery District, Sycaway & Lansingburgh. Free quotes.",
+    },
+    relatedServices: [
+      {
+        name: "Roof Washing",
+        to: "/$service",
+        slug: "roof-washing",
+        blurb: "Shingle-safe soft wash for Troy's older rooflines.",
+      },
+      {
+        name: "Gutter Cleaning & Whitening",
+        to: "/$service",
+        slug: "gutter-cleaning",
+        blurb: "Clear rowhouse gutters and remove black tiger-stripe staining from the face.",
+      },
+      {
+        name: "Concrete Cleaning",
+        to: "/$service",
+        slug: "concrete-cleaning-sealing",
+        blurb: "Undo winter salt damage on Troy stoops, walkways, and brick paths.",
+      },
+    ],
+    relatedCityLinks: [
+      {
+        name: "Roof Washing in Troy, NY",
+        to: "/roof-washing-troy-ny",
+        blurb: "Kill black algae streaks on Troy's older, shaded rooflines.",
+      },
+      {
+        name: "Concrete Cleaning in Troy, NY",
+        to: "/concrete-cleaning-troy-ny",
+        blurb: "Salt-worn stoops, brick walks, and driveways cleaned safely.",
+      },
+    ],
+  },
+  {
+    slug: "roof-washing-troy-ny",
+    service: "Roof Washing",
+    city: "Troy",
+    region: "Capital Region, NY",
+    icon: CloudRain,
+    heroImage: roofWashingHero.url,
+    hero: {
+      eyebrow: "Troy, NY · ARMA-Approved Soft Wash",
+      headline: "Roof Washing in Troy, NY",
+      subhead:
+        "Older Troy rooflines take a beating from Hudson River humidity and shaded, narrow streets. The black streaks on your shingles are living algae — we kill it at the root with a soft wash, not high pressure.",
+    },
+    intro: [
+      "Troy's roofs age faster than most. Between Hudson River humidity, the steep narrow streets that keep sunlight off north-facing slopes for much of the day, and a housing stock where architectural shingles installed 15–25 years ago are still doing the work, the conditions for gloeocapsa magma — the black-streak algae — are close to ideal.",
+      "The tell is the same on nearly every block from Washington Park up through Lansingburgh: long dark ribbons running down the north slope of otherwise fine roofs, feeding on the limestone filler in the shingles. Left alone, it drives granule loss, which drives premature roof failure.",
+      "The wrong fix is a pressure washer. High pressure will strip the streaks temporarily and take shingle granules straight into your gutters — and void most manufacturer warranties in the process. Our ARMA-approved soft wash uses professional cleaning solutions applied from ladders and the ground. Algae dies on contact. Nobody walks your brittle shingles. And the rooflines stay clean.",
+    ],
+    localContext: {
+      heading: "Why Troy Roofs Streak So Fast",
+      body:
+        "Troy's geography makes it a heavier algae market than the surrounding towns — a river valley humid enough to keep shingles wet longer, plus steep streets and older housing stock that stay in the shade.",
+      bullets: [
+        {
+          title: "Hudson River Humidity",
+          desc: "Riverfront damp air keeps shingles wet long after storms — ideal algae conditions on any north-facing slope in the city.",
+        },
+        {
+          title: "Steep, Narrow, Shaded Streets",
+          desc: "Rowhouse streets around Washington Park and downtown block direct sun. Roofs don't fully dry between rains, which accelerates streaking.",
+        },
+        {
+          title: "Older Architectural Shingles",
+          desc: "Plenty of Troy roofs still carry shingles installed 15–25 years ago and never washed. Prime real estate for algae if never treated.",
+        },
+        {
+          title: "Slate & Metal On Historic Roofs",
+          desc: "Washington Park townhouses and downtown buildings often have slate, tin, or standing-seam metal — each requires its own soft-wash approach, never pressure.",
+        },
+      ],
+    },
+    neighborhoods: [
+      "Washington Park",
+      "Pottery District",
+      "Little Italy",
+      "Sycaway",
+      "Lansingburgh",
+      "South Troy",
+      "Downtown Troy",
+    ],
+    benefits: [
+      {
+        title: "Protects Aging Troy Roofs",
+        desc: "Killing the algae stops granule loss — the biggest single driver of premature shingle failure on Troy's older architectural roofs.",
+      },
+      {
+        title: "Slate, Tin & Metal Safe",
+        desc: "Washington Park and downtown historic roofs get their own soft-wash formulation and technique — never pressure, never walked when brittle.",
+      },
+      {
+        title: "Warranty-Safe Application",
+        desc: "ARMA-approved. No high pressure, no granules in the gutters, no shingle-warranty language undone.",
+      },
+      {
+        title: "Rowhouse-Aware Setup",
+        desc: "On shared-wall Troy rowhouses we plan drift, runoff, and gutter flush so the neighbor's roof and gardens aren't affected.",
+      },
+    ],
+    process: [
+      {
+        title: "Free Ground & Ladder Assessment",
+        desc: "We photograph the roof from every side, check flashing, drip edge, and shingle condition, and quote firm — no bait-and-switch ranges.",
+      },
+      {
+        title: "Soft-Wash Application",
+        desc: "ARMA-approved solution applied at low pressure from ladders and the ground. On most Troy homes nobody walks the roof at all.",
+      },
+      {
+        title: "Gentle Rinse & Gutter Flush",
+        desc: "Low-pressure rinse, then flush gutters and downspouts — especially important on rowhouse gutters shared with the next-door roof.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Can you soft-wash a slate roof on a Washington Park townhouse?",
+        a: "Yes. Slate is safe with the correct soft-wash mix at very low pressure, applied from ladders and never by walking the tile. It's the right way to clean historic Troy roofs.",
+      },
+      {
+        q: "My roof is nearly 20 years old. Is washing still worth it?",
+        a: "Usually yes. If the shingles are intact but algae-stained, killing the biology helps slow further granule loss on the shingles you have. If they're already curling or bald in spots we'll say so plainly on the free assessment.",
+      },
+      {
+        q: "The rowhouse next door has visible algae too. Should we book together?",
+        a: "It usually saves both households money and produces a better result — algae spreads block-to-block on connected rooflines. Group discounts are available when neighbors book adjacent rowhouses on the same visit.",
+      },
+      {
+        q: "How is soft-wash different from what a pressure washing crew does?",
+        a: "High pressure blasts the color off the surface temporarily and typically voids the shingle warranty. Soft-wash uses cleaning chemistry — not pressure — to kill the algae itself, so it doesn't rebound the same way and no granules end up in the gutters.",
+      },
+      {
+        q: "Do you protect the gardens and street trees on tight Troy lots?",
+        a: "Yes. We pre-rinse plantings, tarp sensitive beds, and re-rinse after. On rowhouse blocks we treat neighboring gardens with the same care as yours.",
+      },
+      {
+        q: "How much does roof washing cost in Troy?",
+        a: "Most Troy roofs quote in the $499–$1,299 range depending on pitch, height, square footage, and shingle vs slate vs metal. Historic downtown and Washington Park roofs with complex flashing run higher.",
+      },
+    ],
+    meta: {
+      title: "Roof Washing in Troy, NY | Capital Pro Pressure Washing",
+      description:
+        "Shingle, slate, and metal-safe soft-wash roof cleaning in Troy, NY. Kills Hudson-Valley algae streaks. ARMA-approved. Free on-site quotes.",
+    },
+    relatedServices: [
+      {
+        name: "House Washing",
+        to: "/$service",
+        slug: "house-washing",
+        blurb: "Bundle a soft-wash siding and brick cleaning with your roof visit.",
+      },
+      {
+        name: "Gutter Cleaning & Whitening",
+        to: "/$service",
+        slug: "gutter-cleaning",
+        blurb: "Flush granules and leaf debris out of Troy rowhouse gutters after a roof wash.",
+      },
+      {
+        name: "Roof Rejuvenation",
+        to: "/$service",
+        slug: "roof-rejuvenation",
+        blurb: "For aging Troy shingles — restore flexibility and help extend usable roof life.",
+      },
+    ],
+    relatedCityLinks: [
+      {
+        name: "House Washing in Troy, NY",
+        to: "/house-washing-troy-ny",
+        blurb: "Masonry-safe soft wash for Troy brick and brownstone.",
+      },
+      {
+        name: "Concrete Cleaning in Troy, NY",
+        to: "/concrete-cleaning-troy-ny",
+        blurb: "Restore Troy stoops, brick walks, and drives after winter.",
+      },
+    ],
+  },
+  {
+    slug: "concrete-cleaning-troy-ny",
+    service: "Concrete Cleaning",
+    city: "Troy",
+    region: "Capital Region, NY",
+    icon: Layers,
+    heroImage: concreteCleaningHero.url,
+    hero: {
+      eyebrow: "Troy, NY · Surface-Cleaner Finish",
+      headline: "Concrete, Brick & Stoop Cleaning in Troy, NY",
+      subhead:
+        "Troy stoops, brick walkways, and driveways take the full winter — road salt, plow slush, and freeze/thaw all season long. We clean concrete AND historic brick masonry safely, then seal to keep salt out next winter.",
+    },
+    intro: [
+      "In Troy, the surfaces underfoot are a mix you don't see in most of the Capital Region. It's not just poured concrete drives — it's brick sidewalks in front of Washington Park, bluestone stoops on 19th-century rowhouses, brick walkways in the Pottery District, and older poured concrete aprons in South Troy and Lansingburgh. Every one of these takes a beating every winter.",
+      "Road salt gets tracked and plowed into unsealed concrete and shot straight into brick joints. Freeze/thaw cycles work water into hairline cracks, freeze it, and pop the surface loose. By spring the sidewalk out front looks tired, the stoop is streaked white with salt haze, and someone with a rented pressure wand almost always makes it worse — blown-out mortar between brick pavers or 'tiger stripes' down the driveway.",
+      "We clean Troy concrete with a commercial rotary surface cleaner for even, no-wand-mark results, and we clean historic brick and stoops at reduced pressure with masonry-safe chemistry so lime mortar joints stay intact. Sealing after cleaning is especially valuable here — Troy winters are hard and older masonry can't take too many more seasons of salt penetration.",
+    ],
+    localContext: {
+      heading: "Why Troy Masonry & Concrete Age Fast",
+      body:
+        "The Capital Region is a punishing concrete climate, and Troy's mix of historic brick, older concrete, and heavy winter salting accelerates every failure mode masonry has.",
+      bullets: [
+        {
+          title: "Aggressive Winter Salt",
+          desc: "Rensselaer County salts hard, and Troy's stoops and brick walks get the worst of it. That salt attacks unsealed masonry every single winter.",
+        },
+        {
+          title: "Freeze/Thaw Cycles",
+          desc: "Water works into brick joints and hairline cracks in concrete, freezes, expands, and pops the surface loose. Sealing is the biggest single defense.",
+        },
+        {
+          title: "Historic Brick Walkways & Stoops",
+          desc: "Washington Park, downtown, and Pottery District have brick and bluestone that pre-dates modern mortar. It has to be cleaned at low pressure with masonry-safe chemistry — never wand-blasted.",
+        },
+        {
+          title: "Older Poured Concrete",
+          desc: "South Troy, Lansingburgh, and Sycaway have poured drives and walks that are decades old. A proper surface-clean usually brings them back further than owners expect.",
+        },
+      ],
+    },
+    neighborhoods: [
+      "Washington Park",
+      "Pottery District",
+      "Little Italy",
+      "Sycaway",
+      "Lansingburgh",
+      "South Troy",
+      "Downtown Troy",
+    ],
+    benefits: [
+      {
+        title: "Safe On Historic Brick & Mortar",
+        desc: "Reduced pressure and masonry-safe chemistry on brick walkways, stoops, and pavers — no blown-out lime mortar joints.",
+      },
+      {
+        title: "Even Rotary Surface-Cleaner Finish On Concrete",
+        desc: "Uniform pressure across the whole driveway or apron — no wand marks, no zebra stripes, no missed strips down the middle.",
+      },
+      {
+        title: "Cuts Salt Haze & Winter Film",
+        desc: "Specialty pre-treatments break the milky white brine film that rain and a garden hose can't move off stoops and drives.",
+      },
+      {
+        title: "Sealing Built For Troy Winters",
+        desc: "The single smartest post-clean upgrade — a good sealer blocks salt penetration, resists freeze/thaw, and helps the clean hold much longer.",
+      },
+    ],
+    process: [
+      {
+        title: "Surface-By-Surface Assessment",
+        desc: "We map the property — brick walk, bluestone stoop, poured drive, concrete apron — and set a different pressure and chemistry for each.",
+      },
+      {
+        title: "Pre-Treat, Clean & Rinse",
+        desc: "Pre-treat oil, rust, salt haze, and tannin. Rotary surface-clean on poured concrete. Lower-pressure clean with masonry chemistry on brick and stoops. Final rinse.",
+      },
+      {
+        title: "Optional Sealing Visit",
+        desc: "Once fully dry, we return and apply a densifier or penetrating sealer built for Northeast winters — the single biggest longevity move for Troy masonry.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Can you clean historic brick walkways and stoops without blowing out the mortar?",
+        a: "Yes — that's exactly what most Troy jobs look like. We drop pressure and switch to masonry-safe chemistry for brick, bluestone, and any older mortar joints. Wand-style blasting is never used on historic surfaces.",
+      },
+      {
+        q: "Is sealing worth it in Troy?",
+        a: "Especially in Troy, yes. Between aggressive salting, freeze/thaw, and older masonry that can't take another decade of salt penetration, a good penetrating sealer helps the clean hold much longer and slows further damage.",
+      },
+      {
+        q: "Will pressure washing damage my Washington Park stoop?",
+        a: "It can, if it's done the wrong way — narrow high-pressure wands held in one spot gouge bluestone and blow out mortar joints. A rotary surface cleaner spreads pressure evenly and, at the right setting, is safe on bluestone stoops.",
+      },
+      {
+        q: "Can you remove salt haze and rust rings from my brick walkway?",
+        a: "Most of them. Salt haze responds well to pre-treatment plus a low-pressure pass. Deep, years-old rust and organic staining often lightens dramatically but may not vanish entirely — we set honest expectations before starting.",
+      },
+      {
+        q: "Do you clean brick garden walls and retaining walls too?",
+        a: "Yes. Same masonry-safe approach as walkways and stoops. We can quote a walkway, a stoop, a driveway, and a garden wall on the same visit.",
+      },
+      {
+        q: "How much does concrete and stoop cleaning cost in Troy?",
+        a: "Most Troy drives run $249–$549 for cleaning alone. Historic brick walkways, stoops, and multiple masonry surfaces are quoted separately based on square footage and complexity. Sealing is quoted separately.",
+      },
+    ],
+    meta: {
+      title: "Concrete & Brick Cleaning in Troy, NY | Capital Pro Pressure Washing",
+      description:
+        "Driveway, brick walkway, and stoop cleaning in Troy, NY — masonry-safe, salt-haze removal, optional sealing. Historic-brick specialists. Free quotes.",
+    },
+    relatedServices: [
+      {
+        name: "Paver Cleaning & Sealing",
+        to: "/$service",
+        slug: "paver-cleaning-sealing",
+        blurb: "Restore Troy brick and paver walks — cleaning plus polymeric sanding and sealing.",
+      },
+      {
+        name: "House Washing",
+        to: "/$service",
+        slug: "house-washing",
+        blurb: "Bundle a soft-wash brick and siding cleaning with your stoops and drive.",
+      },
+      {
+        name: "Deck & Patio Cleaning",
+        to: "/$service",
+        slug: "deck-patio-cleaning",
+        blurb: "Strip graying and mildew off Troy decks and patios — prep for stain.",
+      },
+    ],
+    relatedCityLinks: [
+      {
+        name: "House Washing in Troy, NY",
+        to: "/house-washing-troy-ny",
+        blurb: "Masonry-safe soft wash for Troy brick and brownstone.",
+      },
+      {
+        name: "Roof Washing in Troy, NY",
+        to: "/roof-washing-troy-ny",
+        blurb: "Kill algae streaks on Troy's older, shaded rooflines.",
+      },
+    ],
+  },
 ];
 
 export function getCityService(slug: string) {
