@@ -10,6 +10,9 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ThankYouRouteImport } from './routes/thank-you'
+import { Route as RoofWashingAlbanyNyRouteImport } from './routes/roof-washing-albany-ny'
+import { Route as HouseWashingAlbanyNyRouteImport } from './routes/house-washing-albany-ny'
+import { Route as ConcreteCleaningAlbanyNyRouteImport } from './routes/concrete-cleaning-albany-ny'
 import { Route as ServiceRouteImport } from './routes/$service'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -18,6 +21,22 @@ const ThankYouRoute = ThankYouRouteImport.update({
   path: '/thank-you',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RoofWashingAlbanyNyRoute = RoofWashingAlbanyNyRouteImport.update({
+  id: '/roof-washing-albany-ny',
+  path: '/roof-washing-albany-ny',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HouseWashingAlbanyNyRoute = HouseWashingAlbanyNyRouteImport.update({
+  id: '/house-washing-albany-ny',
+  path: '/house-washing-albany-ny',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConcreteCleaningAlbanyNyRoute =
+  ConcreteCleaningAlbanyNyRouteImport.update({
+    id: '/concrete-cleaning-albany-ny',
+    path: '/concrete-cleaning-albany-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServiceRoute = ServiceRouteImport.update({
   id: '/$service',
   path: '/$service',
@@ -32,30 +51,61 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$service': typeof ServiceRoute
+  '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
+  '/house-washing-albany-ny': typeof HouseWashingAlbanyNyRoute
+  '/roof-washing-albany-ny': typeof RoofWashingAlbanyNyRoute
   '/thank-you': typeof ThankYouRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$service': typeof ServiceRoute
+  '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
+  '/house-washing-albany-ny': typeof HouseWashingAlbanyNyRoute
+  '/roof-washing-albany-ny': typeof RoofWashingAlbanyNyRoute
   '/thank-you': typeof ThankYouRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$service': typeof ServiceRoute
+  '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
+  '/house-washing-albany-ny': typeof HouseWashingAlbanyNyRoute
+  '/roof-washing-albany-ny': typeof RoofWashingAlbanyNyRoute
   '/thank-you': typeof ThankYouRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$service' | '/thank-you'
+  fullPaths:
+    | '/'
+    | '/$service'
+    | '/concrete-cleaning-albany-ny'
+    | '/house-washing-albany-ny'
+    | '/roof-washing-albany-ny'
+    | '/thank-you'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$service' | '/thank-you'
-  id: '__root__' | '/' | '/$service' | '/thank-you'
+  to:
+    | '/'
+    | '/$service'
+    | '/concrete-cleaning-albany-ny'
+    | '/house-washing-albany-ny'
+    | '/roof-washing-albany-ny'
+    | '/thank-you'
+  id:
+    | '__root__'
+    | '/'
+    | '/$service'
+    | '/concrete-cleaning-albany-ny'
+    | '/house-washing-albany-ny'
+    | '/roof-washing-albany-ny'
+    | '/thank-you'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ServiceRoute: typeof ServiceRoute
+  ConcreteCleaningAlbanyNyRoute: typeof ConcreteCleaningAlbanyNyRoute
+  HouseWashingAlbanyNyRoute: typeof HouseWashingAlbanyNyRoute
+  RoofWashingAlbanyNyRoute: typeof RoofWashingAlbanyNyRoute
   ThankYouRoute: typeof ThankYouRoute
 }
 
@@ -66,6 +116,27 @@ declare module '@tanstack/react-router' {
       path: '/thank-you'
       fullPath: '/thank-you'
       preLoaderRoute: typeof ThankYouRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roof-washing-albany-ny': {
+      id: '/roof-washing-albany-ny'
+      path: '/roof-washing-albany-ny'
+      fullPath: '/roof-washing-albany-ny'
+      preLoaderRoute: typeof RoofWashingAlbanyNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/house-washing-albany-ny': {
+      id: '/house-washing-albany-ny'
+      path: '/house-washing-albany-ny'
+      fullPath: '/house-washing-albany-ny'
+      preLoaderRoute: typeof HouseWashingAlbanyNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/concrete-cleaning-albany-ny': {
+      id: '/concrete-cleaning-albany-ny'
+      path: '/concrete-cleaning-albany-ny'
+      fullPath: '/concrete-cleaning-albany-ny'
+      preLoaderRoute: typeof ConcreteCleaningAlbanyNyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$service': {
@@ -88,6 +159,9 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ServiceRoute: ServiceRoute,
+  ConcreteCleaningAlbanyNyRoute: ConcreteCleaningAlbanyNyRoute,
+  HouseWashingAlbanyNyRoute: HouseWashingAlbanyNyRoute,
+  RoofWashingAlbanyNyRoute: RoofWashingAlbanyNyRoute,
   ThankYouRoute: ThankYouRoute,
 }
 export const routeTree = rootRouteImport
