@@ -344,7 +344,25 @@ export function QuoteWizard({
           if (payload.firstName) params.set("first_name", payload.firstName);
           if (payload.lastName) params.set("last_name", payload.lastName);
           if (payload.email) params.set("email", payload.email);
-          if (payload.phone) params.set("phone", payload.phone);
+          if (payload.phone) {
+            // GHL booking widget expects E.164; bare digits are silently ignored.
+            const digits = payload.phone;
+            const e164 = digits.length === 10 ? `+1${digits}` : `+${digits}`;
+            params.set("phone", e164);
+          }
+          if (payload.address) params.set("address", payload.address);
+          if (payload.city) params.set("city", payload.city);
+          if (payload.state) params.set("state", payload.state);
+          if (payload.zip) params.set("postal_code", payload.zip);
+          if (payload.propertyType) params.set("property_type", payload.propertyType);
+          if (payload.services.length > 0) {
+            const labels = payload.services
+              .map((id) => SERVICES.find((s) => s.id === id)?.label)
+              .filter((v): v is string => Boolean(v));
+            if (labels.length > 0) params.set("services", labels.join(", "));
+          }
+          if (payload.timeline) params.set("timeline", payload.timeline);
+          if (payload.message) params.set("notes", payload.message);
           const qs = params.toString();
           window.location.assign(qs ? `/thank-you?${qs}` : "/thank-you");
         }, 250);
