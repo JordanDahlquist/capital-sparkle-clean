@@ -8,6 +8,14 @@ const searchSchema = z.object({
   last_name: fallback(z.string(), "").default(""),
   email: fallback(z.string(), "").default(""),
   phone: fallback(z.string(), "").default(""),
+  address: fallback(z.string(), "").default(""),
+  city: fallback(z.string(), "").default(""),
+  state: fallback(z.string(), "").default(""),
+  postal_code: fallback(z.string(), "").default(""),
+  property_type: fallback(z.string(), "").default(""),
+  services: fallback(z.string(), "").default(""),
+  timeline: fallback(z.string(), "").default(""),
+  notes: fallback(z.string(), "").default(""),
 });
 
 export const Route = createFileRoute("/thank-you")({
@@ -39,9 +47,30 @@ function ThankYou() {
     if (search.last_name) params.set("last_name", search.last_name);
     if (search.email) params.set("email", search.email);
     if (search.phone) params.set("phone", search.phone);
+    if (search.address) params.set("address", search.address);
+    if (search.city) params.set("city", search.city);
+    if (search.state) params.set("state", search.state);
+    if (search.postal_code) params.set("postal_code", search.postal_code);
+    if (search.property_type) params.set("property_type", search.property_type);
+    if (search.services) params.set("services", search.services);
+    if (search.timeline) params.set("timeline", search.timeline);
+    if (search.notes) params.set("notes", search.notes);
     const qs = params.toString();
     return qs ? `${BOOKING_BASE}?${qs}` : BOOKING_BASE;
-  }, [search.first_name, search.last_name, search.email, search.phone]);
+  }, [
+    search.first_name,
+    search.last_name,
+    search.email,
+    search.phone,
+    search.address,
+    search.city,
+    search.state,
+    search.postal_code,
+    search.property_type,
+    search.services,
+    search.timeline,
+    search.notes,
+  ]);
 
   useEffect(() => {
     if (scriptLoaded.current) return;
