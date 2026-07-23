@@ -340,7 +340,13 @@ export function QuoteWizard({
       // then redirect to /thank-you (canonical conversion page).
       if (typeof window !== "undefined") {
         window.setTimeout(() => {
-          window.location.assign("/thank-you");
+          const params = new URLSearchParams();
+          if (payload.firstName) params.set("first_name", payload.firstName);
+          if (payload.lastName) params.set("last_name", payload.lastName);
+          if (payload.email) params.set("email", payload.email);
+          if (payload.phone) params.set("phone", payload.phone);
+          const qs = params.toString();
+          window.location.assign(qs ? `/thank-you?${qs}` : "/thank-you");
         }, 250);
       }
     })();
