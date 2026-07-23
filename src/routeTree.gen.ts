@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ThankYouRouteImport } from './routes/thank-you'
 import { Route as SiteIndexRouteImport } from './routes/site-index'
 import { Route as RoofWashingTroyNyRouteImport } from './routes/roof-washing-troy-ny'
 import { Route as RoofWashingSchenectadyNyRouteImport } from './routes/roof-washing-schenectady-ny'
@@ -25,6 +26,11 @@ import { Route as ConcreteCleaningAlbanyNyRouteImport } from './routes/concrete-
 import { Route as ServiceRouteImport } from './routes/$service'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ThankYouRoute = ThankYouRouteImport.update({
+  id: '/thank-you',
+  path: '/thank-you',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SiteIndexRoute = SiteIndexRouteImport.update({
   id: '/site-index',
   path: '/site-index',
@@ -124,6 +130,7 @@ export interface FileRoutesByFullPath {
   '/roof-washing-schenectady-ny': typeof RoofWashingSchenectadyNyRoute
   '/roof-washing-troy-ny': typeof RoofWashingTroyNyRoute
   '/site-index': typeof SiteIndexRoute
+  '/thank-you': typeof ThankYouRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -141,6 +148,7 @@ export interface FileRoutesByTo {
   '/roof-washing-schenectady-ny': typeof RoofWashingSchenectadyNyRoute
   '/roof-washing-troy-ny': typeof RoofWashingTroyNyRoute
   '/site-index': typeof SiteIndexRoute
+  '/thank-you': typeof ThankYouRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -159,6 +167,7 @@ export interface FileRoutesById {
   '/roof-washing-schenectady-ny': typeof RoofWashingSchenectadyNyRoute
   '/roof-washing-troy-ny': typeof RoofWashingTroyNyRoute
   '/site-index': typeof SiteIndexRoute
+  '/thank-you': typeof ThankYouRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -178,6 +187,7 @@ export interface FileRouteTypes {
     | '/roof-washing-schenectady-ny'
     | '/roof-washing-troy-ny'
     | '/site-index'
+    | '/thank-you'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -195,6 +205,7 @@ export interface FileRouteTypes {
     | '/roof-washing-schenectady-ny'
     | '/roof-washing-troy-ny'
     | '/site-index'
+    | '/thank-you'
   id:
     | '__root__'
     | '/'
@@ -212,6 +223,7 @@ export interface FileRouteTypes {
     | '/roof-washing-schenectady-ny'
     | '/roof-washing-troy-ny'
     | '/site-index'
+    | '/thank-you'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -230,10 +242,18 @@ export interface RootRouteChildren {
   RoofWashingSchenectadyNyRoute: typeof RoofWashingSchenectadyNyRoute
   RoofWashingTroyNyRoute: typeof RoofWashingTroyNyRoute
   SiteIndexRoute: typeof SiteIndexRoute
+  ThankYouRoute: typeof ThankYouRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/thank-you': {
+      id: '/thank-you'
+      path: '/thank-you'
+      fullPath: '/thank-you'
+      preLoaderRoute: typeof ThankYouRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/site-index': {
       id: '/site-index'
       path: '/site-index'
@@ -359,6 +379,7 @@ const rootRouteChildren: RootRouteChildren = {
   RoofWashingSchenectadyNyRoute: RoofWashingSchenectadyNyRoute,
   RoofWashingTroyNyRoute: RoofWashingTroyNyRoute,
   SiteIndexRoute: SiteIndexRoute,
+  ThankYouRoute: ThankYouRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
