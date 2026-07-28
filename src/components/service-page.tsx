@@ -107,6 +107,11 @@ export function ServicePage({ service }: { service: ServiceContent }) {
               </p>
               <p className="text-sm font-semibold">Capital Region, NY</p>
             </div>
+            {service.heroCaption && (
+              <p className="mt-6 text-center text-xs sm:text-sm uppercase tracking-[0.2em] text-white/75 font-semibold">
+                {service.heroCaption}
+              </p>
+            )}
           </div>
         </div>
       </section>
