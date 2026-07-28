@@ -316,32 +316,33 @@ export const SERVICES: ServiceContent[] = [
     heroVideo: windowCleaningVideo.url,
     hero: {
       eyebrow: "Exterior Only",
-      headline: "Streak-Free Exterior Windows",
+      headline: "Streak-Free Exterior Windows — Paired With a House Wash",
       subhead:
-        "Purified-water pole cleaning for every exterior window, screen, and sill. Let the light back in.",
+        "Purified-water pole cleaning for every exterior window, screen, and sill. Offered as an add-on to our house wash — the best way to make your whole home shine.",
     },
     intro:
-      "The difference between clean windows and streaky ones is technique and water. We use pure-water pole systems on every exterior window — no soap residue, no ladders on your landscaping, no streaks. Screens and sills included. We do not offer interior window cleaning.",
+      "The difference between clean windows and streaky ones is technique and water. We use pure-water pole systems on every exterior window — no soap residue, no ladders on your landscaping, no streaks. We ask customers to remove their window screens before we arrive so we can get every pane spotless. Exterior only — and in almost every case we pair window cleaning with a house wash rather than doing it as a stand-alone service. That way the whole exterior looks its best in one visit.",
     benefits: [
       { title: "Streak-Free Guaranteed", desc: "If a window streaks, we come back — no charge." },
-      { title: "Screens + Sills Included", desc: "We remove, wash, and reinstall screens. Wipe sills." },
+      { title: "Sills Wiped Down", desc: "Every exterior sill wiped as part of the service. We ask you to remove screens before we arrive." },
       { title: "Two- and Three-Story Safe", desc: "Water-fed poles let us safely reach high windows without ladders on landscaping." },
-      { title: "Pairs with Any Wash", desc: "Bundle with a house wash and save." },
+      { title: "Add-On to a House Wash", desc: "We offer window cleaning as an add-on to a house wash — the pairing that gets the best result." },
     ],
     process: [
-      { title: "Screen Removal", desc: "Take down every screen, rinse, and set aside to dry." },
+      { title: "You Remove Screens", desc: "We ask you to pop screens out before we arrive so we can clean every pane fully." },
       { title: "Pure-Water Pole Clean", desc: "Scrub and rinse every exterior pane, frame, and sill with purified water — no soap, no streaks." },
-      { title: "Reinstall & Walk-Through", desc: "Screens back in, final walkthrough with you." },
+      { title: "Final Walk-Through", desc: "We walk the home with you to make sure every window meets the streak-free standard." },
     ],
     faqs: [
       { q: "Do you clean interior windows?", a: "No — we're exterior-only. Every window, screen, and sill on the outside of the house gets cleaned." },
-      { q: "Do you clean screens?", a: "Yes — screens are removed, washed, and reinstalled as part of every job." },
+      { q: "Do I need to remove my screens?", a: "Yes — please pop the screens out before we arrive. It lets us clean every pane thoroughly and keeps the job efficient. If you're unable to, let us know when you book." },
+      { q: "Do you do windows by themselves?", a: "Almost never. We offer window cleaning as an add-on to a house wash — that pairing gets the best result and is the most efficient trip for you. If you only want windows, ask us and we'll let you know if we can fit it in." },
       { q: "Post-construction windows?", a: "Yes — we handle stucco splatter and paint overspray on exterior glass as an add-on." },
       { q: "How often?", a: "Twice a year for most homes. Once a year minimum." },
     ],
     meta: {
-      title: "Exterior Window Cleaning in Albany & the Capital Region",
-      description: "Streak-free exterior window cleaning across Albany & the Capital Region. Pure-water pole system, screens and sills included.",
+      title: "Exterior Window Cleaning + House Wash | Capital Region NY",
+      description: "Streak-free exterior window cleaning across Albany & the Capital Region. Pure-water pole system, offered as an add-on to a house wash.",
     },
   },
   {
