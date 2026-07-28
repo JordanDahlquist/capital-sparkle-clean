@@ -1,8 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Phone, Check, Clock, ShieldCheck, Star, Sparkles, Droplets, AppWindow } from "lucide-react";
-import heroImage from "../assets/service-heroes/service-house-washing.png.asset.json";
+import heroImage from "../assets/hero-crew-surface-cleaner.jpg.asset.json";
 import { openQuoteModal } from "../components/quote-modal";
 import { SHOW_LICENSED_INSURED } from "../data/flags";
+import {
+  useSpecialAnalytics,
+  useExitIntent,
+  SocialProofStrip,
+  BeforeAfterProof,
+  ValueStack,
+  GuaranteeCallout,
+  ScarcityPill,
+  FaqJsonLd,
+} from "../components/special-landing-extras";
+
+const SPECIAL_ID = "499-special";
+const FAQS = [
+  {
+    q: "How do I claim the $499 special — is there a code?",
+    a: "No code needed. Our special pricing is automatically applied to any house wash + windows quote started from this page.",
+  },
+  {
+    q: "Is sales tax included in the $499?",
+    a: "No. New York State sales tax is added on top of the $499, the same as any other home service. Your final invoice will show $499 plus tax.",
+  },
+  {
+    q: "What if my home is over 2,500 sqft?",
+    a: "We'll send a quick custom quote at our normal per-square-foot rate — still one of the best combo values around, just not the exact $499 flat price.",
+  },
+  {
+    q: "Do you clean interior windows too?",
+    a: "This special is exterior windows only. Interior cleaning can be added — just ask when we quote and we'll price it separately.",
+  },
+  {
+    q: "Do I need to remove screens?",
+    a: "Yes, please remove your exterior window screens before we arrive so we can clean every pane fully.",
+  },
+  {
+    q: "Can I combine this with military or first-responder discounts?",
+    a: "One discount per household. If you qualify for our military or first-responder discount, let us know and we'll apply whichever saves you more.",
+  },
+];
 
 export const Route = createFileRoute("/499-special")({
   head: () => ({
@@ -26,8 +64,12 @@ export const Route = createFileRoute("/499-special")({
 });
 
 function SpecialLanding() {
+  useSpecialAnalytics(SPECIAL_ID);
+  useExitIntent(SPECIAL_ID);
+
   return (
     <main>
+      <FaqJsonLd faqs={FAQS} />
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-[var(--brand-deep-blue)]">
         <div aria-hidden="true" className="absolute inset-0 -z-20 overflow-hidden">
@@ -42,11 +84,7 @@ function SpecialLanding() {
         </div>
 
         <div className="mx-auto max-w-5xl px-4 py-14 sm:py-20 text-white">
-          {/* Urgency pill */}
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider backdrop-blur">
-            <Clock className="h-3.5 w-3.5" aria-hidden="true" />
-            Limited spots this month
-          </div>
+          <ScarcityPill slotsLeft={4} className="mb-5" />
 
           <p className="mb-3 font-[var(--font-display)] text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--brand-red)]">
             Special Offer — Capital Region NY
@@ -77,6 +115,7 @@ function SpecialLanding() {
               type="button"
               onClick={() => openQuoteModal()}
               className="inline-flex items-center justify-center rounded-md bg-[color:var(--brand-red)] px-7 py-4 text-base font-bold uppercase tracking-wide text-white shadow-lg transition hover:brightness-110 active:scale-[0.98]"
+              data-special-cta="hero_primary"
             >
               Claim My $499 Special
             </button>
@@ -85,6 +124,7 @@ function SpecialLanding() {
               className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-base font-bold uppercase tracking-wide text-[var(--brand-deep-blue)] shadow-lg transition hover:bg-white/90"
               data-analytics="call_click"
               data-source="499-special-hero"
+              data-special-cta="hero_call"
             >
               <Phone className="h-5 w-5" aria-hidden="true" />
               (518) 900-1913
@@ -104,6 +144,8 @@ function SpecialLanding() {
           </ul>
         </div>
       </section>
+
+      <SocialProofStrip />
 
       {/* WHAT'S INCLUDED */}
       <section className="bg-white">
@@ -140,6 +182,22 @@ function SpecialLanding() {
         </div>
       </section>
 
+      <BeforeAfterProof />
+
+      <ValueStack
+        priceLabel="$499 flat"
+        strikeTotal="$650 – $800 typical local price"
+        items={[
+          { label: "Commercial soft-wash house wash (siding, soffits, gutters)", value: "$325" },
+          { label: "Purified-water exterior window cleaning (every pane)", value: "$225" },
+          { label: "Plant, pet & landscape safe application", value: "$45" },
+          { label: "2-person insured, uniformed crew", value: "$120" },
+          { label: "100% satisfaction guarantee — we come back if needed", value: "$70" },
+        ]}
+      />
+
+      <GuaranteeCallout />
+
       {/* FINE PRINT */}
       <section className="bg-[var(--brand-light-gray)]">
         <div className="mx-auto max-w-5xl px-4 py-12">
@@ -165,13 +223,29 @@ function SpecialLanding() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-4xl px-4 py-14 sm:py-20">
+          <h2 className="font-[var(--font-display)] text-3xl font-bold uppercase tracking-tight text-[var(--brand-deep-blue)] sm:text-4xl">
+            Quick questions about the offer
+          </h2>
+          <dl className="mt-8 divide-y divide-[color:var(--brand-deep-blue)]/10 border-y border-[color:var(--brand-deep-blue)]/10">
+            {FAQS.map((item) => (
+              <div key={item.q} className="py-5">
+                <dt className="font-[var(--font-display)] text-lg font-bold uppercase tracking-tight text-[var(--brand-deep-blue)]">
+                  {item.q}
+                </dt>
+                <dd className="mt-2 text-[color:var(--brand-charcoal)]/85">{item.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
       {/* FINAL CTA BAND */}
       <section className="bg-[var(--brand-deep-blue)] text-white">
         <div className="mx-auto max-w-4xl px-4 py-14 text-center sm:py-20">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider">
-            <Clock className="h-3.5 w-3.5" aria-hidden="true" />
-            Only a few spots left this month
-          </div>
+          <ScarcityPill slotsLeft={4} className="mb-4" />
           <h2 className="font-[var(--font-display)] text-3xl font-bold uppercase leading-tight sm:text-5xl">
             Lock in your $499 special
           </h2>
@@ -183,6 +257,7 @@ function SpecialLanding() {
               type="button"
               onClick={() => openQuoteModal()}
               className="inline-flex items-center justify-center rounded-md bg-[color:var(--brand-red)] px-7 py-4 text-base font-bold uppercase tracking-wide text-white shadow-lg transition hover:brightness-110 active:scale-[0.98]"
+              data-special-cta="final_primary"
             >
               Claim My $499 Special
             </button>
@@ -191,6 +266,7 @@ function SpecialLanding() {
               className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-base font-bold uppercase tracking-wide text-[var(--brand-deep-blue)] shadow-lg transition hover:bg-white/90"
               data-analytics="call_click"
               data-source="499-special-final"
+              data-special-cta="final_call"
             >
               <Phone className="h-5 w-5" aria-hidden="true" />
               Call (518) 900-1913

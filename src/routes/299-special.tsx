@@ -3,6 +3,40 @@ import { Phone, Check, Clock, ShieldCheck, Star, Sparkles, Droplets, Home } from
 import heroImage from "../assets/service-heroes/service-house-washing.png.asset.json";
 import { openQuoteModal } from "../components/quote-modal";
 import { SHOW_LICENSED_INSURED } from "../data/flags";
+import {
+  useSpecialAnalytics,
+  useExitIntent,
+  SocialProofStrip,
+  BeforeAfterProof,
+  ValueStack,
+  GuaranteeCallout,
+  ScarcityPill,
+  FaqJsonLd,
+} from "../components/special-landing-extras";
+
+const SPECIAL_ID = "299-special";
+const FAQS = [
+  {
+    q: "How do I claim the $299 special — is there a code?",
+    a: "No code needed. Our special pricing is automatically applied to any house wash quote started from this page.",
+  },
+  {
+    q: "Is sales tax included in the price?",
+    a: "No. New York State sales tax is added on top of your quoted price, the same as any other home service. Your final invoice will show your price plus tax.",
+  },
+  {
+    q: "Why does it say \"starting at $299\"?",
+    a: "Every home is different — square footage, height, number of stories, and features like dormers or extensive trim all affect the price. $299 is our starting price; we'll send you a quick custom quote for your exact home so there are no surprises.",
+  },
+  {
+    q: "Can I add windows, concrete, or roof cleaning to this?",
+    a: "Absolutely. The special covers the house wash portion; any add-ons are priced separately at our normal rates and added to your quote.",
+  },
+  {
+    q: "Can I combine this with military or first-responder discounts?",
+    a: "One discount per household. If you qualify for our military or first-responder discount, let us know and we'll apply whichever saves you more.",
+  },
+];
 
 export const Route = createFileRoute("/299-special")({
   head: () => ({
@@ -27,8 +61,12 @@ export const Route = createFileRoute("/299-special")({
 });
 
 function SpecialLanding() {
+  useSpecialAnalytics(SPECIAL_ID);
+  useExitIntent(SPECIAL_ID);
+
   return (
     <main>
+      <FaqJsonLd faqs={FAQS} />
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-[var(--brand-deep-blue)]">
         <div aria-hidden="true" className="absolute inset-0 -z-20 overflow-hidden">
@@ -43,10 +81,7 @@ function SpecialLanding() {
         </div>
 
         <div className="mx-auto max-w-5xl px-4 py-14 sm:py-20 text-white">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider backdrop-blur">
-            <Clock className="h-3.5 w-3.5" aria-hidden="true" />
-            Limited spots this month
-          </div>
+          <ScarcityPill slotsLeft={6} className="mb-5" />
 
           <p className="mb-3 font-[var(--font-display)] text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--brand-red)]">
             Special Offer — Capital Region NY
@@ -77,6 +112,7 @@ function SpecialLanding() {
               type="button"
               onClick={() => openQuoteModal()}
               className="inline-flex items-center justify-center rounded-md bg-[color:var(--brand-red)] px-7 py-4 text-base font-bold uppercase tracking-wide text-white shadow-lg transition hover:brightness-110 active:scale-[0.98]"
+              data-special-cta="hero_primary"
             >
               Claim My $299 Special
             </button>
@@ -85,6 +121,7 @@ function SpecialLanding() {
               className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-base font-bold uppercase tracking-wide text-[var(--brand-deep-blue)] shadow-lg transition hover:bg-white/90"
               data-analytics="call_click"
               data-source="299-special-hero"
+              data-special-cta="hero_call"
             >
               <Phone className="h-5 w-5" aria-hidden="true" />
               (518) 900-1913
@@ -104,6 +141,8 @@ function SpecialLanding() {
           </ul>
         </div>
       </section>
+
+      <SocialProofStrip />
 
       {/* WHAT'S INCLUDED */}
       <section className="bg-white">
@@ -141,6 +180,22 @@ function SpecialLanding() {
         </div>
       </section>
 
+      <BeforeAfterProof />
+
+      <ValueStack
+        priceLabel="From $299"
+        strikeTotal="$450 – $550 typical local price"
+        items={[
+          { label: "Commercial soft-wash equipment & chemistry", value: "$95" },
+          { label: "2-person insured, uniformed crew (1–2 hrs)", value: "$180" },
+          { label: "Plant, pet & landscape safe application", value: "$45" },
+          { label: "10+ years experience across Capital Region homes", value: "$60" },
+          { label: "100% satisfaction guarantee — we come back if needed", value: "$70" },
+        ]}
+      />
+
+      <GuaranteeCallout />
+
       {/* FINE PRINT */}
       <section className="bg-[var(--brand-light-gray)]">
         <div className="mx-auto max-w-5xl px-4 py-12">
@@ -174,28 +229,7 @@ function SpecialLanding() {
             Quick questions about the offer
           </h2>
           <dl className="mt-8 divide-y divide-[color:var(--brand-deep-blue)]/10 border-y border-[color:var(--brand-deep-blue)]/10">
-            {[
-              {
-                q: "How do I claim the $299 special — is there a code?",
-                a: "No code needed. Our special pricing is automatically applied to any house wash quote started from this page.",
-              },
-              {
-                q: "Is sales tax included in the price?",
-                a: "No. New York State sales tax is added on top of your quoted price, the same as any other home service. Your final invoice will show your price plus tax.",
-              },
-              {
-                q: "Why does it say \"starting at $299\"?",
-                a: "Every home is different — square footage, height, number of stories, and features like dormers or extensive trim all affect the price. $299 is our starting price; we'll send you a quick custom quote for your exact home so there are no surprises.",
-              },
-              {
-                q: "Can I add windows, concrete, or roof cleaning to this?",
-                a: "Absolutely. The special covers the house wash portion; any add-ons are priced separately at our normal rates and added to your quote.",
-              },
-              {
-                q: "Can I combine this with military or first-responder discounts?",
-                a: "One discount per household. If you qualify for our military or first-responder discount, let us know and we'll apply whichever saves you more.",
-              },
-            ].map((item) => (
+            {FAQS.map((item) => (
               <div key={item.q} className="py-5">
                 <dt className="font-[var(--font-display)] text-lg font-bold uppercase tracking-tight text-[var(--brand-deep-blue)]">
                   {item.q}
@@ -210,10 +244,7 @@ function SpecialLanding() {
       {/* FINAL CTA BAND */}
       <section className="bg-[var(--brand-deep-blue)] text-white">
         <div className="mx-auto max-w-4xl px-4 py-14 text-center sm:py-20">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider">
-            <Clock className="h-3.5 w-3.5" aria-hidden="true" />
-            Only a few spots left this month
-          </div>
+          <ScarcityPill slotsLeft={6} className="mb-4" />
           <h2 className="font-[var(--font-display)] text-3xl font-bold uppercase leading-tight sm:text-5xl">
             Lock in your special pricing
           </h2>
@@ -225,6 +256,7 @@ function SpecialLanding() {
               type="button"
               onClick={() => openQuoteModal()}
               className="inline-flex items-center justify-center rounded-md bg-[color:var(--brand-red)] px-7 py-4 text-base font-bold uppercase tracking-wide text-white shadow-lg transition hover:brightness-110 active:scale-[0.98]"
+              data-special-cta="final_primary"
             >
               Claim My $299 Special
             </button>
@@ -233,6 +265,7 @@ function SpecialLanding() {
               className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-base font-bold uppercase tracking-wide text-[var(--brand-deep-blue)] shadow-lg transition hover:bg-white/90"
               data-analytics="call_click"
               data-source="299-special-final"
+              data-special-cta="final_call"
             >
               <Phone className="h-5 w-5" aria-hidden="true" />
               Call (518) 900-1913
