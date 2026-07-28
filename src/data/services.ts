@@ -313,6 +313,7 @@ export const SERVICES: ServiceContent[] = [
     name: "Window Cleaning",
     icon: AppWindow,
     heroImage: windowCleaningHero.url,
+    heroVideo: windowCleaningVideo.url,
     hero: {
       eyebrow: "Exterior Only",
       headline: "Streak-Free Exterior Windows",
