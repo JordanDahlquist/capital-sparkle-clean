@@ -121,7 +121,6 @@ export const SERVICES: ServiceContent[] = [
     name: "Paver Cleaning & Sealing",
     icon: Grid3x3,
     heroImage: paverCleaningHeroCliftonPark.url,
-    heroCaption: "Recent project",
     hero: {
       eyebrow: "Clean · Joint Blowout · Polymeric Sand · Seal",
       headline: "Paver Cleaning, Sanding & Sealing in the Capital Region",
