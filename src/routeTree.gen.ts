@@ -18,6 +18,8 @@ import { Route as RoofWashingAlbanyNyRouteImport } from './routes/roof-washing-a
 import { Route as PressureWashingTroyNyRouteImport } from './routes/pressure-washing-troy-ny'
 import { Route as PressureWashingSchenectadyNyRouteImport } from './routes/pressure-washing-schenectady-ny'
 import { Route as PressureWashingSaratogaSpringsNyRouteImport } from './routes/pressure-washing-saratoga-springs-ny'
+import { Route as PressureWashingRensselaerNyRouteImport } from './routes/pressure-washing-rensselaer-ny'
+import { Route as PressureWashingCliftonParkNyRouteImport } from './routes/pressure-washing-clifton-park-ny'
 import { Route as PressureWashingAlbanyNyRouteImport } from './routes/pressure-washing-albany-ny'
 import { Route as HouseWashingTroyNyRouteImport } from './routes/house-washing-troy-ny'
 import { Route as HouseWashingSchenectadyNyRouteImport } from './routes/house-washing-schenectady-ny'
@@ -77,6 +79,18 @@ const PressureWashingSaratogaSpringsNyRoute =
   PressureWashingSaratogaSpringsNyRouteImport.update({
     id: '/pressure-washing-saratoga-springs-ny',
     path: '/pressure-washing-saratoga-springs-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PressureWashingRensselaerNyRoute =
+  PressureWashingRensselaerNyRouteImport.update({
+    id: '/pressure-washing-rensselaer-ny',
+    path: '/pressure-washing-rensselaer-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PressureWashingCliftonParkNyRoute =
+  PressureWashingCliftonParkNyRouteImport.update({
+    id: '/pressure-washing-clifton-park-ny',
+    path: '/pressure-washing-clifton-park-ny',
     getParentRoute: () => rootRouteImport,
   } as any)
 const PressureWashingAlbanyNyRoute = PressureWashingAlbanyNyRouteImport.update({
@@ -152,6 +166,8 @@ export interface FileRoutesByFullPath {
   '/house-washing-schenectady-ny': typeof HouseWashingSchenectadyNyRoute
   '/house-washing-troy-ny': typeof HouseWashingTroyNyRoute
   '/pressure-washing-albany-ny': typeof PressureWashingAlbanyNyRoute
+  '/pressure-washing-clifton-park-ny': typeof PressureWashingCliftonParkNyRoute
+  '/pressure-washing-rensselaer-ny': typeof PressureWashingRensselaerNyRoute
   '/pressure-washing-saratoga-springs-ny': typeof PressureWashingSaratogaSpringsNyRoute
   '/pressure-washing-schenectady-ny': typeof PressureWashingSchenectadyNyRoute
   '/pressure-washing-troy-ny': typeof PressureWashingTroyNyRoute
@@ -174,6 +190,8 @@ export interface FileRoutesByTo {
   '/house-washing-schenectady-ny': typeof HouseWashingSchenectadyNyRoute
   '/house-washing-troy-ny': typeof HouseWashingTroyNyRoute
   '/pressure-washing-albany-ny': typeof PressureWashingAlbanyNyRoute
+  '/pressure-washing-clifton-park-ny': typeof PressureWashingCliftonParkNyRoute
+  '/pressure-washing-rensselaer-ny': typeof PressureWashingRensselaerNyRoute
   '/pressure-washing-saratoga-springs-ny': typeof PressureWashingSaratogaSpringsNyRoute
   '/pressure-washing-schenectady-ny': typeof PressureWashingSchenectadyNyRoute
   '/pressure-washing-troy-ny': typeof PressureWashingTroyNyRoute
@@ -197,6 +215,8 @@ export interface FileRoutesById {
   '/house-washing-schenectady-ny': typeof HouseWashingSchenectadyNyRoute
   '/house-washing-troy-ny': typeof HouseWashingTroyNyRoute
   '/pressure-washing-albany-ny': typeof PressureWashingAlbanyNyRoute
+  '/pressure-washing-clifton-park-ny': typeof PressureWashingCliftonParkNyRoute
+  '/pressure-washing-rensselaer-ny': typeof PressureWashingRensselaerNyRoute
   '/pressure-washing-saratoga-springs-ny': typeof PressureWashingSaratogaSpringsNyRoute
   '/pressure-washing-schenectady-ny': typeof PressureWashingSchenectadyNyRoute
   '/pressure-washing-troy-ny': typeof PressureWashingTroyNyRoute
@@ -221,6 +241,8 @@ export interface FileRouteTypes {
     | '/house-washing-schenectady-ny'
     | '/house-washing-troy-ny'
     | '/pressure-washing-albany-ny'
+    | '/pressure-washing-clifton-park-ny'
+    | '/pressure-washing-rensselaer-ny'
     | '/pressure-washing-saratoga-springs-ny'
     | '/pressure-washing-schenectady-ny'
     | '/pressure-washing-troy-ny'
@@ -243,6 +265,8 @@ export interface FileRouteTypes {
     | '/house-washing-schenectady-ny'
     | '/house-washing-troy-ny'
     | '/pressure-washing-albany-ny'
+    | '/pressure-washing-clifton-park-ny'
+    | '/pressure-washing-rensselaer-ny'
     | '/pressure-washing-saratoga-springs-ny'
     | '/pressure-washing-schenectady-ny'
     | '/pressure-washing-troy-ny'
@@ -265,6 +289,8 @@ export interface FileRouteTypes {
     | '/house-washing-schenectady-ny'
     | '/house-washing-troy-ny'
     | '/pressure-washing-albany-ny'
+    | '/pressure-washing-clifton-park-ny'
+    | '/pressure-washing-rensselaer-ny'
     | '/pressure-washing-saratoga-springs-ny'
     | '/pressure-washing-schenectady-ny'
     | '/pressure-washing-troy-ny'
@@ -288,6 +314,8 @@ export interface RootRouteChildren {
   HouseWashingSchenectadyNyRoute: typeof HouseWashingSchenectadyNyRoute
   HouseWashingTroyNyRoute: typeof HouseWashingTroyNyRoute
   PressureWashingAlbanyNyRoute: typeof PressureWashingAlbanyNyRoute
+  PressureWashingCliftonParkNyRoute: typeof PressureWashingCliftonParkNyRoute
+  PressureWashingRensselaerNyRoute: typeof PressureWashingRensselaerNyRoute
   PressureWashingSaratogaSpringsNyRoute: typeof PressureWashingSaratogaSpringsNyRoute
   PressureWashingSchenectadyNyRoute: typeof PressureWashingSchenectadyNyRoute
   PressureWashingTroyNyRoute: typeof PressureWashingTroyNyRoute
@@ -362,6 +390,20 @@ declare module '@tanstack/react-router' {
       path: '/pressure-washing-saratoga-springs-ny'
       fullPath: '/pressure-washing-saratoga-springs-ny'
       preLoaderRoute: typeof PressureWashingSaratogaSpringsNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pressure-washing-rensselaer-ny': {
+      id: '/pressure-washing-rensselaer-ny'
+      path: '/pressure-washing-rensselaer-ny'
+      fullPath: '/pressure-washing-rensselaer-ny'
+      preLoaderRoute: typeof PressureWashingRensselaerNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pressure-washing-clifton-park-ny': {
+      id: '/pressure-washing-clifton-park-ny'
+      path: '/pressure-washing-clifton-park-ny'
+      fullPath: '/pressure-washing-clifton-park-ny'
+      preLoaderRoute: typeof PressureWashingCliftonParkNyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pressure-washing-albany-ny': {
@@ -457,6 +499,8 @@ const rootRouteChildren: RootRouteChildren = {
   HouseWashingSchenectadyNyRoute: HouseWashingSchenectadyNyRoute,
   HouseWashingTroyNyRoute: HouseWashingTroyNyRoute,
   PressureWashingAlbanyNyRoute: PressureWashingAlbanyNyRoute,
+  PressureWashingCliftonParkNyRoute: PressureWashingCliftonParkNyRoute,
+  PressureWashingRensselaerNyRoute: PressureWashingRensselaerNyRoute,
   PressureWashingSaratogaSpringsNyRoute: PressureWashingSaratogaSpringsNyRoute,
   PressureWashingSchenectadyNyRoute: PressureWashingSchenectadyNyRoute,
   PressureWashingTroyNyRoute: PressureWashingTroyNyRoute,
@@ -470,3 +514,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
