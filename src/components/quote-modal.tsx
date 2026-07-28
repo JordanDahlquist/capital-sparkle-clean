@@ -203,6 +203,13 @@ export function QuoteWizard({
           message: "Interested in the $499 House Wash + Windows Special (up to 2,500 sqft).",
         };
       }
+      if (p === "/100-off-house-wash") {
+        return {
+          ...EMPTY,
+          services: ["house"],
+          message: "Interested in the $100 Off House Wash special.",
+        };
+      }
     }
     return EMPTY;
   });

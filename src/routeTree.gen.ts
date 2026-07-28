@@ -30,6 +30,7 @@ import { Route as ConcreteCleaningSchenectadyNyRouteImport } from './routes/conc
 import { Route as ConcreteCleaningSaratogaSpringsNyRouteImport } from './routes/concrete-cleaning-saratoga-springs-ny'
 import { Route as ConcreteCleaningAlbanyNyRouteImport } from './routes/concrete-cleaning-albany-ny'
 import { Route as R499SpecialRouteImport } from './routes/499-special'
+import { Route as R100OffHouseWashRouteImport } from './routes/100-off-house-wash'
 import { Route as ServiceRouteImport } from './routes/$service'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -149,6 +150,11 @@ const R499SpecialRoute = R499SpecialRouteImport.update({
   path: '/499-special',
   getParentRoute: () => rootRouteImport,
 } as any)
+const R100OffHouseWashRoute = R100OffHouseWashRouteImport.update({
+  id: '/100-off-house-wash',
+  path: '/100-off-house-wash',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServiceRoute = ServiceRouteImport.update({
   id: '/$service',
   path: '/$service',
@@ -163,6 +169,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$service': typeof ServiceRoute
+  '/100-off-house-wash': typeof R100OffHouseWashRoute
   '/499-special': typeof R499SpecialRoute
   '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
   '/concrete-cleaning-saratoga-springs-ny': typeof ConcreteCleaningSaratogaSpringsNyRoute
@@ -188,6 +195,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$service': typeof ServiceRoute
+  '/100-off-house-wash': typeof R100OffHouseWashRoute
   '/499-special': typeof R499SpecialRoute
   '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
   '/concrete-cleaning-saratoga-springs-ny': typeof ConcreteCleaningSaratogaSpringsNyRoute
@@ -214,6 +222,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$service': typeof ServiceRoute
+  '/100-off-house-wash': typeof R100OffHouseWashRoute
   '/499-special': typeof R499SpecialRoute
   '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
   '/concrete-cleaning-saratoga-springs-ny': typeof ConcreteCleaningSaratogaSpringsNyRoute
@@ -241,6 +250,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/$service'
+    | '/100-off-house-wash'
     | '/499-special'
     | '/concrete-cleaning-albany-ny'
     | '/concrete-cleaning-saratoga-springs-ny'
@@ -266,6 +276,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/$service'
+    | '/100-off-house-wash'
     | '/499-special'
     | '/concrete-cleaning-albany-ny'
     | '/concrete-cleaning-saratoga-springs-ny'
@@ -291,6 +302,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/$service'
+    | '/100-off-house-wash'
     | '/499-special'
     | '/concrete-cleaning-albany-ny'
     | '/concrete-cleaning-saratoga-springs-ny'
@@ -317,6 +329,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ServiceRoute: typeof ServiceRoute
+  R100OffHouseWashRoute: typeof R100OffHouseWashRoute
   R499SpecialRoute: typeof R499SpecialRoute
   ConcreteCleaningAlbanyNyRoute: typeof ConcreteCleaningAlbanyNyRoute
   ConcreteCleaningSaratogaSpringsNyRoute: typeof ConcreteCleaningSaratogaSpringsNyRoute
@@ -489,6 +502,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof R499SpecialRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/100-off-house-wash': {
+      id: '/100-off-house-wash'
+      path: '/100-off-house-wash'
+      fullPath: '/100-off-house-wash'
+      preLoaderRoute: typeof R100OffHouseWashRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/$service': {
       id: '/$service'
       path: '/$service'
@@ -509,6 +529,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ServiceRoute: ServiceRoute,
+  R100OffHouseWashRoute: R100OffHouseWashRoute,
   R499SpecialRoute: R499SpecialRoute,
   ConcreteCleaningAlbanyNyRoute: ConcreteCleaningAlbanyNyRoute,
   ConcreteCleaningSaratogaSpringsNyRoute:
