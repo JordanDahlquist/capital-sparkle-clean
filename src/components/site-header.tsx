@@ -4,16 +4,7 @@ import { Link } from "@tanstack/react-router";
 import { openQuoteModal } from "./quote-modal";
 import logo from "../assets/capital-pro-logo.png.asset.json";
 import { SERVICES } from "../data/services";
-import { CITY_SERVICES } from "../data/city-services";
-
-const CITIES = ["Albany", "Schenectady", "Saratoga Springs", "Troy"] as const;
-const CITY_MENU = CITIES.map((city) => ({
-  city,
-  items: CITY_SERVICES.filter((c) => c.city === city).map((c) => ({
-    slug: c.slug,
-    label: c.service,
-  })),
-}));
+import { CITIES } from "../data/cities";
 
 type NavLink = { label: string; href?: string; action?: "quote"; dropdown?: "services" | "areas" };
 const NAV_LINKS: NavLink[] = [
@@ -241,25 +232,16 @@ export function SiteHeader() {
                     onMouseEnter={openAreas}
                     onMouseLeave={scheduleCloseAreas}
                   >
-                    <div className="w-[640px] rounded-md border border-[var(--brand-light-gray)] bg-white shadow-lg p-3 grid grid-cols-4 gap-3">
-                      {CITY_MENU.map((col) => (
-                        <div key={col.city}>
-                          <div className="px-2 pb-1 text-xs font-bold uppercase tracking-wide text-[var(--brand-deep-blue)]">
-                            {col.city}
-                          </div>
-                          <div className="flex flex-col">
-                            {col.items.map((it) => (
-                              <a
-                                key={it.slug}
-                                href={`/${it.slug}`}
-                                onClick={() => setAreasOpen(false)}
-                                className="px-2 py-1.5 rounded text-sm text-[var(--brand-charcoal)] hover:bg-[var(--brand-light-gray)] hover:text-[var(--brand-bright-blue)] transition-colors"
-                              >
-                                {it.label}
-                              </a>
-                            ))}
-                          </div>
-                        </div>
+                    <div className="w-[260px] rounded-md border border-[var(--brand-light-gray)] bg-white shadow-lg p-2 flex flex-col">
+                      {CITIES.map((c) => (
+                        <a
+                          key={c.slug}
+                          href={`/${c.slug}`}
+                          onClick={() => setAreasOpen(false)}
+                          className="px-3 py-2 rounded text-sm font-semibold text-[var(--brand-charcoal)] hover:bg-[var(--brand-light-gray)] hover:text-[var(--brand-bright-blue)] transition-colors"
+                        >
+                          {c.city}, NY
+                        </a>
                       ))}
                     </div>
                   </div>
@@ -356,25 +338,18 @@ export function SiteHeader() {
                   </button>
                   {mobileAreasOpen && (
                     <div className="pb-2 flex flex-col">
-                      {CITY_MENU.map((col) => (
-                        <div key={col.city} className="pt-2">
-                          <div className="pl-4 text-xs font-bold uppercase tracking-wide text-[var(--brand-deep-blue)]">
-                            {col.city}
-                          </div>
-                          {col.items.map((it) => (
-                            <a
-                              key={it.slug}
-                              href={`/${it.slug}`}
-                              onClick={() => {
-                                setOpen(false);
-                                setMobileAreasOpen(false);
-                              }}
-                              className="pl-6 py-2 text-sm text-[var(--brand-charcoal)] hover:text-[var(--brand-bright-blue)] transition-colors min-h-[40px] flex items-center"
-                            >
-                              {it.label}
-                            </a>
-                          ))}
-                        </div>
+                      {CITIES.map((c) => (
+                        <a
+                          key={c.slug}
+                          href={`/${c.slug}`}
+                          onClick={() => {
+                            setOpen(false);
+                            setMobileAreasOpen(false);
+                          }}
+                          className="pl-4 py-2 text-sm font-semibold text-[var(--brand-charcoal)] hover:text-[var(--brand-bright-blue)] transition-colors min-h-[40px] flex items-center"
+                        >
+                          {c.city}, NY
+                        </a>
                       ))}
                     </div>
                   )}

@@ -1,13 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CityServicePage } from "../components/city-service-page";
-import { getCityService } from "../data/city-services";
+import { CityPage } from "../components/city-page";
+import { getCity } from "../data/cities";
 
 const SITE = "https://capitalpropressurewashing.com";
-const SLUG = "roof-washing-saratoga-springs-ny";
+const SLUG = "pressure-washing-schenectady-ny";
 
-export const Route = createFileRoute("/roof-washing-saratoga-springs-ny")({
+export const Route = createFileRoute("/pressure-washing-schenectady-ny")({
   head: () => {
-    const c = getCityService(SLUG)!;
+    const c = getCity(SLUG)!;
     const url = `${SITE}/${SLUG}`;
     const image = c.heroImage.startsWith("http") ? c.heroImage : `${SITE}${c.heroImage}`;
     return {
@@ -19,6 +19,7 @@ export const Route = createFileRoute("/roof-washing-saratoga-springs-ny")({
         { property: "og:url", content: url },
         { property: "og:type", content: "website" },
         { property: "og:image", content: image },
+        { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: c.meta.title },
         { name: "twitter:description", content: c.meta.description },
         { name: "twitter:image", content: image },
@@ -29,16 +30,16 @@ export const Route = createFileRoute("/roof-washing-saratoga-springs-ny")({
           type: "application/ld+json",
           children: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            name: `${c.service} in ${c.city}, NY`,
-            serviceType: c.service,
-            provider: { "@id": `${SITE}/#business` },
+            "@type": "LocalBusiness",
+            name: `Capital Pro Pressure Washing — ${c.city}, NY`,
+            url,
+            image,
+            telephone: "+15189001913",
             areaServed: {
               "@type": "City",
               name: c.city,
               containedInPlace: { "@type": "AdministrativeArea", name: "New York" },
             },
-            url,
             description: c.meta.description,
           }),
         },
@@ -49,8 +50,7 @@ export const Route = createFileRoute("/roof-washing-saratoga-springs-ny")({
             "@type": "BreadcrumbList",
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
-              { "@type": "ListItem", position: 2, name: c.service, item: `${SITE}/roof-washing` },
-              { "@type": "ListItem", position: 3, name: `${c.city}, NY`, item: url },
+              { "@type": "ListItem", position: 2, name: `${c.city}, NY`, item: url },
             ],
           }),
         },
@@ -69,5 +69,5 @@ export const Route = createFileRoute("/roof-washing-saratoga-springs-ny")({
       ],
     };
   },
-  component: () => <CityServicePage content={getCityService(SLUG)!} />,
+  component: () => <CityPage content={getCity(SLUG)!} />,
 });
