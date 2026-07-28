@@ -109,10 +109,10 @@ export const SERVICES: ServiceContent[] = [
     intro:
       "High-pressure roof cleaning voids most shingle warranties. Our ARMA-approved soft wash follows manufacturer guidelines, kills algae and moss on contact, and leaves your roof safely renewed for years.",
     benefits: [
+      { title: "2-Year No-Streak Guarantee", desc: "If the black streaks come back within 2 years, we come back and re-treat at no charge." },
       { title: "Extends Roof Life 5–15 Years", desc: "Removing algae stops shingle granule loss — the #1 cause of premature roof failure." },
       { title: "Shingle-Warranty Safe", desc: "ARMA-approved soft wash. No high pressure, no walking on wet shingles." },
       { title: "Instant Curb Appeal", desc: "Streak-free rooflines look brand new — a huge win before selling." },
-      { title: "Lower Cooling Bills", desc: "A clean roof reflects more heat than a stained one." },
     ],
     process: [
       { title: "Roof Inspection", desc: "We check flashing, shingles, and drainage before ever spraying." },
@@ -120,8 +120,9 @@ export const SERVICES: ServiceContent[] = [
       { title: "Gentle Rinse & Cleanup", desc: "Low-pressure rinse, then flush your gutters and downspouts." },
     ],
     faqs: [
+      { q: "Is the roof wash guaranteed?", a: "Yes — every roof wash comes with our 2-year no-streak guarantee. If the black streaks return within 2 years, we come back and re-treat at no charge." },
       { q: "Do you walk on my roof?", a: "Only when absolutely necessary and always with fall protection. Most cleans are done from ladders and the ground." },
-      { q: "Will the black streaks come back?", a: "Not for years. Our treatment kills the algae at the root — not just bleaches it." },
+      { q: "Will the black streaks come back?", a: "Not for years. Our treatment kills the algae at the root — not just bleaches it. Most roofs stay clean 3–5 years, and our 2-year guarantee has you covered if they return sooner." },
       { q: "Is it safe for metal roofs?", a: "Yes. We adjust the mix for metal, tile, cedar, and asphalt separately." },
     ],
     meta: {

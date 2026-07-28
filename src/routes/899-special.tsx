@@ -34,7 +34,7 @@ const FAQS = [
   },
   {
     q: "How long will the roof stay clean?",
-    a: "Results typically last 3–5 years depending on tree cover, humidity, and shade. Most black streaks are gone the same day we treat.",
+    a: "Every roof wash is backed by our 2-year guarantee — if the black streaks return within 2 years, we come back and re-treat at no charge. Most roofs stay clean 3–5 years depending on tree cover, humidity, and shade.",
   },
   {
     q: "Will the runoff hurt my plants and lawn?",
@@ -178,7 +178,7 @@ function SpecialLanding() {
               points={[
                 "Kills Gloeocapsa magma — the algae behind those black streaks on your shingles",
                 "Zero high-pressure — the ARMA-recommended method for asphalt shingles",
-                "Results typically last 3–5 years depending on tree cover",
+                "Backed by our 2-year no-streak guarantee (typical results last 3–5 years)",
                 "Safe for landscaping — we soak plants and lawn before, during & after",
               ]}
             />
@@ -197,7 +197,7 @@ function SpecialLanding() {
           { label: "Shingle-safe roof soft-wash treatment (kills black-streak algae)", value: "$340" },
           { label: "We soak your plants, lawn & landscape before, during & after — zero chemical stress", value: "$70" },
           { label: "10+ years experience across Capital Region homes", value: "$100" },
-          { label: "100% satisfaction guarantee — we come back if needed", value: "$110" },
+          { label: "2-year no-streak roof guarantee — we come back and re-treat free", value: "$110" },
         ]}
       />
 
