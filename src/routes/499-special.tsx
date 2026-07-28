@@ -186,14 +186,14 @@ function SpecialLanding() {
 
       <ValueStack
         priceLabel="$499 flat"
-        strikeTotal="$650 typical local price"
+        strikeTotal="$800 typical local price"
         items={[
-          { label: "Commercial soft-wash equipment & chemistry", value: "$95" },
-          { label: "2-person insured, uniformed crew (1–2 hrs)", value: "$180" },
-          { label: "Purified-water exterior window cleaning (every pane)", value: "$200" },
-          { label: "We soak your plants, lawn & landscape before, during & after — zero chemical stress", value: "$45" },
-          { label: "10+ years experience across Capital Region homes", value: "$60" },
-          { label: "100% satisfaction guarantee — we come back if needed", value: "$70" },
+          { label: "Commercial soft-wash equipment & chemistry", value: "$120" },
+          { label: "2-person insured, uniformed crew (2–3 hrs — bigger job)", value: "$260" },
+          { label: "Purified-water exterior window cleaning (every pane)", value: "$220" },
+          { label: "We soak your plants, lawn & landscape before, during & after — zero chemical stress", value: "$50" },
+          { label: "10+ years experience across Capital Region homes", value: "$70" },
+          { label: "100% satisfaction guarantee — we come back if needed", value: "$80" },
         ]}
       />
 
