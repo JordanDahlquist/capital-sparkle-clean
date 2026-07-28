@@ -11,7 +11,7 @@ const CITY_MENU = CITIES.map((city) => ({
   city,
   items: CITY_SERVICES.filter((c) => c.city === city).map((c) => ({
     slug: c.slug,
-    label: c.name.replace(new RegExp(`\\s*in\\s*${city}.*$`, "i"), "").trim(),
+    label: c.service,
   })),
 }));
 
