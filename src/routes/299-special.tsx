@@ -11,14 +11,14 @@ export const Route = createFileRoute("/299-special")({
       {
         name: "description",
         content:
-          "Limited-time $299 soft-wash house wash special for homes up to 2,000 sqft across Albany & the Capital Region. Only a few slots left this month.",
+          "House washes starting at $299 across Albany & the Capital Region. Professional soft-wash exterior cleaning — limited spots this month.",
       },
       { name: "robots", content: "noindex, nofollow" },
       { property: "og:title", content: "$299 House Wash Special" },
       {
         property: "og:description",
         content:
-          "Full soft-wash house exterior for one flat price. Homes up to 2,000 sqft. Limited spots this month.",
+          "Full soft-wash house exterior starting at $299. Limited spots this month.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -53,20 +53,21 @@ function SpecialLanding() {
           </p>
 
           <h1 className="font-[var(--font-display)] text-4xl font-bold uppercase leading-[1.05] tracking-tight sm:text-6xl">
-            $299 House Wash Special
+            House Washes <span className="text-white/80">Starting At</span>
+            <br className="hidden sm:block" /> $299
           </h1>
 
           <p className="mt-4 max-w-2xl text-lg text-white/85 sm:text-xl">
-            One flat price. Homes up to <strong className="text-white">2,000 sqft</strong>. Full soft-wash exterior
-            — siding, soffits, fascia, gutters, shutters — done in 1–2 hours with commercial equipment.
+            Full soft-wash exterior — siding, soffits, fascia, gutters, shutters — done in 1–2 hours with
+            commercial equipment. Get a fast, no-obligation quote for your exact home.
           </p>
 
           {/* Price card */}
           <div className="mt-8 inline-flex flex-col rounded-xl border-2 border-[color:var(--brand-red)] bg-white/5 p-5 backdrop-blur">
-            <span className="text-xs font-semibold uppercase tracking-wider text-white/70">Flat Special Price</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-white/70">Special Pricing</span>
             <div className="mt-1 flex items-baseline gap-3">
-              <span className="font-[var(--font-display)] text-5xl font-bold text-white sm:text-6xl">$299</span>
-              <span className="text-sm text-white/70">+ tax · up to 2,000 sqft</span>
+              <span className="font-[var(--font-display)] text-5xl font-bold text-white sm:text-6xl">From $299</span>
+              <span className="text-sm text-white/70">+ tax</span>
             </div>
           </div>
 
@@ -108,7 +109,7 @@ function SpecialLanding() {
       <section className="bg-white">
         <div className="mx-auto max-w-5xl px-4 py-14 sm:py-20">
           <h2 className="font-[var(--font-display)] text-3xl font-bold uppercase tracking-tight text-[var(--brand-deep-blue)] sm:text-4xl">
-            What's included for $299
+            What every house wash includes
           </h2>
           <p className="mt-3 max-w-2xl text-[color:var(--brand-charcoal)]/80">
             A true full-exterior soft wash — not just a spray-down. Safe for vinyl, aluminum, brick, and painted
@@ -148,12 +149,12 @@ function SpecialLanding() {
           </h3>
           <ul className="mt-4 grid gap-3 text-sm text-[color:var(--brand-charcoal)]/85 sm:grid-cols-2">
             {[
-              "Flat $299 price for homes up to 2,000 sqft (heated living area).",
+              "House washes start at $299 — final price depends on the size and features of your home.",
               "Price is plus applicable NY sales tax.",
-              "Larger homes: we'll send a quick custom quote — usually still one of the best values around.",
-              "Special is automatically applied to quotes started from this page — no code needed.",
+              "Special pricing is automatically applied to quotes started from this page — no code needed.",
+              "Free custom quote — usually done remotely via Google Earth in minutes.",
               "Capital Region, NY only: Albany, Schenectady, Clifton Park, Saratoga Springs, Troy, Rensselaer & surrounding.",
-              "Most quotes done remotely via Google Earth — free on-site quote available if you prefer.",
+              "Prefer an on-site walk-through? Free in-person quotes available too.",
               "One discount per household. Cannot be combined with other active specials.",
               "Military & first-responder discounts available — just mention it when you book.",
             ].map((t) => (
@@ -176,19 +177,19 @@ function SpecialLanding() {
             {[
               {
                 q: "How do I claim the $299 special — is there a code?",
-                a: "No code needed. The $299 flat price is automatically applied to any house wash quote started from this page.",
+                a: "No code needed. Our special pricing is automatically applied to any house wash quote started from this page.",
               },
               {
-                q: "Is sales tax included in the $299?",
-                a: "No. New York State sales tax is added on top of the $299, the same as any other home service. Your final invoice will show the $299 plus tax.",
+                q: "Is sales tax included in the price?",
+                a: "No. New York State sales tax is added on top of your quoted price, the same as any other home service. Your final invoice will show your price plus tax.",
               },
               {
-                q: "What if my home is larger than 2,000 sqft?",
-                a: "We'll send a quick custom quote at the same great per-square-foot rate. Larger homes are still one of the best values around — you just won't see the exact $299 flat price.",
+                q: "Why does it say \"starting at $299\"?",
+                a: "Every home is different — square footage, height, number of stories, and features like dormers or extensive trim all affect the price. $299 is our starting price; we'll send you a quick custom quote for your exact home so there are no surprises.",
               },
               {
                 q: "Can I add windows, concrete, or roof cleaning to this?",
-                a: "Absolutely. The $299 covers the house wash portion; any add-ons are priced separately at our normal rates and added to your quote.",
+                a: "Absolutely. The special covers the house wash portion; any add-ons are priced separately at our normal rates and added to your quote.",
               },
               {
                 q: "Can I combine this with military or first-responder discounts?",
@@ -214,7 +215,7 @@ function SpecialLanding() {
             Only a few spots left this month
           </div>
           <h2 className="font-[var(--font-display)] text-3xl font-bold uppercase leading-tight sm:text-5xl">
-            Lock in your $299 special
+            Lock in your special pricing
           </h2>
           <p className="mt-3 text-white/85 sm:text-lg">
             Takes under a minute. We'll confirm your slot and price by end of day.
