@@ -120,7 +120,8 @@ export const SERVICES: ServiceContent[] = [
     slug: "paver-cleaning-sealing",
     name: "Paver Cleaning & Sealing",
     icon: Grid3x3,
-    heroImage: paverCleaningHero.url,
+    heroImage: paverCleaningHeroCliftonPark.url,
+    heroCaption: "Recent project — Clifton Park, NY",
     hero: {
       eyebrow: "Clean · Joint Blowout · Polymeric Sand · Seal",
       headline: "Paver Cleaning, Sanding & Sealing in the Capital Region",
