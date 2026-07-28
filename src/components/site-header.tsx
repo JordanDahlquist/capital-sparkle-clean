@@ -338,25 +338,18 @@ export function SiteHeader() {
                   </button>
                   {mobileAreasOpen && (
                     <div className="pb-2 flex flex-col">
-                      {CITY_MENU.map((col) => (
-                        <div key={col.city} className="pt-2">
-                          <div className="pl-4 text-xs font-bold uppercase tracking-wide text-[var(--brand-deep-blue)]">
-                            {col.city}
-                          </div>
-                          {col.items.map((it) => (
-                            <a
-                              key={it.slug}
-                              href={`/${it.slug}`}
-                              onClick={() => {
-                                setOpen(false);
-                                setMobileAreasOpen(false);
-                              }}
-                              className="pl-6 py-2 text-sm text-[var(--brand-charcoal)] hover:text-[var(--brand-bright-blue)] transition-colors min-h-[40px] flex items-center"
-                            >
-                              {it.label}
-                            </a>
-                          ))}
-                        </div>
+                      {CITIES.map((c) => (
+                        <a
+                          key={c.slug}
+                          href={`/${c.slug}`}
+                          onClick={() => {
+                            setOpen(false);
+                            setMobileAreasOpen(false);
+                          }}
+                          className="pl-4 py-2 text-sm font-semibold text-[var(--brand-charcoal)] hover:text-[var(--brand-bright-blue)] transition-colors min-h-[40px] flex items-center"
+                        >
+                          {c.city}, NY
+                        </a>
                       ))}
                     </div>
                   )}
