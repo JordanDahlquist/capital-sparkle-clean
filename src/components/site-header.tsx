@@ -232,25 +232,16 @@ export function SiteHeader() {
                     onMouseEnter={openAreas}
                     onMouseLeave={scheduleCloseAreas}
                   >
-                    <div className="w-[640px] rounded-md border border-[var(--brand-light-gray)] bg-white shadow-lg p-3 grid grid-cols-4 gap-3">
-                      {CITY_MENU.map((col) => (
-                        <div key={col.city}>
-                          <div className="px-2 pb-1 text-xs font-bold uppercase tracking-wide text-[var(--brand-deep-blue)]">
-                            {col.city}
-                          </div>
-                          <div className="flex flex-col">
-                            {col.items.map((it) => (
-                              <a
-                                key={it.slug}
-                                href={`/${it.slug}`}
-                                onClick={() => setAreasOpen(false)}
-                                className="px-2 py-1.5 rounded text-sm text-[var(--brand-charcoal)] hover:bg-[var(--brand-light-gray)] hover:text-[var(--brand-bright-blue)] transition-colors"
-                              >
-                                {it.label}
-                              </a>
-                            ))}
-                          </div>
-                        </div>
+                    <div className="w-[260px] rounded-md border border-[var(--brand-light-gray)] bg-white shadow-lg p-2 flex flex-col">
+                      {CITIES.map((c) => (
+                        <a
+                          key={c.slug}
+                          href={`/${c.slug}`}
+                          onClick={() => setAreasOpen(false)}
+                          className="px-3 py-2 rounded text-sm font-semibold text-[var(--brand-charcoal)] hover:bg-[var(--brand-light-gray)] hover:text-[var(--brand-bright-blue)] transition-colors"
+                        >
+                          {c.city}, NY
+                        </a>
                       ))}
                     </div>
                   </div>
