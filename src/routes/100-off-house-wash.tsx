@@ -165,6 +165,50 @@ function SpecialLanding() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-4xl px-4 py-14 sm:py-20">
+          <h2 className="font-[var(--font-display)] text-3xl font-bold uppercase tracking-tight text-[var(--brand-deep-blue)] sm:text-4xl">
+            Quick questions about the offer
+          </h2>
+          <p className="mt-3 text-[color:var(--brand-charcoal)]/80">
+            Everything you need to know about how the $100 off and pricing work.
+          </p>
+
+          <dl className="mt-8 divide-y divide-[color:var(--brand-deep-blue)]/10 border-y border-[color:var(--brand-deep-blue)]/10">
+            {[
+              {
+                q: "How do I get the $100 off — is there a code?",
+                a: "No code needed. The $100 discount is automatically applied to any house wash quote started from this page. When you submit the form, we already know you came from this offer.",
+              },
+              {
+                q: "Is the $100 already taken off the price you send me?",
+                a: "Yes. The written quote you receive will show your final price with the $100 discount already applied — you won't need to ask for it or remind us.",
+              },
+              {
+                q: "Is sales tax included in the price?",
+                a: "No. New York State sales tax is added on top of your quoted price, the same as any other home service. We show the pre-tax price so you can see exactly what the wash costs, and tax is added on your final invoice.",
+              },
+              {
+                q: "Can I combine this with military, first-responder, or other discounts?",
+                a: "One discount per household. If you qualify for our military or first-responder discount, let us know and we'll apply whichever saves you more — we won't stack them on top of the $100 off.",
+              },
+              {
+                q: "Does the $100 off apply to add-ons like windows or concrete cleaning?",
+                a: "The $100 off is specifically for the house wash portion of your quote. Any add-ons (exterior windows, concrete, roof, etc.) are priced separately at our normal rates.",
+              },
+            ].map((item) => (
+              <div key={item.q} className="py-5">
+                <dt className="font-[var(--font-display)] text-lg font-bold uppercase tracking-tight text-[var(--brand-deep-blue)]">
+                  {item.q}
+                </dt>
+                <dd className="mt-2 text-[color:var(--brand-charcoal)]/85">{item.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
       {/* FINAL CTA BAND */}
       <section className="bg-[var(--brand-deep-blue)] text-white">
         <div className="mx-auto max-w-4xl px-4 py-14 text-center sm:py-20">
