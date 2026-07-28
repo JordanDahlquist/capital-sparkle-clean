@@ -93,13 +93,27 @@ export function ServicePage({ service }: { service: ServiceContent }) {
           {/* Service hero image */}
           <div className="relative">
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl ring-1 ring-white/10 bg-white/5">
-              <img
-                src={service.heroImage}
-                alt={`${service.name} by Capital Pro Pressure Washing`}
-                className="h-full w-full object-cover"
-                loading="eager"
-                {...(service.heroPlaceholder ? { "data-placeholder": service.heroPlaceholder } : {})}
-              />
+              {service.heroVideo ? (
+                <video
+                  src={service.heroVideo}
+                  poster={service.heroImage}
+                  className="h-full w-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label={`${service.name} by Capital Pro Pressure Washing`}
+                />
+              ) : (
+                <img
+                  src={service.heroImage}
+                  alt={`${service.name} by Capital Pro Pressure Washing`}
+                  className="h-full w-full object-cover"
+                  loading="eager"
+                  {...(service.heroPlaceholder ? { "data-placeholder": service.heroPlaceholder } : {})}
+                />
+              )}
             </div>
             <div className="absolute -bottom-4 -left-4 bg-white text-[var(--brand-deep-blue)] px-4 py-3 rounded-md shadow-lg">
               <p className="text-xs uppercase font-bold tracking-widest text-[var(--brand-red)]">
