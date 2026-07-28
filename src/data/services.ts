@@ -17,6 +17,7 @@ import {
 import houseWashingHero from "../assets/service-heroes/service-house-washing.png.asset.json";
 import roofWashingHero from "../assets/service-heroes/service-roof-washing-custom.jpg.asset.json";
 import paverCleaningHero from "../assets/service-heroes/service-paver-cleaning-sealing.png.asset.json";
+import paverCleaningHeroCliftonPark from "../assets/service-heroes/service-paver-cleaning-sealing-clifton-park.jpeg.asset.json";
 import concreteCleaningHero from "../assets/service-heroes/service-concrete-cleaning-sealing.png.asset.json";
 import deckPatioHero from "../assets/service-heroes/service-deck-patio-cleaning.png.asset.json";
 import gutterCleaningHero from "../assets/service-heroes/service-gutter-cleaning.png.asset.json";
@@ -33,6 +34,7 @@ export type ServiceContent = {
   icon: LucideIcon;
   heroImage: string;
   heroPlaceholder?: string;
+  heroCaption?: string;
   hero: {
     eyebrow: string;
     headline: string;
@@ -118,7 +120,8 @@ export const SERVICES: ServiceContent[] = [
     slug: "paver-cleaning-sealing",
     name: "Paver Cleaning & Sealing",
     icon: Grid3x3,
-    heroImage: paverCleaningHero.url,
+    heroImage: paverCleaningHeroCliftonPark.url,
+    heroCaption: "Recent project — Clifton Park, NY",
     hero: {
       eyebrow: "Clean · Joint Blowout · Polymeric Sand · Seal",
       headline: "Paver Cleaning, Sanding & Sealing in the Capital Region",
