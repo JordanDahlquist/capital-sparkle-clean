@@ -171,7 +171,7 @@ function SpecialLanding() {
               title="Professional Process"
               points={[
                 "Commercial-grade equipment — 1–2 hour typical completion",
-                "Plant, pet, and landscape safe application",
+                "Landscape fully watered down before Plant, pet, and landscape safe application after — safe for plants, pets Plant, pet, and landscape safe application lawn",
                 "Most quotes done remotely via Google Earth — free on-site if you prefer",
                 "Fully insured crew, uniformed and background-checked",
               ]}
@@ -188,7 +188,7 @@ function SpecialLanding() {
         items={[
           { label: "Commercial soft-wash equipment & chemistry", value: "$95" },
           { label: "2-person insured, uniformed crew (1–2 hrs)", value: "$180" },
-          { label: "Plant, pet & landscape safe application", value: "$45" },
+          { label: "Landscape fully watered down before Plant, pet & landscape safe application after — safe for plants, pets Plant, pet & landscape safe application lawn", value: "$45" },
           { label: "10+ years experience across Capital Region homes", value: "$60" },
           { label: "100% satisfaction guarantee — we come back if needed", value: "$70" },
         ]}
