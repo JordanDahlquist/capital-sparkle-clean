@@ -29,6 +29,7 @@ import { Route as ConcreteCleaningTroyNyRouteImport } from './routes/concrete-cl
 import { Route as ConcreteCleaningSchenectadyNyRouteImport } from './routes/concrete-cleaning-schenectady-ny'
 import { Route as ConcreteCleaningSaratogaSpringsNyRouteImport } from './routes/concrete-cleaning-saratoga-springs-ny'
 import { Route as ConcreteCleaningAlbanyNyRouteImport } from './routes/concrete-cleaning-albany-ny'
+import { Route as R499SpecialRouteImport } from './routes/499-special'
 import { Route as ServiceRouteImport } from './routes/$service'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -143,6 +144,11 @@ const ConcreteCleaningAlbanyNyRoute =
     path: '/concrete-cleaning-albany-ny',
     getParentRoute: () => rootRouteImport,
   } as any)
+const R499SpecialRoute = R499SpecialRouteImport.update({
+  id: '/499-special',
+  path: '/499-special',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServiceRoute = ServiceRouteImport.update({
   id: '/$service',
   path: '/$service',
@@ -157,6 +163,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$service': typeof ServiceRoute
+  '/499-special': typeof R499SpecialRoute
   '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
   '/concrete-cleaning-saratoga-springs-ny': typeof ConcreteCleaningSaratogaSpringsNyRoute
   '/concrete-cleaning-schenectady-ny': typeof ConcreteCleaningSchenectadyNyRoute
@@ -181,6 +188,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$service': typeof ServiceRoute
+  '/499-special': typeof R499SpecialRoute
   '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
   '/concrete-cleaning-saratoga-springs-ny': typeof ConcreteCleaningSaratogaSpringsNyRoute
   '/concrete-cleaning-schenectady-ny': typeof ConcreteCleaningSchenectadyNyRoute
@@ -206,6 +214,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$service': typeof ServiceRoute
+  '/499-special': typeof R499SpecialRoute
   '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
   '/concrete-cleaning-saratoga-springs-ny': typeof ConcreteCleaningSaratogaSpringsNyRoute
   '/concrete-cleaning-schenectady-ny': typeof ConcreteCleaningSchenectadyNyRoute
@@ -232,6 +241,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/$service'
+    | '/499-special'
     | '/concrete-cleaning-albany-ny'
     | '/concrete-cleaning-saratoga-springs-ny'
     | '/concrete-cleaning-schenectady-ny'
@@ -256,6 +266,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/$service'
+    | '/499-special'
     | '/concrete-cleaning-albany-ny'
     | '/concrete-cleaning-saratoga-springs-ny'
     | '/concrete-cleaning-schenectady-ny'
@@ -280,6 +291,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/$service'
+    | '/499-special'
     | '/concrete-cleaning-albany-ny'
     | '/concrete-cleaning-saratoga-springs-ny'
     | '/concrete-cleaning-schenectady-ny'
@@ -305,6 +317,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ServiceRoute: typeof ServiceRoute
+  R499SpecialRoute: typeof R499SpecialRoute
   ConcreteCleaningAlbanyNyRoute: typeof ConcreteCleaningAlbanyNyRoute
   ConcreteCleaningSaratogaSpringsNyRoute: typeof ConcreteCleaningSaratogaSpringsNyRoute
   ConcreteCleaningSchenectadyNyRoute: typeof ConcreteCleaningSchenectadyNyRoute
@@ -469,6 +482,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConcreteCleaningAlbanyNyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/499-special': {
+      id: '/499-special'
+      path: '/499-special'
+      fullPath: '/499-special'
+      preLoaderRoute: typeof R499SpecialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/$service': {
       id: '/$service'
       path: '/$service'
@@ -489,6 +509,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ServiceRoute: ServiceRoute,
+  R499SpecialRoute: R499SpecialRoute,
   ConcreteCleaningAlbanyNyRoute: ConcreteCleaningAlbanyNyRoute,
   ConcreteCleaningSaratogaSpringsNyRoute:
     ConcreteCleaningSaratogaSpringsNyRoute,
@@ -514,3 +535,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
