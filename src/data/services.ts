@@ -74,6 +74,7 @@ export const SERVICES: ServiceContent[] = [
     ],
     faqs: [
       { q: "Will it damage my siding or plants?", a: "No. We use soft-wash pressure (lower than a garden hose) and rinse landscaping before, during, and after." },
+      { q: "Do I need to schedule an on-site quote?", a: "Usually no — we can price most house washes remotely using Google Earth to measure your home. If you'd rather have us walk the property in person, on-site quotes are always free." },
       { q: "How long does it take?", a: "Most single-family homes take 1–2 hours start to finish with our commercial soft-wash equipment." },
       { q: "How often should I have it done?", a: "Once a year is ideal in the Capital Region — every 18 months minimum for shaded sides." },
       { q: "What equipment do you use?", a: "Commercial-grade soft-wash systems with dedicated 12V pumps and high-volume rinse setups — not consumer pressure washers. That's how we finish a full house in 1–2 hours without damaging siding." },
