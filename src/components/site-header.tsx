@@ -4,12 +4,22 @@ import { Link } from "@tanstack/react-router";
 import { openQuoteModal } from "./quote-modal";
 import logo from "../assets/capital-pro-logo.png.asset.json";
 import { SERVICES } from "../data/services";
+import { CITY_SERVICES } from "../data/city-services";
 
-type NavLink = { label: string; href?: string; action?: "quote"; dropdown?: "services" };
+const CITIES = ["Albany", "Schenectady", "Saratoga Springs", "Troy"] as const;
+const CITY_MENU = CITIES.map((city) => ({
+  city,
+  items: CITY_SERVICES.filter((c) => c.city === city).map((c) => ({
+    slug: c.slug,
+    label: c.name.replace(new RegExp(`\\s*in\\s*${city}.*$`, "i"), "").trim(),
+  })),
+}));
+
+type NavLink = { label: string; href?: string; action?: "quote"; dropdown?: "services" | "areas" };
 const NAV_LINKS: NavLink[] = [
   { label: "Services", dropdown: "services" },
   { label: "Gallery", href: "#gallery" },
-  { label: "Service Area", href: "#service-area" },
+  { label: "Service Area", dropdown: "areas" },
   { label: "Reviews", href: "#reviews" },
   { label: "Contact", action: "quote" },
 ];
@@ -90,25 +100,42 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [areasOpen, setAreasOpen] = useState(false);
+  const [mobileAreasOpen, setMobileAreasOpen] = useState(false);
   const servicesRef = useRef<HTMLDivElement | null>(null);
-  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const areasRef = useRef<HTMLDivElement | null>(null);
+  const servicesTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const areasTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const openServices = () => {
-    if (closeTimer.current) clearTimeout(closeTimer.current);
+    if (servicesTimer.current) clearTimeout(servicesTimer.current);
     setServicesOpen(true);
   };
   const scheduleCloseServices = () => {
-    if (closeTimer.current) clearTimeout(closeTimer.current);
-    closeTimer.current = setTimeout(() => setServicesOpen(false), 120);
+    if (servicesTimer.current) clearTimeout(servicesTimer.current);
+    servicesTimer.current = setTimeout(() => setServicesOpen(false), 120);
+  };
+  const openAreas = () => {
+    if (areasTimer.current) clearTimeout(areasTimer.current);
+    setAreasOpen(true);
+  };
+  const scheduleCloseAreas = () => {
+    if (areasTimer.current) clearTimeout(areasTimer.current);
+    areasTimer.current = setTimeout(() => setAreasOpen(false), 120);
   };
 
   useEffect(() => {
-    if (!servicesOpen) return;
+    if (!servicesOpen && !areasOpen) return;
     const onDocClick = (e: MouseEvent) => {
-      if (!servicesRef.current?.contains(e.target as Node)) setServicesOpen(false);
+      const target = e.target as Node;
+      if (!servicesRef.current?.contains(target)) setServicesOpen(false);
+      if (!areasRef.current?.contains(target)) setAreasOpen(false);
     };
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setServicesOpen(false);
+      if (e.key === "Escape") {
+        setServicesOpen(false);
+        setAreasOpen(false);
+      }
     };
     document.addEventListener("mousedown", onDocClick);
     document.addEventListener("keydown", onKey);
@@ -116,7 +143,7 @@ export function SiteHeader() {
       document.removeEventListener("mousedown", onDocClick);
       document.removeEventListener("keydown", onKey);
     };
-  }, [servicesOpen]);
+  }, [servicesOpen, areasOpen]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 4);
