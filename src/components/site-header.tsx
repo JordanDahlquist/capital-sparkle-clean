@@ -9,9 +9,9 @@ import { CITIES } from "../data/cities";
 type NavLink = { label: string; href?: string; action?: "quote"; dropdown?: "services" | "areas" };
 const NAV_LINKS: NavLink[] = [
   { label: "Services", dropdown: "services" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "Gallery", href: "/#gallery" },
   { label: "Service Area", dropdown: "areas" },
-  { label: "Reviews", href: "#reviews" },
+  { label: "Reviews", href: "/#reviews" },
   { label: "Contact", action: "quote" },
 ];
 
