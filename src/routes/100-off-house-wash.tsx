@@ -150,8 +150,8 @@ function SpecialLanding() {
           <ul className="mt-4 grid gap-3 text-sm text-[color:var(--brand-charcoal)]/85 sm:grid-cols-2">
             {[
               "$100 off applies to any full-exterior house wash.",
-              "Cannot be combined with other active discounts or specials.",
-              "One discount per household — mention this offer when booking.",
+              "Discount is automatically applied to quotes started from this page — no code needed.",
+              "One discount per household. Cannot be combined with other active specials.",
               "Capital Region, NY only: Albany, Schenectady, Clifton Park, Saratoga Springs, Troy, Rensselaer & surrounding.",
               "Most quotes done remotely via Google Earth — free on-site quote available if you prefer.",
               "Military & first-responder discounts available — just mention it when you book.",
