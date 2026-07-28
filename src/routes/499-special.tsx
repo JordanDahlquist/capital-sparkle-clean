@@ -190,7 +190,7 @@ function SpecialLanding() {
         items={[
           { label: "Commercial soft-wash house wash (siding, soffits, gutters)", value: "$325" },
           { label: "Purified-water exterior window cleaning (every pane)", value: "$225" },
-          { label: "Landscape fully watered down before Plant, pet & landscape safe application after — safe for plants, pets Plant, pet & landscape safe application lawn", value: "$45" },
+          { label: "We soak your plants, lawn & landscape before, during & after — zero chemical stress", value: "$45" },
           { label: "2-person insured, uniformed crew", value: "$120" },
           { label: "100% satisfaction guarantee — we come back if needed", value: "$70" },
         ]}
