@@ -68,7 +68,7 @@ export const SERVICES: ServiceContent[] = [
       { title: "Protects Your Investment", desc: "Removes contaminants that eat siding, shingles, and paint over time." },
     ],
     process: [
-      { title: "Free On-Site Quote", desc: "We measure, inspect, and give a firm price — no surprises." },
+      { title: "Fast Free Quote", desc: "Most quotes done remotely via Google Earth — we measure and price without ever needing to schedule a visit. On-site quotes available free of charge if you'd prefer." },
       { title: "Pre-Treat & Rinse", desc: "Cover plants, apply eco-safe detergent with commercial soft-wash equipment, dwell, then low-pressure rinse top to bottom." },
       { title: "Detail Pass", desc: "Hand-scrub high-traffic spots, sills, and doors. Walk the home with you before we leave." },
     ],
