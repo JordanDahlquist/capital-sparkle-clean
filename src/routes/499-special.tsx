@@ -186,12 +186,13 @@ function SpecialLanding() {
 
       <ValueStack
         priceLabel="$499 flat"
-        strikeTotal="$650 – $800 typical local price"
+        strikeTotal="$650 typical local price"
         items={[
-          { label: "Commercial soft-wash house wash (siding, soffits, gutters)", value: "$325" },
-          { label: "Purified-water exterior window cleaning (every pane)", value: "$225" },
+          { label: "Commercial soft-wash equipment & chemistry", value: "$95" },
+          { label: "2-person insured, uniformed crew (1–2 hrs)", value: "$180" },
+          { label: "Purified-water exterior window cleaning (every pane)", value: "$200" },
           { label: "We soak your plants, lawn & landscape before, during & after — zero chemical stress", value: "$45" },
-          { label: "2-person insured, uniformed crew", value: "$120" },
+          { label: "10+ years experience across Capital Region homes", value: "$60" },
           { label: "100% satisfaction guarantee — we come back if needed", value: "$70" },
         ]}
       />
