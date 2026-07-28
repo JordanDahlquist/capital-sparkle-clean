@@ -210,6 +210,13 @@ export function QuoteWizard({
           message: "Interested in the $100 Off House Wash special.",
         };
       }
+      if (p === "/299-special") {
+        return {
+          ...EMPTY,
+          services: ["house"],
+          message: "Interested in the $299 House Wash Special (up to 2,000 sqft).",
+        };
+      }
     }
     return EMPTY;
   });
