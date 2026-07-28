@@ -4,16 +4,7 @@ import { Link } from "@tanstack/react-router";
 import { openQuoteModal } from "./quote-modal";
 import logo from "../assets/capital-pro-logo.png.asset.json";
 import { SERVICES } from "../data/services";
-import { CITY_SERVICES } from "../data/city-services";
-
-const CITIES = ["Albany", "Schenectady", "Saratoga Springs", "Troy"] as const;
-const CITY_MENU = CITIES.map((city) => ({
-  city,
-  items: CITY_SERVICES.filter((c) => c.city === city).map((c) => ({
-    slug: c.slug,
-    label: c.service,
-  })),
-}));
+import { CITIES } from "../data/cities";
 
 type NavLink = { label: string; href?: string; action?: "quote"; dropdown?: "services" | "areas" };
 const NAV_LINKS: NavLink[] = [
