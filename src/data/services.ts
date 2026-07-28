@@ -35,6 +35,7 @@ export type ServiceContent = {
   heroImage: string;
   heroPlaceholder?: string;
   heroCaption?: string;
+  heroVideo?: string;
   hero: {
     eyebrow: string;
     headline: string;
