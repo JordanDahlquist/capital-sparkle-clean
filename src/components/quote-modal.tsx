@@ -1,13 +1,4 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-  type ReactNode,
-} from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { submitLead } from "@/lib/submit-lead.functions";
 import {
   X,
@@ -179,13 +170,7 @@ function QuoteModal({ onClose }: { onClose: () => void }) {
 
   return (
     <div className="qm-backdrop" onMouseDown={onBackdrop}>
-      <div
-        ref={dialogRef}
-        className="qm-dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby={titleId}
-      >
+      <div ref={dialogRef} className="qm-dialog" role="dialog" aria-modal="true" aria-labelledby={titleId}>
         <QuoteWizard titleId={titleId} onClose={onClose} containerRef={dialogRef} />
       </div>
     </div>
@@ -229,17 +214,11 @@ export function QuoteWizard({
     return () => window.clearTimeout(t);
   }, [step, submitted, containerRef]);
 
-  const update = <K extends keyof Payload>(k: K, v: Payload[K]) =>
-    setData((d) => ({ ...d, [k]: v }));
+  const update = <K extends keyof Payload>(k: K, v: Payload[K]) => setData((d) => ({ ...d, [k]: v }));
 
   function stepValid(s: number): boolean {
     if (s === 1) return data.services.length > 0;
-    if (s === 2)
-      return (
-        data.city.trim().length > 0 &&
-        data.state.trim().length > 0 &&
-        zipRx.test(data.zip.trim())
-      );
+    if (s === 2) return data.city.trim().length > 0 && data.state.trim().length > 0 && zipRx.test(data.zip.trim());
     if (s === 3) return data.timeline.length > 0;
     if (s === 4)
       return (
@@ -319,9 +298,25 @@ export function QuoteWizard({
           { eventID: eventId },
         );
         w.dataLayer = w.dataLayer || [];
+
         (w.dataLayer as unknown[]).push({
           event: "lead_submitted",
           event_id: eventId,
+
+          user_data: {
+            email_address: payload.email,
+            phone_number: payload.phone,
+            address: {
+              first_name: payload.firstName,
+              last_name: payload.lastName,
+              street: payload.address,
+              city: payload.city,
+              region: payload.state,
+              postal_code: payload.zip,
+              country: "US",
+            },
+          },
+
           form: "quote",
           services: payload.services,
           property_type: payload.propertyType,
@@ -375,103 +370,93 @@ export function QuoteWizard({
   return (
     <>
       <div className="qm-header">
-          {!submitted && (
-            <div className="qm-progress-wrap" aria-hidden="true">
-              <div className="qm-progress-meta">
-                <span>Step {step} of 4</span>
-              </div>
-              <div className="qm-progress-track">
-                <div className="qm-progress-fill" style={{ width: `${progressPct}%` }} />
-              </div>
-            </div>
-          )}
-          {onClose && (
-            <button type="button" onClick={onClose} aria-label="Close quote form" className="qm-close">
-              <X className="h-5 w-5" />
-            </button>
-          )}
-        </div>
-
-        <div className="qm-body">
-          {submitted ? (
-            <SuccessView onClose={onClose} titleId={titleId} />
-          ) : (
-            <div
-              key={step}
-              className={`qm-step qm-step-${stepDir > 0 ? "in-right" : "in-left"}`}
-            >
-              {step === 1 && (
-                <Step1
-                  titleId={titleId}
-                  selected={data.services}
-                  onToggle={(id) =>
-                    update(
-                      "services",
-                      data.services.includes(id)
-                        ? data.services.filter((s) => s !== id)
-                        : [...data.services, id],
-                    )
-                  }
-                />
-              )}
-              {step === 2 && (
-                <Step2
-                  titleId={titleId}
-                  data={data}
-                  touched={touched}
-                  onChange={update}
-                  onBlur={(k) => setTouched((t) => ({ ...t, [k]: true }))}
-                />
-              )}
-              {step === 3 && (
-                <Step3
-                  titleId={titleId}
-                  timeline={data.timeline}
-                  message={data.message}
-                  onTimeline={(v) => update("timeline", v)}
-                  onMessage={(v) => update("message", v)}
-                />
-              )}
-              {step === 4 && (
-                <Step4
-                  titleId={titleId}
-                  data={data}
-                  touched={touched}
-                  onChange={update}
-                  onBlur={(k) => setTouched((t) => ({ ...t, [k]: true }))}
-                />
-              )}
-            </div>
-          )}
-        </div>
-
         {!submitted && (
-          <div className="qm-footer">
-            <div className="qm-nav">
-              {step > 1 ? (
-                <button type="button" className="qm-btn-secondary" onClick={() => go(step - 1)}>
-                  Back
-                </button>
-              ) : (
-                <span />
-              )}
-              <button
-                type="button"
-                className="qm-btn-primary"
-                onClick={handleContinue}
-                disabled={!stepValid(step)}
-              >
-                {step === 4 ? "Get My Free Quote" : "Continue"}
-              </button>
+          <div className="qm-progress-wrap" aria-hidden="true">
+            <div className="qm-progress-meta">
+              <span>Step {step} of 4</span>
             </div>
-            {step === 4 && (
-              <p className="qm-consent">
-                By submitting, you agree to be contacted by phone or text about your quote. Msg/data rates may apply.
-              </p>
-            )}
-            <p className="qm-trust">No obligation. Free quote. Local crew, 10+ years.</p>
+            <div className="qm-progress-track">
+              <div className="qm-progress-fill" style={{ width: `${progressPct}%` }} />
+            </div>
           </div>
         )}
+        {onClose && (
+          <button type="button" onClick={onClose} aria-label="Close quote form" className="qm-close">
+            <X className="h-5 w-5" />
+          </button>
+        )}
+      </div>
+
+      <div className="qm-body">
+        {submitted ? (
+          <SuccessView onClose={onClose} titleId={titleId} />
+        ) : (
+          <div key={step} className={`qm-step qm-step-${stepDir > 0 ? "in-right" : "in-left"}`}>
+            {step === 1 && (
+              <Step1
+                titleId={titleId}
+                selected={data.services}
+                onToggle={(id) =>
+                  update(
+                    "services",
+                    data.services.includes(id) ? data.services.filter((s) => s !== id) : [...data.services, id],
+                  )
+                }
+              />
+            )}
+            {step === 2 && (
+              <Step2
+                titleId={titleId}
+                data={data}
+                touched={touched}
+                onChange={update}
+                onBlur={(k) => setTouched((t) => ({ ...t, [k]: true }))}
+              />
+            )}
+            {step === 3 && (
+              <Step3
+                titleId={titleId}
+                timeline={data.timeline}
+                message={data.message}
+                onTimeline={(v) => update("timeline", v)}
+                onMessage={(v) => update("message", v)}
+              />
+            )}
+            {step === 4 && (
+              <Step4
+                titleId={titleId}
+                data={data}
+                touched={touched}
+                onChange={update}
+                onBlur={(k) => setTouched((t) => ({ ...t, [k]: true }))}
+              />
+            )}
+          </div>
+        )}
+      </div>
+
+      {!submitted && (
+        <div className="qm-footer">
+          <div className="qm-nav">
+            {step > 1 ? (
+              <button type="button" className="qm-btn-secondary" onClick={() => go(step - 1)}>
+                Back
+              </button>
+            ) : (
+              <span />
+            )}
+            <button type="button" className="qm-btn-primary" onClick={handleContinue} disabled={!stepValid(step)}>
+              {step === 4 ? "Get My Free Quote" : "Continue"}
+            </button>
+          </div>
+          {step === 4 && (
+            <p className="qm-consent">
+              By submitting, you agree to be contacted by phone or text about your quote. Msg/data rates may apply.
+            </p>
+          )}
+          <p className="qm-trust">No obligation. Free quote. Local crew, 10+ years.</p>
+        </div>
+      )}
     </>
   );
 }
@@ -537,14 +522,9 @@ function Step2({
   onChange: <K extends keyof Payload>(k: K, v: Payload[K]) => void;
   onBlur: (k: string) => void;
 }) {
-  const cityErr =
-    touched.city && data.city.trim().length === 0 ? "Please enter a city." : "";
-  const stateErr =
-    touched.state && data.state.trim().length === 0 ? "Please enter a state." : "";
-  const zipErr =
-    touched.zip && !zipRx.test(data.zip.trim())
-      ? "Enter a 5-digit ZIP code."
-      : "";
+  const cityErr = touched.city && data.city.trim().length === 0 ? "Please enter a city." : "";
+  const stateErr = touched.state && data.state.trim().length === 0 ? "Please enter a state." : "";
+  const zipErr = touched.zip && !zipRx.test(data.zip.trim()) ? "Enter a 5-digit ZIP code." : "";
   return (
     <div>
       <StepTitle id={titleId}>Where's the property?</StepTitle>
@@ -564,7 +544,9 @@ function Step2({
         />
       </div>
       <div className="qm-field">
-        <label htmlFor="qm-city" className="qm-label">City</label>
+        <label htmlFor="qm-city" className="qm-label">
+          City
+        </label>
         <input
           id="qm-city"
           type="text"
@@ -578,10 +560,16 @@ function Step2({
           aria-describedby={cityErr ? "qm-city-err" : undefined}
           required
         />
-        {cityErr && <p id="qm-city-err" className="qm-err">{cityErr}</p>}
+        {cityErr && (
+          <p id="qm-city-err" className="qm-err">
+            {cityErr}
+          </p>
+        )}
       </div>
       <div className="qm-field">
-        <label htmlFor="qm-state" className="qm-label">State</label>
+        <label htmlFor="qm-state" className="qm-label">
+          State
+        </label>
         <input
           id="qm-state"
           type="text"
@@ -595,10 +583,16 @@ function Step2({
           aria-describedby={stateErr ? "qm-state-err" : undefined}
           required
         />
-        {stateErr && <p id="qm-state-err" className="qm-err">{stateErr}</p>}
+        {stateErr && (
+          <p id="qm-state-err" className="qm-err">
+            {stateErr}
+          </p>
+        )}
       </div>
       <div className="qm-field">
-        <label htmlFor="qm-zip" className="qm-label">ZIP code</label>
+        <label htmlFor="qm-zip" className="qm-label">
+          ZIP code
+        </label>
         <input
           id="qm-zip"
           type="text"
@@ -614,7 +608,11 @@ function Step2({
           aria-describedby={zipErr ? "qm-zip-err" : undefined}
           required
         />
-        {zipErr && <p id="qm-zip-err" className="qm-err">{zipErr}</p>}
+        {zipErr && (
+          <p id="qm-zip-err" className="qm-err">
+            {zipErr}
+          </p>
+        )}
       </div>
       <div className="qm-field">
         <span className="qm-label">Property type</span>
@@ -709,28 +707,18 @@ function Step4({
   onChange: <K extends keyof Payload>(k: K, v: Payload[K]) => void;
   onBlur: (k: string) => void;
 }) {
-  const nameErr =
-    touched.firstName && data.firstName.trim().length === 0
-      ? "Please enter your first name."
-      : "";
-  const lastNameErr =
-    touched.lastName && data.lastName.trim().length === 0
-      ? "Please enter your last name."
-      : "";
-  const phoneErr =
-    touched.phone && !isValidUsPhone(data.phone)
-      ? "Enter a valid 10-digit US phone number."
-      : "";
-  const emailErr =
-    touched.email && !emailRx.test(data.email.trim())
-      ? "Enter a valid email address."
-      : "";
+  const nameErr = touched.firstName && data.firstName.trim().length === 0 ? "Please enter your first name." : "";
+  const lastNameErr = touched.lastName && data.lastName.trim().length === 0 ? "Please enter your last name." : "";
+  const phoneErr = touched.phone && !isValidUsPhone(data.phone) ? "Enter a valid 10-digit US phone number." : "";
+  const emailErr = touched.email && !emailRx.test(data.email.trim()) ? "Enter a valid email address." : "";
 
   return (
     <div>
       <StepTitle id={titleId}>Where do we send your quote?</StepTitle>
       <div className="qm-field">
-        <label htmlFor="qm-name" className="qm-label">First name</label>
+        <label htmlFor="qm-name" className="qm-label">
+          First name
+        </label>
         <input
           id="qm-name"
           type="text"
@@ -744,10 +732,16 @@ function Step4({
           aria-describedby={nameErr ? "qm-name-err" : undefined}
           required
         />
-        {nameErr && <p id="qm-name-err" className="qm-err">{nameErr}</p>}
+        {nameErr && (
+          <p id="qm-name-err" className="qm-err">
+            {nameErr}
+          </p>
+        )}
       </div>
       <div className="qm-field">
-        <label htmlFor="qm-lastname" className="qm-label">Last name</label>
+        <label htmlFor="qm-lastname" className="qm-label">
+          Last name
+        </label>
         <input
           id="qm-lastname"
           type="text"
@@ -760,10 +754,16 @@ function Step4({
           aria-describedby={lastNameErr ? "qm-lastname-err" : undefined}
           required
         />
-        {lastNameErr && <p id="qm-lastname-err" className="qm-err">{lastNameErr}</p>}
+        {lastNameErr && (
+          <p id="qm-lastname-err" className="qm-err">
+            {lastNameErr}
+          </p>
+        )}
       </div>
       <div className="qm-field">
-        <label htmlFor="qm-phone" className="qm-label">Phone</label>
+        <label htmlFor="qm-phone" className="qm-label">
+          Phone
+        </label>
         <input
           id="qm-phone"
           type="tel"
@@ -778,10 +778,16 @@ function Step4({
           placeholder="(518) 555-0123"
           required
         />
-        {phoneErr && <p id="qm-phone-err" className="qm-err">{phoneErr}</p>}
+        {phoneErr && (
+          <p id="qm-phone-err" className="qm-err">
+            {phoneErr}
+          </p>
+        )}
       </div>
       <div className="qm-field">
-        <label htmlFor="qm-email" className="qm-label">Email</label>
+        <label htmlFor="qm-email" className="qm-label">
+          Email
+        </label>
         <input
           id="qm-email"
           type="email"
@@ -796,7 +802,11 @@ function Step4({
           placeholder="you@example.com"
           required
         />
-        {emailErr && <p id="qm-email-err" className="qm-err">{emailErr}</p>}
+        {emailErr && (
+          <p id="qm-email-err" className="qm-err">
+            {emailErr}
+          </p>
+        )}
       </div>
     </div>
   );
@@ -811,10 +821,10 @@ function SuccessView({ onClose, titleId }: { onClose?: () => void; titleId: stri
           <path className="qm-check-path" fill="none" d="M14 27 l8 8 l16 -18" />
         </svg>
       </div>
-      <h2 id={titleId} className="qm-title qm-success-title">We've got it.</h2>
-      <p className="qm-success-sub">
-        We'll text or call you with your free quote, usually the same day.
-      </p>
+      <h2 id={titleId} className="qm-title qm-success-title">
+        We've got it.
+      </h2>
+      <p className="qm-success-sub">We'll text or call you with your free quote, usually the same day.</p>
       <a href="tel:+15189001913" className="qm-btn-call" data-autofocus="">
         <Phone className="h-4 w-4" aria-hidden="true" />
         Call us now (518) 900-1913
