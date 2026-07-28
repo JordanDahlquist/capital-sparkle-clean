@@ -5,6 +5,7 @@ import { SERVICES } from "../data/services";
 import { openQuoteModal } from "./quote-modal";
 import { QuoteWizard } from "./quote-modal";
 import { Reveal } from "./reveal";
+import { BeforeAfterVideo } from "./before-after-video";
 
 const PHONE_DISPLAY = "(518) 900-1913";
 const PHONE_TEL = "tel:+15189001913";
@@ -222,6 +223,9 @@ export function ServicePage({ service }: { service: ServiceContent }) {
           </div>
         </div>
       </section>
+
+      {/* Before / After video (house washing only) */}
+      {service.slug === "house-washing" && <BeforeAfterVideo />}
 
       {/* Mid CTA band */}
       <section className="bg-[var(--brand-deep-blue)] text-white py-12">
