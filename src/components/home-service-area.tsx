@@ -2,14 +2,14 @@ import { MapPin } from "lucide-react";
 import { openQuoteModal } from "./quote-modal";
 import { Reveal } from "./reveal";
 
-const cities = [
-  "Albany",
-  "Schenectady",
-  "Clifton Park",
-  "Saratoga Springs",
-  "Troy",
-  "Rensselaer",
-  "& all surrounding towns",
+const cities: { name: string; href?: string }[] = [
+  { name: "Albany", href: "/pressure-washing-albany-ny" },
+  { name: "Schenectady", href: "/pressure-washing-schenectady-ny" },
+  { name: "Clifton Park", href: "/pressure-washing-clifton-park-ny" },
+  { name: "Saratoga Springs", href: "/pressure-washing-saratoga-springs-ny" },
+  { name: "Troy", href: "/pressure-washing-troy-ny" },
+  { name: "Rensselaer", href: "/pressure-washing-rensselaer-ny" },
+  { name: "& all surrounding towns" },
 ];
 
 export function HomeServiceArea() {
@@ -39,18 +39,28 @@ export function HomeServiceArea() {
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
               {cities.map((city) => (
-                <li key={city} className="flex items-start gap-2 text-[#1A1A1A]">
+                <li key={city.name} className="flex items-start gap-2 text-[#1A1A1A]">
                   <MapPin
                     size={18}
                     className="text-[#C8102E] shrink-0 mt-1"
                     strokeWidth={2}
                   />
-                  <span
-                    className="text-base"
-                    style={{ fontFamily: "Inter, sans-serif", fontWeight: 500 }}
-                  >
-                    {city}
-                  </span>
+                  {city.href ? (
+                    <a
+                      href={city.href}
+                      className="text-base text-[#1A1A1A] hover:text-[#1E6FD9] underline-offset-4 hover:underline transition-colors"
+                      style={{ fontFamily: "Inter, sans-serif", fontWeight: 500 }}
+                    >
+                      {city.name}
+                    </a>
+                  ) : (
+                    <span
+                      className="text-base"
+                      style={{ fontFamily: "Inter, sans-serif", fontWeight: 500 }}
+                    >
+                      {city.name}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
