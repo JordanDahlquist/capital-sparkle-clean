@@ -67,7 +67,7 @@ function SpecialLanding() {
             <span className="text-xs font-semibold uppercase tracking-wider text-white/70">Flat Special Price</span>
             <div className="mt-1 flex items-baseline gap-3">
               <span className="font-[var(--font-display)] text-5xl font-bold text-white sm:text-6xl">$499</span>
-              <span className="text-sm text-white/70">up to 2,500 sqft</span>
+              <span className="text-sm text-white/70">+ tax · up to 2,500 sqft</span>
             </div>
           </div>
 
@@ -149,6 +149,7 @@ function SpecialLanding() {
           <ul className="mt-4 grid gap-3 text-sm text-[color:var(--brand-charcoal)]/85 sm:grid-cols-2">
             {[
               "Flat $499 price for homes up to 2,500 sqft (heated living area).",
+            "Price is plus applicable NY sales tax.",
               "Larger homes: we'll send a quick custom quote — usually still one of the best values around.",
               "Capital Region, NY only: Albany, Schenectady, Clifton Park, Saratoga Springs, Troy, Rensselaer & surrounding.",
               "Most quotes done remotely via Google Earth — free on-site quote available if you prefer.",
