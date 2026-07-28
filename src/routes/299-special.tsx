@@ -3,6 +3,40 @@ import { Phone, Check, Clock, ShieldCheck, Star, Sparkles, Droplets, Home } from
 import heroImage from "../assets/service-heroes/service-house-washing.png.asset.json";
 import { openQuoteModal } from "../components/quote-modal";
 import { SHOW_LICENSED_INSURED } from "../data/flags";
+import {
+  useSpecialAnalytics,
+  useExitIntent,
+  SocialProofStrip,
+  BeforeAfterProof,
+  ValueStack,
+  GuaranteeCallout,
+  ScarcityPill,
+  FaqJsonLd,
+} from "../components/special-landing-extras";
+
+const SPECIAL_ID = "299-special";
+const FAQS = [
+  {
+    q: "How do I claim the $299 special — is there a code?",
+    a: "No code needed. Our special pricing is automatically applied to any house wash quote started from this page.",
+  },
+  {
+    q: "Is sales tax included in the price?",
+    a: "No. New York State sales tax is added on top of your quoted price, the same as any other home service. Your final invoice will show your price plus tax.",
+  },
+  {
+    q: "Why does it say \"starting at $299\"?",
+    a: "Every home is different — square footage, height, number of stories, and features like dormers or extensive trim all affect the price. $299 is our starting price; we'll send you a quick custom quote for your exact home so there are no surprises.",
+  },
+  {
+    q: "Can I add windows, concrete, or roof cleaning to this?",
+    a: "Absolutely. The special covers the house wash portion; any add-ons are priced separately at our normal rates and added to your quote.",
+  },
+  {
+    q: "Can I combine this with military or first-responder discounts?",
+    a: "One discount per household. If you qualify for our military or first-responder discount, let us know and we'll apply whichever saves you more.",
+  },
+];
 
 export const Route = createFileRoute("/299-special")({
   head: () => ({
@@ -27,8 +61,12 @@ export const Route = createFileRoute("/299-special")({
 });
 
 function SpecialLanding() {
+  useSpecialAnalytics(SPECIAL_ID);
+  useExitIntent(SPECIAL_ID);
+
   return (
     <main>
+      <FaqJsonLd faqs={FAQS} />
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-[var(--brand-deep-blue)]">
         <div aria-hidden="true" className="absolute inset-0 -z-20 overflow-hidden">
@@ -43,10 +81,7 @@ function SpecialLanding() {
         </div>
 
         <div className="mx-auto max-w-5xl px-4 py-14 sm:py-20 text-white">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider backdrop-blur">
-            <Clock className="h-3.5 w-3.5" aria-hidden="true" />
-            Limited spots this month
-          </div>
+          <ScarcityPill slotsLeft={6} className="mb-5" />
 
           <p className="mb-3 font-[var(--font-display)] text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--brand-red)]">
             Special Offer — Capital Region NY
