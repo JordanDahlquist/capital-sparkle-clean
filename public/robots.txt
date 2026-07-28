@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /thank-you
 Disallow: /site-index
+Disallow: /499-special
 
 Sitemap: https://capitalpropressurewashing.com/sitemap.xml
