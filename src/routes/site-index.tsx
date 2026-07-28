@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SERVICES } from "../data/services";
 import { CITIES } from "../data/cities";
+import { CITY_SERVICES } from "../data/city-services";
 
 export const Route = createFileRoute("/site-index")({
   head: () => ({
@@ -22,6 +23,11 @@ function SiteIndexPage() {
   const cityPages = CITIES.map((c) => ({
     to: `/${c.slug}`,
     label: `${c.city}, NY`,
+  }));
+
+  const cityServicePages = CITY_SERVICES.map((c) => ({
+    to: `/${c.slug}`,
+    label: `${c.service} — ${c.city}, NY`,
   }));
 
   return (
@@ -66,6 +72,14 @@ function SiteIndexPage() {
         <Section title="City Landing Pages">
           <ul className="grid gap-2 sm:grid-cols-2">
             {cityPages.map((p) => (
+              <LinkItem key={p.to} to={p.to} label={p.label} />
+            ))}
+          </ul>
+        </Section>
+
+        <Section title="City + Service Landing Pages">
+          <ul className="grid gap-2 sm:grid-cols-2">
+            {cityServicePages.map((p) => (
               <LinkItem key={p.to} to={p.to} label={p.label} />
             ))}
           </ul>
