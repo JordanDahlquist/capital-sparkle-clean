@@ -321,21 +321,21 @@ export const SERVICES: ServiceContent[] = [
         "Purified-water pole cleaning for every exterior window, screen, and sill. Offered as an add-on to our house wash — the best way to make your whole home shine.",
     },
     intro:
-      "The difference between clean windows and streaky ones is technique and water. We use pure-water pole systems on every exterior window — no soap residue, no ladders on your landscaping, no streaks. We ask customers to remove their window screens before we arrive so we can get every pane spotless. Exterior only — and in almost every case we pair window cleaning with a house wash rather than doing it as a stand-alone service. That way the whole exterior looks its best in one visit.",
+      "The difference between clean windows and streaky ones is technique and water. We use pure-water pole systems on every exterior window — no soap residue, no ladders on your landscaping, no streaks. We ask customers to remove their window screens before we arrive so we can get every pane spotless — unless it's agreed upon in advance, we don't remove screens ourselves. Exterior only — and in almost every case we pair window cleaning with a house wash rather than doing it as a stand-alone service. That way the whole exterior looks its best in one visit.",
     benefits: [
       { title: "Streak-Free Guaranteed", desc: "If a window streaks, we come back — no charge." },
-      { title: "Sills Wiped Down", desc: "Every exterior sill wiped as part of the service. We ask you to remove screens before we arrive." },
+      { title: "Sills Wiped Down", desc: "Every exterior sill wiped as part of the service. Screens should be removed by you before we arrive unless agreed upon in advance." },
       { title: "Two- and Three-Story Safe", desc: "Water-fed poles let us safely reach high windows without ladders on landscaping." },
       { title: "Add-On to a House Wash", desc: "We offer window cleaning as an add-on to a house wash — the pairing that gets the best result." },
     ],
     process: [
-      { title: "You Remove Screens", desc: "We ask you to pop screens out before we arrive so we can clean every pane fully." },
+      { title: "Screens Off (By You)", desc: "Please pop screens out before we arrive so we can clean every pane fully. We only remove them ourselves if it's agreed upon in advance." },
       { title: "Pure-Water Pole Clean", desc: "Scrub and rinse every exterior pane, frame, and sill with purified water — no soap, no streaks." },
       { title: "Final Walk-Through", desc: "We walk the home with you to make sure every window meets the streak-free standard." },
     ],
     faqs: [
       { q: "Do you clean interior windows?", a: "No — we're exterior-only. Every window, screen, and sill on the outside of the house gets cleaned." },
-      { q: "Do I need to remove my screens?", a: "Yes — please pop the screens out before we arrive. It lets us clean every pane thoroughly and keeps the job efficient. If you're unable to, let us know when you book." },
+      { q: "Do I need to remove my screens?", a: "Yes — please pop the screens out before we arrive. It lets us clean every pane thoroughly and keeps the job efficient. Unless it's agreed upon ahead of time, screen removal isn't included — just let us know when you book if you'd like us to handle it." },
       { q: "Do you do windows by themselves?", a: "Almost never. We offer window cleaning as an add-on to a house wash — that pairing gets the best result and is the most efficient trip for you. If you only want windows, ask us and we'll let you know if we can fit it in." },
       { q: "Post-construction windows?", a: "Yes — we handle stucco splatter and paint overspray on exterior glass as an add-on." },
       { q: "How often?", a: "Twice a year for most homes. Once a year minimum." },
