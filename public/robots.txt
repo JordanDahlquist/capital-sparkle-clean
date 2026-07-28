@@ -3,5 +3,6 @@ Allow: /
 Disallow: /thank-you
 Disallow: /site-index
 Disallow: /499-special
+Disallow: /100-off-house-wash
 
 Sitemap: https://capitalpropressurewashing.com/sitemap.xml
