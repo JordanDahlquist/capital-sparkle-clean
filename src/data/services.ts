@@ -18,7 +18,7 @@ import houseWashingHero from "../assets/service-heroes/service-house-washing.png
 import roofWashingHero from "../assets/service-heroes/service-roof-washing-custom.jpg.asset.json";
 import paverCleaningHero from "../assets/service-heroes/service-paver-cleaning-sealing.png.asset.json";
 import paverCleaningHeroCliftonPark from "../assets/service-heroes/service-paver-cleaning-sealing-clifton-park.jpeg.asset.json";
-import concreteCleaningHero from "../assets/service-heroes/service-concrete-cleaning-sealing.png.asset.json";
+import concreteCleaningHero from "../assets/service-heroes/service-concrete-cleaning-sealing-v2.jpg.asset.json";
 import deckPatioHero from "../assets/service-heroes/service-deck-patio-cleaning.png.asset.json";
 import gutterCleaningHero from "../assets/service-heroes/service-gutter-cleaning.png.asset.json";
 import gutterGuardsHero from "../assets/service-heroes/service-gutter-guards.png.asset.json";
