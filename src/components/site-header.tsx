@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
-import { Menu, Phone, X, Facebook, Instagram } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Menu, Phone, X, Facebook, Instagram, ChevronDown } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { openQuoteModal } from "./quote-modal";
 import logo from "../assets/capital-pro-logo.png.asset.json";
+import { SERVICES } from "../data/services";
 
-type NavLink = { label: string; href?: string; action?: "quote" };
+type NavLink = { label: string; href?: string; action?: "quote"; dropdown?: "services" };
 const NAV_LINKS: NavLink[] = [
-  { label: "Services", href: "#services" },
+  { label: "Services", dropdown: "services" },
   { label: "Gallery", href: "#gallery" },
   { label: "Service Area", href: "#service-area" },
   { label: "Reviews", href: "#reviews" },
@@ -86,6 +88,35 @@ function QuoteButton({ className = "", onClick, children = "Get Free Quote" }: {
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const servicesRef = useRef<HTMLDivElement | null>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openServices = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setServicesOpen(true);
+  };
+  const scheduleCloseServices = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setServicesOpen(false), 120);
+  };
+
+  useEffect(() => {
+    if (!servicesOpen) return;
+    const onDocClick = (e: MouseEvent) => {
+      if (!servicesRef.current?.contains(e.target as Node)) setServicesOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setServicesOpen(false);
+    };
+    document.addEventListener("mousedown", onDocClick);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDocClick);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [servicesOpen]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 4);
@@ -117,7 +148,48 @@ export function SiteHeader() {
         {/* Center: nav (desktop) */}
         <nav className="hidden lg:flex items-center gap-7" aria-label="Primary">
           {NAV_LINKS.map((link) =>
-            link.action === "quote" ? (
+            link.dropdown === "services" ? (
+              <div
+                key={link.label}
+                ref={servicesRef}
+                className="relative"
+                onMouseEnter={openServices}
+                onMouseLeave={scheduleCloseServices}
+              >
+                <button
+                  type="button"
+                  onClick={() => setServicesOpen((v) => !v)}
+                  aria-haspopup="menu"
+                  aria-expanded={servicesOpen}
+                  className="text-[var(--brand-charcoal)] font-medium text-sm hover:text-[var(--brand-bright-blue)] transition-colors min-h-[44px] flex items-center gap-1 bg-transparent"
+                >
+                  {link.label}
+                  <ChevronDown className={"h-4 w-4 transition-transform " + (servicesOpen ? "rotate-180" : "")} />
+                </button>
+                {servicesOpen && (
+                  <div
+                    role="menu"
+                    className="absolute left-1/2 -translate-x-1/2 top-full pt-2 z-50"
+                    onMouseEnter={openServices}
+                    onMouseLeave={scheduleCloseServices}
+                  >
+                    <div className="w-[520px] rounded-md border border-[var(--brand-light-gray)] bg-white shadow-lg p-2 grid grid-cols-2 gap-1">
+                      {SERVICES.map((s) => (
+                        <Link
+                          key={s.slug}
+                          to="/$service"
+                          params={{ service: s.slug }}
+                          onClick={() => setServicesOpen(false)}
+                          className="px-3 py-2 rounded text-sm text-[var(--brand-charcoal)] hover:bg-[var(--brand-light-gray)] hover:text-[var(--brand-bright-blue)] transition-colors"
+                        >
+                          {s.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : link.action === "quote" ? (
               <button
                 key={link.label}
                 type="button"
@@ -165,7 +237,37 @@ export function SiteHeader() {
         <div className="lg:hidden border-t border-[var(--brand-light-gray)] bg-white">
           <nav className="mx-auto max-w-[1200px] px-4 py-3 flex flex-col" aria-label="Mobile">
             {NAV_LINKS.map((link) =>
-              link.action === "quote" ? (
+              link.dropdown === "services" ? (
+                <div key={link.label} className="border-b border-[var(--brand-light-gray)]">
+                  <button
+                    type="button"
+                    onClick={() => setMobileServicesOpen((v) => !v)}
+                    aria-expanded={mobileServicesOpen}
+                    className="w-full py-3 text-left text-[var(--brand-charcoal)] font-medium text-base flex items-center justify-between min-h-[44px] bg-transparent"
+                  >
+                    {link.label}
+                    <ChevronDown className={"h-4 w-4 transition-transform " + (mobileServicesOpen ? "rotate-180" : "")} />
+                  </button>
+                  {mobileServicesOpen && (
+                    <div className="pb-2 flex flex-col">
+                      {SERVICES.map((s) => (
+                        <Link
+                          key={s.slug}
+                          to="/$service"
+                          params={{ service: s.slug }}
+                          onClick={() => {
+                            setOpen(false);
+                            setMobileServicesOpen(false);
+                          }}
+                          className="pl-4 py-2 text-sm text-[var(--brand-charcoal)] hover:text-[var(--brand-bright-blue)] transition-colors min-h-[40px] flex items-center"
+                        >
+                          {s.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : link.action === "quote" ? (
                 <button
                   key={link.label}
                   type="button"
