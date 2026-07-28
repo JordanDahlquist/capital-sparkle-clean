@@ -23,6 +23,7 @@ import deckPatioHero from "../assets/service-heroes/service-deck-patio-cleaning.
 import gutterCleaningHero from "../assets/service-heroes/service-gutter-cleaning.png.asset.json";
 import gutterGuardsHero from "../assets/service-heroes/service-gutter-guards.png.asset.json";
 import windowCleaningHero from "../assets/service-heroes/service-window-cleaning.png.asset.json";
+import windowCleaningVideo from "../assets/service-heroes/service-window-cleaning.mp4.asset.json";
 import fenceCleaningHero from "../assets/service-heroes/service-fence-cleaning.png.asset.json";
 import holidayLightingHero from "../assets/service-heroes/service-holiday-lighting.png.asset.json";
 import permanentLightingHero from "../assets/service-heroes/service-permanent-lighting.png.asset.json";
@@ -35,6 +36,7 @@ export type ServiceContent = {
   heroImage: string;
   heroPlaceholder?: string;
   heroCaption?: string;
+  heroVideo?: string;
   hero: {
     eyebrow: string;
     headline: string;
@@ -311,6 +313,7 @@ export const SERVICES: ServiceContent[] = [
     name: "Window Cleaning",
     icon: AppWindow,
     heroImage: windowCleaningHero.url,
+    heroVideo: windowCleaningVideo.url,
     hero: {
       eyebrow: "Exterior Only",
       headline: "Streak-Free Exterior Windows",
