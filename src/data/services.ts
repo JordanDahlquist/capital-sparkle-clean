@@ -23,6 +23,7 @@ import deckPatioHero from "../assets/service-heroes/service-deck-patio-cleaning.
 import gutterCleaningHero from "../assets/service-heroes/service-gutter-cleaning.png.asset.json";
 import gutterGuardsHero from "../assets/service-heroes/service-gutter-guards.png.asset.json";
 import windowCleaningHero from "../assets/service-heroes/service-window-cleaning.png.asset.json";
+import windowCleaningVideo from "../assets/service-heroes/service-window-cleaning.mp4.asset.json";
 import fenceCleaningHero from "../assets/service-heroes/service-fence-cleaning.png.asset.json";
 import holidayLightingHero from "../assets/service-heroes/service-holiday-lighting.png.asset.json";
 import permanentLightingHero from "../assets/service-heroes/service-permanent-lighting.png.asset.json";
