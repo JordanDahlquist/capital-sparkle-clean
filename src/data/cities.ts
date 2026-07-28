@@ -421,6 +421,204 @@ export const CITIES: CityContent[] = [
         "Soft-wash pressure washing in Troy, NY — safe for brick, brownstone, and lime mortar. Washington Park, Pottery District, Sycaway & Lansingburgh. Free quotes.",
     },
   },
+  {
+    slug: "pressure-washing-clifton-park-ny",
+    city: "Clifton Park",
+    region: "Capital Region, NY",
+    heroImage: houseWashingHero.url,
+    hero: {
+      eyebrow: "Clifton Park, NY · Suburban Soft-Wash Specialists",
+      headline: "Pressure Washing in Clifton Park, NY",
+      subhead:
+        "Wooded lots, big Colonials, and long shaded driveways make Clifton Park a mildew and algae hotspot. We soft-wash siding, roofs, decks, and concrete so your home looks maintained year-round — not just after a rain.",
+    },
+    intro: [
+      "Clifton Park was built for families — big lots, mature trees, and hundreds of Colonials, ranches, and newer Hardie-and-vinyl builds tucked into Country Knolls, Longkill, Ashdown Woods, and Van Patten Woods. The same tree canopy that makes the neighborhoods feel like a park keeps north walls shaded and slow to dry.",
+      "That's the recipe for the green mildew streaks and black algae stains you see creeping up siding, gutters, and roof shingles by early summer. Pressure alone knocks it off for a few weeks — then the biology comes back.",
+      "Our Clifton Park soft-wash approach uses professional biocides at low pressure to kill algae, mildew, and moss at the root — safe for vinyl, Hardie, aluminum, painted cedar, and asphalt shingle. Same local crew, over 10 years cleaning Southern Saratoga County homes.",
+    ],
+    localContext: {
+      heading: "Built For Clifton Park Homes",
+      body:
+        "From 1980s Country Knolls Colonials to newer Van Patten Woods builds and the ranches along Route 146, we've cleaned every style Clifton Park has. Each surface — vinyl, Hardie, aluminum, painted cedar, asphalt shingle — gets its own detergent mix and rinse pressure.",
+      bullets: [
+        {
+          title: "Country Knolls & Longkill",
+          desc: "Mature trees, big lots, and shaded north walls that stay damp for days. Extended dwell times and re-rinsing wipe out mildew that comes back on shorter washes.",
+        },
+        {
+          title: "Van Patten Woods & Ashdown Woods",
+          desc: "Newer Colonials with Hardie and vinyl siding, tall gables, and dormers. Our soft-wash reaches peaks safely from the ground — no ladders scraping siding.",
+        },
+        {
+          title: "Vischer Ferry & Rexford",
+          desc: "Older wood clapboard homes near the Mohawk River, plus decks that back to the river. Gentle detergents, careful rinsing around mature landscaping.",
+        },
+        {
+          title: "Halfmoon & Round Lake Area",
+          desc: "Suburban ranches and split-levels on wooded lots. Perfect prep before painting, listing, or a summer party.",
+        },
+      ],
+    },
+    neighborhoods: [
+      "Country Knolls",
+      "Longkill",
+      "Van Patten Woods",
+      "Ashdown Woods",
+      "Vischer Ferry",
+      "Rexford",
+      "Halfmoon",
+      "Round Lake",
+      "Jonesville",
+    ],
+    whyLocal: [
+      {
+        title: "10+ Years On Clifton Park Homes",
+        desc: "Same local crew working from Route 146 through Country Knolls and out to Halfmoon. Not a franchise, not a rotating subcontractor.",
+      },
+      {
+        title: "Kills Algae At The Root",
+        desc: "The green streaks on your north wall are living algae fed by the tree canopy. Our biocides kill it — not just bleach it — so it doesn't come back in eight weeks.",
+      },
+      {
+        title: "Deck- & Fence-Safe",
+        desc: "Clifton Park has a lot of pressure-treated decks. We soft-wash them without fuzzing the wood or blowing splinters up — clean, ready to seal.",
+      },
+      {
+        title: "Careful Around Mature Landscaping",
+        desc: "The plantings around your foundation aren't replaceable. We pre-rinse beds before the wash, apply with drift control, and re-rinse after.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What parts of Clifton Park do you serve?",
+        a: "All of it — Country Knolls, Longkill, Van Patten Woods, Ashdown Woods, Vischer Ferry, Rexford, Jonesville — plus Halfmoon, Round Lake, and Ballston Lake next door.",
+      },
+      {
+        q: "How much does pressure washing cost in Clifton Park?",
+        a: "Depends on the service and property size. Most single-family house washes run $349–$699; driveways $199–$449; roof soft-wash $499–$1,299. We give firm quotes — never a range that changes on the day of service.",
+      },
+      {
+        q: "Will you damage my vinyl or Hardie siding?",
+        a: "No. We soft-wash at pressure lower than a garden hose. The cleaning is done by the detergent, not the wand — vinyl, Hardie, aluminum, and painted cedar all wash cleanly without splitting, cracking, or driving water behind the siding.",
+      },
+      {
+        q: "How often should my Clifton Park home be washed?",
+        a: "House washing: once a year. Roof washing: every 2–4 years depending on shade. Concrete cleaning & sealing: every 2–3 years. Homes with heavy tree cover in Country Knolls or Van Patten Woods benefit from annual visits.",
+      },
+      {
+        q: "Do you offer free quotes in Clifton Park?",
+        a: "Yes. Same-day callback. We measure, inspect the surface condition, and give a firm price — usually within 24 hours of your call. No obligation.",
+      },
+      {
+        q: "Are you licensed and insured?",
+        a: "Yes — fully insured with workers comp and liability coverage. Certificate of insurance available on request before any job.",
+      },
+    ],
+    meta: {
+      title: "Pressure Washing in Clifton Park, NY | Capital Pro",
+      description:
+        "Soft-wash pressure washing in Clifton Park, NY — house, roof, concrete, decks & more. Country Knolls, Van Patten Woods, Halfmoon. 10+ years local. Free quotes.",
+    },
+  },
+  {
+    slug: "pressure-washing-rensselaer-ny",
+    city: "Rensselaer",
+    region: "Capital Region, NY",
+    heroImage: houseWashingHero.url,
+    hero: {
+      eyebrow: "Rensselaer, NY · Hudson River Soft-Wash",
+      headline: "Pressure Washing in Rensselaer, NY",
+      subhead:
+        "Riverfront humidity, older wood and vinyl homes, and long winters full of road salt make Rensselaer exteriors work overtime. We soft-wash siding, roofs, concrete, and decks so mildew, algae, and salt haze come off — and stay off.",
+    },
+    intro: [
+      "Rensselaer sits right on the Hudson, and that river humidity is what feeds the green algae on north walls, the black streaks running down roof shingles, and the mildew in gutter runs by early summer. It's the same story from downtown Rensselaer up through East Greenbush, North Greenbush, and Wynantskill.",
+      "The housing stock is a mix — older wood clapboard and painted homes near the river, mid-century ranches through East Greenbush, and newer vinyl and Hardie builds in North Greenbush and Defreestville. High pressure isn't the answer for any of them: it splits older wood, drives water behind siding, and leaves 'tiger stripes' on driveways.",
+      "Our Rensselaer soft-wash approach uses professional biocides at low pressure to kill mildew, algae, and moss at the root — safe for every surface on your home. Same local crew, over 10 years cleaning Rensselaer County homes.",
+    ],
+    localContext: {
+      heading: "Built For Rensselaer Homes",
+      body:
+        "From older riverfront wood clapboard to East Greenbush ranches and newer North Greenbush Colonials, no two Rensselaer homes ask for the same wash. We calibrate detergent strength and rinse pressure to the actual surface.",
+      bullets: [
+        {
+          title: "Downtown & Riverfront Rensselaer",
+          desc: "Older painted wood and mixed siding right on the Hudson — high humidity, heavy mildew on shaded sides. Gentle detergents, extended dwell time, careful rinsing.",
+        },
+        {
+          title: "East Greenbush & Defreestville",
+          desc: "Mid-century ranches and split-levels with vinyl and aluminum siding. Our soft-wash cleans without cracking older vinyl or driving water behind seams.",
+        },
+        {
+          title: "North Greenbush & Wynantskill",
+          desc: "Newer Colonials with Hardie and vinyl siding, tall gables, and wooded lots. Soft-wash reaches high peaks safely from the ground.",
+        },
+        {
+          title: "Sand Lake & Averill Park Corridor",
+          desc: "Suburban and rural properties with longer driveways and larger decks. Rotary surface cleaner for concrete, soft-wash for pressure-treated wood.",
+        },
+      ],
+    },
+    neighborhoods: [
+      "Downtown Rensselaer",
+      "East Greenbush",
+      "North Greenbush",
+      "Defreestville",
+      "Wynantskill",
+      "Sand Lake",
+      "Averill Park",
+    ],
+    whyLocal: [
+      {
+        title: "Handles Hudson River Humidity",
+        desc: "Riverfront damp feeds green algae and black roof streaks. Our biocides target the biology at the root — not just bleach the surface for a few weeks.",
+      },
+      {
+        title: "Salt-Damage Recovery",
+        desc: "Rensselaer County salts hard. We clean AND seal concrete drives, walks, and stoops so next winter's brine does less damage.",
+      },
+      {
+        title: "Safe For Older Vinyl & Wood",
+        desc: "Mid-century vinyl gets brittle. High pressure cracks it. Our soft-wash cleans at hose pressure — no cracks, no water intrusion behind the siding.",
+      },
+      {
+        title: "10+ Years On Rensselaer County Homes",
+        desc: "Same local crew from downtown Rensselaer through East Greenbush and out toward Averill Park. Not a franchise.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What areas do you serve in and around Rensselaer?",
+        a: "Downtown Rensselaer, East Greenbush, North Greenbush, Defreestville, Wynantskill, Sand Lake, Averill Park — plus the neighboring Rensselaer County suburbs.",
+      },
+      {
+        q: "How much does pressure washing cost in Rensselaer?",
+        a: "Most single-family house washes run $349–$649; driveways $199–$399; roof soft-wash $499–$1,299. We give firm quotes — never a range that changes on the day of service.",
+      },
+      {
+        q: "Will you damage my older siding or crack aging vinyl?",
+        a: "No. Older vinyl gets brittle and cracks under high pressure. We soft-wash at less than garden-hose pressure — the detergent does the work, not the wand.",
+      },
+      {
+        q: "Can you get the black streaks off my roof?",
+        a: "Yes. Those streaks are gloeocapsa magma algae, and Hudson River humidity feeds it. Our ARMA-approved soft-wash kills it at the root — streaks are gone the day we treat, and they don't come back next season.",
+      },
+      {
+        q: "Do you clean and seal salt-stained walks and driveways?",
+        a: "Yes. We clean the surface first with a rotary surface cleaner, then apply a penetrating sealer that helps repel next winter's road salt and brine.",
+      },
+      {
+        q: "Are you licensed and insured?",
+        a: "Yes — fully insured with workers comp and liability coverage. Certificate of insurance available on request before any job.",
+      },
+    ],
+    meta: {
+      title: "Pressure Washing in Rensselaer, NY | Capital Pro",
+      description:
+        "Soft-wash pressure washing in Rensselaer, NY — house, roof, concrete & more. East Greenbush, North Greenbush, Defreestville & Wynantskill. Free quotes.",
+    },
+  },
 ];
 
 export function getCity(slug: string): CityContent | undefined {
