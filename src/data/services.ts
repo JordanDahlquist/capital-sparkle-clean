@@ -17,6 +17,7 @@ import {
 import houseWashingHero from "../assets/service-heroes/service-house-washing.png.asset.json";
 import roofWashingHero from "../assets/service-heroes/service-roof-washing-custom.jpg.asset.json";
 import paverCleaningHero from "../assets/service-heroes/service-paver-cleaning-sealing.png.asset.json";
+import paverCleaningHeroCliftonPark from "../assets/service-heroes/service-paver-cleaning-sealing-clifton-park.jpeg.asset.json";
 import concreteCleaningHero from "../assets/service-heroes/service-concrete-cleaning-sealing.png.asset.json";
 import deckPatioHero from "../assets/service-heroes/service-deck-patio-cleaning.png.asset.json";
 import gutterCleaningHero from "../assets/service-heroes/service-gutter-cleaning.png.asset.json";
@@ -33,6 +34,7 @@ export type ServiceContent = {
   icon: LucideIcon;
   heroImage: string;
   heroPlaceholder?: string;
+  heroCaption?: string;
   hero: {
     eyebrow: string;
     headline: string;
