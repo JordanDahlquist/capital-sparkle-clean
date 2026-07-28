@@ -217,6 +217,13 @@ export function QuoteWizard({
           message: "Interested in the $299 House Wash Special (up to 2,000 sqft).",
         };
       }
+      if (p === "/899-special") {
+        return {
+          ...EMPTY,
+          services: ["house", "roof"],
+          message: "Interested in the $899 House Wash + Roof Wash Special (up to 2,500 sqft).",
+        };
+      }
     }
     return EMPTY;
   });

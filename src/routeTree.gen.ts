@@ -29,6 +29,7 @@ import { Route as ConcreteCleaningTroyNyRouteImport } from './routes/concrete-cl
 import { Route as ConcreteCleaningSchenectadyNyRouteImport } from './routes/concrete-cleaning-schenectady-ny'
 import { Route as ConcreteCleaningSaratogaSpringsNyRouteImport } from './routes/concrete-cleaning-saratoga-springs-ny'
 import { Route as ConcreteCleaningAlbanyNyRouteImport } from './routes/concrete-cleaning-albany-ny'
+import { Route as R899SpecialRouteImport } from './routes/899-special'
 import { Route as R499SpecialRouteImport } from './routes/499-special'
 import { Route as R299SpecialRouteImport } from './routes/299-special'
 import { Route as R100OffHouseWashRouteImport } from './routes/100-off-house-wash'
@@ -146,6 +147,11 @@ const ConcreteCleaningAlbanyNyRoute =
     path: '/concrete-cleaning-albany-ny',
     getParentRoute: () => rootRouteImport,
   } as any)
+const R899SpecialRoute = R899SpecialRouteImport.update({
+  id: '/899-special',
+  path: '/899-special',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const R499SpecialRoute = R499SpecialRouteImport.update({
   id: '/499-special',
   path: '/499-special',
@@ -178,6 +184,7 @@ export interface FileRoutesByFullPath {
   '/100-off-house-wash': typeof R100OffHouseWashRoute
   '/299-special': typeof R299SpecialRoute
   '/499-special': typeof R499SpecialRoute
+  '/899-special': typeof R899SpecialRoute
   '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
   '/concrete-cleaning-saratoga-springs-ny': typeof ConcreteCleaningSaratogaSpringsNyRoute
   '/concrete-cleaning-schenectady-ny': typeof ConcreteCleaningSchenectadyNyRoute
@@ -205,6 +212,7 @@ export interface FileRoutesByTo {
   '/100-off-house-wash': typeof R100OffHouseWashRoute
   '/299-special': typeof R299SpecialRoute
   '/499-special': typeof R499SpecialRoute
+  '/899-special': typeof R899SpecialRoute
   '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
   '/concrete-cleaning-saratoga-springs-ny': typeof ConcreteCleaningSaratogaSpringsNyRoute
   '/concrete-cleaning-schenectady-ny': typeof ConcreteCleaningSchenectadyNyRoute
@@ -233,6 +241,7 @@ export interface FileRoutesById {
   '/100-off-house-wash': typeof R100OffHouseWashRoute
   '/299-special': typeof R299SpecialRoute
   '/499-special': typeof R499SpecialRoute
+  '/899-special': typeof R899SpecialRoute
   '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
   '/concrete-cleaning-saratoga-springs-ny': typeof ConcreteCleaningSaratogaSpringsNyRoute
   '/concrete-cleaning-schenectady-ny': typeof ConcreteCleaningSchenectadyNyRoute
@@ -262,6 +271,7 @@ export interface FileRouteTypes {
     | '/100-off-house-wash'
     | '/299-special'
     | '/499-special'
+    | '/899-special'
     | '/concrete-cleaning-albany-ny'
     | '/concrete-cleaning-saratoga-springs-ny'
     | '/concrete-cleaning-schenectady-ny'
@@ -289,6 +299,7 @@ export interface FileRouteTypes {
     | '/100-off-house-wash'
     | '/299-special'
     | '/499-special'
+    | '/899-special'
     | '/concrete-cleaning-albany-ny'
     | '/concrete-cleaning-saratoga-springs-ny'
     | '/concrete-cleaning-schenectady-ny'
@@ -316,6 +327,7 @@ export interface FileRouteTypes {
     | '/100-off-house-wash'
     | '/299-special'
     | '/499-special'
+    | '/899-special'
     | '/concrete-cleaning-albany-ny'
     | '/concrete-cleaning-saratoga-springs-ny'
     | '/concrete-cleaning-schenectady-ny'
@@ -344,6 +356,7 @@ export interface RootRouteChildren {
   R100OffHouseWashRoute: typeof R100OffHouseWashRoute
   R299SpecialRoute: typeof R299SpecialRoute
   R499SpecialRoute: typeof R499SpecialRoute
+  R899SpecialRoute: typeof R899SpecialRoute
   ConcreteCleaningAlbanyNyRoute: typeof ConcreteCleaningAlbanyNyRoute
   ConcreteCleaningSaratogaSpringsNyRoute: typeof ConcreteCleaningSaratogaSpringsNyRoute
   ConcreteCleaningSchenectadyNyRoute: typeof ConcreteCleaningSchenectadyNyRoute
@@ -508,6 +521,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConcreteCleaningAlbanyNyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/899-special': {
+      id: '/899-special'
+      path: '/899-special'
+      fullPath: '/899-special'
+      preLoaderRoute: typeof R899SpecialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/499-special': {
       id: '/499-special'
       path: '/499-special'
@@ -552,6 +572,7 @@ const rootRouteChildren: RootRouteChildren = {
   R100OffHouseWashRoute: R100OffHouseWashRoute,
   R299SpecialRoute: R299SpecialRoute,
   R499SpecialRoute: R499SpecialRoute,
+  R899SpecialRoute: R899SpecialRoute,
   ConcreteCleaningAlbanyNyRoute: ConcreteCleaningAlbanyNyRoute,
   ConcreteCleaningSaratogaSpringsNyRoute:
     ConcreteCleaningSaratogaSpringsNyRoute,
