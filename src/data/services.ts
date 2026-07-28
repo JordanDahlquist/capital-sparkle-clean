@@ -60,7 +60,7 @@ export const SERVICES: ServiceContent[] = [
         "Low-pressure soft wash cleans siding, brick, stucco, and trim without damage — killing mold, mildew, algae, and cobwebs at the root.",
     },
     intro:
-      "A dirty house isn't just cosmetic — mildew and algae eat away at siding and paint. Our soft-wash system uses professional detergents and low pressure to safely restore your home's curb appeal in a single afternoon.",
+      "A dirty house isn't just cosmetic — mildew and algae eat away at siding and paint. Our commercial-grade soft-wash system uses professional detergents and low pressure to safely restore your home's curb appeal — most homes done in 1–2 hours.",
     benefits: [
       { title: "Kills Mold & Algae at the Root", desc: "Professional biocides clean deeper than pressure alone — results last 3–5× longer." },
       { title: "Safe on Every Surface", desc: "Vinyl, wood, brick, stucco, painted trim — we adjust pressure and mix for each material." },
@@ -69,13 +69,23 @@ export const SERVICES: ServiceContent[] = [
     ],
     process: [
       { title: "Free On-Site Quote", desc: "We measure, inspect, and give a firm price — no surprises." },
-      { title: "Pre-Treat & Rinse", desc: "Cover plants, apply eco-safe detergent, dwell, then low-pressure rinse top to bottom." },
+      { title: "Pre-Treat & Rinse", desc: "Cover plants, apply eco-safe detergent with commercial soft-wash equipment, dwell, then low-pressure rinse top to bottom." },
       { title: "Detail Pass", desc: "Hand-scrub high-traffic spots, sills, and doors. Walk the home with you before we leave." },
     ],
     faqs: [
       { q: "Will it damage my siding or plants?", a: "No. We use soft-wash pressure (lower than a garden hose) and rinse landscaping before, during, and after." },
-      { q: "How long does it take?", a: "Most single-family homes take 2–4 hours start to finish." },
+      { q: "How long does it take?", a: "Most single-family homes take 1–2 hours start to finish with our commercial soft-wash equipment." },
       { q: "How often should I have it done?", a: "Once a year is ideal in the Capital Region — every 18 months minimum for shaded sides." },
+      { q: "What equipment do you use?", a: "Commercial-grade soft-wash systems with dedicated 12V pumps and high-volume rinse setups — not consumer pressure washers. That's how we finish a full house in 1–2 hours without damaging siding." },
+      { q: "Do I need to be home during the wash?", a: "No. As long as we have access to an outdoor water spigot and the gates are unlocked, you don't need to be home. We'll send before/after photos and a walkthrough summary when we're done." },
+      { q: "Do you use bleach? Is it safe for my landscaping?", a: "We use a professionally diluted sodium hypochlorite blend — the industry standard for killing mold and algae at the root. Plants and shrubs are pre-soaked, tarped where needed, and rinsed thoroughly during and after the wash." },
+      { q: "Will it remove oxidation or chalky siding?", a: "Soft washing removes biological growth (mold, mildew, algae) and surface dirt. Heavy oxidation on older vinyl may need a separate hand-scrub restoration — we'll flag it during the on-site quote and let you know your options." },
+      { q: "Can you clean stucco, brick, cedar, or Hardie board?", a: "Yes. We adjust pressure, dwell time, and detergent mix for each surface. Stucco and cedar in particular require a gentler touch — we've cleaned all of them across the Capital Region." },
+      { q: "What about window screens, lights, and outlets?", a: "We remove or cover exterior screens when needed, avoid direct spray on light fixtures and electrical outlets, and rinse everything clean before packing up." },
+      { q: "How much does a house wash cost?", a: "Most single-family homes in the Capital Region fall between $299 and $549 depending on size, height, and condition. We give a firm quote up front — no surprises, no upsells on-site." },
+      { q: "Do you offer any discounts?", a: "Yes — active and retired military, first responders (police, fire, EMS), and seniors receive a discount. Just mention it when you request your quote." },
+      { q: "Are you licensed and insured?", a: "Yes — fully insured with liability coverage and workers' comp. Certificates available on request before we start the job." },
+      { q: "What's the best time of year to wash my house?", a: "Spring through fall is ideal in the Capital Region. Spring cleans off winter grime; fall preps siding before snow. We'll wash any time temperatures are safely above freezing." },
     ],
     meta: {
       title: "House Washing in Albany & the Capital Region | Capital Pro",
