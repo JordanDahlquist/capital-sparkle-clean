@@ -68,12 +68,13 @@ export const SERVICES: ServiceContent[] = [
       { title: "Protects Your Investment", desc: "Removes contaminants that eat siding, shingles, and paint over time." },
     ],
     process: [
-      { title: "Free On-Site Quote", desc: "We measure, inspect, and give a firm price — no surprises." },
+      { title: "Fast Free Quote", desc: "Most quotes done remotely via Google Earth — we measure and price without ever needing to schedule a visit. On-site quotes available free of charge if you'd prefer." },
       { title: "Pre-Treat & Rinse", desc: "Cover plants, apply eco-safe detergent with commercial soft-wash equipment, dwell, then low-pressure rinse top to bottom." },
       { title: "Detail Pass", desc: "Hand-scrub high-traffic spots, sills, and doors. Walk the home with you before we leave." },
     ],
     faqs: [
       { q: "Will it damage my siding or plants?", a: "No. We use soft-wash pressure (lower than a garden hose) and rinse landscaping before, during, and after." },
+      { q: "Do I need to schedule an on-site quote?", a: "Usually no — we can price most house washes remotely using Google Earth to measure your home. If you'd rather have us walk the property in person, on-site quotes are always free." },
       { q: "How long does it take?", a: "Most single-family homes take 1–2 hours start to finish with our commercial soft-wash equipment." },
       { q: "How often should I have it done?", a: "Once a year is ideal in the Capital Region — every 18 months minimum for shaded sides." },
       { q: "What equipment do you use?", a: "Commercial-grade soft-wash systems with dedicated 12V pumps and high-volume rinse setups — not consumer pressure washers. That's how we finish a full house in 1–2 hours without damaging siding." },
