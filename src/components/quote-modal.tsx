@@ -193,8 +193,16 @@ export function QuoteWizard({
   const [step, setStep] = useState(1);
   const [stepDir, setStepDir] = useState<1 | -1>(1);
   const [data, setData] = useState<Payload>(() => {
-    if (typeof window !== "undefined" && window.location.pathname === "/roof-rejuvenation") {
-      return { ...EMPTY, services: ["rejuvenation"] };
+    if (typeof window !== "undefined") {
+      const p = window.location.pathname;
+      if (p === "/roof-rejuvenation") return { ...EMPTY, services: ["rejuvenation"] };
+      if (p === "/499-special") {
+        return {
+          ...EMPTY,
+          services: ["house", "window"],
+          message: "Interested in the $499 House Wash + Windows Special (up to 2,500 sqft).",
+        };
+      }
     }
     return EMPTY;
   });
