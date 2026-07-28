@@ -183,8 +183,7 @@ function SpecialLanding() {
       <BeforeAfterProof />
 
       <ValueStack
-        priceLabel="Your price – $100"
-        strikeTotal="$450 – $550 typical local price"
+        priceLabel="$100 OFF your custom quote"
         items={[
           { label: "Commercial soft-wash equipment & chemistry", value: "$95" },
           { label: "2-person insured, uniformed crew (1–2 hrs)", value: "$180" },
