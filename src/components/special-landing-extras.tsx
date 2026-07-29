@@ -4,43 +4,11 @@ import { openQuoteModal } from "./quote-modal";
 import houseWashBefore from "../assets/before-after/house-wash-before.png.asset.json";
 import houseWashAfter from "../assets/before-after/house-wash-after.png.asset.json";
 
-/* ────────────────────────────────────────────────────────────────────────── */
-/* Analytics — fire a page-view + wire CTA click tracking                    */
-/* ────────────────────────────────────────────────────────────────────────── */
-
 declare global {
   interface Window {
     dataLayer?: Array<Record<string, unknown>>;
     fbq?: (...args: unknown[]) => void;
   }
-}
-
-export function useSpecialAnalytics(specialId: string) {
-  // page view — once per mount
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: "special_page_view", special_id: specialId });
-    window.fbq?.("trackCustom", "SpecialPageView", { special_id: specialId });
-  }, [specialId]);
-
-  // delegated CTA click tracking — any button/link with data-special-cta
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const handler = (e: MouseEvent) => {
-      const el = (e.target as HTMLElement | null)?.closest?.<HTMLElement>("[data-special-cta]");
-      if (!el) return;
-      const label = el.getAttribute("data-special-cta") || "cta";
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: "special_cta_click",
-        special_id: specialId,
-        cta_label: label,
-      });
-    };
-    document.addEventListener("click", handler);
-    return () => document.removeEventListener("click", handler);
-  }, [specialId]);
 }
 
 /* ────────────────────────────────────────────────────────────────────────── */

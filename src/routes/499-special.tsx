@@ -4,7 +4,6 @@ import heroImage from "../assets/hero-crew-surface-cleaner.jpg.asset.json";
 import { openQuoteModal } from "../components/quote-modal";
 import { SHOW_LICENSED_INSURED } from "../data/flags";
 import {
-  useSpecialAnalytics,
   useExitIntent,
   SocialProofStrip,
   BeforeAfterProof,
@@ -64,7 +63,6 @@ export const Route = createFileRoute("/499-special")({
 });
 
 function SpecialLanding() {
-  useSpecialAnalytics(SPECIAL_ID);
   useExitIntent(SPECIAL_ID);
 
   return (
@@ -115,7 +113,6 @@ function SpecialLanding() {
               type="button"
               onClick={() => openQuoteModal()}
               className="inline-flex items-center justify-center rounded-md bg-[color:var(--brand-red)] px-7 py-4 text-base font-bold uppercase tracking-wide text-white shadow-lg transition hover:brightness-110 active:scale-[0.98]"
-              data-special-cta="hero_primary"
             >
               Claim My $499 Special
             </button>
@@ -124,7 +121,6 @@ function SpecialLanding() {
               className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-base font-bold uppercase tracking-wide text-[var(--brand-deep-blue)] shadow-lg transition hover:bg-white/90"
               data-analytics="call_click"
               data-source="499-special-hero"
-              data-special-cta="hero_call"
             >
               <Phone className="h-5 w-5" aria-hidden="true" />
               (518) 900-1913
@@ -258,7 +254,6 @@ function SpecialLanding() {
               type="button"
               onClick={() => openQuoteModal()}
               className="inline-flex items-center justify-center rounded-md bg-[color:var(--brand-red)] px-7 py-4 text-base font-bold uppercase tracking-wide text-white shadow-lg transition hover:brightness-110 active:scale-[0.98]"
-              data-special-cta="final_primary"
             >
               Claim My $499 Special
             </button>
@@ -267,7 +262,6 @@ function SpecialLanding() {
               className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-base font-bold uppercase tracking-wide text-[var(--brand-deep-blue)] shadow-lg transition hover:bg-white/90"
               data-analytics="call_click"
               data-source="499-special-final"
-              data-special-cta="final_call"
             >
               <Phone className="h-5 w-5" aria-hidden="true" />
               Call (518) 900-1913
