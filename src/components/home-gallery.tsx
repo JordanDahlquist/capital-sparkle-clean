@@ -13,8 +13,8 @@ import deckBefore from "../assets/before-after/deck-before.png.asset.json";
 import deckAfter from "../assets/before-after/deck-after.png.asset.json";
 import houseTileBefore from "../assets/before-after/house-wash-tile-before.png.asset.json";
 import houseTileAfter from "../assets/before-after/house-wash-tile-after.png.asset.json";
-import gutterBefore from "../assets/before-after/gutter-before.png.asset.json";
-import gutterAfter from "../assets/before-after/gutter-after.png.asset.json";
+import gutterBefore from "../assets/before-after/gutter-inside-before.webp.asset.json";
+import gutterAfter from "../assets/before-after/gutter-inside-after.webp.asset.json";
 
 /**
  * Home Before/After Gallery
@@ -234,8 +234,8 @@ const tileImages: Record<string, { before: string; after: string; beforeAlt: str
   "Gutter Cleaning": {
     before: gutterBefore.url,
     after: gutterAfter.url,
-    beforeAlt: "Gutter cleaning — before",
-    afterAlt: "Gutter cleaning — after",
+    beforeAlt: "Gutter cleaning — before, gutter trough packed with wet leaves and debris",
+    afterAlt: "Gutter cleaning — after, clean empty gutter trough",
   },
 };
 
