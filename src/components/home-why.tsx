@@ -1,7 +1,12 @@
-import { MapPin, ShieldCheck, Layers, Droplets, Shield } from "lucide-react";
+import { MapPin, ShieldCheck, Layers, Droplets, Shield, Star } from "lucide-react";
 import { Reveal } from "./reveal";
 
 const items = [
+  {
+    icon: Star,
+    title: "Veteran Owned & Family Run",
+    body: "Owned and operated by a US Army veteran. Same family, same crew, same standards on every job we take.",
+  },
   {
     icon: MapPin,
     title: "10 Years, All Local",
@@ -36,12 +41,12 @@ export function HomeWhy() {
             className="text-[#0B3D7A] text-3xl md:text-5xl uppercase leading-tight"
             style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700 }}
           >
-            10 Years Making Capital Region Homes Look New
+            Veteran Owned. 10 Years Making Capital Region Homes Look New
           </h2>
         </div>
 
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6"
           style={{ perspective: "1000px" }}
         >
           {items.map(({ icon: Icon, title, body }, i) => (
@@ -68,7 +73,9 @@ export function HomeWhy() {
         <Reveal className="mt-12 bg-[#0B3D7A] rounded-lg px-6 py-6 md:py-7 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
           <Shield className="text-[#C8102E] shrink-0" size={32} strokeWidth={2} fill="#C8102E" stroke="#ffffff" />
           <p className="text-white text-base md:text-lg" style={{ fontFamily: "Inter, sans-serif" }}>
-            <span className="font-bold">Proud to offer Military &amp; First Responder discounts.</span>{" "}
+            <span className="font-bold">
+              Veteran owned &amp; operated (US Army) — proud to offer Military &amp; First Responder discounts.
+            </span>{" "}
             <span className="opacity-90">Thank you for your service.</span>
           </p>
         </Reveal>

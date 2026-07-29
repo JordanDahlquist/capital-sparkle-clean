@@ -5,9 +5,10 @@ import { openQuoteModal } from "./quote-modal";
 import { SHOW_LICENSED_INSURED } from "../data/flags";
 
 const trustItems: Array<{ icon: typeof Clock; label: ReactNode; key: string }> = [
+  { icon: Star, key: "vetowned", label: "Veteran Owned & Operated" },
   { icon: Clock, key: "exp", label: "10+ Years Experience" },
   { icon: BadgeCheck, key: "free", label: "Free Quotes" },
-  { icon: Star, key: "sat", label: "Satisfaction Guaranteed" },
+  { icon: BadgeCheck, key: "sat", label: "Satisfaction Guaranteed" },
   { icon: HeartHandshake, key: "vet", label: "Veteran & First Responder Discounts" },
   ...(SHOW_LICENSED_INSURED
     ? [{ icon: ShieldCheck, key: "lic", label: "Licensed & Insured" as ReactNode }]
