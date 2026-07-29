@@ -2,6 +2,7 @@ import { useRef, useState, useCallback, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import { openQuoteModal } from "./quote-modal";
 import { Reveal } from "./reveal";
+import { GalleryVideoSlider } from "./gallery-video-slider";
 import houseWashBefore from "../assets/before-after/house-wash-before.png.asset.json";
 import houseWashAfter from "../assets/before-after/house-wash-after.png.asset.json";
 import roofWashBefore from "../assets/before-after/roof-wash-before.png.asset.json";
@@ -316,6 +317,20 @@ export function HomeGallery() {
             </Reveal>
           ))}
         </div>
+
+        <div className="text-center mt-12">
+          {/* PART 3 — Muted job clips slider */}
+        </div>
+
+        <Reveal className="mt-14 md:mt-16">
+          <h3
+            className="text-[#0B3D7A] text-2xl md:text-3xl uppercase text-center mb-6"
+            style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700 }}
+          >
+            On The Job
+          </h3>
+          <GalleryVideoSlider />
+        </Reveal>
 
         <div className="text-center mt-12">
           <button
