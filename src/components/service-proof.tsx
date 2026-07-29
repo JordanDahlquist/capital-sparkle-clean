@@ -55,7 +55,7 @@ export function ServiceProofSection({ proof }: { proof: ServiceProof }) {
   }, [updateFromClientX]);
 
   return (
-    <section className="bg-[var(--brand-light-gray)] py-16 md:py-20">
+    <section className="bg-white py-16 md:py-20">
       <div className="mx-auto max-w-[900px] px-4">
         <div className="text-center mb-8 md:mb-10">
           <p
@@ -148,7 +148,7 @@ export function ServiceComparisonSection({
   comparison: ServiceComparison;
 }) {
   return (
-    <section className="bg-white py-16 md:py-20">
+    <section className="bg-[var(--brand-light-gray)] py-16 md:py-20">
       <div className="mx-auto max-w-[1000px] px-4">
         <div className="text-center mb-8 md:mb-10">
           <p

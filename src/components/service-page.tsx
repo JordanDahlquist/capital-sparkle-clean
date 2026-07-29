@@ -152,8 +152,6 @@ export function ServicePage({ service }: { service: ServiceContent }) {
         </div>
       </section>
 
-      {service.proof && <ServiceProofSection proof={service.proof} />}
-
       {/* Benefits */}
       <section className="bg-[var(--brand-light-gray)] py-16 md:py-20">
         <div className="mx-auto max-w-[1200px] px-4">
@@ -199,6 +197,8 @@ export function ServicePage({ service }: { service: ServiceContent }) {
           </div>
         </div>
       </section>
+
+      {service.proof && <ServiceProofSection proof={service.proof} />}
 
       {service.comparison && <ServiceComparisonSection comparison={service.comparison} />}
 
