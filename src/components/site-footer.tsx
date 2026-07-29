@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Globe, Facebook, Instagram, ShieldCheck } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Globe, Facebook, Instagram, ShieldCheck, Star } from "lucide-react";
 import logo from "../assets/capital-pro-logo.png.asset.json";
 
 // Flip to true once Jordan confirms the Google Business Profile URL.
@@ -68,9 +68,16 @@ export function SiteFooter() {
             <FooterLogo />
             <p className="text-white/75 text-sm leading-relaxed mt-4">
               Professional exterior cleaning across New York's Capital Region.
-              10 years in business.
+              Veteran owned &amp; operated, family run, 10 years in business.
             </p>
-            <div className="mt-5">
+            <div className="mt-5 flex flex-col items-start gap-2">
+              <span
+                className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-white/5 px-3 py-2 text-white text-xs uppercase tracking-widest"
+                style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700, letterSpacing: "0.12em" }}
+              >
+                <Star size={16} strokeWidth={2.5} className="text-[#C8102E]" fill="#C8102E" />
+                Veteran Owned &amp; Operated &middot; US Army
+              </span>
               <span
                 className="inline-flex items-center gap-2 rounded-md border border-[#C8102E]/70 bg-[#C8102E]/10 px-3 py-2 text-white text-xs uppercase tracking-widest"
                 style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700, letterSpacing: "0.12em" }}
