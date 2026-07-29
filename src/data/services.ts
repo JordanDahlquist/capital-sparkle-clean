@@ -254,32 +254,39 @@ export const SERVICES: ServiceContent[] = [
     icon: Layers,
     heroImage: concreteCleaningHero.url,
     hero: {
-      eyebrow: "Driveways · Sidewalks · Patios",
+      eyebrow: "Driveways · Sidewalks · Stamped Concrete",
       headline: "Concrete That Looks Poured Yesterday",
       subhead:
-        "Surface-cleaner concrete washing lifts oil, rust, algae, and years of grime — leaves an even, streak-free finish.",
+        "Surface-cleaner washing lifts oil, rust, algae, and years of grime — plus stamped concrete sealing and antiquing that brings faded color back to life.",
     },
     intro:
-      "A dirty driveway drags down the entire front of your home. Our commercial-grade surface cleaners produce even, streak-free results — with no wand marks or zebra stripes.",
+      "A dirty driveway drags down the entire front of your home. Our commercial-grade surface cleaners produce even, streak-free results — with no wand marks or zebra stripes. We also specialize in stamped concrete: cleaning, sealing, and antiquing faded stamped patios, walkways, and pool decks to restore the color and depth they had the day they were poured.",
     benefits: [
       { title: "Even, Streak-Free Finish", desc: "Rotary surface cleaners avoid the wand-mark 'tiger stripes' DIY jobs leave behind." },
       { title: "Removes Oil & Rust", desc: "Specialty degreasers and rust removers included when needed." },
-      { title: "Optional Concrete Sealing", desc: "Extend cleaning life 3–4×, prevent salt damage, and enhance color." },
+      { title: "Stamped Concrete Sealing", desc: "We seal stamped concrete with a premium wet-look sealer that locks out salt and water and brings back the sheen." },
+      { title: "Antiquing & Color Restoration", desc: "Faded or washed-out stamped concrete? We re-apply antiquing color to restore the original contrast and depth — not just a shiny coat over gray concrete." },
       { title: "Boosts Curb Appeal", desc: "Often the single biggest visible improvement to your home's exterior." },
     ],
     process: [
       { title: "Pre-Treat Stains", desc: "Spot-treat oil, rust, and organic staining first." },
       { title: "Surface Clean", desc: "Even pass with a commercial rotary surface cleaner." },
-      { title: "Rinse & Optional Seal", desc: "Final rinse, then apply densifier or sealer if selected." },
+      { title: "Antique & Re-Color", desc: "On stamped concrete, we apply antiquing color to restore the faded pattern contrast once the slab is clean and fully dry." },
+      { title: "Seal & Protect", desc: "Final rinse, then a premium sealer — wet-look or matte on stamped, densifier or penetrating sealer on standard concrete." },
     ],
     faqs: [
       { q: "Will it remove old oil stains?", a: "Most of them — we set expectations before starting. Deep, old stains may lighten but not vanish." },
       { q: "Should I seal my driveway?", a: "In the Capital Region, yes. Salt and freeze/thaw cycles chew unsealed concrete." },
+      { q: "Do you seal stamped concrete?", a: "Yes. Stamped concrete should be cleaned and re-sealed on a regular cycle — the sealer is what protects the color and keeps water and road salt out of the surface. We use a premium sealer and can finish it wet-look/high-gloss or matte, whichever you prefer." },
+      { q: "My stamped concrete has faded — can the color be brought back?", a: "Yes. We antique stamped concrete, re-applying color to the low points of the pattern to restore the contrast and depth it had originally. It's a true color restoration, not just a clear coat over a faded slab." },
+      { q: "What's the difference between sealing and antiquing?", a: "Sealing protects the surface and adds sheen. Antiquing restores the actual color and pattern contrast. On badly faded stamped concrete we do both — clean, antique, then seal — so the color comes back and stays locked in." },
+      { q: "How often should stamped concrete be re-sealed?", a: "Every 2–3 years in the Capital Region. Freeze/thaw cycles and salt break sealer down faster here than in warmer climates. If your stamped concrete looks dull, chalky, or is darkening when it rains, it's time." },
+      { q: "How long before I can walk or drive on it?", a: "Typically a few hours for foot traffic and 24–48 hours for vehicles, depending on the sealer and the weather. We'll give you exact times before we leave." },
       { q: "How often?", a: "Annual cleaning, sealer every 2–3 years." },
     ],
     meta: {
-      title: "Concrete & Driveway Cleaning in Albany & the Capital Region",
-      description: "Concrete and driveway pressure washing across Albany & the Capital Region. Even, streak-free surface cleaning. Free quotes.",
+      title: "Concrete, Driveway & Stamped Concrete Sealing | Albany NY",
+      description: "Concrete and driveway cleaning across Albany & the Capital Region, plus stamped concrete sealing and antiquing to restore faded color. Free quotes.",
     },
   },
   {
