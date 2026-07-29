@@ -5,6 +5,7 @@ import { SERVICES } from "../data/services";
 import { openQuoteModal } from "./quote-modal";
 import { QuoteWizard } from "./quote-modal";
 import { Reveal } from "./reveal";
+import { ServiceProofSection, ServiceComparisonSection } from "./service-proof";
 
 const PHONE_DISPLAY = "(518) 900-1913";
 const PHONE_TEL = "tel:+15189001913";
@@ -197,6 +198,10 @@ export function ServicePage({ service }: { service: ServiceContent }) {
         </div>
       </section>
 
+      {service.proof && <ServiceProofSection proof={service.proof} />}
+
+      {service.comparison && <ServiceComparisonSection comparison={service.comparison} />}
+
       {/* Process */}
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-[1200px] px-4">
@@ -214,7 +219,7 @@ export function ServicePage({ service }: { service: ServiceContent }) {
               Simple, Professional, Guaranteed
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className={`grid grid-cols-1 gap-6 sm:grid-cols-2 ${service.process.length === 4 ? "lg:grid-cols-4" : "md:grid-cols-3"}`}>
             {service.process.map((step, i) => (
               <Reveal
                 key={step.title}
