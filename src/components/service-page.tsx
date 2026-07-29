@@ -7,6 +7,7 @@ import { QuoteWizard } from "./quote-modal";
 import { Reveal } from "./reveal";
 import { ServiceProofSection, ServiceComparisonSection } from "./service-proof";
 import { HouseWashVideoSection, AllServicesVideoSection } from "./service-video";
+import { StampedGallerySection } from "./stamped-gallery";
 
 const PHONE_DISPLAY = "(518) 900-1913";
 const PHONE_TEL = "tel:+15189001913";
@@ -203,6 +204,8 @@ export function ServicePage({ service }: { service: ServiceContent }) {
       </section>
 
       {service.proof && <ServiceProofSection proof={service.proof} />}
+
+      {service.slug === "concrete-cleaning-sealing" && <StampedGallerySection />}
 
       {service.comparison && <ServiceComparisonSection comparison={service.comparison} />}
 
