@@ -16,7 +16,7 @@ const SITE = "https://capitalpropressurewashing.com";
 const HOME_TITLE = "Pressure Washing Albany NY | Capital Pro Pressure Washing";
 const HOME_DESC =
   "Pressure washing in Albany & the Capital Region — house washing, roof washing, gutters, concrete, and more. 10+ years local. Free quotes.";
-const HOME_OG_IMAGE = `${SITE}/__l5e/assets-v1/17b2d795-9b55-4907-9a7d-7857aeba64f0/hero-pressure-sprayer.webp`;
+const HOME_OG_IMAGE = `${SITE}/__l5e/assets-v1/7fb348af-f23e-48db-88cd-6aeda94adc1a/hero-crew-surface-cleaner.jpg`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
