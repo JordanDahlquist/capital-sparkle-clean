@@ -36,7 +36,12 @@ export type CityServiceContent = {
   relatedCityLinks: { name: string; to: string; blurb: string }[];
 };
 
-export const CITY_SERVICES: CityServiceContent[] = [
+import { CITY_SERVICES_CLIFTON_RENSSELAER } from "./city-services-clifton-rensselaer";
+import { CITY_SERVICES_COLONIE_LATHAM } from "./city-services-colonie-latham";
+import { CITY_SERVICES_GUILDERLAND_DELMAR } from "./city-services-guilderland-delmar";
+import { CITY_SERVICES_NISKAYUNA_BALLSTON_SPA } from "./city-services-niskayuna-ballston-spa";
+
+const CITY_SERVICES_CORE: CityServiceContent[] = [
   {
     slug: "house-washing-albany-ny",
     service: "House Washing",
@@ -1807,6 +1812,14 @@ export const CITY_SERVICES: CityServiceContent[] = [
       },
     ],
   },
+];
+
+export const CITY_SERVICES: CityServiceContent[] = [
+  ...CITY_SERVICES_CORE,
+  ...CITY_SERVICES_CLIFTON_RENSSELAER,
+  ...CITY_SERVICES_COLONIE_LATHAM,
+  ...CITY_SERVICES_GUILDERLAND_DELMAR,
+  ...CITY_SERVICES_NISKAYUNA_BALLSTON_SPA,
 ];
 
 export function getCityService(slug: string) {
