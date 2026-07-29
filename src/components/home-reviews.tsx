@@ -198,8 +198,9 @@ export function HomeReviews() {
   const featuredList = dedupe([...live, ...featured]).slice(0, 3);
   const marqueeList = dedupe([...live, ...marquee]);
 
-  const count = data?.reviewCount ?? 90;
-  const countLabel = `${Math.floor(count / 10) * 10}+ Google reviews`;
+  const countLabel = data?.reviewCount
+    ? `${data.reviewCount} Google reviews`
+    : "90+ Google reviews";
   const ratingLabel = (data?.rating ?? 5).toFixed(1);
 
   const track = [...marqueeList, ...marqueeList]; // duplicate for seamless loop
