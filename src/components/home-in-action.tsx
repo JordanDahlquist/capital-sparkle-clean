@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { Phone, Play, Pause, Volume2, VolumeX, Check } from "lucide-react";
 import { openQuoteModal } from "./quote-modal";
 import { Reveal } from "./reveal";
-import videoAsset from "../assets/video/crew-in-action.mp4.asset.json";
-import posterAsset from "../assets/video/crew-in-action-poster.jpg.asset.json";
+import videoAsset from "../assets/video/capital-pro-services.mp4.asset.json";
+import posterAsset from "../assets/video/capital-pro-services-poster.jpg.asset.json";
 
 const BULLETS = [
   "Local crew, 10+ years",
