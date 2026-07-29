@@ -26,11 +26,11 @@ const CLIPS: Array<{ src: string; poster: string; caption: string; wide?: boolea
   { src: v2.url, poster: p2.url, caption: "Soft wash rinse" },
   { src: v3.url, poster: p3.url, caption: "Driveway cleaning pass" },
   { src: v4.url, poster: p4.url, caption: "Exterior cleaning on the job" },
-  { src: v5.url, poster: p5.url, caption: "On the job", wide: true },
+  { src: v5.url, poster: p5.url, caption: "On the job" },
   { src: v6.url, poster: p6.url, caption: "On the job" },
   { src: v7.url, poster: p7.url, caption: "On the job" },
-  { src: v8.url, poster: p8.url, caption: "On the job", wide: true },
-  { src: v9.url, poster: p9.url, caption: "On the job", wide: true },
+  { src: v8.url, poster: p8.url, caption: "On the job" },
+  { src: v9.url, poster: p9.url, caption: "On the job" },
   { src: v10.url, poster: p10.url, caption: "On the job" },
 ];
 
