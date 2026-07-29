@@ -22,7 +22,9 @@ export type CityContent = {
   meta: { title: string; description: string };
 };
 
-export const CITIES: CityContent[] = [
+import { CITIES_EXTRA } from "./cities-extra";
+
+const CITIES_CORE: CityContent[] = [
   {
     slug: "pressure-washing-albany-ny",
     city: "Albany",
@@ -620,6 +622,8 @@ export const CITIES: CityContent[] = [
     },
   },
 ];
+
+export const CITIES: CityContent[] = [...CITIES_CORE, ...CITIES_EXTRA];
 
 export function getCity(slug: string): CityContent | undefined {
   return CITIES.find((c) => c.slug === slug);

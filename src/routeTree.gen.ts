@@ -14,20 +14,50 @@ import { Route as SiteIndexRouteImport } from './routes/site-index'
 import { Route as RoofWashingTroyNyRouteImport } from './routes/roof-washing-troy-ny'
 import { Route as RoofWashingSchenectadyNyRouteImport } from './routes/roof-washing-schenectady-ny'
 import { Route as RoofWashingSaratogaSpringsNyRouteImport } from './routes/roof-washing-saratoga-springs-ny'
+import { Route as RoofWashingRensselaerNyRouteImport } from './routes/roof-washing-rensselaer-ny'
+import { Route as RoofWashingNiskayunaNyRouteImport } from './routes/roof-washing-niskayuna-ny'
+import { Route as RoofWashingLathamNyRouteImport } from './routes/roof-washing-latham-ny'
+import { Route as RoofWashingGuilderlandNyRouteImport } from './routes/roof-washing-guilderland-ny'
+import { Route as RoofWashingDelmarNyRouteImport } from './routes/roof-washing-delmar-ny'
+import { Route as RoofWashingColonieNyRouteImport } from './routes/roof-washing-colonie-ny'
+import { Route as RoofWashingCliftonParkNyRouteImport } from './routes/roof-washing-clifton-park-ny'
+import { Route as RoofWashingBallstonSpaNyRouteImport } from './routes/roof-washing-ballston-spa-ny'
 import { Route as RoofWashingAlbanyNyRouteImport } from './routes/roof-washing-albany-ny'
 import { Route as PressureWashingTroyNyRouteImport } from './routes/pressure-washing-troy-ny'
 import { Route as PressureWashingSchenectadyNyRouteImport } from './routes/pressure-washing-schenectady-ny'
 import { Route as PressureWashingSaratogaSpringsNyRouteImport } from './routes/pressure-washing-saratoga-springs-ny'
 import { Route as PressureWashingRensselaerNyRouteImport } from './routes/pressure-washing-rensselaer-ny'
+import { Route as PressureWashingNiskayunaNyRouteImport } from './routes/pressure-washing-niskayuna-ny'
+import { Route as PressureWashingLathamNyRouteImport } from './routes/pressure-washing-latham-ny'
+import { Route as PressureWashingGuilderlandNyRouteImport } from './routes/pressure-washing-guilderland-ny'
+import { Route as PressureWashingDelmarNyRouteImport } from './routes/pressure-washing-delmar-ny'
+import { Route as PressureWashingColonieNyRouteImport } from './routes/pressure-washing-colonie-ny'
 import { Route as PressureWashingCliftonParkNyRouteImport } from './routes/pressure-washing-clifton-park-ny'
+import { Route as PressureWashingBallstonSpaNyRouteImport } from './routes/pressure-washing-ballston-spa-ny'
 import { Route as PressureWashingAlbanyNyRouteImport } from './routes/pressure-washing-albany-ny'
 import { Route as HouseWashingTroyNyRouteImport } from './routes/house-washing-troy-ny'
 import { Route as HouseWashingSchenectadyNyRouteImport } from './routes/house-washing-schenectady-ny'
 import { Route as HouseWashingSaratogaSpringsNyRouteImport } from './routes/house-washing-saratoga-springs-ny'
+import { Route as HouseWashingRensselaerNyRouteImport } from './routes/house-washing-rensselaer-ny'
+import { Route as HouseWashingNiskayunaNyRouteImport } from './routes/house-washing-niskayuna-ny'
+import { Route as HouseWashingLathamNyRouteImport } from './routes/house-washing-latham-ny'
+import { Route as HouseWashingGuilderlandNyRouteImport } from './routes/house-washing-guilderland-ny'
+import { Route as HouseWashingDelmarNyRouteImport } from './routes/house-washing-delmar-ny'
+import { Route as HouseWashingColonieNyRouteImport } from './routes/house-washing-colonie-ny'
+import { Route as HouseWashingCliftonParkNyRouteImport } from './routes/house-washing-clifton-park-ny'
+import { Route as HouseWashingBallstonSpaNyRouteImport } from './routes/house-washing-ballston-spa-ny'
 import { Route as HouseWashingAlbanyNyRouteImport } from './routes/house-washing-albany-ny'
 import { Route as ConcreteCleaningTroyNyRouteImport } from './routes/concrete-cleaning-troy-ny'
 import { Route as ConcreteCleaningSchenectadyNyRouteImport } from './routes/concrete-cleaning-schenectady-ny'
 import { Route as ConcreteCleaningSaratogaSpringsNyRouteImport } from './routes/concrete-cleaning-saratoga-springs-ny'
+import { Route as ConcreteCleaningRensselaerNyRouteImport } from './routes/concrete-cleaning-rensselaer-ny'
+import { Route as ConcreteCleaningNiskayunaNyRouteImport } from './routes/concrete-cleaning-niskayuna-ny'
+import { Route as ConcreteCleaningLathamNyRouteImport } from './routes/concrete-cleaning-latham-ny'
+import { Route as ConcreteCleaningGuilderlandNyRouteImport } from './routes/concrete-cleaning-guilderland-ny'
+import { Route as ConcreteCleaningDelmarNyRouteImport } from './routes/concrete-cleaning-delmar-ny'
+import { Route as ConcreteCleaningColonieNyRouteImport } from './routes/concrete-cleaning-colonie-ny'
+import { Route as ConcreteCleaningCliftonParkNyRouteImport } from './routes/concrete-cleaning-clifton-park-ny'
+import { Route as ConcreteCleaningBallstonSpaNyRouteImport } from './routes/concrete-cleaning-ballston-spa-ny'
 import { Route as ConcreteCleaningAlbanyNyRouteImport } from './routes/concrete-cleaning-albany-ny'
 import { Route as R899SpecialRouteImport } from './routes/899-special'
 import { Route as R499SpecialRouteImport } from './routes/499-special'
@@ -63,6 +93,49 @@ const RoofWashingSaratogaSpringsNyRoute =
     path: '/roof-washing-saratoga-springs-ny',
     getParentRoute: () => rootRouteImport,
   } as any)
+const RoofWashingRensselaerNyRoute = RoofWashingRensselaerNyRouteImport.update({
+  id: '/roof-washing-rensselaer-ny',
+  path: '/roof-washing-rensselaer-ny',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoofWashingNiskayunaNyRoute = RoofWashingNiskayunaNyRouteImport.update({
+  id: '/roof-washing-niskayuna-ny',
+  path: '/roof-washing-niskayuna-ny',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoofWashingLathamNyRoute = RoofWashingLathamNyRouteImport.update({
+  id: '/roof-washing-latham-ny',
+  path: '/roof-washing-latham-ny',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoofWashingGuilderlandNyRoute =
+  RoofWashingGuilderlandNyRouteImport.update({
+    id: '/roof-washing-guilderland-ny',
+    path: '/roof-washing-guilderland-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const RoofWashingDelmarNyRoute = RoofWashingDelmarNyRouteImport.update({
+  id: '/roof-washing-delmar-ny',
+  path: '/roof-washing-delmar-ny',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoofWashingColonieNyRoute = RoofWashingColonieNyRouteImport.update({
+  id: '/roof-washing-colonie-ny',
+  path: '/roof-washing-colonie-ny',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoofWashingCliftonParkNyRoute =
+  RoofWashingCliftonParkNyRouteImport.update({
+    id: '/roof-washing-clifton-park-ny',
+    path: '/roof-washing-clifton-park-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const RoofWashingBallstonSpaNyRoute =
+  RoofWashingBallstonSpaNyRouteImport.update({
+    id: '/roof-washing-ballston-spa-ny',
+    path: '/roof-washing-ballston-spa-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const RoofWashingAlbanyNyRoute = RoofWashingAlbanyNyRouteImport.update({
   id: '/roof-washing-albany-ny',
   path: '/roof-washing-albany-ny',
@@ -91,10 +164,44 @@ const PressureWashingRensselaerNyRoute =
     path: '/pressure-washing-rensselaer-ny',
     getParentRoute: () => rootRouteImport,
   } as any)
+const PressureWashingNiskayunaNyRoute =
+  PressureWashingNiskayunaNyRouteImport.update({
+    id: '/pressure-washing-niskayuna-ny',
+    path: '/pressure-washing-niskayuna-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PressureWashingLathamNyRoute = PressureWashingLathamNyRouteImport.update({
+  id: '/pressure-washing-latham-ny',
+  path: '/pressure-washing-latham-ny',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PressureWashingGuilderlandNyRoute =
+  PressureWashingGuilderlandNyRouteImport.update({
+    id: '/pressure-washing-guilderland-ny',
+    path: '/pressure-washing-guilderland-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PressureWashingDelmarNyRoute = PressureWashingDelmarNyRouteImport.update({
+  id: '/pressure-washing-delmar-ny',
+  path: '/pressure-washing-delmar-ny',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PressureWashingColonieNyRoute =
+  PressureWashingColonieNyRouteImport.update({
+    id: '/pressure-washing-colonie-ny',
+    path: '/pressure-washing-colonie-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PressureWashingCliftonParkNyRoute =
   PressureWashingCliftonParkNyRouteImport.update({
     id: '/pressure-washing-clifton-park-ny',
     path: '/pressure-washing-clifton-park-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PressureWashingBallstonSpaNyRoute =
+  PressureWashingBallstonSpaNyRouteImport.update({
+    id: '/pressure-washing-ballston-spa-ny',
+    path: '/pressure-washing-ballston-spa-ny',
     getParentRoute: () => rootRouteImport,
   } as any)
 const PressureWashingAlbanyNyRoute = PressureWashingAlbanyNyRouteImport.update({
@@ -119,6 +226,50 @@ const HouseWashingSaratogaSpringsNyRoute =
     path: '/house-washing-saratoga-springs-ny',
     getParentRoute: () => rootRouteImport,
   } as any)
+const HouseWashingRensselaerNyRoute =
+  HouseWashingRensselaerNyRouteImport.update({
+    id: '/house-washing-rensselaer-ny',
+    path: '/house-washing-rensselaer-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HouseWashingNiskayunaNyRoute = HouseWashingNiskayunaNyRouteImport.update({
+  id: '/house-washing-niskayuna-ny',
+  path: '/house-washing-niskayuna-ny',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HouseWashingLathamNyRoute = HouseWashingLathamNyRouteImport.update({
+  id: '/house-washing-latham-ny',
+  path: '/house-washing-latham-ny',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HouseWashingGuilderlandNyRoute =
+  HouseWashingGuilderlandNyRouteImport.update({
+    id: '/house-washing-guilderland-ny',
+    path: '/house-washing-guilderland-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HouseWashingDelmarNyRoute = HouseWashingDelmarNyRouteImport.update({
+  id: '/house-washing-delmar-ny',
+  path: '/house-washing-delmar-ny',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HouseWashingColonieNyRoute = HouseWashingColonieNyRouteImport.update({
+  id: '/house-washing-colonie-ny',
+  path: '/house-washing-colonie-ny',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HouseWashingCliftonParkNyRoute =
+  HouseWashingCliftonParkNyRouteImport.update({
+    id: '/house-washing-clifton-park-ny',
+    path: '/house-washing-clifton-park-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HouseWashingBallstonSpaNyRoute =
+  HouseWashingBallstonSpaNyRouteImport.update({
+    id: '/house-washing-ballston-spa-ny',
+    path: '/house-washing-ballston-spa-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const HouseWashingAlbanyNyRoute = HouseWashingAlbanyNyRouteImport.update({
   id: '/house-washing-albany-ny',
   path: '/house-washing-albany-ny',
@@ -139,6 +290,54 @@ const ConcreteCleaningSaratogaSpringsNyRoute =
   ConcreteCleaningSaratogaSpringsNyRouteImport.update({
     id: '/concrete-cleaning-saratoga-springs-ny',
     path: '/concrete-cleaning-saratoga-springs-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ConcreteCleaningRensselaerNyRoute =
+  ConcreteCleaningRensselaerNyRouteImport.update({
+    id: '/concrete-cleaning-rensselaer-ny',
+    path: '/concrete-cleaning-rensselaer-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ConcreteCleaningNiskayunaNyRoute =
+  ConcreteCleaningNiskayunaNyRouteImport.update({
+    id: '/concrete-cleaning-niskayuna-ny',
+    path: '/concrete-cleaning-niskayuna-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ConcreteCleaningLathamNyRoute =
+  ConcreteCleaningLathamNyRouteImport.update({
+    id: '/concrete-cleaning-latham-ny',
+    path: '/concrete-cleaning-latham-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ConcreteCleaningGuilderlandNyRoute =
+  ConcreteCleaningGuilderlandNyRouteImport.update({
+    id: '/concrete-cleaning-guilderland-ny',
+    path: '/concrete-cleaning-guilderland-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ConcreteCleaningDelmarNyRoute =
+  ConcreteCleaningDelmarNyRouteImport.update({
+    id: '/concrete-cleaning-delmar-ny',
+    path: '/concrete-cleaning-delmar-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ConcreteCleaningColonieNyRoute =
+  ConcreteCleaningColonieNyRouteImport.update({
+    id: '/concrete-cleaning-colonie-ny',
+    path: '/concrete-cleaning-colonie-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ConcreteCleaningCliftonParkNyRoute =
+  ConcreteCleaningCliftonParkNyRouteImport.update({
+    id: '/concrete-cleaning-clifton-park-ny',
+    path: '/concrete-cleaning-clifton-park-ny',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ConcreteCleaningBallstonSpaNyRoute =
+  ConcreteCleaningBallstonSpaNyRouteImport.update({
+    id: '/concrete-cleaning-ballston-spa-ny',
+    path: '/concrete-cleaning-ballston-spa-ny',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ConcreteCleaningAlbanyNyRoute =
@@ -186,20 +385,50 @@ export interface FileRoutesByFullPath {
   '/499-special': typeof R499SpecialRoute
   '/899-special': typeof R899SpecialRoute
   '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
+  '/concrete-cleaning-ballston-spa-ny': typeof ConcreteCleaningBallstonSpaNyRoute
+  '/concrete-cleaning-clifton-park-ny': typeof ConcreteCleaningCliftonParkNyRoute
+  '/concrete-cleaning-colonie-ny': typeof ConcreteCleaningColonieNyRoute
+  '/concrete-cleaning-delmar-ny': typeof ConcreteCleaningDelmarNyRoute
+  '/concrete-cleaning-guilderland-ny': typeof ConcreteCleaningGuilderlandNyRoute
+  '/concrete-cleaning-latham-ny': typeof ConcreteCleaningLathamNyRoute
+  '/concrete-cleaning-niskayuna-ny': typeof ConcreteCleaningNiskayunaNyRoute
+  '/concrete-cleaning-rensselaer-ny': typeof ConcreteCleaningRensselaerNyRoute
   '/concrete-cleaning-saratoga-springs-ny': typeof ConcreteCleaningSaratogaSpringsNyRoute
   '/concrete-cleaning-schenectady-ny': typeof ConcreteCleaningSchenectadyNyRoute
   '/concrete-cleaning-troy-ny': typeof ConcreteCleaningTroyNyRoute
   '/house-washing-albany-ny': typeof HouseWashingAlbanyNyRoute
+  '/house-washing-ballston-spa-ny': typeof HouseWashingBallstonSpaNyRoute
+  '/house-washing-clifton-park-ny': typeof HouseWashingCliftonParkNyRoute
+  '/house-washing-colonie-ny': typeof HouseWashingColonieNyRoute
+  '/house-washing-delmar-ny': typeof HouseWashingDelmarNyRoute
+  '/house-washing-guilderland-ny': typeof HouseWashingGuilderlandNyRoute
+  '/house-washing-latham-ny': typeof HouseWashingLathamNyRoute
+  '/house-washing-niskayuna-ny': typeof HouseWashingNiskayunaNyRoute
+  '/house-washing-rensselaer-ny': typeof HouseWashingRensselaerNyRoute
   '/house-washing-saratoga-springs-ny': typeof HouseWashingSaratogaSpringsNyRoute
   '/house-washing-schenectady-ny': typeof HouseWashingSchenectadyNyRoute
   '/house-washing-troy-ny': typeof HouseWashingTroyNyRoute
   '/pressure-washing-albany-ny': typeof PressureWashingAlbanyNyRoute
+  '/pressure-washing-ballston-spa-ny': typeof PressureWashingBallstonSpaNyRoute
   '/pressure-washing-clifton-park-ny': typeof PressureWashingCliftonParkNyRoute
+  '/pressure-washing-colonie-ny': typeof PressureWashingColonieNyRoute
+  '/pressure-washing-delmar-ny': typeof PressureWashingDelmarNyRoute
+  '/pressure-washing-guilderland-ny': typeof PressureWashingGuilderlandNyRoute
+  '/pressure-washing-latham-ny': typeof PressureWashingLathamNyRoute
+  '/pressure-washing-niskayuna-ny': typeof PressureWashingNiskayunaNyRoute
   '/pressure-washing-rensselaer-ny': typeof PressureWashingRensselaerNyRoute
   '/pressure-washing-saratoga-springs-ny': typeof PressureWashingSaratogaSpringsNyRoute
   '/pressure-washing-schenectady-ny': typeof PressureWashingSchenectadyNyRoute
   '/pressure-washing-troy-ny': typeof PressureWashingTroyNyRoute
   '/roof-washing-albany-ny': typeof RoofWashingAlbanyNyRoute
+  '/roof-washing-ballston-spa-ny': typeof RoofWashingBallstonSpaNyRoute
+  '/roof-washing-clifton-park-ny': typeof RoofWashingCliftonParkNyRoute
+  '/roof-washing-colonie-ny': typeof RoofWashingColonieNyRoute
+  '/roof-washing-delmar-ny': typeof RoofWashingDelmarNyRoute
+  '/roof-washing-guilderland-ny': typeof RoofWashingGuilderlandNyRoute
+  '/roof-washing-latham-ny': typeof RoofWashingLathamNyRoute
+  '/roof-washing-niskayuna-ny': typeof RoofWashingNiskayunaNyRoute
+  '/roof-washing-rensselaer-ny': typeof RoofWashingRensselaerNyRoute
   '/roof-washing-saratoga-springs-ny': typeof RoofWashingSaratogaSpringsNyRoute
   '/roof-washing-schenectady-ny': typeof RoofWashingSchenectadyNyRoute
   '/roof-washing-troy-ny': typeof RoofWashingTroyNyRoute
@@ -214,20 +443,50 @@ export interface FileRoutesByTo {
   '/499-special': typeof R499SpecialRoute
   '/899-special': typeof R899SpecialRoute
   '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
+  '/concrete-cleaning-ballston-spa-ny': typeof ConcreteCleaningBallstonSpaNyRoute
+  '/concrete-cleaning-clifton-park-ny': typeof ConcreteCleaningCliftonParkNyRoute
+  '/concrete-cleaning-colonie-ny': typeof ConcreteCleaningColonieNyRoute
+  '/concrete-cleaning-delmar-ny': typeof ConcreteCleaningDelmarNyRoute
+  '/concrete-cleaning-guilderland-ny': typeof ConcreteCleaningGuilderlandNyRoute
+  '/concrete-cleaning-latham-ny': typeof ConcreteCleaningLathamNyRoute
+  '/concrete-cleaning-niskayuna-ny': typeof ConcreteCleaningNiskayunaNyRoute
+  '/concrete-cleaning-rensselaer-ny': typeof ConcreteCleaningRensselaerNyRoute
   '/concrete-cleaning-saratoga-springs-ny': typeof ConcreteCleaningSaratogaSpringsNyRoute
   '/concrete-cleaning-schenectady-ny': typeof ConcreteCleaningSchenectadyNyRoute
   '/concrete-cleaning-troy-ny': typeof ConcreteCleaningTroyNyRoute
   '/house-washing-albany-ny': typeof HouseWashingAlbanyNyRoute
+  '/house-washing-ballston-spa-ny': typeof HouseWashingBallstonSpaNyRoute
+  '/house-washing-clifton-park-ny': typeof HouseWashingCliftonParkNyRoute
+  '/house-washing-colonie-ny': typeof HouseWashingColonieNyRoute
+  '/house-washing-delmar-ny': typeof HouseWashingDelmarNyRoute
+  '/house-washing-guilderland-ny': typeof HouseWashingGuilderlandNyRoute
+  '/house-washing-latham-ny': typeof HouseWashingLathamNyRoute
+  '/house-washing-niskayuna-ny': typeof HouseWashingNiskayunaNyRoute
+  '/house-washing-rensselaer-ny': typeof HouseWashingRensselaerNyRoute
   '/house-washing-saratoga-springs-ny': typeof HouseWashingSaratogaSpringsNyRoute
   '/house-washing-schenectady-ny': typeof HouseWashingSchenectadyNyRoute
   '/house-washing-troy-ny': typeof HouseWashingTroyNyRoute
   '/pressure-washing-albany-ny': typeof PressureWashingAlbanyNyRoute
+  '/pressure-washing-ballston-spa-ny': typeof PressureWashingBallstonSpaNyRoute
   '/pressure-washing-clifton-park-ny': typeof PressureWashingCliftonParkNyRoute
+  '/pressure-washing-colonie-ny': typeof PressureWashingColonieNyRoute
+  '/pressure-washing-delmar-ny': typeof PressureWashingDelmarNyRoute
+  '/pressure-washing-guilderland-ny': typeof PressureWashingGuilderlandNyRoute
+  '/pressure-washing-latham-ny': typeof PressureWashingLathamNyRoute
+  '/pressure-washing-niskayuna-ny': typeof PressureWashingNiskayunaNyRoute
   '/pressure-washing-rensselaer-ny': typeof PressureWashingRensselaerNyRoute
   '/pressure-washing-saratoga-springs-ny': typeof PressureWashingSaratogaSpringsNyRoute
   '/pressure-washing-schenectady-ny': typeof PressureWashingSchenectadyNyRoute
   '/pressure-washing-troy-ny': typeof PressureWashingTroyNyRoute
   '/roof-washing-albany-ny': typeof RoofWashingAlbanyNyRoute
+  '/roof-washing-ballston-spa-ny': typeof RoofWashingBallstonSpaNyRoute
+  '/roof-washing-clifton-park-ny': typeof RoofWashingCliftonParkNyRoute
+  '/roof-washing-colonie-ny': typeof RoofWashingColonieNyRoute
+  '/roof-washing-delmar-ny': typeof RoofWashingDelmarNyRoute
+  '/roof-washing-guilderland-ny': typeof RoofWashingGuilderlandNyRoute
+  '/roof-washing-latham-ny': typeof RoofWashingLathamNyRoute
+  '/roof-washing-niskayuna-ny': typeof RoofWashingNiskayunaNyRoute
+  '/roof-washing-rensselaer-ny': typeof RoofWashingRensselaerNyRoute
   '/roof-washing-saratoga-springs-ny': typeof RoofWashingSaratogaSpringsNyRoute
   '/roof-washing-schenectady-ny': typeof RoofWashingSchenectadyNyRoute
   '/roof-washing-troy-ny': typeof RoofWashingTroyNyRoute
@@ -243,20 +502,50 @@ export interface FileRoutesById {
   '/499-special': typeof R499SpecialRoute
   '/899-special': typeof R899SpecialRoute
   '/concrete-cleaning-albany-ny': typeof ConcreteCleaningAlbanyNyRoute
+  '/concrete-cleaning-ballston-spa-ny': typeof ConcreteCleaningBallstonSpaNyRoute
+  '/concrete-cleaning-clifton-park-ny': typeof ConcreteCleaningCliftonParkNyRoute
+  '/concrete-cleaning-colonie-ny': typeof ConcreteCleaningColonieNyRoute
+  '/concrete-cleaning-delmar-ny': typeof ConcreteCleaningDelmarNyRoute
+  '/concrete-cleaning-guilderland-ny': typeof ConcreteCleaningGuilderlandNyRoute
+  '/concrete-cleaning-latham-ny': typeof ConcreteCleaningLathamNyRoute
+  '/concrete-cleaning-niskayuna-ny': typeof ConcreteCleaningNiskayunaNyRoute
+  '/concrete-cleaning-rensselaer-ny': typeof ConcreteCleaningRensselaerNyRoute
   '/concrete-cleaning-saratoga-springs-ny': typeof ConcreteCleaningSaratogaSpringsNyRoute
   '/concrete-cleaning-schenectady-ny': typeof ConcreteCleaningSchenectadyNyRoute
   '/concrete-cleaning-troy-ny': typeof ConcreteCleaningTroyNyRoute
   '/house-washing-albany-ny': typeof HouseWashingAlbanyNyRoute
+  '/house-washing-ballston-spa-ny': typeof HouseWashingBallstonSpaNyRoute
+  '/house-washing-clifton-park-ny': typeof HouseWashingCliftonParkNyRoute
+  '/house-washing-colonie-ny': typeof HouseWashingColonieNyRoute
+  '/house-washing-delmar-ny': typeof HouseWashingDelmarNyRoute
+  '/house-washing-guilderland-ny': typeof HouseWashingGuilderlandNyRoute
+  '/house-washing-latham-ny': typeof HouseWashingLathamNyRoute
+  '/house-washing-niskayuna-ny': typeof HouseWashingNiskayunaNyRoute
+  '/house-washing-rensselaer-ny': typeof HouseWashingRensselaerNyRoute
   '/house-washing-saratoga-springs-ny': typeof HouseWashingSaratogaSpringsNyRoute
   '/house-washing-schenectady-ny': typeof HouseWashingSchenectadyNyRoute
   '/house-washing-troy-ny': typeof HouseWashingTroyNyRoute
   '/pressure-washing-albany-ny': typeof PressureWashingAlbanyNyRoute
+  '/pressure-washing-ballston-spa-ny': typeof PressureWashingBallstonSpaNyRoute
   '/pressure-washing-clifton-park-ny': typeof PressureWashingCliftonParkNyRoute
+  '/pressure-washing-colonie-ny': typeof PressureWashingColonieNyRoute
+  '/pressure-washing-delmar-ny': typeof PressureWashingDelmarNyRoute
+  '/pressure-washing-guilderland-ny': typeof PressureWashingGuilderlandNyRoute
+  '/pressure-washing-latham-ny': typeof PressureWashingLathamNyRoute
+  '/pressure-washing-niskayuna-ny': typeof PressureWashingNiskayunaNyRoute
   '/pressure-washing-rensselaer-ny': typeof PressureWashingRensselaerNyRoute
   '/pressure-washing-saratoga-springs-ny': typeof PressureWashingSaratogaSpringsNyRoute
   '/pressure-washing-schenectady-ny': typeof PressureWashingSchenectadyNyRoute
   '/pressure-washing-troy-ny': typeof PressureWashingTroyNyRoute
   '/roof-washing-albany-ny': typeof RoofWashingAlbanyNyRoute
+  '/roof-washing-ballston-spa-ny': typeof RoofWashingBallstonSpaNyRoute
+  '/roof-washing-clifton-park-ny': typeof RoofWashingCliftonParkNyRoute
+  '/roof-washing-colonie-ny': typeof RoofWashingColonieNyRoute
+  '/roof-washing-delmar-ny': typeof RoofWashingDelmarNyRoute
+  '/roof-washing-guilderland-ny': typeof RoofWashingGuilderlandNyRoute
+  '/roof-washing-latham-ny': typeof RoofWashingLathamNyRoute
+  '/roof-washing-niskayuna-ny': typeof RoofWashingNiskayunaNyRoute
+  '/roof-washing-rensselaer-ny': typeof RoofWashingRensselaerNyRoute
   '/roof-washing-saratoga-springs-ny': typeof RoofWashingSaratogaSpringsNyRoute
   '/roof-washing-schenectady-ny': typeof RoofWashingSchenectadyNyRoute
   '/roof-washing-troy-ny': typeof RoofWashingTroyNyRoute
@@ -273,20 +562,50 @@ export interface FileRouteTypes {
     | '/499-special'
     | '/899-special'
     | '/concrete-cleaning-albany-ny'
+    | '/concrete-cleaning-ballston-spa-ny'
+    | '/concrete-cleaning-clifton-park-ny'
+    | '/concrete-cleaning-colonie-ny'
+    | '/concrete-cleaning-delmar-ny'
+    | '/concrete-cleaning-guilderland-ny'
+    | '/concrete-cleaning-latham-ny'
+    | '/concrete-cleaning-niskayuna-ny'
+    | '/concrete-cleaning-rensselaer-ny'
     | '/concrete-cleaning-saratoga-springs-ny'
     | '/concrete-cleaning-schenectady-ny'
     | '/concrete-cleaning-troy-ny'
     | '/house-washing-albany-ny'
+    | '/house-washing-ballston-spa-ny'
+    | '/house-washing-clifton-park-ny'
+    | '/house-washing-colonie-ny'
+    | '/house-washing-delmar-ny'
+    | '/house-washing-guilderland-ny'
+    | '/house-washing-latham-ny'
+    | '/house-washing-niskayuna-ny'
+    | '/house-washing-rensselaer-ny'
     | '/house-washing-saratoga-springs-ny'
     | '/house-washing-schenectady-ny'
     | '/house-washing-troy-ny'
     | '/pressure-washing-albany-ny'
+    | '/pressure-washing-ballston-spa-ny'
     | '/pressure-washing-clifton-park-ny'
+    | '/pressure-washing-colonie-ny'
+    | '/pressure-washing-delmar-ny'
+    | '/pressure-washing-guilderland-ny'
+    | '/pressure-washing-latham-ny'
+    | '/pressure-washing-niskayuna-ny'
     | '/pressure-washing-rensselaer-ny'
     | '/pressure-washing-saratoga-springs-ny'
     | '/pressure-washing-schenectady-ny'
     | '/pressure-washing-troy-ny'
     | '/roof-washing-albany-ny'
+    | '/roof-washing-ballston-spa-ny'
+    | '/roof-washing-clifton-park-ny'
+    | '/roof-washing-colonie-ny'
+    | '/roof-washing-delmar-ny'
+    | '/roof-washing-guilderland-ny'
+    | '/roof-washing-latham-ny'
+    | '/roof-washing-niskayuna-ny'
+    | '/roof-washing-rensselaer-ny'
     | '/roof-washing-saratoga-springs-ny'
     | '/roof-washing-schenectady-ny'
     | '/roof-washing-troy-ny'
@@ -301,20 +620,50 @@ export interface FileRouteTypes {
     | '/499-special'
     | '/899-special'
     | '/concrete-cleaning-albany-ny'
+    | '/concrete-cleaning-ballston-spa-ny'
+    | '/concrete-cleaning-clifton-park-ny'
+    | '/concrete-cleaning-colonie-ny'
+    | '/concrete-cleaning-delmar-ny'
+    | '/concrete-cleaning-guilderland-ny'
+    | '/concrete-cleaning-latham-ny'
+    | '/concrete-cleaning-niskayuna-ny'
+    | '/concrete-cleaning-rensselaer-ny'
     | '/concrete-cleaning-saratoga-springs-ny'
     | '/concrete-cleaning-schenectady-ny'
     | '/concrete-cleaning-troy-ny'
     | '/house-washing-albany-ny'
+    | '/house-washing-ballston-spa-ny'
+    | '/house-washing-clifton-park-ny'
+    | '/house-washing-colonie-ny'
+    | '/house-washing-delmar-ny'
+    | '/house-washing-guilderland-ny'
+    | '/house-washing-latham-ny'
+    | '/house-washing-niskayuna-ny'
+    | '/house-washing-rensselaer-ny'
     | '/house-washing-saratoga-springs-ny'
     | '/house-washing-schenectady-ny'
     | '/house-washing-troy-ny'
     | '/pressure-washing-albany-ny'
+    | '/pressure-washing-ballston-spa-ny'
     | '/pressure-washing-clifton-park-ny'
+    | '/pressure-washing-colonie-ny'
+    | '/pressure-washing-delmar-ny'
+    | '/pressure-washing-guilderland-ny'
+    | '/pressure-washing-latham-ny'
+    | '/pressure-washing-niskayuna-ny'
     | '/pressure-washing-rensselaer-ny'
     | '/pressure-washing-saratoga-springs-ny'
     | '/pressure-washing-schenectady-ny'
     | '/pressure-washing-troy-ny'
     | '/roof-washing-albany-ny'
+    | '/roof-washing-ballston-spa-ny'
+    | '/roof-washing-clifton-park-ny'
+    | '/roof-washing-colonie-ny'
+    | '/roof-washing-delmar-ny'
+    | '/roof-washing-guilderland-ny'
+    | '/roof-washing-latham-ny'
+    | '/roof-washing-niskayuna-ny'
+    | '/roof-washing-rensselaer-ny'
     | '/roof-washing-saratoga-springs-ny'
     | '/roof-washing-schenectady-ny'
     | '/roof-washing-troy-ny'
@@ -329,20 +678,50 @@ export interface FileRouteTypes {
     | '/499-special'
     | '/899-special'
     | '/concrete-cleaning-albany-ny'
+    | '/concrete-cleaning-ballston-spa-ny'
+    | '/concrete-cleaning-clifton-park-ny'
+    | '/concrete-cleaning-colonie-ny'
+    | '/concrete-cleaning-delmar-ny'
+    | '/concrete-cleaning-guilderland-ny'
+    | '/concrete-cleaning-latham-ny'
+    | '/concrete-cleaning-niskayuna-ny'
+    | '/concrete-cleaning-rensselaer-ny'
     | '/concrete-cleaning-saratoga-springs-ny'
     | '/concrete-cleaning-schenectady-ny'
     | '/concrete-cleaning-troy-ny'
     | '/house-washing-albany-ny'
+    | '/house-washing-ballston-spa-ny'
+    | '/house-washing-clifton-park-ny'
+    | '/house-washing-colonie-ny'
+    | '/house-washing-delmar-ny'
+    | '/house-washing-guilderland-ny'
+    | '/house-washing-latham-ny'
+    | '/house-washing-niskayuna-ny'
+    | '/house-washing-rensselaer-ny'
     | '/house-washing-saratoga-springs-ny'
     | '/house-washing-schenectady-ny'
     | '/house-washing-troy-ny'
     | '/pressure-washing-albany-ny'
+    | '/pressure-washing-ballston-spa-ny'
     | '/pressure-washing-clifton-park-ny'
+    | '/pressure-washing-colonie-ny'
+    | '/pressure-washing-delmar-ny'
+    | '/pressure-washing-guilderland-ny'
+    | '/pressure-washing-latham-ny'
+    | '/pressure-washing-niskayuna-ny'
     | '/pressure-washing-rensselaer-ny'
     | '/pressure-washing-saratoga-springs-ny'
     | '/pressure-washing-schenectady-ny'
     | '/pressure-washing-troy-ny'
     | '/roof-washing-albany-ny'
+    | '/roof-washing-ballston-spa-ny'
+    | '/roof-washing-clifton-park-ny'
+    | '/roof-washing-colonie-ny'
+    | '/roof-washing-delmar-ny'
+    | '/roof-washing-guilderland-ny'
+    | '/roof-washing-latham-ny'
+    | '/roof-washing-niskayuna-ny'
+    | '/roof-washing-rensselaer-ny'
     | '/roof-washing-saratoga-springs-ny'
     | '/roof-washing-schenectady-ny'
     | '/roof-washing-troy-ny'
@@ -358,20 +737,50 @@ export interface RootRouteChildren {
   R499SpecialRoute: typeof R499SpecialRoute
   R899SpecialRoute: typeof R899SpecialRoute
   ConcreteCleaningAlbanyNyRoute: typeof ConcreteCleaningAlbanyNyRoute
+  ConcreteCleaningBallstonSpaNyRoute: typeof ConcreteCleaningBallstonSpaNyRoute
+  ConcreteCleaningCliftonParkNyRoute: typeof ConcreteCleaningCliftonParkNyRoute
+  ConcreteCleaningColonieNyRoute: typeof ConcreteCleaningColonieNyRoute
+  ConcreteCleaningDelmarNyRoute: typeof ConcreteCleaningDelmarNyRoute
+  ConcreteCleaningGuilderlandNyRoute: typeof ConcreteCleaningGuilderlandNyRoute
+  ConcreteCleaningLathamNyRoute: typeof ConcreteCleaningLathamNyRoute
+  ConcreteCleaningNiskayunaNyRoute: typeof ConcreteCleaningNiskayunaNyRoute
+  ConcreteCleaningRensselaerNyRoute: typeof ConcreteCleaningRensselaerNyRoute
   ConcreteCleaningSaratogaSpringsNyRoute: typeof ConcreteCleaningSaratogaSpringsNyRoute
   ConcreteCleaningSchenectadyNyRoute: typeof ConcreteCleaningSchenectadyNyRoute
   ConcreteCleaningTroyNyRoute: typeof ConcreteCleaningTroyNyRoute
   HouseWashingAlbanyNyRoute: typeof HouseWashingAlbanyNyRoute
+  HouseWashingBallstonSpaNyRoute: typeof HouseWashingBallstonSpaNyRoute
+  HouseWashingCliftonParkNyRoute: typeof HouseWashingCliftonParkNyRoute
+  HouseWashingColonieNyRoute: typeof HouseWashingColonieNyRoute
+  HouseWashingDelmarNyRoute: typeof HouseWashingDelmarNyRoute
+  HouseWashingGuilderlandNyRoute: typeof HouseWashingGuilderlandNyRoute
+  HouseWashingLathamNyRoute: typeof HouseWashingLathamNyRoute
+  HouseWashingNiskayunaNyRoute: typeof HouseWashingNiskayunaNyRoute
+  HouseWashingRensselaerNyRoute: typeof HouseWashingRensselaerNyRoute
   HouseWashingSaratogaSpringsNyRoute: typeof HouseWashingSaratogaSpringsNyRoute
   HouseWashingSchenectadyNyRoute: typeof HouseWashingSchenectadyNyRoute
   HouseWashingTroyNyRoute: typeof HouseWashingTroyNyRoute
   PressureWashingAlbanyNyRoute: typeof PressureWashingAlbanyNyRoute
+  PressureWashingBallstonSpaNyRoute: typeof PressureWashingBallstonSpaNyRoute
   PressureWashingCliftonParkNyRoute: typeof PressureWashingCliftonParkNyRoute
+  PressureWashingColonieNyRoute: typeof PressureWashingColonieNyRoute
+  PressureWashingDelmarNyRoute: typeof PressureWashingDelmarNyRoute
+  PressureWashingGuilderlandNyRoute: typeof PressureWashingGuilderlandNyRoute
+  PressureWashingLathamNyRoute: typeof PressureWashingLathamNyRoute
+  PressureWashingNiskayunaNyRoute: typeof PressureWashingNiskayunaNyRoute
   PressureWashingRensselaerNyRoute: typeof PressureWashingRensselaerNyRoute
   PressureWashingSaratogaSpringsNyRoute: typeof PressureWashingSaratogaSpringsNyRoute
   PressureWashingSchenectadyNyRoute: typeof PressureWashingSchenectadyNyRoute
   PressureWashingTroyNyRoute: typeof PressureWashingTroyNyRoute
   RoofWashingAlbanyNyRoute: typeof RoofWashingAlbanyNyRoute
+  RoofWashingBallstonSpaNyRoute: typeof RoofWashingBallstonSpaNyRoute
+  RoofWashingCliftonParkNyRoute: typeof RoofWashingCliftonParkNyRoute
+  RoofWashingColonieNyRoute: typeof RoofWashingColonieNyRoute
+  RoofWashingDelmarNyRoute: typeof RoofWashingDelmarNyRoute
+  RoofWashingGuilderlandNyRoute: typeof RoofWashingGuilderlandNyRoute
+  RoofWashingLathamNyRoute: typeof RoofWashingLathamNyRoute
+  RoofWashingNiskayunaNyRoute: typeof RoofWashingNiskayunaNyRoute
+  RoofWashingRensselaerNyRoute: typeof RoofWashingRensselaerNyRoute
   RoofWashingSaratogaSpringsNyRoute: typeof RoofWashingSaratogaSpringsNyRoute
   RoofWashingSchenectadyNyRoute: typeof RoofWashingSchenectadyNyRoute
   RoofWashingTroyNyRoute: typeof RoofWashingTroyNyRoute
@@ -416,6 +825,62 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RoofWashingSaratogaSpringsNyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/roof-washing-rensselaer-ny': {
+      id: '/roof-washing-rensselaer-ny'
+      path: '/roof-washing-rensselaer-ny'
+      fullPath: '/roof-washing-rensselaer-ny'
+      preLoaderRoute: typeof RoofWashingRensselaerNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roof-washing-niskayuna-ny': {
+      id: '/roof-washing-niskayuna-ny'
+      path: '/roof-washing-niskayuna-ny'
+      fullPath: '/roof-washing-niskayuna-ny'
+      preLoaderRoute: typeof RoofWashingNiskayunaNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roof-washing-latham-ny': {
+      id: '/roof-washing-latham-ny'
+      path: '/roof-washing-latham-ny'
+      fullPath: '/roof-washing-latham-ny'
+      preLoaderRoute: typeof RoofWashingLathamNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roof-washing-guilderland-ny': {
+      id: '/roof-washing-guilderland-ny'
+      path: '/roof-washing-guilderland-ny'
+      fullPath: '/roof-washing-guilderland-ny'
+      preLoaderRoute: typeof RoofWashingGuilderlandNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roof-washing-delmar-ny': {
+      id: '/roof-washing-delmar-ny'
+      path: '/roof-washing-delmar-ny'
+      fullPath: '/roof-washing-delmar-ny'
+      preLoaderRoute: typeof RoofWashingDelmarNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roof-washing-colonie-ny': {
+      id: '/roof-washing-colonie-ny'
+      path: '/roof-washing-colonie-ny'
+      fullPath: '/roof-washing-colonie-ny'
+      preLoaderRoute: typeof RoofWashingColonieNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roof-washing-clifton-park-ny': {
+      id: '/roof-washing-clifton-park-ny'
+      path: '/roof-washing-clifton-park-ny'
+      fullPath: '/roof-washing-clifton-park-ny'
+      preLoaderRoute: typeof RoofWashingCliftonParkNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roof-washing-ballston-spa-ny': {
+      id: '/roof-washing-ballston-spa-ny'
+      path: '/roof-washing-ballston-spa-ny'
+      fullPath: '/roof-washing-ballston-spa-ny'
+      preLoaderRoute: typeof RoofWashingBallstonSpaNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/roof-washing-albany-ny': {
       id: '/roof-washing-albany-ny'
       path: '/roof-washing-albany-ny'
@@ -451,11 +916,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PressureWashingRensselaerNyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pressure-washing-niskayuna-ny': {
+      id: '/pressure-washing-niskayuna-ny'
+      path: '/pressure-washing-niskayuna-ny'
+      fullPath: '/pressure-washing-niskayuna-ny'
+      preLoaderRoute: typeof PressureWashingNiskayunaNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pressure-washing-latham-ny': {
+      id: '/pressure-washing-latham-ny'
+      path: '/pressure-washing-latham-ny'
+      fullPath: '/pressure-washing-latham-ny'
+      preLoaderRoute: typeof PressureWashingLathamNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pressure-washing-guilderland-ny': {
+      id: '/pressure-washing-guilderland-ny'
+      path: '/pressure-washing-guilderland-ny'
+      fullPath: '/pressure-washing-guilderland-ny'
+      preLoaderRoute: typeof PressureWashingGuilderlandNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pressure-washing-delmar-ny': {
+      id: '/pressure-washing-delmar-ny'
+      path: '/pressure-washing-delmar-ny'
+      fullPath: '/pressure-washing-delmar-ny'
+      preLoaderRoute: typeof PressureWashingDelmarNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pressure-washing-colonie-ny': {
+      id: '/pressure-washing-colonie-ny'
+      path: '/pressure-washing-colonie-ny'
+      fullPath: '/pressure-washing-colonie-ny'
+      preLoaderRoute: typeof PressureWashingColonieNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pressure-washing-clifton-park-ny': {
       id: '/pressure-washing-clifton-park-ny'
       path: '/pressure-washing-clifton-park-ny'
       fullPath: '/pressure-washing-clifton-park-ny'
       preLoaderRoute: typeof PressureWashingCliftonParkNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pressure-washing-ballston-spa-ny': {
+      id: '/pressure-washing-ballston-spa-ny'
+      path: '/pressure-washing-ballston-spa-ny'
+      fullPath: '/pressure-washing-ballston-spa-ny'
+      preLoaderRoute: typeof PressureWashingBallstonSpaNyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pressure-washing-albany-ny': {
@@ -486,6 +993,62 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HouseWashingSaratogaSpringsNyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/house-washing-rensselaer-ny': {
+      id: '/house-washing-rensselaer-ny'
+      path: '/house-washing-rensselaer-ny'
+      fullPath: '/house-washing-rensselaer-ny'
+      preLoaderRoute: typeof HouseWashingRensselaerNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/house-washing-niskayuna-ny': {
+      id: '/house-washing-niskayuna-ny'
+      path: '/house-washing-niskayuna-ny'
+      fullPath: '/house-washing-niskayuna-ny'
+      preLoaderRoute: typeof HouseWashingNiskayunaNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/house-washing-latham-ny': {
+      id: '/house-washing-latham-ny'
+      path: '/house-washing-latham-ny'
+      fullPath: '/house-washing-latham-ny'
+      preLoaderRoute: typeof HouseWashingLathamNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/house-washing-guilderland-ny': {
+      id: '/house-washing-guilderland-ny'
+      path: '/house-washing-guilderland-ny'
+      fullPath: '/house-washing-guilderland-ny'
+      preLoaderRoute: typeof HouseWashingGuilderlandNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/house-washing-delmar-ny': {
+      id: '/house-washing-delmar-ny'
+      path: '/house-washing-delmar-ny'
+      fullPath: '/house-washing-delmar-ny'
+      preLoaderRoute: typeof HouseWashingDelmarNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/house-washing-colonie-ny': {
+      id: '/house-washing-colonie-ny'
+      path: '/house-washing-colonie-ny'
+      fullPath: '/house-washing-colonie-ny'
+      preLoaderRoute: typeof HouseWashingColonieNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/house-washing-clifton-park-ny': {
+      id: '/house-washing-clifton-park-ny'
+      path: '/house-washing-clifton-park-ny'
+      fullPath: '/house-washing-clifton-park-ny'
+      preLoaderRoute: typeof HouseWashingCliftonParkNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/house-washing-ballston-spa-ny': {
+      id: '/house-washing-ballston-spa-ny'
+      path: '/house-washing-ballston-spa-ny'
+      fullPath: '/house-washing-ballston-spa-ny'
+      preLoaderRoute: typeof HouseWashingBallstonSpaNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/house-washing-albany-ny': {
       id: '/house-washing-albany-ny'
       path: '/house-washing-albany-ny'
@@ -512,6 +1075,62 @@ declare module '@tanstack/react-router' {
       path: '/concrete-cleaning-saratoga-springs-ny'
       fullPath: '/concrete-cleaning-saratoga-springs-ny'
       preLoaderRoute: typeof ConcreteCleaningSaratogaSpringsNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/concrete-cleaning-rensselaer-ny': {
+      id: '/concrete-cleaning-rensselaer-ny'
+      path: '/concrete-cleaning-rensselaer-ny'
+      fullPath: '/concrete-cleaning-rensselaer-ny'
+      preLoaderRoute: typeof ConcreteCleaningRensselaerNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/concrete-cleaning-niskayuna-ny': {
+      id: '/concrete-cleaning-niskayuna-ny'
+      path: '/concrete-cleaning-niskayuna-ny'
+      fullPath: '/concrete-cleaning-niskayuna-ny'
+      preLoaderRoute: typeof ConcreteCleaningNiskayunaNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/concrete-cleaning-latham-ny': {
+      id: '/concrete-cleaning-latham-ny'
+      path: '/concrete-cleaning-latham-ny'
+      fullPath: '/concrete-cleaning-latham-ny'
+      preLoaderRoute: typeof ConcreteCleaningLathamNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/concrete-cleaning-guilderland-ny': {
+      id: '/concrete-cleaning-guilderland-ny'
+      path: '/concrete-cleaning-guilderland-ny'
+      fullPath: '/concrete-cleaning-guilderland-ny'
+      preLoaderRoute: typeof ConcreteCleaningGuilderlandNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/concrete-cleaning-delmar-ny': {
+      id: '/concrete-cleaning-delmar-ny'
+      path: '/concrete-cleaning-delmar-ny'
+      fullPath: '/concrete-cleaning-delmar-ny'
+      preLoaderRoute: typeof ConcreteCleaningDelmarNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/concrete-cleaning-colonie-ny': {
+      id: '/concrete-cleaning-colonie-ny'
+      path: '/concrete-cleaning-colonie-ny'
+      fullPath: '/concrete-cleaning-colonie-ny'
+      preLoaderRoute: typeof ConcreteCleaningColonieNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/concrete-cleaning-clifton-park-ny': {
+      id: '/concrete-cleaning-clifton-park-ny'
+      path: '/concrete-cleaning-clifton-park-ny'
+      fullPath: '/concrete-cleaning-clifton-park-ny'
+      preLoaderRoute: typeof ConcreteCleaningCliftonParkNyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/concrete-cleaning-ballston-spa-ny': {
+      id: '/concrete-cleaning-ballston-spa-ny'
+      path: '/concrete-cleaning-ballston-spa-ny'
+      fullPath: '/concrete-cleaning-ballston-spa-ny'
+      preLoaderRoute: typeof ConcreteCleaningBallstonSpaNyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/concrete-cleaning-albany-ny': {
@@ -574,21 +1193,51 @@ const rootRouteChildren: RootRouteChildren = {
   R499SpecialRoute: R499SpecialRoute,
   R899SpecialRoute: R899SpecialRoute,
   ConcreteCleaningAlbanyNyRoute: ConcreteCleaningAlbanyNyRoute,
+  ConcreteCleaningBallstonSpaNyRoute: ConcreteCleaningBallstonSpaNyRoute,
+  ConcreteCleaningCliftonParkNyRoute: ConcreteCleaningCliftonParkNyRoute,
+  ConcreteCleaningColonieNyRoute: ConcreteCleaningColonieNyRoute,
+  ConcreteCleaningDelmarNyRoute: ConcreteCleaningDelmarNyRoute,
+  ConcreteCleaningGuilderlandNyRoute: ConcreteCleaningGuilderlandNyRoute,
+  ConcreteCleaningLathamNyRoute: ConcreteCleaningLathamNyRoute,
+  ConcreteCleaningNiskayunaNyRoute: ConcreteCleaningNiskayunaNyRoute,
+  ConcreteCleaningRensselaerNyRoute: ConcreteCleaningRensselaerNyRoute,
   ConcreteCleaningSaratogaSpringsNyRoute:
     ConcreteCleaningSaratogaSpringsNyRoute,
   ConcreteCleaningSchenectadyNyRoute: ConcreteCleaningSchenectadyNyRoute,
   ConcreteCleaningTroyNyRoute: ConcreteCleaningTroyNyRoute,
   HouseWashingAlbanyNyRoute: HouseWashingAlbanyNyRoute,
+  HouseWashingBallstonSpaNyRoute: HouseWashingBallstonSpaNyRoute,
+  HouseWashingCliftonParkNyRoute: HouseWashingCliftonParkNyRoute,
+  HouseWashingColonieNyRoute: HouseWashingColonieNyRoute,
+  HouseWashingDelmarNyRoute: HouseWashingDelmarNyRoute,
+  HouseWashingGuilderlandNyRoute: HouseWashingGuilderlandNyRoute,
+  HouseWashingLathamNyRoute: HouseWashingLathamNyRoute,
+  HouseWashingNiskayunaNyRoute: HouseWashingNiskayunaNyRoute,
+  HouseWashingRensselaerNyRoute: HouseWashingRensselaerNyRoute,
   HouseWashingSaratogaSpringsNyRoute: HouseWashingSaratogaSpringsNyRoute,
   HouseWashingSchenectadyNyRoute: HouseWashingSchenectadyNyRoute,
   HouseWashingTroyNyRoute: HouseWashingTroyNyRoute,
   PressureWashingAlbanyNyRoute: PressureWashingAlbanyNyRoute,
+  PressureWashingBallstonSpaNyRoute: PressureWashingBallstonSpaNyRoute,
   PressureWashingCliftonParkNyRoute: PressureWashingCliftonParkNyRoute,
+  PressureWashingColonieNyRoute: PressureWashingColonieNyRoute,
+  PressureWashingDelmarNyRoute: PressureWashingDelmarNyRoute,
+  PressureWashingGuilderlandNyRoute: PressureWashingGuilderlandNyRoute,
+  PressureWashingLathamNyRoute: PressureWashingLathamNyRoute,
+  PressureWashingNiskayunaNyRoute: PressureWashingNiskayunaNyRoute,
   PressureWashingRensselaerNyRoute: PressureWashingRensselaerNyRoute,
   PressureWashingSaratogaSpringsNyRoute: PressureWashingSaratogaSpringsNyRoute,
   PressureWashingSchenectadyNyRoute: PressureWashingSchenectadyNyRoute,
   PressureWashingTroyNyRoute: PressureWashingTroyNyRoute,
   RoofWashingAlbanyNyRoute: RoofWashingAlbanyNyRoute,
+  RoofWashingBallstonSpaNyRoute: RoofWashingBallstonSpaNyRoute,
+  RoofWashingCliftonParkNyRoute: RoofWashingCliftonParkNyRoute,
+  RoofWashingColonieNyRoute: RoofWashingColonieNyRoute,
+  RoofWashingDelmarNyRoute: RoofWashingDelmarNyRoute,
+  RoofWashingGuilderlandNyRoute: RoofWashingGuilderlandNyRoute,
+  RoofWashingLathamNyRoute: RoofWashingLathamNyRoute,
+  RoofWashingNiskayunaNyRoute: RoofWashingNiskayunaNyRoute,
+  RoofWashingRensselaerNyRoute: RoofWashingRensselaerNyRoute,
   RoofWashingSaratogaSpringsNyRoute: RoofWashingSaratogaSpringsNyRoute,
   RoofWashingSchenectadyNyRoute: RoofWashingSchenectadyNyRoute,
   RoofWashingTroyNyRoute: RoofWashingTroyNyRoute,
