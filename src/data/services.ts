@@ -199,7 +199,6 @@ export const SERVICES: ServiceContent[] = [
       { q: "How much does roof washing cost?", a: "Pricing depends on roof size, pitch, and how heavy the growth is. We give one firm, flat quote up front — no surprises and no on-site upsells. Many homeowners bundle a roof wash with a house wash and save on the combined visit." },
       { q: "Do you offer any discounts?", a: "Yes — active and retired military, first responders, and seniors receive a discount. Just mention it when you request your quote." },
     ],
-    process2: undefined,
     meta: {
       title: "Roof Washing in Albany & the Capital Region | Capital Pro",
       description: "Shingle-safe soft-wash roof washing across Albany & the Capital Region. Removes black streaks, moss, and algae. Free quotes.",
