@@ -9,12 +9,12 @@ const cities: { name: string; href?: string }[] = [
   { name: "Saratoga Springs", href: "/pressure-washing-saratoga-springs-ny" },
   { name: "Troy", href: "/pressure-washing-troy-ny" },
   { name: "Rensselaer", href: "/pressure-washing-rensselaer-ny" },
-  { name: href: "/pressure-washing-colonie-ny" },
-  { name: href: "/pressure-washing-latham-ny" },
-  { name: href: "/pressure-washing-guilderland-ny" },
-  { name: href: "/pressure-washing-delmar-ny" },
-  { name: href: "/pressure-washing-niskayuna-ny" },
-  { name: href: "/pressure-washing-ballston-spa-ny" },
+  { name: "Colonie", href: "/pressure-washing-colonie-ny" },
+  { name: "Latham", href: "/pressure-washing-latham-ny" },
+  { name: "Guilderland", href: "/pressure-washing-guilderland-ny" },
+  { name: "Delmar", href: "/pressure-washing-delmar-ny" },
+  { name: "Niskayuna", href: "/pressure-washing-niskayuna-ny" },
+  { name: "Ballston Spa", href: "/pressure-washing-ballston-spa-ny" },
 ];
 
 const towns: string[] = [
