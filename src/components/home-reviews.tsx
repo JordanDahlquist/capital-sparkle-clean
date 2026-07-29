@@ -1,5 +1,7 @@
 import { Star, Quote } from "lucide-react";
 import { Reveal } from "./reveal";
+import { useQuery } from "@tanstack/react-query";
+import { getGoogleReviews } from "@/lib/google-reviews.functions";
 
 // Toggle ON only after the Google Business Profile link is confirmed.
 const SHOW_VERIFIED_LINE = false;
@@ -169,7 +171,39 @@ function ReviewCard({ r, minimal = false }: { r: Review; minimal?: boolean }) {
 }
 
 export function HomeReviews() {
-  const track = [...marquee, ...marquee]; // duplicate for seamless loop
+  const { data } = useQuery({
+    queryKey: ["google-reviews"],
+    queryFn: () => getGoogleReviews(),
+    staleTime: 60 * 60 * 1000,
+    retry: false,
+  });
+
+  const live: Review[] = (data?.reviews ?? [])
+    .filter((r) => r.rating >= 5 && r.text.length > 60)
+    .map((r) => ({
+      name: r.authorName,
+      when: r.relativeTime ?? "recently",
+      text: r.text.length > 320 ? `${r.text.slice(0, 317).trimEnd()}…` : r.text,
+    }));
+
+  const seen = new Set<string>();
+  const dedupe = (list: Review[]) =>
+    list.filter((r) => {
+      const key = r.name.toLowerCase();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+
+  const featuredList = dedupe([...live, ...featured]).slice(0, 3);
+  const marqueeList = dedupe([...live, ...marquee]);
+
+  const countLabel = data?.reviewCount
+    ? `${data.reviewCount} Google reviews`
+    : "90+ Google reviews";
+  const ratingLabel = (data?.rating ?? 5).toFixed(1);
+
+  const track = [...marqueeList, ...marqueeList]; // duplicate for seamless loop
   return (
     <section id="reviews" className="bg-[#F4F6F8] py-16 md:py-20 scroll-mt-24">
       <div className="mx-auto max-w-[1200px] px-4">
@@ -186,7 +220,7 @@ export function HomeReviews() {
           <div className="mt-5 inline-flex items-center gap-3 rounded-full bg-white border border-gray-200 px-5 py-2 shadow-sm">
             <Stars />
             <span className="text-[#1A1A1A] font-semibold text-sm">
-              5.0 average · 90+ Google reviews
+              {ratingLabel} average · {countLabel}
             </span>
           </div>
         </div>
@@ -196,7 +230,7 @@ export function HomeReviews() {
           className="grid grid-cols-1 lg:grid-cols-3 gap-6"
           style={{ perspective: "1000px" }}
         >
-          {featured.map((r, i) => (
+          {featuredList.map((r, i) => (
             <Reveal as="div" key={r.name} delayMs={i * 90} variant="flap" className="h-full">
               <ReviewCard r={r} />
             </Reveal>
