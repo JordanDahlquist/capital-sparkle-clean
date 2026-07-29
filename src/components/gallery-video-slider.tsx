@@ -76,7 +76,6 @@ export function GalleryVideoSlider() {
               disablePictureInPicture
               className="w-full aspect-[9/16] object-cover"
             />
-            <figcaption className="bg-white px-3 py-2 text-sm text-[#1A1A1A]/80">{c.caption}</figcaption>
           </figure>
         ))}
       </div>
