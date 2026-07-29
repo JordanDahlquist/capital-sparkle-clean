@@ -28,6 +28,9 @@ import fenceCleaningHero from "../assets/service-heroes/service-fence-cleaning.p
 import holidayLightingHero from "../assets/service-heroes/service-holiday-lighting.png.asset.json";
 import permanentLightingHero from "../assets/service-heroes/service-permanent-lighting.png.asset.json";
 import commercialWashingHero from "../assets/service-heroes/service-commercial-pressure-washing.png.asset.json";
+import houseWashBefore from "../assets/before-after/house-wash-before.png.asset.json";
+import houseWashAfter from "../assets/before-after/house-wash-after.png.asset.json";
+import type { ServiceProof, ServiceComparison } from "../components/service-proof";
 
 export type ServiceContent = {
   slug: string;
@@ -46,6 +49,8 @@ export type ServiceContent = {
   benefits: { title: string; desc: string }[];
   process: { title: string; desc: string }[];
   faqs: { q: string; a: string }[];
+  proof?: ServiceProof;
+  comparison?: ServiceComparison;
   meta: { title: string; description: string };
 };
 
@@ -73,8 +78,38 @@ export const SERVICES: ServiceContent[] = [
       { title: "Fast Free Quote", desc: "Most quotes done remotely via Google Earth — we measure and price without ever needing to schedule a visit. On-site quotes available free of charge if you'd prefer." },
       { title: "Pre-Treat & Rinse", desc: "Cover plants, apply eco-safe detergent with commercial soft-wash equipment, dwell, then low-pressure rinse top to bottom." },
       { title: "Detail Pass", desc: "Hand-scrub high-traffic spots, sills, and doors. Walk the home with you before we leave." },
+      { title: "Final Walkthrough & Photos", desc: "We review every elevation with you, re-soak the landscaping one last time, and send before/after photos the same day." },
     ],
+    proof: {
+      eyebrow: "Real Results",
+      headline: "Drag To See The Difference",
+      caption: "Algae- and mildew-stained siding restored with a low-pressure soft wash — no ladders scraping your panels, no high pressure behind the siding.",
+      beforeImage: houseWashBefore.url,
+      afterImage: houseWashAfter.url,
+      alt: "Capital Region home before and after a Capital Pro soft-wash house washing",
+    },
+    comparison: {
+      eyebrow: "The Right Way",
+      headline: "Washing A House Should Be Soft Washing",
+      body: [
+        "When homeowners ask to have their house \"pressure washed,\" what they actually want is clean siding without damage. True high pressure can drive water behind panels, crack aging vinyl, chew up caulk lines, and strip paint off wood trim.",
+        "Soft washing is the answer: low pressure plus a professionally diluted cleaning solution that kills algae, mold, and mildew at the root so your siding stays clean far longer than a quick blast ever would. It's the manufacturer-approved way to wash a home, and it's how we wash every house in the Capital Region.",
+      ],
+      goodLabel: "Capital Pro Soft Wash",
+      badLabel: "High-Pressure Blasting",
+      rows: [
+        { label: "Pressure at the siding", good: "Lower than a garden hose", bad: "Enough to crack aging vinyl" },
+        { label: "What it removes", good: "Kills mold, algae & mildew at the root", bad: "Strips the surface, roots stay behind" },
+        { label: "How long it lasts", good: "Typically 1–3 years", bad: "Regrowth in a few months" },
+        { label: "Water behind panels", good: "Controlled low-pressure rinse", bad: "Water forced behind siding" },
+        { label: "Landscaping", good: "Soaked before, during & after", bad: "Often skipped entirely" },
+        { label: "Time on site", good: "Most homes done in 1–2 hours", bad: "All-day scrubbing" },
+      ],
+    },
     faqs: [
+      { q: "Should I pressure wash my house?", a: "It's risky. High pressure can force water behind siding, crack older vinyl, and strip paint from wood. What most people mean by \"pressure washing a house\" is really soft washing — low pressure plus a cleaning solution — and that's exactly what we do." },
+      { q: "Will it remove the green and black stains on my siding?", a: "Yes. Those stains are living algae and mildew. Our solution kills them at the root rather than just rinsing the surface, which is why the results last years instead of months." },
+      { q: "Can you wash just one side or section?", a: "Absolutely. Plenty of homeowners start with the shaded north side where algae grows fastest. We'll quote whatever scope you want." },
       { q: "Will it damage my siding or plants?", a: "No. We use soft-wash pressure (lower than a garden hose) and rinse landscaping before, during, and after." },
       { q: "Do I need to schedule an on-site quote?", a: "Usually no — we can price most house washes remotely using Google Earth to measure your home. If you'd rather have us walk the property in person, on-site quotes are always free." },
       { q: "How long does it take?", a: "Most single-family homes take 1–2 hours start to finish with our commercial soft-wash equipment." },
