@@ -31,6 +31,12 @@ const areas = [
   { name: "Saratoga Springs", href: "/pressure-washing-saratoga-springs-ny" },
   { name: "Troy", href: "/pressure-washing-troy-ny" },
   { name: "Rensselaer", href: "/pressure-washing-rensselaer-ny" },
+  { name: "Colonie", href: "/pressure-washing-colonie-ny" },
+  { name: "Latham", href: "/pressure-washing-latham-ny" },
+  { name: "Guilderland", href: "/pressure-washing-guilderland-ny" },
+  { name: "Delmar", href: "/pressure-washing-delmar-ny" },
+  { name: "Niskayuna", href: "/pressure-washing-niskayuna-ny" },
+  { name: "Ballston Spa", href: "/pressure-washing-ballston-spa-ny" },
 ];
 
 

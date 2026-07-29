@@ -9,14 +9,20 @@ const cities: { name: string; href?: string }[] = [
   { name: "Saratoga Springs", href: "/pressure-washing-saratoga-springs-ny" },
   { name: "Troy", href: "/pressure-washing-troy-ny" },
   { name: "Rensselaer", href: "/pressure-washing-rensselaer-ny" },
+  { name: href: "/pressure-washing-colonie-ny" },
+  { name: href: "/pressure-washing-latham-ny" },
+  { name: href: "/pressure-washing-guilderland-ny" },
+  { name: href: "/pressure-washing-delmar-ny" },
+  { name: href: "/pressure-washing-niskayuna-ny" },
+  { name: href: "/pressure-washing-ballston-spa-ny" },
 ];
 
 const towns: string[] = [
-  "Colonie", "Latham", "Loudonville", "Guilderland", "Westmere", "Altamont",
-  "Delmar", "Glenmont", "Slingerlands", "Voorheesville", "Menands", "Cohoes",
-  "Watervliet", "Feura Bush", "Niskayuna", "Rotterdam", "Scotia", "Glenville",
+  "Loudonville", "Westmere", "Altamont",
+  "Glenmont", "Slingerlands", "Voorheesville", "Menands", "Cohoes",
+  "Watervliet", "Feura Bush", "Rotterdam", "Scotia", "Glenville",
   "Duanesburg", "Delanson", "Halfmoon", "Ballston Lake", "Malta",
-  "Ballston Spa", "Mechanicville", "Waterford", "Brunswick", "East Greenbush",
+  "Mechanicville", "Waterford", "Brunswick", "East Greenbush",
   "North Greenbush", "Wynantskill", "Defreestville", "Averill Park",
   "Poestenkill", "Sand Lake", "Castleton-on-Hudson",
 ];
