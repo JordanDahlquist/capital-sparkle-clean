@@ -152,9 +152,10 @@ export const SERVICES: ServiceContent[] = [
       { title: "Instant Curb Appeal", desc: "Streak-free rooflines look brand new — a huge win before selling." },
     ],
     process: [
-      { title: "Roof Inspection", desc: "We check flashing, shingles, and drainage before ever spraying." },
-      { title: "Soft Wash Application", desc: "Apply approved cleaning solution from the ground — it kills algae on contact." },
-      { title: "Gentle Rinse & Cleanup", desc: "Low-pressure rinse, then flush your gutters and downspouts." },
+      { title: "Fast Free Quote", desc: "Most roofs are measured and priced remotely via Google Earth — one firm flat price, same day. Free on-site quotes available if you'd prefer." },
+      { title: "Protect & Pre-Soak", desc: "We soak plants, lawn, and landscaping with fresh water and cover anything sensitive before a drop of solution goes on the roof." },
+      { title: "Low-Pressure Soft Wash", desc: "An ARMA-approved cleaning solution is applied from ladders and the ground, killing Gloeocapsa magma algae, moss, and lichen at the root — zero granule-stripping pressure." },
+      { title: "Gentle Rinse & Walkthrough", desc: "Low-pressure rinse, gutters and downspouts flushed, landscaping re-soaked, then we review the results with you — backed by our 2-year no-streak guarantee." },
     ],
     proof: {
       eyebrow: "Real Results",
