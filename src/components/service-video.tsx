@@ -51,7 +51,7 @@ export function AllServicesVideoSection() {
                 className="btn-pop btn-shimmer inline-flex min-h-[52px] items-center justify-center rounded-md bg-[var(--brand-red)] px-6 font-bold uppercase tracking-wide text-white transition-colors hover:bg-[var(--brand-red-hover)]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Get My Free Quote
+                Get Quote
               </button>
               <a
                 href="tel:+15189001913"
@@ -117,7 +117,7 @@ export function HouseWashVideoSection() {
                 className="btn-pop btn-shimmer inline-flex min-h-[52px] items-center justify-center rounded-md bg-[var(--brand-red)] px-6 font-bold uppercase tracking-wide text-white transition-colors hover:bg-[var(--brand-red-hover)]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Get My Free Quote
+                Get Quote
               </button>
               <a
                 href="tel:+15189001913"
