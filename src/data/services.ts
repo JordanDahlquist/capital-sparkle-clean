@@ -30,6 +30,8 @@ import permanentLightingHero from "../assets/service-heroes/service-permanent-li
 import commercialWashingHero from "../assets/service-heroes/service-commercial-pressure-washing.png.asset.json";
 import houseWashBefore from "../assets/before-after/house-wash-before.png.asset.json";
 import houseWashAfter from "../assets/before-after/house-wash-after.png.asset.json";
+import roofWashBefore from "../assets/before-after/roof-wash-before.png.asset.json";
+import roofWashAfter from "../assets/before-after/roof-wash-after.png.asset.json";
 import type { ServiceProof, ServiceComparison } from "../components/service-proof";
 
 export type ServiceContent = {
@@ -150,15 +152,53 @@ export const SERVICES: ServiceContent[] = [
       { title: "Instant Curb Appeal", desc: "Streak-free rooflines look brand new — a huge win before selling." },
     ],
     process: [
-      { title: "Roof Inspection", desc: "We check flashing, shingles, and drainage before ever spraying." },
-      { title: "Soft Wash Application", desc: "Apply approved cleaning solution from the ground — it kills algae on contact." },
-      { title: "Gentle Rinse & Cleanup", desc: "Low-pressure rinse, then flush your gutters and downspouts." },
+      { title: "Fast Free Quote", desc: "Most roofs are measured and priced remotely via Google Earth — one firm flat price, same day. Free on-site quotes available if you'd prefer." },
+      { title: "Protect & Pre-Soak", desc: "We soak plants, lawn, and landscaping with fresh water and cover anything sensitive before a drop of solution goes on the roof." },
+      { title: "Low-Pressure Soft Wash", desc: "An ARMA-approved cleaning solution is applied from ladders and the ground, killing Gloeocapsa magma algae, moss, and lichen at the root — zero granule-stripping pressure." },
+      { title: "Gentle Rinse & Walkthrough", desc: "Low-pressure rinse, gutters and downspouts flushed, landscaping re-soaked, then we review the results with you — backed by our 2-year no-streak guarantee." },
     ],
+    proof: {
+      eyebrow: "Real Results",
+      headline: "Drag To See The Difference",
+      caption:
+        "Black-streaked asphalt shingles restored with a low-pressure soft wash — the algae is killed at the root, not blasted off with pressure that strips granules.",
+      beforeImage: roofWashBefore.url,
+      afterImage: roofWashAfter.url,
+      alt: "Capital Region roof before and after a Capital Pro soft-wash roof cleaning",
+    },
+    comparison: {
+      eyebrow: "The Right Way",
+      headline: "Never Pressure Wash A Roof",
+      body: [
+        "High pressure strips the protective granules off asphalt shingles — the exact layer that shields them from UV and weather. The roof looks clean for a season, but years have been taken off its life, and most manufacturer warranties are voided the moment a pressure washer touches the shingles.",
+        "That's why shingle manufacturers and ARMA call for low-pressure soft washing. We apply a professionally diluted solution that kills the Gloeocapsa magma algae, moss, and lichen at the root, let it dwell, then rinse gently. Your roof comes clean, the granules stay put, and the warranty stays intact. If a company offers to \"power wash\" your roof, call someone else.",
+      ],
+      goodLabel: "Capital Pro Soft Wash",
+      badLabel: "High-Pressure Roof Blasting",
+      rows: [
+        { label: "Pressure at the shingle", good: "Rinse pressure only — no granule loss", bad: "Blasts granules into the gutters" },
+        { label: "Manufacturer warranty", good: "ARMA-approved, warranty intact", bad: "Commonly voids shingle warranty" },
+        { label: "What it removes", good: "Kills algae, moss & lichen at the root", bad: "Scours the surface, roots remain" },
+        { label: "How long it lasts", good: "Typically 3–5 years", bad: "Streaks often return in a season" },
+        { label: "Guarantee", good: "2-year no-streak guarantee", bad: "None" },
+        { label: "Landscaping", good: "Soaked before, during & after", bad: "Often skipped entirely" },
+      ],
+    },
     faqs: [
       { q: "Is the roof wash guaranteed?", a: "Yes — every roof wash comes with our 2-year no-streak guarantee. If the black streaks return within 2 years, we come back and re-treat at no charge." },
+      { q: "Can you pressure wash my roof?", a: "No — and you shouldn't let anyone. High pressure strips the granules off asphalt shingles, shortens the life of the roof, and usually voids the manufacturer's warranty. What people call \"pressure washing a roof\" should always be done as a low-pressure soft wash, which is exactly what we do." },
+      { q: "What are the black streaks on my roof?", a: "A blue-green algae called Gloeocapsa magma. It feeds on the limestone filler in asphalt shingles and thrives in our humid Capital Region summers, especially on shaded, north-facing slopes. Moss and lichen usually follow it." },
+      { q: "Will roof cleaning damage my shingles?", a: "No. Soft washing is the method shingle manufacturers and ARMA recommend. There's no high pressure and no scrubbing — the solution does the work, then we rinse gently." },
+      { q: "Can roof cleaning extend the life of my roof?", a: "Yes. Algae and moss trap moisture against the shingles, lift edges, and accelerate granule loss. Removing them stops that damage and can add years to the roof you already paid for." },
       { q: "Do you walk on my roof?", a: "Only when absolutely necessary and always with fall protection. Most cleans are done from ladders and the ground." },
       { q: "Will the black streaks come back?", a: "Not for years. Our treatment kills the algae at the root — not just bleaches it. Most roofs stay clean 3–5 years, and our 2-year guarantee has you covered if they return sooner." },
+      { q: "Will the runoff hurt my plants, lawn, or gutters?", a: "No. We soak your plants, lawn, and landscaping with fresh water before, during, and after the wash to dilute any runoff, and we flush your gutters and downspouts when we're done." },
+      { q: "How long does a roof wash take?", a: "Most single-family roofs take 1–3 hours depending on pitch, size, and how heavy the growth is. Results are visible immediately, and any remaining shadowing continues to fade over the following weeks with rain." },
+      { q: "Do I need an on-site quote?", a: "Usually not. We measure and price most roofs remotely using Google Earth, so you can get a firm number the same day. Free on-site quotes are always available if you'd prefer we walk the property." },
+      { q: "What about moss and lichen, not just streaks?", a: "Both are handled. Moss and lichen root into the shingle surface, so they take longer to release — they die off during treatment and weather away over the following weeks rather than disappearing the same day." },
       { q: "Is it safe for metal roofs?", a: "Yes. We adjust the mix for metal, tile, cedar, and asphalt separately." },
+      { q: "How much does roof washing cost?", a: "Pricing depends on roof size, pitch, and how heavy the growth is. We give one firm, flat quote up front — no surprises and no on-site upsells. Many homeowners bundle a roof wash with a house wash and save on the combined visit." },
+      { q: "Do you offer any discounts?", a: "Yes — active and retired military, first responders, and seniors receive a discount. Just mention it when you request your quote." },
     ],
     meta: {
       title: "Roof Washing in Albany & the Capital Region | Capital Pro",
