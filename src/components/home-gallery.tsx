@@ -1,4 +1,5 @@
 import { useRef, useState, useCallback, useEffect } from "react";
+import { Link } from "@tanstack/react-router";
 import { openQuoteModal } from "./quote-modal";
 import { Reveal } from "./reveal";
 import houseWashBefore from "../assets/before-after/house-wash-before.png.asset.json";
@@ -191,13 +192,13 @@ function BeforeAfterSlider() {
   );
 }
 
-const tiles: Array<{ caption: string; beforeMarker: string; afterMarker: string }> = [
-  { caption: "House Washing", beforeMarker: "REPLACE_HOUSEWASH_BEFORE", afterMarker: "REPLACE_HOUSEWASH_AFTER" },
-  { caption: "Roof Washing", beforeMarker: "REPLACE_ROOF_BEFORE", afterMarker: "REPLACE_ROOF_AFTER" },
-  { caption: "Paver Cleaning & Sealing", beforeMarker: "REPLACE_PAVER_BEFORE", afterMarker: "REPLACE_PAVER_AFTER" },
-  { caption: "Concrete Cleaning", beforeMarker: "REPLACE_CONCRETE_BEFORE", afterMarker: "REPLACE_CONCRETE_AFTER" },
-  { caption: "Deck & Patio", beforeMarker: "REPLACE_DECK_BEFORE", afterMarker: "REPLACE_DECK_AFTER" },
-  { caption: "Gutter Cleaning", beforeMarker: "REPLACE_GUTTER_BEFORE", afterMarker: "REPLACE_GUTTER_AFTER" },
+const tiles: Array<{ caption: string; slug: string; beforeMarker: string; afterMarker: string }> = [
+  { caption: "House Washing", slug: "house-washing", beforeMarker: "REPLACE_HOUSEWASH_BEFORE", afterMarker: "REPLACE_HOUSEWASH_AFTER" },
+  { caption: "Roof Washing", slug: "roof-washing", beforeMarker: "REPLACE_ROOF_BEFORE", afterMarker: "REPLACE_ROOF_AFTER" },
+  { caption: "Paver Cleaning & Sealing", slug: "paver-cleaning-sealing", beforeMarker: "REPLACE_PAVER_BEFORE", afterMarker: "REPLACE_PAVER_AFTER" },
+  { caption: "Concrete Cleaning", slug: "concrete-cleaning-sealing", beforeMarker: "REPLACE_CONCRETE_BEFORE", afterMarker: "REPLACE_CONCRETE_AFTER" },
+  { caption: "Deck & Patio", slug: "deck-patio-cleaning", beforeMarker: "REPLACE_DECK_BEFORE", afterMarker: "REPLACE_DECK_AFTER" },
+  { caption: "Gutter Cleaning", slug: "gutter-cleaning", beforeMarker: "REPLACE_GUTTER_BEFORE", afterMarker: "REPLACE_GUTTER_AFTER" },
 ];
 
 const tileImages: Record<string, { before: string; after: string; beforeAlt: string; afterAlt: string }> = {
@@ -299,11 +300,18 @@ export function HomeGallery() {
                   </span>
                 </div>
               </div>
-              <figcaption
-                className="text-center text-[#0B3D7A] uppercase text-base md:text-lg py-4 px-3"
-                style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700, letterSpacing: "0.02em" }}
-              >
-                {t.caption}
+              <figcaption className="text-center py-4 px-3">
+                <Link
+                  to="/$service"
+                  params={{ service: t.slug }}
+                  className="inline-flex items-center gap-1.5 text-[#0B3D7A] hover:text-[#C8102E] uppercase text-base md:text-lg transition-colors"
+                  style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700, letterSpacing: "0.02em" }}
+                >
+                  {t.caption}
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </Link>
               </figcaption>
             </Reveal>
           ))}
