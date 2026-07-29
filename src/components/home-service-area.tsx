@@ -9,7 +9,16 @@ const cities: { name: string; href?: string }[] = [
   { name: "Saratoga Springs", href: "/pressure-washing-saratoga-springs-ny" },
   { name: "Troy", href: "/pressure-washing-troy-ny" },
   { name: "Rensselaer", href: "/pressure-washing-rensselaer-ny" },
-  { name: "& all surrounding towns" },
+];
+
+const towns: string[] = [
+  "Colonie", "Latham", "Loudonville", "Guilderland", "Westmere", "Altamont",
+  "Delmar", "Glenmont", "Slingerlands", "Voorheesville", "Menands", "Cohoes",
+  "Watervliet", "Feura Bush", "Niskayuna", "Rotterdam", "Scotia", "Glenville",
+  "Duanesburg", "Delanson", "Halfmoon", "Ballston Lake", "Malta",
+  "Ballston Spa", "Mechanicville", "Waterford", "Brunswick", "East Greenbush",
+  "North Greenbush", "Wynantskill", "Defreestville", "Averill Park",
+  "Poestenkill", "Sand Lake", "Castleton-on-Hudson",
 ];
 
 export function HomeServiceArea() {
@@ -64,6 +73,29 @@ export function HomeServiceArea() {
                 </li>
               ))}
             </ul>
+
+            <div className="mt-8">
+              <p
+                className="text-[#0B3D7A] uppercase text-sm tracking-[0.15em] mb-3"
+                style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700 }}
+              >
+                Also Serving
+              </p>
+              <ul className="flex flex-wrap gap-x-2 gap-y-2">
+                {towns.map((t) => (
+                  <li
+                    key={t}
+                    className="rounded-full bg-[#F4F6F8] border border-gray-200 px-3 py-1 text-sm text-[#1A1A1A]"
+                    style={{ fontFamily: "Inter, sans-serif", fontWeight: 500 }}
+                  >
+                    {t}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 text-sm text-[#1A1A1A]/70">
+                & all surrounding towns — don't see yours? Give us a call.
+              </p>
+            </div>
           </Reveal>
 
           {/* Right: map embed (placeholder — swap with confirmed embed URL) */}
