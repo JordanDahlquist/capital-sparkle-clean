@@ -14,6 +14,63 @@ export type Database = {
   }
   public: {
     Tables: {
+      google_place_stats: {
+        Row: {
+          place_id: string
+          rating: number | null
+          updated_at: string
+          user_rating_count: number | null
+        }
+        Insert: {
+          place_id: string
+          rating?: number | null
+          updated_at?: string
+          user_rating_count?: number | null
+        }
+        Update: {
+          place_id?: string
+          rating?: number | null
+          updated_at?: string
+          user_rating_count?: number | null
+        }
+        Relationships: []
+      }
+      google_reviews: {
+        Row: {
+          author_name: string
+          author_photo_url: string | null
+          created_at: string
+          id: string
+          published_at: string | null
+          rating: number
+          relative_time: string | null
+          text: string
+          updated_at: string
+        }
+        Insert: {
+          author_name: string
+          author_photo_url?: string | null
+          created_at?: string
+          id: string
+          published_at?: string | null
+          rating: number
+          relative_time?: string | null
+          text: string
+          updated_at?: string
+        }
+        Update: {
+          author_name?: string
+          author_photo_url?: string | null
+          created_at?: string
+          id?: string
+          published_at?: string | null
+          rating?: number
+          relative_time?: string | null
+          text?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       leads: {
         Row: {
           address: string | null
