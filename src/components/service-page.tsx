@@ -6,7 +6,7 @@ import { openQuoteModal } from "./quote-modal";
 import { QuoteWizard } from "./quote-modal";
 import { Reveal } from "./reveal";
 import { ServiceProofSection, ServiceComparisonSection } from "./service-proof";
-import { HouseWashVideoSection } from "./service-video";
+import { HouseWashVideoSection, AllServicesVideoSection } from "./service-video";
 
 const PHONE_DISPLAY = "(518) 900-1913";
 const PHONE_TEL = "tel:+15189001913";
@@ -154,6 +154,7 @@ export function ServicePage({ service }: { service: ServiceContent }) {
       </section>
 
       {service.slug === "house-washing" && <HouseWashVideoSection />}
+      {service.slug === "roof-washing" && <AllServicesVideoSection />}
 
       {/* Benefits */}
       <section className="bg-[var(--brand-light-gray)] py-16 md:py-20">
