@@ -33,6 +33,7 @@ const areas = [
   { name: "Rensselaer", href: "/pressure-washing-rensselaer-ny" },
 ];
 
+
 function FooterLogo() {
   return (
     <a href="/" className="inline-flex items-center gap-2" aria-label="Capital Pro Pressure Washing — Home">
