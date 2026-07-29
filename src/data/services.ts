@@ -30,6 +30,8 @@ import permanentLightingHero from "../assets/service-heroes/service-permanent-li
 import commercialWashingHero from "../assets/service-heroes/service-commercial-pressure-washing.png.asset.json";
 import houseWashBefore from "../assets/before-after/house-wash-before.png.asset.json";
 import houseWashAfter from "../assets/before-after/house-wash-after.png.asset.json";
+import roofWashBefore from "../assets/before-after/roof-wash-before.png.asset.json";
+import roofWashAfter from "../assets/before-after/roof-wash-after.png.asset.json";
 import type { ServiceProof, ServiceComparison } from "../components/service-proof";
 
 export type ServiceContent = {
