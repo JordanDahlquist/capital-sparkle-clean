@@ -9,7 +9,16 @@ const cities: { name: string; href?: string }[] = [
   { name: "Saratoga Springs", href: "/pressure-washing-saratoga-springs-ny" },
   { name: "Troy", href: "/pressure-washing-troy-ny" },
   { name: "Rensselaer", href: "/pressure-washing-rensselaer-ny" },
-  { name: "& all surrounding towns" },
+];
+
+const towns: string[] = [
+  "Colonie", "Latham", "Loudonville", "Guilderland", "Westmere", "Altamont",
+  "Delmar", "Glenmont", "Slingerlands", "Voorheesville", "Menands", "Cohoes",
+  "Watervliet", "Feura Bush", "Niskayuna", "Rotterdam", "Scotia", "Glenville",
+  "Duanesburg", "Delanson", "Halfmoon", "Ballston Lake", "Malta",
+  "Ballston Spa", "Mechanicville", "Waterford", "Brunswick", "East Greenbush",
+  "North Greenbush", "Wynantskill", "Defreestville", "Averill Park",
+  "Poestenkill", "Sand Lake", "Castleton-on-Hudson",
 ];
 
 export function HomeServiceArea() {
