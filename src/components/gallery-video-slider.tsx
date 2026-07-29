@@ -80,7 +80,12 @@ export function GalleryVideoSlider() {
         {CLIPS.map((c) => (
           <figure
             key={c.src}
-            className="snap-center shrink-0 w-[78%] sm:w-[46%] lg:w-[30%] rounded-xl overflow-hidden bg-black shadow-md border border-gray-200"
+            className={
+              "snap-center shrink-0 rounded-xl overflow-hidden bg-black shadow-md border border-gray-200 " +
+              (c.wide
+                ? "w-[88%] sm:w-[70%] lg:w-[48%]"
+                : "w-[60%] sm:w-[36%] lg:w-[24%]")
+            }
           >
             <video
               src={c.src}
@@ -92,7 +97,7 @@ export function GalleryVideoSlider() {
               preload="metadata"
               controls={false}
               disablePictureInPicture
-              className="w-full aspect-[9/16] object-cover"
+              className={"w-full object-cover " + (c.wide ? "aspect-video" : "aspect-[9/16]")}
             />
           </figure>
         ))}
