@@ -7,13 +7,31 @@ import v3 from "../assets/video/clips/clip-img_2357.mp4.asset.json";
 import p3 from "../assets/video/clips/clip-img_2357-poster.jpg.asset.json";
 import v4 from "../assets/video/clips/clip-img_2370.mp4.asset.json";
 import p4 from "../assets/video/clips/clip-img_2370-poster.jpg.asset.json";
+import v5 from "../assets/video/clips/clip-img_2031.mp4.asset.json";
+import p5 from "../assets/video/clips/clip-img_2031-poster.jpg.asset.json";
+import v6 from "../assets/video/clips/clip-img_2096.mp4.asset.json";
+import p6 from "../assets/video/clips/clip-img_2096-poster.jpg.asset.json";
+import v7 from "../assets/video/clips/clip-img_2109.mp4.asset.json";
+import p7 from "../assets/video/clips/clip-img_2109-poster.jpg.asset.json";
+import v8 from "../assets/video/clips/clip-img_2160.mp4.asset.json";
+import p8 from "../assets/video/clips/clip-img_2160-poster.jpg.asset.json";
+import v9 from "../assets/video/clips/clip-img_2161.mp4.asset.json";
+import p9 from "../assets/video/clips/clip-img_2161-poster.jpg.asset.json";
+import v10 from "../assets/video/clips/clip-img_2179.mp4.asset.json";
+import p10 from "../assets/video/clips/clip-img_2179-poster.jpg.asset.json";
 
 /** Muted job clips — horizontal slider. Add more entries here as new clips come in. */
-const CLIPS: Array<{ src: string; poster: string; caption: string }> = [
+const CLIPS: Array<{ src: string; poster: string; caption: string; wide?: boolean }> = [
   { src: v1.url, poster: p1.url, caption: "Surface cleaning in action" },
   { src: v2.url, poster: p2.url, caption: "Soft wash rinse" },
   { src: v3.url, poster: p3.url, caption: "Driveway cleaning pass" },
   { src: v4.url, poster: p4.url, caption: "Exterior cleaning on the job" },
+  { src: v5.url, poster: p5.url, caption: "On the job", wide: true },
+  { src: v6.url, poster: p6.url, caption: "On the job" },
+  { src: v7.url, poster: p7.url, caption: "On the job" },
+  { src: v8.url, poster: p8.url, caption: "On the job", wide: true },
+  { src: v9.url, poster: p9.url, caption: "On the job", wide: true },
+  { src: v10.url, poster: p10.url, caption: "On the job" },
 ];
 
 export function GalleryVideoSlider() {
