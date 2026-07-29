@@ -21,6 +21,11 @@ const towns: string[] = [
   "Poestenkill", "Sand Lake", "Castleton-on-Hudson",
 ];
 
+const allPlaces: { name: string; href?: string }[] = [
+  ...cities,
+  ...towns.map((name) => ({ name })),
+];
+
 export function HomeServiceArea() {
   return (
     <section id="service-area" className="bg-white py-16 md:py-20 scroll-mt-24">
@@ -46,8 +51,8 @@ export function HomeServiceArea() {
               If we clean in your area, we'll get you on the schedule.
             </p>
 
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
-              {cities.map((city) => (
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3">
+              {allPlaces.map((city) => (
                 <li key={city.name} className="flex items-start gap-2 text-[#1A1A1A]">
                   <MapPin
                     size={18}
@@ -74,28 +79,9 @@ export function HomeServiceArea() {
               ))}
             </ul>
 
-            <div className="mt-8">
-              <p
-                className="text-[#0B3D7A] uppercase text-sm tracking-[0.15em] mb-3"
-                style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700 }}
-              >
-                Also Serving
-              </p>
-              <ul className="flex flex-wrap gap-x-2 gap-y-2">
-                {towns.map((t) => (
-                  <li
-                    key={t}
-                    className="rounded-full bg-[#F4F6F8] border border-gray-200 px-3 py-1 text-sm text-[#1A1A1A]"
-                    style={{ fontFamily: "Inter, sans-serif", fontWeight: 500 }}
-                  >
-                    {t}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-4 text-sm text-[#1A1A1A]/70">
-                & all surrounding towns — don't see yours? Give us a call.
-              </p>
-            </div>
+            <p className="mt-6 text-sm text-[#1A1A1A]/70">
+              & all surrounding towns — don't see yours? Give us a call.
+            </p>
           </Reveal>
 
           {/* Right: map embed (placeholder — swap with confirmed embed URL) */}
