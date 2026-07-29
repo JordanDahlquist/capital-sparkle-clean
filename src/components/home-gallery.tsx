@@ -318,10 +318,7 @@ export function HomeGallery() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          {/* PART 3 — Muted job clips slider */}
-        </div>
-
+        {/* PART 3 — Muted job clips slider */}
         <Reveal className="mt-14 md:mt-16">
           <h3
             className="text-[#0B3D7A] text-2xl md:text-3xl uppercase text-center mb-6"
