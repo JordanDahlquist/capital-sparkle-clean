@@ -186,7 +186,7 @@ export function HomeReviews() {
           <div className="mt-5 inline-flex items-center gap-3 rounded-full bg-white border border-gray-200 px-5 py-2 shadow-sm">
             <Stars />
             <span className="text-[#1A1A1A] font-semibold text-sm">
-              5.0 average · 70+ Google reviews
+              5.0 average · 90+ Google reviews
             </span>
           </div>
         </div>
