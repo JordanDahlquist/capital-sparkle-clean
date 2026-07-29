@@ -73,6 +73,29 @@ export function HomeServiceArea() {
                 </li>
               ))}
             </ul>
+
+            <div className="mt-8">
+              <p
+                className="text-[#0B3D7A] uppercase text-sm tracking-[0.15em] mb-3"
+                style={{ fontFamily: "Oswald, sans-serif", fontWeight: 700 }}
+              >
+                Also Serving
+              </p>
+              <ul className="flex flex-wrap gap-x-2 gap-y-2">
+                {towns.map((t) => (
+                  <li
+                    key={t}
+                    className="rounded-full bg-[#F4F6F8] border border-gray-200 px-3 py-1 text-sm text-[#1A1A1A]"
+                    style={{ fontFamily: "Inter, sans-serif", fontWeight: 500 }}
+                  >
+                    {t}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 text-sm text-[#1A1A1A]/70">
+                & all surrounding towns — don't see yours? Give us a call.
+              </p>
+            </div>
           </Reveal>
 
           {/* Right: map embed (placeholder — swap with confirmed embed URL) */}
